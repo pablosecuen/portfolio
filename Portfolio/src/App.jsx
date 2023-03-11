@@ -1,15 +1,15 @@
 import { lazy, Suspense } from "react";
 import { Routes, Route, BrowserRouter } from "react-router-dom";
-import reactLogo from "./assets/react.svg";
-import "./App.css";
 import Loader from "./Components/Loader";
+import reactLogo from "./assets/react.svg";
+import "./App.css"; // import your custom CSS styles
+import "./tailwind.css"; // import Tailwind CSS styles
 
 function App() {
   const Landing = lazy(() => import("./Landing/Landing"));
-  // const { pathname } = useLocation();
 
   return (
-    <div className="App min-h-screen">
+    <div className="h-full min-h-screen w-full">
       <Suspense fallback={<Loader />}>
         <BrowserRouter>
           <Routes>

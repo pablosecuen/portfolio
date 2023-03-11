@@ -1,4 +1,3 @@
-import React from "react";
 import uno from "../assets/1x/Recurso1.png";
 import dos from "../assets/1x/Recurso2sol.png";
 import tres from "../assets/1x/Recurso3derecho.png";
@@ -14,9 +13,14 @@ import doce from "../assets/1x/Recurso12.png";
 
 function Landing() {
   return (
-    <div className="relative h-full">
-      <div></div>
-      {/* <img src={uno} className="border-2 border-red-600" alt="Vite logo" /> */}
+    <div className="h-96 w-96">
+      <div className="h-96 w-96 border-2 border-red-500">
+        {/* <img
+          src={uno}
+          className="w-1/2 border-2 border-red-600"
+          alt="Vite logo"
+        /> */}
+      </div>
 
       {/* <div className=" absolute">
         <img src={dos} alt="Vite logo" />

@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+const defaultTheme = require("tailwindcss/defaultTheme");
+
 module.exports = {
   content: [
     "./index.html",
@@ -14,7 +16,18 @@ module.exports = {
       xl: "1280px",
       "2xl": "1536px",
     },
-    extend: {},
+    extend: {
+      fontFamily: {
+        roboto: ['"roboto", ...defaultTheme.fontFamily.roboto'],
+      },
+      colors: {
+        primario: "#163134",
+        secundario: "#88771b",
+      },
+      backgroundImage: {
+        fondo: "url('./assets/1x/2x/fondo.png')",
+      },
+    },
   },
   plugins: [],
 };

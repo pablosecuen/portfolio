@@ -33,7 +33,7 @@ function Landing() {
     <div className=" -z-50 h-full overflow-x-hidden bg-primario">
       <LandingImage />
       {/* esta es la parte con fondo verde */}
-      <div className="h-[4000px] bg-gradient-to-b from-primario via-amber-300  to-slate-300">
+      <div className="h-[9000px] bg-gradient-to-b from-primario via-amber-300 to-slate-300 xsm:h-[9000px] sm:h-[9000px] md:h-[8000px] lg:h-[8000px] xl:h-[5000px] 2xl:h-[5000px]">
         {/* Cards de proyectos */}
         <Proyects />
 

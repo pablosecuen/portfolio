@@ -48,7 +48,7 @@ function Proyects() {
               delay: 0.2,
               ease: [0, 0.71, 0.2, 1.01],
             }}
-            className=" h-[300px] w-1/3 min-w-[300px] rounded-3xl border-8 border-slate-900 bg-slate-200"
+            className=" aspect-video h-[300px] min-w-[300px] rounded-3xl border-8 border-slate-900 bg-slate-200"
           >
             1
           </motion.div>
@@ -65,7 +65,7 @@ function Proyects() {
               delay: 0.2,
               ease: [0, 0.71, 0.2, 1.01],
             }}
-            className=" h-[300px] w-1/3 min-w-[300px] rounded-3xl border-8 border-slate-900 bg-slate-200"
+            className=" aspect-video h-[300px]  min-w-[300px] rounded-3xl border-8 border-slate-900 bg-slate-200"
           >
             2
           </motion.div>
@@ -83,7 +83,7 @@ function Proyects() {
               delay: 0.2,
               ease: [0, 0.71, 0.2, 1.01],
             }}
-            className=" h-[300px] w-1/3 min-w-[300px] rounded-3xl border-8 border-slate-900 bg-slate-200"
+            className=" aspect-video h-[300px]  min-w-[300px] rounded-3xl border-8 border-slate-900 bg-slate-200"
           >
             3
           </motion.div>
@@ -105,7 +105,7 @@ function Proyects() {
               delay: 0.2,
               ease: [0, 0.71, 0.2, 1.01],
             }}
-            className=" w-full text-center text-xl tracking-tighter  text-white"
+            className=" w-full  text-center text-xl tracking-tighter  text-white"
           >
             My proyects
           </motion.div>
@@ -185,7 +185,7 @@ function Proyects() {
           <motion.div
             variants={{
               hidden: { opacity: 0, scale: 0, x: -100, y: 100 },
-              visible: { opacity: 1, scale: 1, x: "90%", y: 100 },
+              visible: { opacity: 1, scale: 1, x: "30%", y: 100 },
             }}
             viewport={{ once: false, amount: 0.5 }}
             initial="hidden"
@@ -195,7 +195,7 @@ function Proyects() {
               delay: 0.2,
               ease: [0, 0.71, 0.2, 1.01],
             }}
-            className="flex h-[250px] w-1/3 min-w-[300px] justify-center rounded-3xl border-8 border-slate-900 bg-slate-200 "
+            className="flex aspect-video h-[250px]  min-w-[300px] justify-center rounded-3xl border-8 border-slate-900 bg-slate-200 "
           >
             1
           </motion.div>
@@ -212,14 +212,14 @@ function Proyects() {
               delay: 0.2,
               ease: [0, 0.71, 0.2, 1.01],
             }}
-            className=" flex h-[250px] w-1/3 min-w-[300px] justify-center rounded-3xl border-8 border-slate-900 bg-slate-200"
+            className=" flex aspect-video h-[250px]  min-w-[300px] justify-center rounded-3xl border-8 border-slate-900 bg-slate-200"
           >
             2
           </motion.div>
           <motion.div
             variants={{
               hidden: { opacity: 0, scale: 0, x: -100, y: 100 },
-              visible: { opacity: 1, scale: 1, x: "90%", y: 300 },
+              visible: { opacity: 1, scale: 1, x: "30%", y: 300 },
             }}
             viewport={{ once: false, amount: 0.5 }}
             initial="hidden"
@@ -229,7 +229,7 @@ function Proyects() {
               delay: 0.2,
               ease: [0, 0.71, 0.2, 1.01],
             }}
-            className=" flex h-[250px] w-1/3 min-w-[300px] justify-center rounded-3xl border-8 border-slate-900 bg-slate-200"
+            className=" flex aspect-video h-[250px]  min-w-[300px] justify-center rounded-3xl border-8 border-slate-900 bg-slate-200"
           >
             3
           </motion.div>
@@ -258,7 +258,7 @@ function Proyects() {
           <motion.div
             variants={{
               hidden: { opacity: 0, scale: 0, x: -100, y: 100 },
-              visible: { opacity: 1, scale: 1, x: 400, y: 100 },
+              visible: { opacity: 1, scale: 1, x: 280, y: 100 },
             }}
             viewport={{ once: false, amount: 0.5 }}
             initial="hidden"
@@ -268,7 +268,7 @@ function Proyects() {
               delay: 0.2,
               ease: [0, 0.71, 0.2, 1.01],
             }}
-            className=" flex h-[250px] w-1/3 min-w-[300px] justify-center rounded-3xl border-8 border-slate-900 bg-slate-200"
+            className=" flex aspect-video h-[250px]  min-w-[300px] justify-center rounded-3xl border-8 border-slate-900 bg-slate-200"
           >
             1
           </motion.div>
@@ -285,14 +285,14 @@ function Proyects() {
               delay: 0.2,
               ease: [0, 0.71, 0.2, 1.01],
             }}
-            className=" flex h-[250px] w-1/3 min-w-[300px] justify-center rounded-3xl border-8 border-slate-900 bg-slate-200"
+            className=" flex aspect-video h-[250px]  min-w-[300px] justify-center rounded-3xl border-8 border-slate-900 bg-slate-200"
           >
             2
           </motion.div>
           <motion.div
             variants={{
               hidden: { opacity: 0, scale: 0, x: -100, y: 100 },
-              visible: { opacity: 1, scale: 1, x: 400, y: 100 },
+              visible: { opacity: 1, scale: 1, x: 280, y: 100 },
             }}
             viewport={{ once: false, amount: 0.5 }}
             initial="hidden"
@@ -302,7 +302,7 @@ function Proyects() {
               delay: 0.2,
               ease: [0, 0.71, 0.2, 1.01],
             }}
-            className=" flex h-[250px] w-1/3 min-w-[300px] justify-center rounded-3xl border-8 border-slate-900 bg-slate-200"
+            className=" flex aspect-video h-[250px]  min-w-[300px] justify-center rounded-3xl border-8 border-slate-900 bg-slate-200"
           >
             3
           </motion.div>
@@ -331,7 +331,7 @@ function Proyects() {
           <motion.div
             variants={{
               hidden: { opacity: 0, scale: 0.5, x: "-40%", y: 100 },
-              visible: { opacity: 1, scale: 1, x: "200%", y: 100 },
+              visible: { opacity: 1, scale: 1, x: "50%", y: 100 },
             }}
             viewport={{ once: false, amount: 0.5 }}
             initial="hidden"
@@ -341,7 +341,7 @@ function Proyects() {
               delay: 0.2,
               ease: [0, 0.71, 0.2, 1.01],
             }}
-            className=" h-[300px] w-1/3 min-w-[300px] rounded-3xl border-8 border-slate-900 bg-slate-200"
+            className=" aspect-video h-[300px]  min-w-[300px] rounded-3xl border-8 border-slate-900 bg-slate-200"
           >
             1
           </motion.div>{" "}
@@ -358,14 +358,14 @@ function Proyects() {
               delay: 0.2,
               ease: [0, 0.71, 0.2, 1.01],
             }}
-            className=" h-[300px] w-1/3 min-w-[300px] rounded-3xl border-8 border-slate-900 bg-slate-200"
+            className=" aspect-video h-[300px]  min-w-[300px] rounded-3xl border-8 border-slate-900 bg-slate-200"
           >
             2
           </motion.div>{" "}
           <motion.div
             variants={{
               hidden: { opacity: 0, scale: 0.5, x: "-40%", y: 150 },
-              visible: { opacity: 1, scale: 1, x: "200%", y: 200 },
+              visible: { opacity: 1, scale: 1, x: "50%", y: 200 },
             }}
             viewport={{ once: false, amount: 0.5 }}
             initial="hidden"
@@ -375,7 +375,7 @@ function Proyects() {
               delay: 0.2,
               ease: [0, 0.71, 0.2, 1.01],
             }}
-            className=" h-[300px] w-1/3 min-w-[300px] rounded-3xl border-8 border-slate-900 bg-slate-200"
+            className=" aspect-video h-[300px]  min-w-[300px] rounded-3xl border-8 border-slate-900 bg-slate-200"
           >
             3
           </motion.div>
@@ -414,14 +414,14 @@ function Proyects() {
               delay: 0.2,
               ease: [0, 0.71, 0.2, 1.01],
             }}
-            className=" h-[300px] w-1/3 min-w-[400px] rounded-3xl border-8 border-slate-900 bg-slate-200"
+            className=" aspect-video h-[300px]  min-w-[400px] rounded-3xl border-8 border-slate-900 bg-slate-200"
           >
             1
           </motion.div>{" "}
           <motion.div
             variants={{
-              hidden: { opacity: 0, scale: 0.5, x: "200%", y: 150 },
-              visible: { opacity: 1, scale: 1, x: "0%", y: 150 },
+              hidden: { opacity: 0, scale: 0.5, x: 0, y: 150 },
+              visible: { opacity: 1, scale: 1, x: 0, y: 150 },
             }}
             viewport={{ once: false, amount: 0.5 }}
             initial="hidden"
@@ -431,14 +431,14 @@ function Proyects() {
               delay: 0.2,
               ease: [0, 0.71, 0.2, 1.01],
             }}
-            className=" h-[300px] w-1/3 min-w-[400px] rounded-3xl border-8 border-slate-900 bg-slate-200"
+            className=" aspect-video h-[300px]  min-w-[300px] rounded-3xl border-8 border-slate-900 bg-slate-200"
           >
             2
-          </motion.div>{" "}
+          </motion.div>
           <motion.div
             variants={{
               hidden: { opacity: 0, scale: 0.5, x: "-40%", y: 150 },
-              visible: { opacity: 1, scale: 1, x: "170%", y: 200 },
+              visible: { opacity: 1, scale: 1, x: "170%", y: 250 },
             }}
             viewport={{ once: false, amount: 0.5 }}
             initial="hidden"
@@ -448,7 +448,7 @@ function Proyects() {
               delay: 0.2,
               ease: [0, 0.71, 0.2, 1.01],
             }}
-            className=" h-[300px] w-1/3 min-w-[400px] rounded-3xl border-8 border-slate-900 bg-slate-200"
+            className=" aspect-video h-[300px]  min-w-[400px] rounded-3xl border-8 border-slate-900 bg-slate-200"
           >
             3
           </motion.div>

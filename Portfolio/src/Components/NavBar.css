@@ -30,6 +30,7 @@
     font-weight: 900;
 }
 .nav-list{
+    font-family: "roboto", Arial, sans-serif;
     list-style: none;
     display: flex;
     width: 100%;
@@ -75,3 +76,8 @@ header.active .button{
 header.active .button:hover{
     background-color: #151515;
 }
+
+h3{
+    letter-spacing: 2px;
+}
+

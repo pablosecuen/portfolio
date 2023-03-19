@@ -2,7 +2,7 @@ import { lazy, Suspense } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 
 import Loader from "./Components/Loader";
-import reactLogo from "./assets/react.svg";
+
 import "./App.css"; // import your custom CSS styles
 import NavBar from "./Components/NavBar";
 

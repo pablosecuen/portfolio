@@ -10,10 +10,11 @@ function NavBar() {
   const toggleMenu = () => {
     setShowMenu(!showMenu);
   };
-  const isMobile = useMediaQuery({ maxWidth: 800 });
+  const isMobile = useMediaQuery({ maxWidth: 700 });
 
   const isSCrolling = () => {
     const headerEl = document.querySelector(".primary-header");
+
     let windowPosition = window.scrollY > 200;
     headerEl.classList.toggle("active", windowPosition);
   };
@@ -102,11 +103,11 @@ function NavBar() {
 
             {showMenu && (
               <motion.ul
-                class="nav-list-mobile"
+                class="nav-mobile"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ duration: 1 }}
-                className="absolute flex flex-col py-10 "
+                transition={{ duration: 0.7 }}
+                className="absolute -right-10 flex flex-col p-10 "
               >
                 <motion.li
                   initial={{ opacity: 0 }}
@@ -114,7 +115,7 @@ function NavBar() {
                   transition={{ duration: 1 }}
                 >
                   <a href="#" class="nav-link">
-                    <h3 className="load-screen--message pb-4">Home</h3>
+                    <h1 className="load-screen--message pb-4">Home</h1>
                   </a>
                 </motion.li>
                 <motion.li
@@ -123,9 +124,9 @@ function NavBar() {
                   transition={{ duration: 1.5 }}
                 >
                   <a href="#" class="nav-link">
-                    <h3 className="load-screen--message " class="p2">
+                    <h1 className="load-screen--message " class="p2">
                       Proyects
-                    </h3>
+                    </h1>
                   </a>
                 </motion.li>
                 <motion.li
@@ -134,7 +135,7 @@ function NavBar() {
                   transition={{ duration: 2 }}
                 >
                   <a href="#" class="nav-link">
-                    <h3 className="load-screen--message pt-4">Contact</h3>
+                    <h1 className="load-screen--message pt-4">Contact</h1>
                   </a>
                 </motion.li>
               </motion.ul>

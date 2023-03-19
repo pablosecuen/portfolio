@@ -33,14 +33,14 @@ function Landing() {
     <div className=" -z-50 h-full overflow-x-hidden bg-primario">
       <LandingImage />
       {/* esta es la parte con fondo verde */}
-      <div className="h-[9000px] bg-gradient-to-b from-primario via-amber-300 to-slate-300 xsm:h-[9000px] sm:h-[9000px] md:h-[8000px] lg:h-[8000px] xl:h-[5000px] 2xl:h-[5000px]">
+      <div className="h-[5200px] bg-gradient-to-b from-primario via-green-600 to-slate-300 xsm:h-[10000px] sm:h-[10000px] md:h-[10000px] lg:h-[10000px] xl:h-[5700px] 2xl:h-[5700px]">
         {/* Cards de proyectos */}
         <Proyects />
 
         {/* Cards de redes sociales */}
 
         <div className="relative">
-          <h3 className="absolute top-[950px] w-full text-center text-6xl text-white">
+          <h3 className="absolute top-[950px] w-full  text-center text-lg text-white md:text-4xl lg:text-6xl">
             {" "}
             My Skills
           </h3>

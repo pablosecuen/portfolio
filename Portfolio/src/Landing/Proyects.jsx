@@ -3,9 +3,9 @@ import { motion } from "framer-motion";
 import { useMediaQuery } from "./useMediaQuery";
 
 function Proyects() {
-  const isXSmallMobile = useMediaQuery("(max-width: 370px)");
+  const isXSmallMobile = useMediaQuery("(max-width: 400px)");
   const isSmallMobile = useMediaQuery(
-    "(min-width: 371px) and (max-width: 639px)"
+    "(min-width: 401px) and (max-width: 639px)"
   );
   const isMobile = useMediaQuery("(min-width: 640px) and (max-width: 767px)");
   const isTablet = useMediaQuery("(min-width: 768px) and (max-width: 1023px)");
@@ -54,8 +54,8 @@ function Proyects() {
           </motion.div>
           <motion.div
             variants={{
-              hidden: { opacity: 0, scale: 0.5, x: "220%", y: 150 },
-              visible: { opacity: 1, scale: 1, x: "180%", y: 150 },
+              hidden: { opacity: 0, scale: 0.5, x: "280%", y: 150 },
+              visible: { opacity: 1, scale: 1, x: "220%", y: 150 },
             }}
             viewport={{ once: false, amount: 0.5 }}
             initial="hidden"

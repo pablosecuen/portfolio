@@ -17,7 +17,7 @@ function Proyects() {
   return (
     <div className="relative h-96 w-full">
       {isLargeDesktop && (
-        <div>
+        <div className="flex flex-col border-2">
           <motion.div
             variants={{
               hidden: { opacity: 0, scale: 0.5, x: "-40%" },
@@ -31,62 +31,64 @@ function Proyects() {
               delay: 0.2,
               ease: [0, 0.71, 0.2, 1.01],
             }}
-            className=" w-full text-center text-6xl tracking-tighter  text-white"
+            className=" w-full pb-28 text-center text-6xl tracking-tighter  text-white"
           >
             My proyects
           </motion.div>
-          <motion.div
-            variants={{
-              hidden: { opacity: 0, scale: 0.5, x: "-40%", y: 100 },
-              visible: { opacity: 1, scale: 1, x: 200, y: 100 },
-            }}
-            viewport={{ once: false, amount: 0.5 }}
-            initial="hidden"
-            whileInView="visible"
-            transition={{
-              duration: 1.8,
-              delay: 0.2,
-              ease: [0, 0.71, 0.2, 1.01],
-            }}
-            className=" aspect-video h-[300px] min-w-[300px] rounded-3xl border-8 border-slate-900 bg-slate-200"
-          >
-            1
-          </motion.div>
-          <motion.div
-            variants={{
-              hidden: { opacity: 0, scale: 0.5, x: "280%", y: 150 },
-              visible: { opacity: 1, scale: 1, x: "220%", y: 150 },
-            }}
-            viewport={{ once: false, amount: 0.5 }}
-            initial="hidden"
-            whileInView="visible"
-            transition={{
-              duration: 1.8,
-              delay: 0.2,
-              ease: [0, 0.71, 0.2, 1.01],
-            }}
-            className=" aspect-video h-[300px]  min-w-[300px] rounded-3xl border-8 border-slate-900 bg-slate-200"
-          >
-            2
-          </motion.div>
-
-          <motion.div
-            variants={{
-              hidden: { opacity: 0, scale: 0.5, x: "-40%", y: 150 },
-              visible: { opacity: 1, scale: 1, x: 200, y: 150 },
-            }}
-            viewport={{ once: false, amount: 0.5 }}
-            initial="hidden"
-            whileInView="visible"
-            transition={{
-              duration: 1.8,
-              delay: 0.2,
-              ease: [0, 0.71, 0.2, 1.01],
-            }}
-            className=" aspect-video h-[300px]  min-w-[300px] rounded-3xl border-8 border-slate-900 bg-slate-200"
-          >
-            3
-          </motion.div>
+          <div className="flex justify-around">
+            {" "}
+            <motion.div
+              variants={{
+                hidden: { opacity: 0, scale: 0.5, x: 0, y: 0 },
+                visible: { opacity: 1, scale: 1, x: 0, y: 0 },
+              }}
+              viewport={{ once: false, amount: 0.5 }}
+              initial="hidden"
+              whileInView="visible"
+              transition={{
+                duration: 1.8,
+                delay: 0.2,
+                ease: [0, 0.71, 0.2, 1.01],
+              }}
+              className=" aspect-video h-[300px] w-96 rounded-3xl border-8 border-slate-900 bg-slate-200"
+            >
+              1
+            </motion.div>
+            <motion.div
+              variants={{
+                hidden: { opacity: 0, scale: 0.5, x: 0, y: 0 },
+                visible: { opacity: 1, scale: 1, x: 0, y: 0 },
+              }}
+              viewport={{ once: false, amount: 0.5 }}
+              initial="hidden"
+              whileInView="visible"
+              transition={{
+                duration: 1.8,
+                delay: 0.2,
+                ease: [0, 0.71, 0.2, 1.01],
+              }}
+              className=" aspect-video h-[300px]  w-96 rounded-3xl border-8 border-slate-900 bg-slate-200"
+            >
+              2
+            </motion.div>
+            <motion.div
+              variants={{
+                hidden: { opacity: 0, scale: 0.5, x: 0, y: 0 },
+                visible: { opacity: 1, scale: 1, x: 0, y: 0 },
+              }}
+              viewport={{ once: false, amount: 0.5 }}
+              initial="hidden"
+              whileInView="visible"
+              transition={{
+                duration: 1.8,
+                delay: 0.2,
+                ease: [0, 0.71, 0.2, 1.01],
+              }}
+              className=" aspect-video h-[300px]  w-96 rounded-3xl border-8 border-slate-900 bg-slate-200"
+            >
+              3
+            </motion.div>
+          </div>
         </div>
       )}
 

@@ -8,3 +8,20 @@
   scroll-behavior: smooth;
 }
 
+::-webkit-scrollbar {
+  width: 15px;
+  height: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background: #132C2F;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #BFE5AB;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #FFF9B0 ;
+}

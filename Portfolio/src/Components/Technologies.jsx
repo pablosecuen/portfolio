@@ -18,12 +18,14 @@ import vite from "../assets/logoTecnologias/vitejs.svg";
 import anime from "animejs/lib/anime.es.js";
 import "./Technologies.module.css";
 import { useMediaQuery } from "react-responsive";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 
 function Technologies() {
   const isMobile = useMediaQuery({ maxWidth: 600 });
   const [selectedTech, setSelectedTech] = useState(null);
+  const [expandedIndex, setExpandedIndex] = useState(null);
+  const [isHovered, setIsHovered] = useState(false);
 
   const arrayTech = [
     {
@@ -207,16 +209,21 @@ function Technologies() {
       element.name,
       [
         {
-          value: `drop-shadow(0px 0px 2px ${element.shadowColor})`,
-          duration: 500,
-          shadowColor: element.shadowColor,
-        },
-        {
           value: `drop-shadow(0px 0px 4px ${element.shadowColor})`,
           duration: 500,
           shadowColor: element.shadowColor,
         },
+        {
+          value: `drop-shadow(0px 0px 6px ${element.shadowColor})`,
+          duration: 500,
+          shadowColor: element.shadowColor,
+        },
 
+        {
+          value: `drop-shadow(0px 0px 10px ${element.shadowColor})`,
+          duration: 800,
+          shadowColor: element.shadowColor,
+        },
         {
           value: `drop-shadow(0px 0px 6px ${element.shadowColor})`,
           duration: 500,
@@ -227,24 +234,17 @@ function Technologies() {
           duration: 500,
           shadowColor: element.shadowColor,
         },
-        {
-          value: `drop-shadow(0px 0px 2px ${element.shadowColor})`,
-          duration: 500,
-          shadowColor: element.shadowColor,
-        },
       ],
       { easing: "easeInOutQuad", direction: "normal", loop: true }
     );
   });
 
-  const handleClick = (index) => {
-    setSelectedTech(index);
-    anime({
-      targets: `.box-${index}`,
-      scale: [0, 1],
-      duration: 1000,
-      easing: "easeOutQuad",
-    });
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
   };
 
   const handleExitComplete = () => {
@@ -257,6 +257,10 @@ function Technologies() {
     setSelectedTech(null);
   };
 
+  const handleOnClick = (i) => {
+    setExpandedIndex(i === expandedIndex ? null : i);
+  };
+
   return (
     <div className="absolute top-[850px] w-full">
       <div className="flex w-full justify-center">
@@ -264,42 +268,66 @@ function Technologies() {
           <div className="mx-40 flex w-full flex-wrap  justify-around gap-y-28 gap-x-10 font-roboto sm:justify-center md:justify-center lg:justify-around">
             {arrayTech.map((t, i) => {
               return (
-                <div className=" relative" key={i}>
-                  <article className=" absolute z-50 h-96 w-96 rounded-xl p-6 pt-20  text-sm text-white">
-                    {t.description}
-                  </article>
-                  <a href={t.url}>
-                    <img
-                      src={t.logo}
-                      alt={t.name}
-                      title={t.title}
-                      class={`${t.name} h-24 hover:cursor-pointer`}
-                      className={`${t.name} absolute -top-12 z-50 h-24 text-white hover:cursor-pointer`}
-                    />
-                  </a>
+                <motion.div
+                  initial={{ height: 150, width: 150 }}
+                  animate={{
+                    height: expandedIndex === i ? 400 : 150,
+                    width: expandedIndex === i ? 400 : 250,
+                  }}
+                  transition={{ duration: 0.5 }}
+                  onClick={() => handleOnClick(i)}
+                  className=" relative"
+                  key={i}
+                >
+                  {expandedIndex === i && (
+                    <motion.article
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      transition={{ duration: 0.5 }}
+                      className="absolute z-50 h-96 w-96 rounded-xl p-6 pt-20 text-sm text-white"
+                    >
+                      {t.description}
+                    </motion.article>
+                  )}
+                  <motion.img
+                    src={t.logo}
+                    alt={t.name}
+                    title={t.title}
+                    class={`${t.name} h-24 hover:cursor-pointer`}
+                    className={`${t.name} absolute -top-12 z-50 h-24 text-white hover:cursor-pointer`}
+                    onMouseEnter={handleMouseEnter}
+                    onMouseLeave={handleMouseLeave}
+                  />
+
                   {/* este div tiene el texto */}
-                  <motion.div className="box  h-96 w-96 rounded-xl p-4 pt-20 text-white"></motion.div>
+                  {expandedIndex === i && (
+                    <motion.div
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      transition={{ duration: 0.5 }}
+                      className="text-box  h-96 w-96 rounded-xl p-4 pt-20 text-white"
+                    ></motion.div>
+                  )}
                   {/* abajo esta el fondo gradiente con el efecto */}
-                  <motion.div
-                    variants={{
-                      visible: {
-                        opacity: 1,
-                        scale: [1, 1.25, 1.25, 1.25, 1],
-                        rotate: [0, 0, 270, 270, 0],
-                        borderRadius: ["0%", "20%", "50%", "50%", "20%"],
-                      },
-                    }}
-                    initial="hidden"
-                    whileInView="visible"
-                    transition={{
-                      duration: 3,
-                      ease: "easeInOut",
-                      times: [0, 0.2, 0.5, 0.8, 1],
-                      repeat: 0,
-                    }}
-                    className=" box absolute top-0 left-0 h-96 w-96 rounded-xl  bg-gradient-to-b from-transparent to-slate-900 p-4 pt-20"
-                  ></motion.div>
-                </div>
+                  {expandedIndex === i && (
+                    <motion.div
+                      variants={{
+                        visible: {
+                          opacity: 1,
+                          borderRadius: ["0%", "20%", "50%", "50%", "20%"],
+                        },
+                      }}
+                      initial="hidden"
+                      whileHover="visible"
+                      transition={{
+                        duration: 3,
+                        times: [0, 0.2, 0.5, 0.8, 1],
+                        repeat: 0,
+                      }}
+                      className=" box absolute top-0 left-0 h-96 w-96 rounded-xl  bg-gradient-to-b from-transparent to-slate-900 p-4 pt-20"
+                    ></motion.div>
+                  )}
+                </motion.div>
               );
             })}
           </div>

@@ -1,18 +1,5 @@
-import { motion } from "framer-motion";
 import { useMediaQuery } from "./useMediaQuery";
 
-import uno from "../assets/1x/Recurso1.png";
-import dos from "../assets/1x/Recurso2sol.png";
-import tres from "../assets/1x/Recurso3derecho.png";
-import cuatro from "../assets/1x/Recurso4.png";
-import cinco from "../assets/1x/Recurso5.png";
-import seis from "../assets/1x/Recurso6.png";
-import siete from "../assets/1x/Recurso7.png";
-import ocho from "../assets/1x/Recurso8.png";
-import diez from "../assets/1x/Recurso10.png";
-import once from "../assets/1x/Recurso11.png";
-import doce from "../assets/1x/Recurso12.png";
-import { useState } from "react";
 import LandingImage from "./LandingImage";
 import Proyects from "./Proyects";
 import Technologies from "../Components/Technologies";
@@ -38,9 +25,8 @@ function Landing() {
         <Proyects />
 
         {/* Cards de redes sociales */}
-
         <div className="relative">
-          <h3 className="absolute top-[950px] w-full  text-center text-lg text-white md:text-4xl lg:text-6xl">
+          <h3 className="absolute top-[550px] w-full  text-center text-lg text-white md:text-4xl lg:text-6xl">
             {" "}
             My Skills
           </h3>

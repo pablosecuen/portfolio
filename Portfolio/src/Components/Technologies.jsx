@@ -14,21 +14,23 @@ import illustrator from "../assets/logoTecnologias/illustrator.png";
 import photoshop from "../assets/logoTecnologias/photoshop2.svg";
 import git from "../assets/logoTecnologias/git.svg";
 import github from "../assets/logoTecnologias/github.svg";
+import vite from "../assets/logoTecnologias/vitejs.svg";
 import anime from "animejs/lib/anime.es.js";
 import "./Technologies.module.css";
 import { useMediaQuery } from "react-responsive";
 import { motion } from "framer-motion";
-import { useEffect } from "react";
+import { useState } from "react";
 
 function Technologies() {
   const isMobile = useMediaQuery({ maxWidth: 600 });
+  const [selectedTech, setSelectedTech] = useState(null);
 
   const arrayTech = [
     {
       name: "html",
       logo: html,
       description:
-        "HTML (HyperText Markup Language) is a standarf markup language used for creating web pages and other web-basec and other web-based documents. It provides the structure and content of web pages by defining various elements such as headings, paragraphs, links, images,                 tables, and more. HTML works in conjunction with other technologies such as CSS and JavaScript to create rich, dynamic web pages. HTML documents are composed of tags and attributes that are used to define the various elements of a page. HTML documents can be created and edited using a text editor or specialized HTML editor software.",
+        "HTML (HyperText Markup Language) is a standar markup language used for creating web pages and other web-basec and other web-based documents. It provides the structure and content of web pages by defining various elements such as headings, paragraphs, links, images,                 tables, and more. HTML works in conjunction with other technologies such as CSS and JavaScript to create rich, dynamic web pages. HTML documents are composed of tags and attributes that are used to define the various elements of a page. HTML documents can be created and edited using a text editor or specialized HTML editor software.",
       title: "Html",
       shadowColor: "red",
       url: "https://html.com/",
@@ -97,6 +99,16 @@ function Technologies() {
       shadowColor: "lightseagreen",
       url: "https://tailwindcss.com//",
     },
+    {
+      name: "vite",
+      logo: vite,
+      description:
+        "Vitejs is a lightweight and efficient development tool that aims to improve the developer experience for modern web development. It provides a fast development server that uses native ES modules, allowing for quick and incremental building of projects. It also supports hot module replacement, making it easy to see changes in real-time without having to manually refresh the page. In addition to its development server, Vitejs also offers a production-ready build process that can generate optimized and minified code for deployment. It supports a variety of languages and frameworks, including JavaScript, TypeScript, Vue.js, React, and more.",
+      title: "Vite",
+      shadowColor: "magenta",
+      url: "https://vitejs.dev/",
+    },
+
     {
       name: "node",
       logo: node,
@@ -200,27 +212,56 @@ function Technologies() {
           shadowColor: element.shadowColor,
         },
         {
-          value: `drop-shadow(0px 0px 10px ${element.shadowColor})`,
-          duration: 1000,
+          value: `drop-shadow(0px 0px 4px ${element.shadowColor})`,
+          duration: 500,
+          shadowColor: element.shadowColor,
+        },
+
+        {
+          value: `drop-shadow(0px 0px 6px ${element.shadowColor})`,
+          duration: 500,
           shadowColor: element.shadowColor,
         },
         {
-          value: `drop-shadow(0px 0px 20px ${element.shadowColor})`,
-          duration: 1500,
+          value: `drop-shadow(0px 0px 4px ${element.shadowColor})`,
+          duration: 500,
+          shadowColor: element.shadowColor,
+        },
+        {
+          value: `drop-shadow(0px 0px 2px ${element.shadowColor})`,
+          duration: 500,
           shadowColor: element.shadowColor,
         },
       ],
-      { easing: "easeInOutQuad", direction: "normal", loop: false }
+      { easing: "easeInOutQuad", direction: "normal", loop: true }
     );
   });
 
-  // Wrap every letter in a span
+  const handleClick = (index) => {
+    setSelectedTech(index);
+    anime({
+      targets: `.box-${index}`,
+      scale: [0, 1],
+      duration: 1000,
+      easing: "easeOutQuad",
+    });
+  };
+
+  const handleExitComplete = () => {
+    anime({
+      targets: ".box",
+      scale: [1, 0],
+      duration: 1000,
+      easing: "easeOutQuad",
+    });
+    setSelectedTech(null);
+  };
 
   return (
-    <div className="absolute top-[1200px] w-full">
+    <div className="absolute top-[850px] w-full">
       <div className="flex w-full justify-center">
         {!isMobile ? (
-          <div className=" flex w-3/4 flex-wrap  justify-between gap-28 font-roboto sm:justify-center md:justify-center lg:justify-around">
+          <div className="mx-40 flex w-full flex-wrap  justify-around gap-y-28 gap-x-10 font-roboto sm:justify-center md:justify-center lg:justify-around">
             {arrayTech.map((t, i) => {
               return (
                 <div className=" relative" key={i}>
@@ -263,7 +304,7 @@ function Technologies() {
             })}
           </div>
         ) : (
-          <div className=" flex h-full w-full flex-col flex-wrap items-center justify-between  gap-20   font-roboto">
+          <div className=" flex h-full w-full flex-col flex-wrap items-center justify-between  gap-10   font-roboto">
             {arrayTech.map((t, i) => {
               return (
                 <div

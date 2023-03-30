@@ -16,7 +16,7 @@ import { motion } from "framer-motion";
 
 function LandingImage() {
   const [isVisible, setIsVisible] = useState(true);
-  const { ref } = useParallax({ speed: 300 });
+  const { ref } = useParallax({ speed: 50 });
   const handleClick = () => {
     setIsVisible(false);
   };
@@ -78,9 +78,9 @@ function LandingImage() {
           </motion.div>
         )}
         {/* arboles */}{" "}
-        <div className="xl:bot-0 absolute -bottom-1 z-50 w-full  overflow-hidden">
+        <div className="xl:bot-0 absolute -bottom-1 z-50 w-full  ">
           <motion.img
-            initial={{ x: 0, y: 0 }}
+            initial={{ x: 0, y: 0, scale: 1 }}
             animate={{ scaleX: 1.02 }}
             transition={{
               repeat: Infinity,
@@ -118,7 +118,18 @@ function LandingImage() {
         </div>
         {/* iluminacion del sol */}
         <div className=" sm:-bottom- 2xl:-left-62 absolute -bottom-[52%] -left-32 z-30 h-full w-full xsm:-left-[150px] xsm:-bottom-[20%] sm:-left-44 sm:top-0 md:top-10 md:-left-44 lg:-left-96 lg:-top-56 xl:-top-96 xl:-left-96 ">
-          <img src={tres} alt="Vite logo z-40" />
+          <motion.img
+            initial={{ scale: 0.5 }}
+            animate={{ scale: 1.2 }}
+            transition={{
+              repeat: Infinity,
+              duration: 4,
+              repeatType: "reverse",
+              ease: "linear",
+            }}
+            src={tres}
+            alt="Vite logo z-40"
+          />
         </div>
         {/* montañas bajo el sol 1*/}
         <div className="absolute bottom-0 right-24 z-10 w-full  overflow-hidden xl:-left-20  xl:bottom-0">
@@ -149,18 +160,7 @@ function LandingImage() {
         </div>
         {/* sol */}
         <div className="absolute bottom-48 -left-20 w-full scale-50 overflow-hidden xsm:top-52  lg:top-0 lg:-left-44 xl:-left-44 xl:top-0 2xl:-top-0  2xl:-left-64 ">
-          <motion.img
-            initial={{ x: 0, y: 0 }}
-            animate={{ x: 100, y: 100 }}
-            transition={{
-              repeat: Infinity,
-              duration: 1,
-              repeatType: "reverse",
-              ease: "linear",
-            }}
-            src={once}
-            alt="Vite logo"
-          />
+          <motion.img src={once} alt="Vite logo" />
         </div>
         {/* bruma */}
         <div className="absolute bottom-16 z-10 w-full overflow-hidden xsm:bottom-12 lg:bottom-56  xl:bottom-56 2xl:bottom-0 ">

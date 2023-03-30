@@ -3,6 +3,7 @@ import { useMediaQuery } from "./useMediaQuery";
 import LandingImage from "./LandingImage";
 import Proyects from "./Proyects";
 import Technologies from "../Components/Technologies";
+import About from "../Components/About";
 
 function Landing() {
   const isXSmallMobile = useMediaQuery("(max-width: 370px)");
@@ -20,13 +21,14 @@ function Landing() {
     <div className=" -z-50 h-full overflow-x-hidden bg-primario">
       <LandingImage />
       {/* esta es la parte con fondo verde */}
-      <div className="h-[5200px] bg-gradient-to-b from-primario via-green-600 to-slate-300 xsm:h-[10000px] sm:h-[10000px] md:h-[10000px] lg:h-[10000px] xl:h-[5700px] 2xl:h-[5700px]">
+      <div className="h-[5200px] bg-gradient-to-b from-primario via-green-600 to-slate-300 xsm:h-[10000px] sm:h-[10000px] md:h-[10000px] lg:h-[10000px] xl:h-[5700px] 2xl:h-[3300px]">
         {/* Cards de proyectos */}
+        <About></About>
         <Proyects />
 
         {/* Cards de redes sociales */}
-        <div className="relative">
-          <h3 className="absolute top-[550px] w-full  text-center text-lg text-white md:text-4xl lg:text-6xl">
+        <div className="relative   ">
+          <h3 className="absolute top-[550px] w-full p-4 text-center text-lg  text-white   md:text-4xl lg:text-6xl">
             {" "}
             My Skills
           </h3>

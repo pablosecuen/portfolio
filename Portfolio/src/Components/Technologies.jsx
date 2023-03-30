@@ -294,7 +294,7 @@ function Technologies() {
                     alt={t.name}
                     title={t.title}
                     class={`${t.name} h-24 hover:cursor-pointer`}
-                    className={`${t.name} absolute -top-12 z-50 h-24 text-white hover:cursor-pointer`}
+                    className={`${t.name} absolute -top-12 z-50 h-32 text-white hover:cursor-pointer`}
                     onMouseEnter={handleMouseEnter}
                     onMouseLeave={handleMouseLeave}
                   />

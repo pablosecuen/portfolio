@@ -79,25 +79,25 @@ function Proyects() {
 
   return (
     <div className="relative  h-96 w-full">
+      <motion.h2
+        variants={{
+          hidden: { opacity: 0, scale: 0.5, x: "-40%" },
+          visible: { opacity: 1, scale: 1, x: 0 },
+        }}
+        viewport={{ once: false, amount: 0.5 }}
+        initial="hidden"
+        whileInView="visible"
+        transition={{
+          duration: 1.8,
+          delay: 0.2,
+          ease: [0, 0.71, 0.2, 1.01],
+        }}
+        className=" mb-40  w-full cursor-pointer p-4 text-center text-6xl tracking-tighter text-white  "
+      >
+        My proyects
+      </motion.h2>
       {isXSmallMobile && (
         <div className="flex w-full  flex-col">
-          <motion.h2
-            variants={{
-              hidden: { opacity: 0, scale: 0.5, x: "-40%" },
-              visible: { opacity: 1, scale: 1, x: 0 },
-            }}
-            viewport={{ once: false, amount: 0.5 }}
-            initial="hidden"
-            whileInView="visible"
-            transition={{
-              duration: 1.8,
-              delay: 0.2,
-              ease: [0, 0.71, 0.2, 1.01],
-            }}
-            className=" w-full cursor-pointer pb-28 text-center text-6xl tracking-tighter  text-white"
-          >
-            My proyects
-          </motion.h2>
           <div className="flex h-[500px] flex-col justify-around gap-10 pt-48">
             <motion.div
               ref={wrapperRef}
@@ -120,9 +120,11 @@ function Proyects() {
                     opacity: { ease: "linear" },
                     layout: { duration: 2 },
                   }}
-                  className=" flex flex-col items-center  justify-center bg-white  text-center duration-1000 "
+                  className=" flex  flex-col items-center justify-center bg-slate-100 text-center shadow-2xl   shadow-black duration-1000 "
                 >
-                  <span>toca para ver mas del proyecto</span>
+                  <motion.span className="">
+                    toca para ver mas del proyecto
+                  </motion.span>
                   <motion.img src={proyect1} className="h-24"></motion.img>
                 </motion.div>
               )}
@@ -141,7 +143,7 @@ function Proyects() {
                       opacity: { easeInOut: "linear" },
                       layout: { duration: 2 },
                     }}
-                    className=" mt-96 flex h-96 w-96 flex-col items-center justify-center rounded-full  duration-1000 "
+                    className=" mt-96  flex h-96 w-96 flex-col items-center justify-center rounded-full shadow-2xl shadow-black  duration-1000 "
                   >
                     <motion.img
                       src={petsm}
@@ -169,7 +171,7 @@ function Proyects() {
                       opacity: { easeInOut: "linear" },
                       layout: { duration: 2 },
                     }}
-                    className="absolute flex h-96 w-96 flex-col items-center justify-evenly  rounded-full bg-white duration-1000 "
+                    className=" absolute  flex h-96 w-96 flex-col items-center justify-evenly rounded-full bg-slate-100  shadow-2xl shadow-black duration-1000 "
                   >
                     <img
                       src={proyect1}
@@ -225,7 +227,7 @@ function Proyects() {
                     opacity: { ease: "linear" },
                     layout: { duration: 2 },
                   }}
-                  className=" flex h-48 w-48 flex-col items-center justify-center rounded-3xl bg-white  text-center duration-1000 "
+                  className=" flex  h-48 w-48 flex-col items-center justify-center rounded-3xl bg-slate-100 text-center shadow-2xl  shadow-black duration-1000 "
                 >
                   {" "}
                   <span>toca para ver mas del proyecto</span>
@@ -252,13 +254,14 @@ function Proyects() {
                       opacity: { easeInOut: "linear" },
                       layout: { duration: 2 },
                     }}
-                    className=" mt-96 flex h-96 w-96 flex-col items-center justify-center rounded-full  duration-1000 "
+                    className=" mt-96  flex  flex-col items-center justify-center rounded-full   duration-1000 "
                   >
                     <motion.img
                       src={poke}
                       alt="Pokemon Proyect"
                       initial={{ opacity: 0, borderRadius: 80 }}
                       animate={{ opacity: 1, borderRadius: 50 }}
+                      className=" "
                     />
                   </motion.div>
                   <motion.div
@@ -280,7 +283,7 @@ function Proyects() {
                       opacity: { easeInOut: "linear" },
                       layout: { duration: 2 },
                     }}
-                    className="absolute flex h-96 w-96 flex-col items-center justify-evenly  rounded-full bg-white duration-1000 "
+                    className=" absolute  flex h-96 w-96 flex-col items-center justify-evenly rounded-full bg-slate-100  shadow-2xl shadow-black duration-1000 "
                   >
                     <img
                       src={pokemon}
@@ -358,7 +361,7 @@ function Proyects() {
                     opacity: { ease: "linear" },
                     layout: { duration: 2 },
                   }}
-                  className=" flex h-48 w-48 flex-col items-center justify-center rounded-3xl bg-white  text-center duration-1000 "
+                  className=" flex  h-48 w-48 flex-col items-center justify-center rounded-3xl bg-slate-100 text-center shadow-2xl  shadow-black duration-1000 "
                 >
                   <span>toca para ver mas del proyecto</span>
                   <motion.img
@@ -382,7 +385,7 @@ function Proyects() {
                     opacity: { ease: "linear" },
                     layout: { duration: 2 },
                   }}
-                  className="child flex h-48 w-48 items-center justify-center rounded-3xl bg-white duration-1000 "
+                  className=" child  flex h-48 w-48 items-center justify-center rounded-3xl bg-white shadow-2xl shadow-black duration-1000 "
                 ></motion.div>
               )}
             </motion.div>
@@ -392,23 +395,6 @@ function Proyects() {
 
       {isSmallMobile && (
         <div className="flex w-full flex-col">
-          <motion.h2
-            variants={{
-              hidden: { opacity: 0, scale: 0.5, x: "-40%" },
-              visible: { opacity: 1, scale: 1, x: 0 },
-            }}
-            viewport={{ once: false, amount: 0.5 }}
-            initial="hidden"
-            whileInView="visible"
-            transition={{
-              duration: 1.8,
-              delay: 0.2,
-              ease: [0, 0.71, 0.2, 1.01],
-            }}
-            className=" w-full pb-28 text-center text-6xl tracking-tighter  text-white"
-          >
-            My proyects
-          </motion.h2>
           <div className="flex h-[500px] flex-col justify-around gap-10 pt-48">
             <motion.div
               ref={wrapperRef}
@@ -431,7 +417,7 @@ function Proyects() {
                     opacity: { ease: "linear" },
                     layout: { duration: 2 },
                   }}
-                  className=" flex flex-col items-center  justify-center bg-white  text-center duration-1000 "
+                  className=" flex flex-col items-center  justify-center bg-slate-100  text-center duration-1000 "
                 >
                   <span>toca para ver mas del proyecto</span>
                   <motion.img src={proyect1} className="h-24"></motion.img>
@@ -480,7 +466,7 @@ function Proyects() {
                       opacity: { easeInOut: "linear" },
                       layout: { duration: 2 },
                     }}
-                    className="absolute flex h-96 w-96 flex-col items-center justify-evenly  rounded-full bg-white duration-1000 "
+                    className="absolute flex h-96 w-96 flex-col items-center justify-evenly  rounded-full bg-slate-100 duration-1000 "
                   >
                     <img
                       src={proyect1}
@@ -532,7 +518,7 @@ function Proyects() {
                     opacity: { ease: "linear" },
                     layout: { duration: 2 },
                   }}
-                  className=" flex h-48 w-48 flex-col items-center justify-center rounded-3xl bg-white  text-center duration-1000 "
+                  className=" flex h-48 w-48 flex-col items-center justify-center rounded-3xl bg-slate-100  text-center duration-1000 "
                 >
                   {" "}
                   <span>toca para ver mas del proyecto</span>
@@ -587,7 +573,7 @@ function Proyects() {
                       opacity: { easeInOut: "linear" },
                       layout: { duration: 2 },
                     }}
-                    className="absolute flex h-96 w-96 flex-col items-center justify-evenly  rounded-full bg-white duration-1000 "
+                    className="absolute flex h-96 w-96 flex-col items-center justify-evenly  rounded-full bg-slate-100 duration-1000 "
                   >
                     <img
                       src={pokemon}
@@ -665,7 +651,7 @@ function Proyects() {
                     opacity: { ease: "linear" },
                     layout: { duration: 2 },
                   }}
-                  className=" flex h-48 w-48 flex-col items-center justify-center rounded-3xl bg-white  text-center duration-1000 "
+                  className=" flex h-48 w-48 flex-col items-center justify-center rounded-3xl bg-slate-100  text-center duration-1000 "
                 >
                   <span>toca para ver mas del proyecto</span>
                   <motion.img
@@ -689,7 +675,7 @@ function Proyects() {
                     opacity: { ease: "linear" },
                     layout: { duration: 2 },
                   }}
-                  className="child flex h-48 w-48 items-center justify-center rounded-3xl bg-white duration-1000 "
+                  className="child flex h-48 w-48 items-center justify-center rounded-3xl bg-slate-100 duration-1000 "
                 ></motion.div>
               )}
             </motion.div>
@@ -699,23 +685,6 @@ function Proyects() {
 
       {isMobile && (
         <div className="flex w-full flex-col">
-          <motion.h2
-            variants={{
-              hidden: { opacity: 0, scale: 0.5, x: "-40%" },
-              visible: { opacity: 1, scale: 1, x: 0 },
-            }}
-            viewport={{ once: false, amount: 0.5 }}
-            initial="hidden"
-            whileInView="visible"
-            transition={{
-              duration: 1.8,
-              delay: 0.2,
-              ease: [0, 0.71, 0.2, 1.01],
-            }}
-            className=" w-full pb-28 text-center text-6xl tracking-tighter  text-white"
-          >
-            My proyects
-          </motion.h2>
           <div className="mt-48 flex h-[400px] flex-col justify-around gap-20">
             <motion.div
               ref={wrapperRef}
@@ -738,7 +707,7 @@ function Proyects() {
                     opacity: { ease: "linear" },
                     layout: { duration: 2 },
                   }}
-                  className=" flex flex-col items-center  justify-center bg-white  text-center duration-1000 "
+                  className=" flex  flex-col items-center justify-center bg-slate-100  text-center shadow-2xl  shadow-black duration-1000 "
                 >
                   <span>toca para ver mas del proyecto</span>
                   <motion.img src={proyect1} className="h-24"></motion.img>
@@ -759,7 +728,7 @@ function Proyects() {
                       opacity: { easeInOut: "linear" },
                       layout: { duration: 2 },
                     }}
-                    className=" m-l-24 flex h-96 w-96 flex-col items-center justify-center rounded-full  duration-1000 "
+                    className=" m-l-24  flex h-96 w-96 flex-col items-center justify-center rounded-full shadow-2xl shadow-black  duration-1000 "
                   >
                     <motion.img
                       src={pet}
@@ -787,7 +756,7 @@ function Proyects() {
                       opacity: { easeInOut: "linear" },
                       layout: { duration: 2 },
                     }}
-                    className="absolute flex h-96 w-96 flex-col items-center justify-evenly  rounded-full bg-white duration-1000 "
+                    className=" absolute  flex h-96 w-96 flex-col items-center justify-evenly rounded-full bg-slate-100  shadow-2xl shadow-black duration-1000 "
                   >
                     <img
                       src={proyect1}
@@ -839,7 +808,7 @@ function Proyects() {
                     opacity: { ease: "linear" },
                     layout: { duration: 2 },
                   }}
-                  className=" flex h-48 w-48 flex-col items-center justify-center rounded-3xl bg-white  text-center duration-1000 "
+                  className=" flex  h-48 w-48 flex-col items-center justify-center rounded-3xl bg-slate-100 text-center shadow-2xl  shadow-black duration-1000 "
                 >
                   {" "}
                   <span>toca para ver mas del proyecto</span>
@@ -866,7 +835,7 @@ function Proyects() {
                       opacity: { easeInOut: "linear" },
                       layout: { duration: 2 },
                     }}
-                    className=" m-l-24 flex h-96 w-96 flex-col items-center justify-center rounded-full  duration-1000 "
+                    className=" m-l-24  flex h-96 w-96 flex-col items-center justify-center rounded-full shadow-2xl shadow-black  duration-1000 "
                   >
                     <motion.img
                       src={poke}
@@ -894,7 +863,7 @@ function Proyects() {
                       opacity: { easeInOut: "linear" },
                       layout: { duration: 2 },
                     }}
-                    className="absolute flex h-96 w-96 flex-col items-center justify-evenly  rounded-full bg-white duration-1000 "
+                    className=" absolute  flex h-96 w-96 flex-col items-center justify-evenly rounded-full bg-slate-100  shadow-2xl shadow-black duration-1000 "
                   >
                     <img
                       src={pokemon}
@@ -971,7 +940,7 @@ function Proyects() {
                     opacity: { ease: "linear" },
                     layout: { duration: 2 },
                   }}
-                  className=" flex h-48 w-48 flex-col items-center justify-center rounded-3xl bg-white  text-center duration-1000 "
+                  className=" flex  h-48 w-48 flex-col items-center justify-center rounded-3xl bg-slate-100 text-center shadow-2xl  shadow-black duration-1000 "
                 >
                   <span>toca para ver mas del proyecto</span>
                   <motion.img
@@ -996,7 +965,7 @@ function Proyects() {
                     opacity: { ease: "linear" },
                     layout: { duration: 2 },
                   }}
-                  className="child flex h-48 w-48 items-center justify-center rounded-3xl bg-white duration-1000 "
+                  className=" child  flex h-48 w-48 items-center justify-center rounded-3xl bg-slate-100 shadow-2xl shadow-black duration-1000 "
                 ></motion.div>
               )}
             </motion.div>
@@ -1006,23 +975,6 @@ function Proyects() {
 
       {isTablet && (
         <div className="flex w-full flex-col">
-          <motion.h2
-            variants={{
-              hidden: { opacity: 0, scale: 0.5, x: "-40%" },
-              visible: { opacity: 1, scale: 1, x: 0 },
-            }}
-            viewport={{ once: false, amount: 0.5 }}
-            initial="hidden"
-            whileInView="visible"
-            transition={{
-              duration: 1.8,
-              delay: 0.2,
-              ease: [0, 0.71, 0.2, 1.01],
-            }}
-            className=" w-full pb-28 text-center text-6xl tracking-tighter  text-white"
-          >
-            My proyects
-          </motion.h2>
           <div className="mt-48 flex h-[400px] flex-col justify-around gap-20">
             <motion.div
               ref={wrapperRef}
@@ -1045,7 +997,7 @@ function Proyects() {
                     opacity: { ease: "linear" },
                     layout: { duration: 2 },
                   }}
-                  className=" flex flex-col items-center  justify-center bg-white  text-center duration-1000 "
+                  className=" flex  flex-col items-center justify-center bg-slate-100  text-center shadow-2xl  shadow-black duration-1000 "
                 >
                   <span>toca para ver mas del proyecto</span>
                   <motion.img src={proyect1} className="h-24"></motion.img>
@@ -1066,7 +1018,7 @@ function Proyects() {
                       opacity: { easeInOut: "linear" },
                       layout: { duration: 2 },
                     }}
-                    className=" m-l-24 flex h-96 w-96 flex-col items-center justify-center rounded-full  duration-1000 "
+                    className=" m-l-24  flex h-96 w-96 flex-col items-center justify-center rounded-full shadow-2xl shadow-black  duration-1000 "
                   >
                     <motion.img
                       src={pet}
@@ -1094,7 +1046,7 @@ function Proyects() {
                       opacity: { easeInOut: "linear" },
                       layout: { duration: 2 },
                     }}
-                    className="absolute flex h-96 w-96 flex-col items-center justify-evenly  rounded-full bg-white duration-1000 "
+                    className=" absolute  flex h-96 w-96 flex-col items-center justify-evenly rounded-full bg-white  shadow-2xl shadow-black duration-1000 "
                   >
                     <img
                       src={proyect1}
@@ -1146,7 +1098,7 @@ function Proyects() {
                     opacity: { ease: "linear" },
                     layout: { duration: 2 },
                   }}
-                  className=" flex h-48 w-48 flex-col items-center justify-center rounded-3xl bg-white  text-center duration-1000 "
+                  className=" flex  h-48 w-48 flex-col items-center justify-center rounded-3xl bg-slate-100 text-center shadow-2xl shadow-black duration-1000 "
                 >
                   {" "}
                   <span>toca para ver mas del proyecto</span>
@@ -1173,7 +1125,7 @@ function Proyects() {
                       opacity: { easeInOut: "linear" },
                       layout: { duration: 2 },
                     }}
-                    className=" m-l-24 flex h-96 w-96 flex-col items-center justify-center rounded-full  duration-1000 "
+                    className=" m-l-24  flex h-96 w-96 flex-col items-center justify-center rounded-full shadow-2xl shadow-black  duration-1000 "
                   >
                     <motion.img
                       src={poke}
@@ -1201,7 +1153,7 @@ function Proyects() {
                       opacity: { easeInOut: "linear" },
                       layout: { duration: 2 },
                     }}
-                    className="absolute flex h-96 w-96 flex-col items-center justify-evenly  rounded-full bg-white duration-1000 "
+                    className=" absolute  flex h-96 w-96 flex-col items-center justify-evenly rounded-full bg-slate-100  shadow-2xl shadow-black duration-1000 "
                   >
                     <img
                       src={pokemon}
@@ -1279,7 +1231,7 @@ function Proyects() {
                     opacity: { ease: "linear" },
                     layout: { duration: 2 },
                   }}
-                  className=" flex h-48 w-48 flex-col items-center justify-center rounded-3xl bg-white  text-center duration-1000 "
+                  className=" z-50 flex h-48 w-48 flex-col items-center justify-center rounded-3xl bg-slate-100 text-center shadow-2xl  shadow-black duration-1000 "
                 >
                   <span>toca para ver mas del proyecto</span>
                   <motion.img
@@ -1304,7 +1256,7 @@ function Proyects() {
                     opacity: { ease: "linear" },
                     layout: { duration: 2 },
                   }}
-                  className="child flex h-48 w-48 items-center justify-center rounded-3xl bg-white duration-1000 "
+                  className="child z-50 flex  h-48 w-48 items-center justify-center rounded-3xl bg-slate-100 shadow-2xl shadow-black duration-1000 "
                 ></motion.div>
               )}
             </motion.div>
@@ -1314,23 +1266,6 @@ function Proyects() {
 
       {isDesktop && (
         <div className="flex flex-col ">
-          <motion.h2
-            variants={{
-              hidden: { opacity: 0, scale: 0.5, x: "-40%" },
-              visible: { opacity: 1, scale: 1, x: 0 },
-            }}
-            viewport={{ once: false, amount: 0.5 }}
-            initial="hidden"
-            whileInView="visible"
-            transition={{
-              duration: 1.8,
-              delay: 0.2,
-              ease: [0, 0.71, 0.2, 1.01],
-            }}
-            className=" w-full pb-28 text-center text-6xl tracking-tighter  text-white"
-          >
-            My proyects
-          </motion.h2>
           <div className="flex h-[400px] justify-around">
             <motion.div
               ref={wrapperRef}
@@ -1349,7 +1284,7 @@ function Proyects() {
                     opacity: { ease: "linear" },
                     layout: { duration: 2 },
                   }}
-                  className=" flex flex-col items-center  justify-center bg-white  text-center duration-1000 "
+                  className=" flex flex-col items-center  justify-center  bg-slate-100  text-center shadow-2xl  shadow-black duration-1000 "
                 >
                   <span>toca para ver mas del proyecto</span>
                   <motion.img src={proyect1} className="h-24"></motion.img>
@@ -1370,7 +1305,7 @@ function Proyects() {
                       opacity: { easeInOut: "linear" },
                       layout: { duration: 2 },
                     }}
-                    className=" flex h-96 w-96 flex-col items-center justify-center rounded-full  duration-1000 "
+                    className=" flex  h-96 w-96 flex-col items-center justify-center rounded-full shadow-2xl shadow-black  duration-1000 "
                   >
                     <motion.img
                       src={pet}
@@ -1398,7 +1333,7 @@ function Proyects() {
                       opacity: { easeInOut: "linear" },
                       layout: { duration: 2 },
                     }}
-                    className="absolute flex h-96 w-96 flex-col items-center justify-evenly  rounded-full bg-white duration-1000 "
+                    className="absolute  flex  h-96 w-96 flex-col items-center justify-evenly rounded-full bg-slate-100  shadow-2xl shadow-black duration-1000 "
                   >
                     <img
                       src={proyect1}
@@ -1450,7 +1385,7 @@ function Proyects() {
                       opacity: { ease: "linear" },
                       layout: { duration: 2 },
                     }}
-                    className=" flex h-48 w-48 flex-col items-center justify-center rounded-3xl bg-white  text-center duration-1000 "
+                    className=" flex  h-48  w-48 flex-col items-center justify-center rounded-3xl bg-slate-100 text-center shadow-2xl  shadow-black duration-1000 "
                   >
                     {" "}
                     <span>toca para ver mas del proyecto</span>
@@ -1478,7 +1413,7 @@ function Proyects() {
                       opacity: { easeInOut: "linear" },
                       layout: { duration: 2 },
                     }}
-                    className=" flex h-96 w-96 flex-col items-center justify-center rounded-full  duration-1000 "
+                    className="  flex  h-96 w-96 flex-col items-center justify-center rounded-full shadow-2xl shadow-black  duration-1000 "
                   >
                     <motion.img
                       src={poke}
@@ -1506,7 +1441,7 @@ function Proyects() {
                       opacity: { easeInOut: "linear" },
                       layout: { duration: 2 },
                     }}
-                    className="absolute flex h-96 w-96 flex-col items-center justify-evenly  rounded-full bg-white duration-1000 "
+                    className="absolute  flex  h-96 w-96 flex-col items-center justify-evenly rounded-full bg-slate-100  shadow-2xl shadow-black duration-1000 "
                   >
                     <img
                       src={pokemon}
@@ -1572,7 +1507,7 @@ function Proyects() {
               data-isopen={!isOpen2}
               initial={{ borderRadius: 50 }}
               onClick={() => setIsOpen2(!isOpen2)}
-              className="parent flex  items-center justify-center  "
+              className=" flex  items-center justify-center  "
             >
               {!isOpen2 && (
                 <motion.div
@@ -1584,7 +1519,7 @@ function Proyects() {
                     opacity: { ease: "linear" },
                     layout: { duration: 2 },
                   }}
-                  className=" flex h-48 w-48 flex-col items-center justify-center rounded-3xl bg-white  text-center duration-1000 "
+                  className=" flex h-48  w-48  flex-col items-center justify-center rounded-3xl bg-slate-100 text-center shadow-2xl  shadow-black duration-1000 "
                 >
                   <span>toca para ver mas del proyecto</span>
                   <motion.img
@@ -1604,7 +1539,7 @@ function Proyects() {
                     opacity: { ease: "linear" },
                     layout: { duration: 2 },
                   }}
-                  className="child flex h-48 w-48 items-center justify-center rounded-3xl bg-white duration-1000 "
+                  className="child  flex  h-48 w-48 items-center justify-center rounded-3xl bg-slate-100 shadow-2xl shadow-black duration-1000 "
                 ></motion.div>
               )}
             </motion.div>
@@ -1612,24 +1547,7 @@ function Proyects() {
         </div>
       )}
       {isLargeDesktop && (
-        <div className="flex flex-col ">
-          <motion.h2
-            variants={{
-              hidden: { opacity: 0, scale: 0.5, x: "-40%" },
-              visible: { opacity: 1, scale: 1, x: 0 },
-            }}
-            viewport={{ once: false, amount: 0.5 }}
-            initial="hidden"
-            whileInView="visible"
-            transition={{
-              duration: 1.8,
-              delay: 0.2,
-              ease: [0, 0.71, 0.2, 1.01],
-            }}
-            className=" w-full pb-28 text-center text-6xl tracking-tighter  text-white"
-          >
-            My proyects
-          </motion.h2>
+        <div className="flex flex-col  ">
           <div className="flex h-[400px] justify-around">
             <motion.div
               ref={wrapperRef}
@@ -1648,9 +1566,9 @@ function Proyects() {
                     layout: { duration: 2 },
                   }}
                   onClick={() => setIsOpen(!isOpen)}
-                  className="relative flex cursor-pointer flex-col items-center justify-center bg-white  text-center duration-1000 "
+                  className="relative  flex  cursor-pointer flex-col items-center justify-center bg-slate-100 text-center shadow-2xl  shadow-black duration-1000 "
                 >
-                  <span className=" absolute -top-20 tracking-widest text-white">
+                  <span className=" absolute -top-20 z-50 tracking-widest text-white">
                     toca para ver mas del proyecto
                   </span>
                   <motion.img src={proyect1} className="h-24"></motion.img>
@@ -1675,7 +1593,7 @@ function Proyects() {
                       opacity: { easeInOut: "linear" },
                       layout: { duration: 2 },
                     }}
-                    className=" flex h-96 w-96 cursor-pointer flex-col items-center justify-center rounded-full duration-1000 "
+                    className=" flex  h-96 w-96 cursor-pointer flex-col items-center justify-center rounded-full shadow-2xl shadow-black duration-1000 "
                   >
                     <motion.img
                       src={pet}
@@ -1703,7 +1621,7 @@ function Proyects() {
                       opacity: { easeInOut: "linear" },
                       layout: { duration: 2 },
                     }}
-                    className="absolute flex h-96 w-96 cursor-pointer flex-col items-center justify-evenly  rounded-full bg-white duration-1000 "
+                    className="absolute  z-50  flex h-96 w-96 cursor-pointer flex-col items-center justify-evenly rounded-full bg-slate-100  shadow-2xl shadow-black duration-1000 "
                   >
                     <img
                       src={proyect1}
@@ -1755,7 +1673,7 @@ function Proyects() {
                       opacity: { ease: "linear" },
                       layout: { duration: 2 },
                     }}
-                    className="relative flex h-48 w-48 cursor-pointer flex-col items-center justify-center rounded-3xl bg-white  text-center duration-1000 "
+                    className="relative  flex  h-48 w-48 cursor-pointer flex-col items-center justify-center rounded-3xl bg-slate-100 text-center shadow-2xl  shadow-black duration-1000 "
                   >
                     {" "}
                     <span className=" absolute -top-20 tracking-widest text-white">
@@ -1789,7 +1707,7 @@ function Proyects() {
                       opacity: { easeInOut: "linear" },
                       layout: { duration: 2 },
                     }}
-                    className=" flex h-96 w-96 cursor-pointer flex-col items-center justify-center rounded-full duration-1000 "
+                    className=" flex  h-96 w-96 cursor-pointer flex-col items-center justify-center rounded-full shadow-2xl shadow-black duration-1000 "
                   >
                     <motion.img
                       src={poke}
@@ -1817,7 +1735,7 @@ function Proyects() {
                       opacity: { easeInOut: "linear" },
                       layout: { duration: 2 },
                     }}
-                    className="absolute flex h-96 w-96 cursor-pointer flex-col items-center justify-evenly  rounded-full bg-white duration-1000 "
+                    className="absolute  z-50  flex h-96 w-96 cursor-pointer flex-col items-center justify-evenly rounded-full bg-slate-100  shadow-2xl shadow-black duration-1000 "
                   >
                     <img
                       src={pokemon}
@@ -1864,7 +1782,7 @@ function Proyects() {
                     opacity: { ease: "linear" },
                     layout: { duration: 2 },
                   }}
-                  className=" relative flex h-48 w-48 cursor-pointer flex-col items-center justify-center rounded-3xl bg-white  text-center duration-1000 "
+                  className=" relative flex h-48 w-48 cursor-pointer flex-col items-center justify-center rounded-3xl bg-slate-100 text-center shadow-2xl  shadow-black duration-1000 "
                 >
                   <span className=" absolute -top-20 tracking-widest text-white">
                     toca para ver mas del proyecto
@@ -1878,7 +1796,7 @@ function Proyects() {
                 </motion.div>
               )}
               {isOpen2 && (
-                <div className="relative flex flex-col">
+                <div className="relative flex  flex-col">
                   <motion.div
                     layout
                     initial={{
@@ -1896,7 +1814,7 @@ function Proyects() {
                       opacity: { easeInOut: "linear" },
                       layout: { duration: 2 },
                     }}
-                    className=" flex h-96 w-96 cursor-pointer flex-col items-center justify-center rounded-full duration-1000 "
+                    className=" flex  h-96 w-96 cursor-pointer flex-col items-center justify-center rounded-full shadow-2xl shadow-black duration-1000 "
                   >
                     <motion.img
                       src={pet}
@@ -1924,7 +1842,7 @@ function Proyects() {
                       opacity: { easeInOut: "linear" },
                       layout: { duration: 2 },
                     }}
-                    className="absolute flex h-96 w-96 cursor-pointer flex-col items-center justify-evenly  rounded-full bg-white duration-1000 "
+                    className="absolute  z-50  flex h-96 w-96 cursor-pointer flex-col items-center justify-evenly rounded-full bg-slate-100  shadow-2xl shadow-black duration-1000 "
                   >
                     <img
                       src={proyect1}

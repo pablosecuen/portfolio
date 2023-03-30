@@ -5,13 +5,15 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useMediaQuery } from "react-responsive";
 
-function NavBar() {
+function NavBar(props) {
+  const [language, setLanguage] = useState("en");
   const [showMenu, setShowMenu] = useState(false);
   const [scrollPosition, setScrollPosition] = useState(0);
   const [isMenuBackgroundWhite, setIsMenuBackgroundWhite] = useState(false);
   const toggleMenu = () => {
     setShowMenu(!showMenu);
   };
+
   const isMobile = useMediaQuery({ maxWidth: 700 });
 
   const isSCrolling = () => {
@@ -41,9 +43,26 @@ function NavBar() {
     };
   }, []);
 
-  const line1 = "Home";
-  const line2 = "Proyects";
-  const line3 = "Contact";
+  const line1 = language === "en" ? "Home" : "Inicio";
+  const line2 = language === "en" ? "Projects" : "Proyectos";
+  const line3 = language === "en" ? "Skills" : "Tecnologías";
+  const line4 = language === "en" ? "Contact" : "Contacto";
+
+  const scrollToHome = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  const scrollToProjects = () => {
+    window.scrollTo({ top: 900, behavior: "smooth" });
+  };
+
+  const scrollToSkills = () => {
+    window.scrollTo({ top: 1700, behavior: "smooth" });
+  };
+
+  const scrollToContact = () => {
+    window.scrollTo({ top: 3500, behavior: "smooth" });
+  };
 
   const sentence = {
     hidden: { opacity: 1 },
@@ -73,6 +92,17 @@ function NavBar() {
       opacity: 1,
       transition: {
         delay: 3.5,
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
+  const sentence3 = {
+    hidden: { opacity: 1 },
+    visible: {
+      opacity: 1,
+      transition: {
+        delay: 4.5,
         staggerChildren: 0.2,
       },
     },
@@ -137,29 +167,48 @@ function NavBar() {
                   animate={{ opacity: 1 }}
                   transition={{ duration: 1 }}
                 >
-                  <a href="#" class="nav-link">
-                    <h1 className="load-screen--message pb-4">Home</h1>
-                  </a>
+                  <h1
+                    onClick={scrollToHome}
+                    className="load-screen--message cursor-pointer pb-4"
+                  >
+                    {line1}
+                  </h1>
                 </motion.li>
                 <motion.li
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ duration: 1.5 }}
                 >
-                  <a href="#" class="nav-link">
-                    <h1 className="load-screen--message " class="p2">
-                      Proyects
-                    </h1>
-                  </a>
+                  <h1
+                    onClick={scrollToProjects}
+                    className="load-screen--message cursor-pointer"
+                  >
+                    {line2}
+                  </h1>
                 </motion.li>
                 <motion.li
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ duration: 2 }}
                 >
-                  <a href="#" class="nav-link">
-                    <h1 className="load-screen--message pt-4">Contact</h1>
-                  </a>
+                  <h1
+                    onClick={scrollToSkills}
+                    className="load-screen--message cursor-pointer pt-4"
+                  >
+                    {line3}
+                  </h1>
+                </motion.li>
+                <motion.li
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 2.5 }}
+                >
+                  <h1
+                    onClick={scrollToContact}
+                    className="load-screen--message cursor-pointer pt-4"
+                  >
+                    {line4}
+                  </h1>
                 </motion.li>
               </motion.ul>
             )}
@@ -171,67 +220,85 @@ function NavBar() {
               animate={{ opacity: 1 }}
               transition={{ duration: 3.0 }}
             >
-              <a href="#" class="nav-link">
-                <motion.h3
-                  className="load-screen--message"
-                  variants={sentence}
-                  initial="hidden"
-                  animate="visible"
-                >
-                  {line1.split("").map((char, index) => {
-                    return (
-                      <motion.span key={char + "-" + index} variants={letter}>
-                        {char}
-                      </motion.span>
-                    );
-                  })}
-                </motion.h3>
-              </a>
+              <motion.h3
+                className="load-screen--message cursor-pointer"
+                variants={sentence}
+                initial="hidden"
+                animate="visible"
+                onClick={scrollToHome}
+              >
+                {line1.split("").map((char, index) => {
+                  return (
+                    <motion.span key={char + "-" + index} variants={letter}>
+                      {char}
+                    </motion.span>
+                  );
+                })}
+              </motion.h3>
             </motion.li>
             <motion.li
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 2.0 }}
             >
-              <a href="#" class="nav-link">
-                <motion.h3
-                  className="load-screen--message"
-                  class="p2"
-                  variants={sentence1}
-                  initial="hidden"
-                  animate="visible"
-                >
-                  {line2.split("").map((char, index) => {
-                    return (
-                      <motion.span key={char + "-" + index} variants={letter}>
-                        {char}
-                      </motion.span>
-                    );
-                  })}
-                </motion.h3>
-              </a>
+              <motion.h3
+                className="load-screen--message cursor-pointer"
+                class="p2"
+                variants={sentence1}
+                initial="hidden"
+                animate="visible"
+                onClick={scrollToProjects}
+              >
+                {line2.split("").map((char, index) => {
+                  return (
+                    <motion.span key={char + "-" + index} variants={letter}>
+                      {char}
+                    </motion.span>
+                  );
+                })}
+              </motion.h3>
             </motion.li>
             <motion.li
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 1.0 }}
             >
-              <a href="#" class="nav-link">
-                <motion.h3
-                  className="load-screen--message"
-                  variants={sentence2}
-                  initial="hidden"
-                  animate="visible"
-                >
-                  {line3.split("").map((char, index) => {
-                    return (
-                      <motion.span key={char + "-" + index} variants={letter}>
-                        {char}
-                      </motion.span>
-                    );
-                  })}
-                </motion.h3>
-              </a>
+              <motion.h3
+                className="load-screen--message cursor-pointer"
+                variants={sentence2}
+                initial="hidden"
+                animate="visible"
+                onClick={scrollToSkills}
+              >
+                {line3.split("").map((char, index) => {
+                  return (
+                    <motion.span key={char + "-" + index} variants={letter}>
+                      {char}
+                    </motion.span>
+                  );
+                })}
+              </motion.h3>
+            </motion.li>
+            <motion.li
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 1.0 }}
+            >
+              <motion.h3
+                className="load-screen--message cursor-pointer"
+                variants={sentence3}
+                initial="hidden"
+                animate="visible"
+                onClick={scrollToContact}
+              >
+                {line4.split("").map((char, index) => {
+                  return (
+                    <motion.span key={char + "-" + index} variants={letter}>
+                      {char}
+                    </motion.span>
+                  );
+                })}
+              </motion.h3>
             </motion.li>
           </motion.ul>
         )}

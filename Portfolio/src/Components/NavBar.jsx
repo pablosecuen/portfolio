@@ -7,6 +7,8 @@ import { useMediaQuery } from "react-responsive";
 
 function NavBar() {
   const [showMenu, setShowMenu] = useState(false);
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const [isMenuBackgroundWhite, setIsMenuBackgroundWhite] = useState(false);
   const toggleMenu = () => {
     setShowMenu(!showMenu);
   };
@@ -19,6 +21,25 @@ function NavBar() {
     headerEl.classList.toggle("active", windowPosition);
   };
   window.addEventListener("scroll", isSCrolling);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentPosition = window.pageYOffset;
+      setScrollPosition(currentPosition);
+
+      if (currentPosition > 200) {
+        setIsMenuBackgroundWhite(true);
+      } else {
+        setIsMenuBackgroundWhite(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   const line1 = "Home";
   const line2 = "Proyects";
@@ -107,7 +128,9 @@ function NavBar() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.7 }}
-                className="absolute -right-10 flex flex-col p-10 "
+                className={`duration-800 absolute -right-10 top-[68px] flex flex-col rounded-b-xl p-10 ${
+                  isMenuBackgroundWhite ? "bg-white" : ""
+                }`}
               >
                 <motion.li
                   initial={{ opacity: 0 }}

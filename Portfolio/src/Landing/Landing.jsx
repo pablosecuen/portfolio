@@ -4,6 +4,7 @@ import LandingImage from "./LandingImage";
 import Proyects from "./Proyects";
 import Technologies from "../Components/Technologies";
 import About from "../Components/About";
+import bg from "../assets/img/greybg.png";
 
 function Landing() {
   const isXSmallMobile = useMediaQuery("(max-width: 370px)");
@@ -18,25 +19,12 @@ function Landing() {
   const isLargeDesktop = useMediaQuery("(min-width: 1280px)");
 
   return (
-    <div className=" -z-50 h-full overflow-x-hidden bg-primario">
-      <LandingImage />
-      {/* esta es la parte con fondo verde */}
-      <div className="h-[5200px] bg-gradient-to-b from-primario via-green-600 to-slate-300 xsm:h-[10000px] sm:h-[10000px] md:h-[10000px] lg:h-[10000px] xl:h-[5700px] 2xl:h-[3300px]">
-        {/* Cards de proyectos */}
-        <About></About>
-        <Proyects />
-
-        {/* Cards de redes sociales */}
-        <div className="relative   ">
-          <h3 className="absolute top-[550px] w-full p-4 text-center text-lg  text-white   md:text-4xl lg:text-6xl">
-            {" "}
-            My Skills
-          </h3>
-          <Technologies />
-        </div>
-        {/* Cards de tecnologias */}
-        <div></div>
-      </div>
+    <div className=" -z-50 h-full overflow-x-hidden bg-bggrey bg-cover bg-center">
+      <About></About>
+      {/* Cards de proyectos */}
+      <Proyects />
+      {/* Cards de redes sociales */}
+      <Technologies />
     </div>
   );
 }

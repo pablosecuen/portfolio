@@ -49,7 +49,7 @@ function LandingImage() {
             }}
             animate={{ height: 200, width: 200 }}
             transition={{ duration: 2, ease: "easeInOut", overflow: "hidden" }}
-            className="primary-box absolute z-50 h-48 w-48 flex-col overflow-hidden rounded-r-3xl rounded-b-3xl bg-white p-4 align-middle font-serif text-sm font-bold"
+            className="primary-box absolute z-50 h-48 w-48 flex-col overflow-hidden rounded-r-3xl rounded-b-3xl bg-white p-4 align-middle font-serif text-sm font-bold shadow-black drop-shadow-2xl"
             style={{ opacity: 1 }}
             onClick={handleClick}
           >
@@ -132,7 +132,7 @@ function LandingImage() {
           />
         </div>
         {/* montañas bajo el sol 1*/}
-        <div className="absolute bottom-0 right-24 z-10 w-full  overflow-hidden xl:-left-20  xl:bottom-0">
+        <div className=" absolute bottom-0 right-24 z-10 w-full  overflow-hidden xl:-left-20  xl:bottom-0">
           <img src={seis} alt="Vite logo" />
         </div>
         {/* montañas bajo el sol 2*/}

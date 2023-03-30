@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+const plugin = require("tailwindcss/plugin");
 const defaultTheme = require("tailwindcss/defaultTheme");
 
 module.exports = {
@@ -34,6 +35,23 @@ module.exports = {
         "glow-orange": "0 0 10px 2px rgba(255, 165, 0, 0.5)",
         "glow-lightblue": "0 0 10px 2px rgba(173, 216, 230, 0.5)",
       },
+      textShadow: {
+        sm: "1px 1px 2px var(--tw-shadow-color)",
+        DEFAULT: "2px 2px 2px var(--tw-shadow-color)",
+        md: "4px 4px 5px var(--tw-shadow-color)",
+        lg: "5px 5px 8px var(--tw-shadow-color)",
+        xl: "12px 12px 24px var(--tw-shadow-color)",
+        "2xl": "20px 20px 40px var(--tw-shadow-color)",
+      },
+      textBlur: {
+        sm: "0 1px 2px var(--tw-shadow-color)",
+        DEFAULT: "0 2px 4px var(--tw-shadow-color)",
+        "sm-blur": "0 1px 2px 1px var(--tw-shadow-color)",
+        "md-blur": "0 4px 8px 2px var(--tw-shadow-color)",
+        "lg-blur": "0 8px 16px 2px var(--tw-shadow-color)",
+        "xl-blur": "0 12px 24px 4px var(--tw-shadow-color)",
+        "2xl-blur": "0 20px 40px 6px var(--tw-shadow-color)",
+      },
       maskImage: {
         custom: "polygon(0 0, 100% 0, 92% 89%, 51% 100%, 8% 90%)",
       },
@@ -46,6 +64,7 @@ module.exports = {
       },
       backgroundImage: {
         fondo: "url('./assets/1x/2x/fondo.png')",
+        bggrey: "url('./assets/img/greybg.png')",
       },
     },
   },
@@ -54,5 +73,16 @@ module.exports = {
       boxShadow: ["hover"],
     },
   },
-  plugins: [],
+  plugins: [
+    plugin(function ({ matchUtilities, theme }) {
+      matchUtilities(
+        {
+          "text-shadow": (value) => ({
+            textShadow: value,
+          }),
+        },
+        { values: theme("textShadow") }
+      );
+    }),
+  ],
 };

@@ -78,7 +78,7 @@ function Proyects() {
   };
 
   return (
-    <div className="relative  h-96 w-full">
+    <div className="relative mt-96 w-full lg:mt-64">
       <motion.h2
         variants={{
           hidden: { opacity: 0, scale: 0.5, x: "-40%" },
@@ -92,13 +92,13 @@ function Proyects() {
           delay: 0.2,
           ease: [0, 0.71, 0.2, 1.01],
         }}
-        className=" mb-40  w-full cursor-pointer p-4 text-center text-6xl tracking-tighter text-white  "
+        className=" -mt-96 mb-48 w-full cursor-pointer p-4 text-center text-2xl  -tracking-widest text-white shadow-black text-shadow-md xsm:text-xl lg:-mt-48 lg:mb-0 lg:text-6xl   "
       >
         My proyects
       </motion.h2>
       {isXSmallMobile && (
         <div className="flex w-full  flex-col">
-          <div className="flex h-[500px] flex-col justify-around gap-10 pt-48">
+          <div className="flex h-[500px] flex-col justify-around gap-10 pt-48 ">
             <motion.div
               ref={wrapperRef}
               layout
@@ -120,9 +120,9 @@ function Proyects() {
                     opacity: { ease: "linear" },
                     layout: { duration: 2 },
                   }}
-                  className=" flex  flex-col items-center justify-center bg-slate-100 text-center shadow-2xl   shadow-black duration-1000 "
+                  className="relative mb-20 flex flex-col items-center justify-center bg-slate-100 text-center shadow-2xl   shadow-black duration-1000 "
                 >
-                  <motion.span className="">
+                  <motion.span className="absolute -top-12 text-white text-shadow-sm ">
                     toca para ver mas del proyecto
                   </motion.span>
                   <motion.img src={proyect1} className="h-24"></motion.img>
@@ -171,7 +171,7 @@ function Proyects() {
                       opacity: { easeInOut: "linear" },
                       layout: { duration: 2 },
                     }}
-                    className=" absolute  flex h-96 w-96 flex-col items-center justify-evenly rounded-full bg-slate-100  shadow-2xl shadow-black duration-1000 "
+                    className=" absolute z-50 flex h-96 w-96 flex-col items-center justify-evenly rounded-full bg-slate-100  shadow-2xl shadow-black duration-1000 "
                   >
                     <img
                       src={proyect1}
@@ -227,10 +227,12 @@ function Proyects() {
                     opacity: { ease: "linear" },
                     layout: { duration: 2 },
                   }}
-                  className=" flex  h-48 w-48 flex-col items-center justify-center rounded-3xl bg-slate-100 text-center shadow-2xl  shadow-black duration-1000 "
+                  className="relative mb-20 flex h-48 w-48 flex-col items-center justify-center rounded-3xl bg-slate-100 text-center shadow-2xl  shadow-black duration-1000 "
                 >
                   {" "}
-                  <span>toca para ver mas del proyecto</span>
+                  <span className=" absolute -top-12 text-white text-shadow-sm">
+                    toca para ver mas del proyecto
+                  </span>
                   <motion.img
                     src={pokemon}
                     className="h-20"
@@ -283,7 +285,7 @@ function Proyects() {
                       opacity: { easeInOut: "linear" },
                       layout: { duration: 2 },
                     }}
-                    className=" absolute  flex h-96 w-96 flex-col items-center justify-evenly rounded-full bg-slate-100  shadow-2xl shadow-black duration-1000 "
+                    className=" absolute z-50 flex h-96 w-96 flex-col items-center justify-evenly rounded-full bg-slate-100  shadow-2xl shadow-black duration-1000 "
                   >
                     <img
                       src={pokemon}
@@ -293,52 +295,22 @@ function Proyects() {
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
                       transition={{ duration: 2 }}
-                      className="overflow-scroll p-6 text-start text-xs"
+                      className=" p-6 text-start text-xs"
                     >
                       {" "}
-                      This project has been developed using technologies such as
-                      React, Redux, Node, and Sequelize. The main idea of the
-                      application is to view different Pokémon using the
-                      external pokeapi API, and from there, carry out different
-                      actions such as searching, filtering, and sorting them. On
-                      the main page of the application, you can find a search
-                      input to find Pokémon by name, as well as an area where
-                      you will see the list of them. Upon starting, the
-                      application will load the first results obtained from the
-                      GET /pokemons route and show the image, name, and types of
-                      each one. You will also find buttons and options to filter
-                      by Pokémon type and by existing or created by us Pokémon,
-                      and to sort both alphabetically and by attack in ascending
-                      and descending order. In addition, pagination has been
-                      included to search and display the next Pokémon, 12 per
-                      page. On the Pokémon detail route, you can find the same
-                      fields shown in the main route for each Pokémon, such as
-                      the image, name, and types. In addition, the Pokémon
-                      number (id), statistics (life, attack, defense, speed),
-                      height, and weight are included. On the creation route, a
-                      controlled form with JavaScript has been included
-                      containing the fields mentioned in the Pokémon detail
-                      route. The possibility of selecting/adding more than one
-                      Pokémon type has also been included, as well as a
-                      button/option to create a new Pokémon. The creation form
-                      has been validated with JavaScript and not just with HTML
-                      validations, so the necessary validations have been added
-                      to ensure correct Pokémon creation, such as the Pokémon
-                      name not being able to contain numeric characters or the
-                      height cannot be greater than a certain value. In
-                      addition, as part of the project's extras, a section has
-                      been included to play the Kanto Ultimate Pokémon game
-                      within the browser in a fully functional manner. This app
-                      was not designed to be responsive using media queries due
-                      to the limited development time, as it was completed
-                      within a one-week sprint. In summary, this Pokémon
-                      application has been developed with the aim of putting
-                      into practice the knowledge acquired in the course,
-                      learning and using technologies such as React, Redux,
-                      Node, and Sequelize. It offers multiple functionalities to
-                      search, filter, sort, and create Pokémon, as well as the
-                      possibility of playing the Kanto Ultimate Pokémon game. We
-                      hope you enjoy this app.
+                      This project uses React, Redux, Node, and Sequelize to
+                      view and interact with Pokémon data from the pokeapi API.
+                      The main page features a search input and list of Pokémon,
+                      which can be filtered and sorted by type and attack.
+                      Pagination is included to display 12 Pokémon per page. The
+                      Pokémon detail page includes stats and additional
+                      information, and a controlled form is available for
+                      creating new Pokémon. The creation form has been validated
+                      to ensure proper data entry. The app also includes a
+                      playable Kanto Ultimate Pokémon game. The app is not
+                      responsive due to limited development time. Overall, this
+                      project serves as a way to practice and apply knowledge of
+                      various technologies.
                     </motion.span>
                   </motion.div>
                 </div>
@@ -361,9 +333,11 @@ function Proyects() {
                     opacity: { ease: "linear" },
                     layout: { duration: 2 },
                   }}
-                  className=" flex  h-48 w-48 flex-col items-center justify-center rounded-3xl bg-slate-100 text-center shadow-2xl  shadow-black duration-1000 "
+                  className="relative flex  h-48 w-48 flex-col items-center justify-center rounded-3xl bg-slate-100 text-center shadow-2xl  shadow-black duration-1000 "
                 >
-                  <span>toca para ver mas del proyecto</span>
+                  <span className="absolute -top-12 text-white text-shadow-sm">
+                    toca para ver mas del proyecto
+                  </span>
                   <motion.img
                     src={rick}
                     className="h-24"
@@ -385,7 +359,7 @@ function Proyects() {
                     opacity: { ease: "linear" },
                     layout: { duration: 2 },
                   }}
-                  className=" child  flex h-48 w-48 items-center justify-center rounded-3xl bg-white shadow-2xl shadow-black duration-1000 "
+                  className=" child z-50 mb-40 flex h-48 w-48 items-center justify-center rounded-3xl bg-white shadow-2xl shadow-black duration-1000 "
                 ></motion.div>
               )}
             </motion.div>
@@ -419,7 +393,9 @@ function Proyects() {
                   }}
                   className=" flex flex-col items-center  justify-center bg-slate-100  text-center duration-1000 "
                 >
-                  <span>toca para ver mas del proyecto</span>
+                  <span className=" shadow-black    text-shadow-md">
+                    toca para ver mas del proyecto
+                  </span>
                   <motion.img src={proyect1} className="h-24"></motion.img>
                 </motion.div>
               )}
@@ -521,7 +497,9 @@ function Proyects() {
                   className=" flex h-48 w-48 flex-col items-center justify-center rounded-3xl bg-slate-100  text-center duration-1000 "
                 >
                   {" "}
-                  <span>toca para ver mas del proyecto</span>
+                  <span className=" shadow-black    text-shadow-md">
+                    toca para ver mas del proyecto
+                  </span>
                   <motion.img
                     src={pokemon}
                     className="h-20"
@@ -583,52 +561,22 @@ function Proyects() {
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
                       transition={{ duration: 2 }}
-                      className="overflow-scroll p-6 text-start text-xs"
+                      className=" p-6 text-start text-xs"
                     >
                       {" "}
-                      This project has been developed using technologies such as
-                      React, Redux, Node, and Sequelize. The main idea of the
-                      application is to view different Pokémon using the
-                      external pokeapi API, and from there, carry out different
-                      actions such as searching, filtering, and sorting them. On
-                      the main page of the application, you can find a search
-                      input to find Pokémon by name, as well as an area where
-                      you will see the list of them. Upon starting, the
-                      application will load the first results obtained from the
-                      GET /pokemons route and show the image, name, and types of
-                      each one. You will also find buttons and options to filter
-                      by Pokémon type and by existing or created by us Pokémon,
-                      and to sort both alphabetically and by attack in ascending
-                      and descending order. In addition, pagination has been
-                      included to search and display the next Pokémon, 12 per
-                      page. On the Pokémon detail route, you can find the same
-                      fields shown in the main route for each Pokémon, such as
-                      the image, name, and types. In addition, the Pokémon
-                      number (id), statistics (life, attack, defense, speed),
-                      height, and weight are included. On the creation route, a
-                      controlled form with JavaScript has been included
-                      containing the fields mentioned in the Pokémon detail
-                      route. The possibility of selecting/adding more than one
-                      Pokémon type has also been included, as well as a
-                      button/option to create a new Pokémon. The creation form
-                      has been validated with JavaScript and not just with HTML
-                      validations, so the necessary validations have been added
-                      to ensure correct Pokémon creation, such as the Pokémon
-                      name not being able to contain numeric characters or the
-                      height cannot be greater than a certain value. In
-                      addition, as part of the project's extras, a section has
-                      been included to play the Kanto Ultimate Pokémon game
-                      within the browser in a fully functional manner. This app
-                      was not designed to be responsive using media queries due
-                      to the limited development time, as it was completed
-                      within a one-week sprint. In summary, this Pokémon
-                      application has been developed with the aim of putting
-                      into practice the knowledge acquired in the course,
-                      learning and using technologies such as React, Redux,
-                      Node, and Sequelize. It offers multiple functionalities to
-                      search, filter, sort, and create Pokémon, as well as the
-                      possibility of playing the Kanto Ultimate Pokémon game. We
-                      hope you enjoy this app.
+                      This project uses React, Redux, Node, and Sequelize to
+                      view and interact with Pokémon data from the pokeapi API.
+                      The main page features a search input and list of Pokémon,
+                      which can be filtered and sorted by type and attack.
+                      Pagination is included to display 12 Pokémon per page. The
+                      Pokémon detail page includes stats and additional
+                      information, and a controlled form is available for
+                      creating new Pokémon. The creation form has been validated
+                      to ensure proper data entry. The app also includes a
+                      playable Kanto Ultimate Pokémon game. The app is not
+                      responsive due to limited development time. Overall, this
+                      project serves as a way to practice and apply knowledge of
+                      various technologies.
                     </motion.span>
                   </motion.div>
                 </div>
@@ -653,7 +601,9 @@ function Proyects() {
                   }}
                   className=" flex h-48 w-48 flex-col items-center justify-center rounded-3xl bg-slate-100  text-center duration-1000 "
                 >
-                  <span>toca para ver mas del proyecto</span>
+                  <span className=" shadow-black    text-shadow-md">
+                    toca para ver mas del proyecto
+                  </span>
                   <motion.img
                     src={rick}
                     className="h-24"
@@ -709,7 +659,9 @@ function Proyects() {
                   }}
                   className=" flex  flex-col items-center justify-center bg-slate-100  text-center shadow-2xl  shadow-black duration-1000 "
                 >
-                  <span>toca para ver mas del proyecto</span>
+                  <span className=" shadow-black    text-shadow-md">
+                    toca para ver mas del proyecto
+                  </span>
                   <motion.img src={proyect1} className="h-24"></motion.img>
                 </motion.div>
               )}
@@ -811,7 +763,9 @@ function Proyects() {
                   className=" flex  h-48 w-48 flex-col items-center justify-center rounded-3xl bg-slate-100 text-center shadow-2xl  shadow-black duration-1000 "
                 >
                   {" "}
-                  <span>toca para ver mas del proyecto</span>
+                  <span className=" shadow-black    text-shadow-md">
+                    toca para ver mas del proyecto
+                  </span>
                   <motion.img
                     src={pokemon}
                     className="h-20"
@@ -873,51 +827,21 @@ function Proyects() {
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
                       transition={{ duration: 2 }}
-                      className="overflow-scroll p-6 text-center text-xs"
+                      className=" p-6 text-center text-xs"
                     >
-                      This project has been developed using technologies such as
-                      React, Redux, Node, and Sequelize. The main idea of the
-                      application is to view different Pokémon using the
-                      external pokeapi API, and from there, carry out different
-                      actions such as searching, filtering, and sorting them. On
-                      the main page of the application, you can find a search
-                      input to find Pokémon by name, as well as an area where
-                      you will see the list of them. Upon starting, the
-                      application will load the first results obtained from the
-                      GET /pokemons route and show the image, name, and types of
-                      each one. You will also find buttons and options to filter
-                      by Pokémon type and by existing or created by us Pokémon,
-                      and to sort both alphabetically and by attack in ascending
-                      and descending order. In addition, pagination has been
-                      included to search and display the next Pokémon, 12 per
-                      page. On the Pokémon detail route, you can find the same
-                      fields shown in the main route for each Pokémon, such as
-                      the image, name, and types. In addition, the Pokémon
-                      number (id), statistics (life, attack, defense, speed),
-                      height, and weight are included. On the creation route, a
-                      controlled form with JavaScript has been included
-                      containing the fields mentioned in the Pokémon detail
-                      route. The possibility of selecting/adding more than one
-                      Pokémon type has also been included, as well as a
-                      button/option to create a new Pokémon. The creation form
-                      has been validated with JavaScript and not just with HTML
-                      validations, so the necessary validations have been added
-                      to ensure correct Pokémon creation, such as the Pokémon
-                      name not being able to contain numeric characters or the
-                      height cannot be greater than a certain value. In
-                      addition, as part of the project's extras, a section has
-                      been included to play the Kanto Ultimate Pokémon game
-                      within the browser in a fully functional manner. This app
-                      was not designed to be responsive using media queries due
-                      to the limited development time, as it was completed
-                      within a one-week sprint. In summary, this Pokémon
-                      application has been developed with the aim of putting
-                      into practice the knowledge acquired in the course,
-                      learning and using technologies such as React, Redux,
-                      Node, and Sequelize. It offers multiple functionalities to
-                      search, filter, sort, and create Pokémon, as well as the
-                      possibility of playing the Kanto Ultimate Pokémon game. We
-                      hope you enjoy this app.
+                      This project uses React, Redux, Node, and Sequelize to
+                      view and interact with Pokémon data from the pokeapi API.
+                      The main page features a search input and list of Pokémon,
+                      which can be filtered and sorted by type and attack.
+                      Pagination is included to display 12 Pokémon per page. The
+                      Pokémon detail page includes stats and additional
+                      information, and a controlled form is available for
+                      creating new Pokémon. The creation form has been validated
+                      to ensure proper data entry. The app also includes a
+                      playable Kanto Ultimate Pokémon game. The app is not
+                      responsive due to limited development time. Overall, this
+                      project serves as a way to practice and apply knowledge of
+                      various technologies.
                     </motion.span>
                   </motion.div>
                 </div>
@@ -940,9 +864,11 @@ function Proyects() {
                     opacity: { ease: "linear" },
                     layout: { duration: 2 },
                   }}
-                  className=" flex  h-48 w-48 flex-col items-center justify-center rounded-3xl bg-slate-100 text-center shadow-2xl  shadow-black duration-1000 "
+                  className="relative flex  h-48 w-48 flex-col items-center justify-center rounded-3xl bg-slate-100 text-center shadow-2xl  shadow-black duration-1000 "
                 >
-                  <span>toca para ver mas del proyecto</span>
+                  <span className="absolute -top-20 tracking-widest text-white shadow-black text-shadow-sm">
+                    toca para ver mas del proyecto
+                  </span>
                   <motion.img
                     src={rick}
                     className="h-24"
@@ -997,9 +923,11 @@ function Proyects() {
                     opacity: { ease: "linear" },
                     layout: { duration: 2 },
                   }}
-                  className=" flex  flex-col items-center justify-center bg-slate-100  text-center shadow-2xl  shadow-black duration-1000 "
+                  className="relative flex  flex-col items-center justify-center bg-slate-100  text-center shadow-2xl  shadow-black duration-1000 "
                 >
-                  <span>toca para ver mas del proyecto</span>
+                  <span className="absolute -top-20 tracking-widest text-white shadow-black text-shadow-sm">
+                    toca para ver mas del proyecto
+                  </span>
                   <motion.img src={proyect1} className="h-24"></motion.img>
                 </motion.div>
               )}
@@ -1098,10 +1026,12 @@ function Proyects() {
                     opacity: { ease: "linear" },
                     layout: { duration: 2 },
                   }}
-                  className=" flex  h-48 w-48 flex-col items-center justify-center rounded-3xl bg-slate-100 text-center shadow-2xl shadow-black duration-1000 "
+                  className="relative flex  h-48 w-48 flex-col items-center justify-center rounded-3xl bg-slate-100 text-center shadow-2xl shadow-black duration-1000 "
                 >
                   {" "}
-                  <span>toca para ver mas del proyecto</span>
+                  <span className="absolute -top-20 tracking-widest text-white shadow-black text-shadow-sm">
+                    toca para ver mas del proyecto
+                  </span>
                   <motion.img
                     src={pokemon}
                     className="h-20"
@@ -1163,52 +1093,22 @@ function Proyects() {
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
                       transition={{ duration: 2 }}
-                      className="overflow-scroll p-6 text-start text-xs"
+                      className=" p-6 text-start text-xs"
                     >
                       {" "}
-                      This project has been developed using technologies such as
-                      React, Redux, Node, and Sequelize. The main idea of the
-                      application is to view different Pokémon using the
-                      external pokeapi API, and from there, carry out different
-                      actions such as searching, filtering, and sorting them. On
-                      the main page of the application, you can find a search
-                      input to find Pokémon by name, as well as an area where
-                      you will see the list of them. Upon starting, the
-                      application will load the first results obtained from the
-                      GET /pokemons route and show the image, name, and types of
-                      each one. You will also find buttons and options to filter
-                      by Pokémon type and by existing or created by us Pokémon,
-                      and to sort both alphabetically and by attack in ascending
-                      and descending order. In addition, pagination has been
-                      included to search and display the next Pokémon, 12 per
-                      page. On the Pokémon detail route, you can find the same
-                      fields shown in the main route for each Pokémon, such as
-                      the image, name, and types. In addition, the Pokémon
-                      number (id), statistics (life, attack, defense, speed),
-                      height, and weight are included. On the creation route, a
-                      controlled form with JavaScript has been included
-                      containing the fields mentioned in the Pokémon detail
-                      route. The possibility of selecting/adding more than one
-                      Pokémon type has also been included, as well as a
-                      button/option to create a new Pokémon. The creation form
-                      has been validated with JavaScript and not just with HTML
-                      validations, so the necessary validations have been added
-                      to ensure correct Pokémon creation, such as the Pokémon
-                      name not being able to contain numeric characters or the
-                      height cannot be greater than a certain value. In
-                      addition, as part of the project's extras, a section has
-                      been included to play the Kanto Ultimate Pokémon game
-                      within the browser in a fully functional manner. This app
-                      was not designed to be responsive using media queries due
-                      to the limited development time, as it was completed
-                      within a one-week sprint. In summary, this Pokémon
-                      application has been developed with the aim of putting
-                      into practice the knowledge acquired in the course,
-                      learning and using technologies such as React, Redux,
-                      Node, and Sequelize. It offers multiple functionalities to
-                      search, filter, sort, and create Pokémon, as well as the
-                      possibility of playing the Kanto Ultimate Pokémon game. We
-                      hope you enjoy this app.{" "}
+                      This project uses React, Redux, Node, and Sequelize to
+                      view and interact with Pokémon data from the pokeapi API.
+                      The main page features a search input and list of Pokémon,
+                      which can be filtered and sorted by type and attack.
+                      Pagination is included to display 12 Pokémon per page. The
+                      Pokémon detail page includes stats and additional
+                      information, and a controlled form is available for
+                      creating new Pokémon. The creation form has been validated
+                      to ensure proper data entry. The app also includes a
+                      playable Kanto Ultimate Pokémon game. The app is not
+                      responsive due to limited development time. Overall, this
+                      project serves as a way to practice and apply knowledge of
+                      various technologies.{" "}
                     </motion.span>
                   </motion.div>
                 </div>
@@ -1231,9 +1131,11 @@ function Proyects() {
                     opacity: { ease: "linear" },
                     layout: { duration: 2 },
                   }}
-                  className=" z-50 flex h-48 w-48 flex-col items-center justify-center rounded-3xl bg-slate-100 text-center shadow-2xl  shadow-black duration-1000 "
+                  className="relative z-50 flex h-48 w-48 flex-col items-center justify-center rounded-3xl bg-slate-100 text-center shadow-2xl  shadow-black duration-1000 "
                 >
-                  <span>toca para ver mas del proyecto</span>
+                  <span className="absolute -top-20 tracking-widest text-white shadow-black text-shadow-sm">
+                    toca para ver mas del proyecto
+                  </span>
                   <motion.img
                     src={rick}
                     className="h-24"
@@ -1284,9 +1186,11 @@ function Proyects() {
                     opacity: { ease: "linear" },
                     layout: { duration: 2 },
                   }}
-                  className=" flex flex-col items-center  justify-center  bg-slate-100  text-center shadow-2xl  shadow-black duration-1000 "
+                  className="relative flex flex-col items-center  justify-center  bg-slate-100  text-center shadow-2xl  shadow-black duration-1000 "
                 >
-                  <span>toca para ver mas del proyecto</span>
+                  <span className="absolute -top-20 text-white shadow-black   text-shadow-md">
+                    toca para ver mas del proyecto
+                  </span>
                   <motion.img src={proyect1} className="h-24"></motion.img>
                 </motion.div>
               )}
@@ -1385,10 +1289,12 @@ function Proyects() {
                       opacity: { ease: "linear" },
                       layout: { duration: 2 },
                     }}
-                    className=" flex  h-48  w-48 flex-col items-center justify-center rounded-3xl bg-slate-100 text-center shadow-2xl  shadow-black duration-1000 "
+                    className="relative flex  h-48  w-48 flex-col items-center justify-center rounded-3xl bg-slate-100 text-center shadow-2xl  shadow-black duration-1000 "
                   >
                     {" "}
-                    <span>toca para ver mas del proyecto</span>
+                    <span className="absolute -top-20 text-white shadow-black   text-shadow-md">
+                      toca para ver mas del proyecto
+                    </span>
                     <motion.img
                       src={pokemon}
                       className="h-20"
@@ -1451,52 +1357,22 @@ function Proyects() {
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
                       transition={{ duration: 2 }}
-                      className="overflow-scroll p-6 text-start text-xs"
+                      className=" p-6 text-start text-xs"
                     >
                       {" "}
-                      This project has been developed using technologies such as
-                      React, Redux, Node, and Sequelize. The main idea of the
-                      application is to view different Pokémon using the
-                      external pokeapi API, and from there, carry out different
-                      actions such as searching, filtering, and sorting them. On
-                      the main page of the application, you can find a search
-                      input to find Pokémon by name, as well as an area where
-                      you will see the list of them. Upon starting, the
-                      application will load the first results obtained from the
-                      GET /pokemons route and show the image, name, and types of
-                      each one. You will also find buttons and options to filter
-                      by Pokémon type and by existing or created by us Pokémon,
-                      and to sort both alphabetically and by attack in ascending
-                      and descending order. In addition, pagination has been
-                      included to search and display the next Pokémon, 12 per
-                      page. On the Pokémon detail route, you can find the same
-                      fields shown in the main route for each Pokémon, such as
-                      the image, name, and types. In addition, the Pokémon
-                      number (id), statistics (life, attack, defense, speed),
-                      height, and weight are included. On the creation route, a
-                      controlled form with JavaScript has been included
-                      containing the fields mentioned in the Pokémon detail
-                      route. The possibility of selecting/adding more than one
-                      Pokémon type has also been included, as well as a
-                      button/option to create a new Pokémon. The creation form
-                      has been validated with JavaScript and not just with HTML
-                      validations, so the necessary validations have been added
-                      to ensure correct Pokémon creation, such as the Pokémon
-                      name not being able to contain numeric characters or the
-                      height cannot be greater than a certain value. In
-                      addition, as part of the project's extras, a section has
-                      been included to play the Kanto Ultimate Pokémon game
-                      within the browser in a fully functional manner. This app
-                      was not designed to be responsive using media queries due
-                      to the limited development time, as it was completed
-                      within a one-week sprint. In summary, this Pokémon
-                      application has been developed with the aim of putting
-                      into practice the knowledge acquired in the course,
-                      learning and using technologies such as React, Redux,
-                      Node, and Sequelize. It offers multiple functionalities to
-                      search, filter, sort, and create Pokémon, as well as the
-                      possibility of playing the Kanto Ultimate Pokémon game. We
-                      hope you enjoy this app.
+                      This project uses React, Redux, Node, and Sequelize to
+                      view and interact with Pokémon data from the pokeapi API.
+                      The main page features a search input and list of Pokémon,
+                      which can be filtered and sorted by type and attack.
+                      Pagination is included to display 12 Pokémon per page. The
+                      Pokémon detail page includes stats and additional
+                      information, and a controlled form is available for
+                      creating new Pokémon. The creation form has been validated
+                      to ensure proper data entry. The app also includes a
+                      playable Kanto Ultimate Pokémon game. The app is not
+                      responsive due to limited development time. Overall, this
+                      project serves as a way to practice and apply knowledge of
+                      various technologies.
                     </motion.span>
                   </motion.div>
                 </div>
@@ -1519,9 +1395,11 @@ function Proyects() {
                     opacity: { ease: "linear" },
                     layout: { duration: 2 },
                   }}
-                  className=" flex h-48  w-48  flex-col items-center justify-center rounded-3xl bg-slate-100 text-center shadow-2xl  shadow-black duration-1000 "
+                  className="relative flex h-48  w-48  flex-col items-center justify-center rounded-3xl bg-slate-100 text-center shadow-2xl  shadow-black duration-1000 "
                 >
-                  <span>toca para ver mas del proyecto</span>
+                  <span className="absolute -top-20 text-white shadow-black   text-shadow-md">
+                    toca para ver mas del proyecto
+                  </span>
                   <motion.img
                     src={rick}
                     className="h-24"
@@ -1547,8 +1425,8 @@ function Proyects() {
         </div>
       )}
       {isLargeDesktop && (
-        <div className="flex flex-col  ">
-          <div className="flex h-[400px] justify-around">
+        <div className=" flex flex-col  ">
+          <div className="flex h-[600px] justify-around align-top">
             <motion.div
               ref={wrapperRef}
               layout
@@ -1558,20 +1436,39 @@ function Proyects() {
             >
               {!isOpen && (
                 <motion.div
-                  layout
-                  initial={{ height: 385, width: 800, borderRadius: 50 }}
-                  animate={{ height: 200, width: 200, borderRadius: 80 }}
-                  transition={{
-                    opacity: { ease: "linear" },
-                    layout: { duration: 2 },
+                  variants={{
+                    hidden: { opacity: 0, scale: 0.5, x: "-40%" },
+                    visible: { opacity: 1, scale: 1, x: 0 },
                   }}
-                  onClick={() => setIsOpen(!isOpen)}
-                  className="relative  flex  cursor-pointer flex-col items-center justify-center bg-slate-100 text-center shadow-2xl  shadow-black duration-1000 "
+                  viewport={{ once: false, amount: 0.5 }}
+                  initial="hidden"
+                  whileInView="visible"
+                  transition={{
+                    duration: 1.8,
+                    delay: 0.2,
+                    ease: [0, 0.71, 0.2, 1.01],
+                  }}
                 >
-                  <span className=" absolute -top-20 z-50 tracking-widest text-white">
-                    toca para ver mas del proyecto
-                  </span>
-                  <motion.img src={proyect1} className="h-24"></motion.img>
+                  <motion.div
+                    layout
+                    initial={{
+                      height: 385,
+                      width: 800,
+                      borderRadius: 50,
+                    }}
+                    animate={{ height: 200, width: 200, borderRadius: 80 }}
+                    transition={{
+                      opacity: { ease: "linear" },
+                      layout: { duration: 2 },
+                    }}
+                    onClick={() => setIsOpen(!isOpen)}
+                    className="relative  flex  cursor-pointer flex-col items-center justify-center bg-slate-100 text-center shadow-2xl  shadow-black duration-1000 "
+                  >
+                    <span className="absolute -top-20 z-50 tracking-widest text-white shadow-black text-shadow-sm">
+                      toca para ver mas del proyecto
+                    </span>
+                    <motion.img src={proyect1} className="h-24"></motion.img>
+                  </motion.div>
                 </motion.div>
               )}
               {isOpen && (
@@ -1663,7 +1560,20 @@ function Proyects() {
               className="flex  items-center justify-center  "
             >
               {!isOpen1 && (
-                <button onClick={() => setIsOpen1(!isOpen1)}>
+                <motion.div
+                  variants={{
+                    hidden: { opacity: 0, scale: 0.5, y: "60%" },
+                    visible: { opacity: 1, scale: 1, y: 0 },
+                  }}
+                  viewport={{ once: false, amount: 0.5 }}
+                  initial="hidden"
+                  whileInView="visible"
+                  transition={{
+                    duration: 1.8,
+                    delay: 0.2,
+                    ease: [0, 0.71, 0.2, 1.01],
+                  }}
+                >
                   <motion.div
                     ref={wrapperRef1}
                     layout
@@ -1673,10 +1583,11 @@ function Proyects() {
                       opacity: { ease: "linear" },
                       layout: { duration: 2 },
                     }}
+                    onClick={() => setIsOpen1(!isOpen)}
                     className="relative  flex  h-48 w-48 cursor-pointer flex-col items-center justify-center rounded-3xl bg-slate-100 text-center shadow-2xl  shadow-black duration-1000 "
                   >
                     {" "}
-                    <span className=" absolute -top-20 tracking-widest text-white">
+                    <span className="absolute -top-20 tracking-widest text-white shadow-black text-shadow-sm">
                       toca para ver mas del proyecto
                     </span>
                     <motion.img
@@ -1686,7 +1597,7 @@ function Proyects() {
                       title="Individual Proyect Pokemon"
                     ></motion.img>
                   </motion.div>
-                </button>
+                </motion.div>
               )}
               {isOpen1 && (
                 <div className="relative flex flex-col">
@@ -1774,25 +1685,40 @@ function Proyects() {
             >
               {!isOpen2 && (
                 <motion.div
-                  ref={wrapperRef2}
-                  layout
-                  initial={{ height: 385, width: 800, borderRadius: 50 }}
-                  animate={{ height: 200, width: 200, borderRadius: 80 }}
-                  transition={{
-                    opacity: { ease: "linear" },
-                    layout: { duration: 2 },
+                  variants={{
+                    hidden: { opacity: 0, scale: 0.5, x: "40%" },
+                    visible: { opacity: 1, scale: 1, x: 0 },
                   }}
-                  className=" relative flex h-48 w-48 cursor-pointer flex-col items-center justify-center rounded-3xl bg-slate-100 text-center shadow-2xl  shadow-black duration-1000 "
+                  viewport={{ once: false, amount: 0.5 }}
+                  initial="hidden"
+                  whileInView="visible"
+                  transition={{
+                    duration: 1.8,
+                    delay: 0.2,
+                    ease: [0, 0.71, 0.2, 1.01],
+                  }}
                 >
-                  <span className=" absolute -top-20 tracking-widest text-white">
-                    toca para ver mas del proyecto
-                  </span>
-                  <motion.img
-                    src={rick}
-                    className="h-24"
-                    alt="Rick and Morty"
-                    title="Proyect Rick and Morty"
-                  ></motion.img>
+                  <motion.div
+                    ref={wrapperRef2}
+                    layout
+                    initial={{ height: 385, width: 800, borderRadius: 50 }}
+                    animate={{ height: 200, width: 200, borderRadius: 80 }}
+                    transition={{
+                      opacity: { ease: "linear" },
+                      layout: { duration: 2 },
+                    }}
+                    className=" relative flex h-48 w-48 cursor-pointer flex-col items-center justify-center rounded-3xl bg-slate-100 text-center shadow-2xl  shadow-black duration-1000 "
+                  >
+                    <span className="absolute -top-20 tracking-widest text-white shadow-black text-shadow-sm">
+                      toca para ver mas del proyecto
+                    </span>
+                    <motion.img
+                      src={rick}
+                      className="h-24"
+                      alt="Rick and Morty"
+                      title="Proyect Rick and Morty"
+                    ></motion.img>
+                  </motion.div>
                 </motion.div>
               )}
               {isOpen2 && (

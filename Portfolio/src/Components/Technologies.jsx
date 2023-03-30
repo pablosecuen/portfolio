@@ -262,81 +262,126 @@ function Technologies() {
   };
 
   return (
-    <div className="absolute top-[850px] w-full">
+    <div className="mt-96 h-full w-full lg:mt-0">
+      <motion.h3
+        variants={{
+          hidden: { opacity: 0, scale: 0.5, x: "-40%" },
+          visible: { opacity: 1, scale: 1, x: 0 },
+        }}
+        viewport={{ once: false, amount: 0.5 }}
+        initial="hidden"
+        whileInView="visible"
+        transition={{
+          duration: 1.8,
+          delay: 0.2,
+          ease: [0, 0.71, 0.2, 1.01],
+        }}
+        className="  mt-40 -mb-24 w-full p-4 text-center text-2xl text-white shadow-black text-shadow-md md:text-4xl   lg:-mb-0 lg:text-6xl"
+      >
+        {" "}
+        My Skills
+      </motion.h3>
       <div className="flex w-full justify-center">
         {!isMobile ? (
-          <div className="mx-40 flex w-full flex-wrap  justify-around gap-y-28 gap-x-10 font-roboto sm:justify-center md:justify-center lg:justify-around">
+          <div className="mx-20 flex w-full flex-wrap  justify-center gap-y-28 gap-x-10 font-roboto sm:justify-center md:justify-center lg:justify-around">
             {arrayTech.map((t, i) => {
               return (
                 <motion.div
-                  initial={{ height: 150, width: 150 }}
-                  animate={{
-                    height: expandedIndex === i ? 400 : 150,
-                    width: expandedIndex === i ? 400 : 250,
+                  variants={{
+                    hidden: { opacity: 0, scale: 0.5, x: "40%" },
+                    visible: { opacity: 1, scale: 1, x: 0 },
                   }}
-                  transition={{ duration: 0.5 }}
-                  onClick={() => handleOnClick(i)}
-                  className=" relative"
-                  key={i}
+                  viewport={{ once: false, amount: 0.5 }}
+                  initial="hidden"
+                  whileInView="visible"
+                  transition={{
+                    duration: 1.8,
+                    delay: 0.2,
+                    ease: [0, 0.71, 0.2, 1.01],
+                  }}
                 >
-                  {expandedIndex === i && (
-                    <motion.article
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      transition={{ duration: 0.5 }}
-                      className="absolute z-50 h-96 w-96 rounded-xl p-6 pt-20 text-sm text-white"
-                    >
-                      {t.description}
-                    </motion.article>
-                  )}
-                  <motion.img
-                    src={t.logo}
-                    alt={t.name}
-                    title={t.title}
-                    class={`${t.name} h-24 hover:cursor-pointer`}
-                    className={`${t.name} absolute -top-12 z-50 h-32 text-white hover:cursor-pointer`}
-                    onMouseEnter={handleMouseEnter}
-                    onMouseLeave={handleMouseLeave}
-                  />
-
-                  {/* este div tiene el texto */}
-                  {expandedIndex === i && (
-                    <motion.div
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      transition={{ duration: 0.5 }}
-                      className="text-box  h-96 w-96 rounded-xl p-4 pt-20 text-white"
-                    ></motion.div>
-                  )}
-                  {/* abajo esta el fondo gradiente con el efecto */}
-                  {expandedIndex === i && (
-                    <motion.div
+                  <motion.div
+                    initial={{ height: 150, width: 150 }}
+                    animate={{
+                      height: expandedIndex === i ? 400 : 150,
+                      width: expandedIndex === i ? 400 : 250,
+                    }}
+                    transition={{ duration: 0.5 }}
+                    onClick={() => handleOnClick(i)}
+                    className=" relative mt-40 flex justify-center"
+                    key={i}
+                  >
+                    {expandedIndex === i && (
+                      <motion.article
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ duration: 0.5 }}
+                        className="absolute z-50 h-96 w-96 rounded-xl p-6 pt-20 text-sm text-white"
+                      >
+                        {t.description}
+                      </motion.article>
+                    )}
+                    <motion.img
                       variants={{
-                        visible: {
-                          opacity: 1,
-                          borderRadius: ["0%", "20%", "50%", "50%", "20%"],
-                        },
+                        hidden: { opacity: 0, scale: 0.5, x: "-40%" },
+                        visible: { opacity: 1, scale: 1, x: 0 },
                       }}
+                      viewport={{ once: false, amount: 0.5 }}
                       initial="hidden"
-                      whileHover="visible"
+                      whileInView="visible"
                       transition={{
-                        duration: 3,
-                        times: [0, 0.2, 0.5, 0.8, 1],
-                        repeat: 0,
+                        duration: 1.8,
+                        delay: 0.2,
+                        ease: [0, 0.71, 0.2, 1.01],
                       }}
-                      className=" box absolute top-0 left-0 h-96 w-96 rounded-xl  bg-gradient-to-b from-transparent to-slate-900 p-4 pt-20"
-                    ></motion.div>
-                  )}
+                      src={t.logo}
+                      alt={t.name}
+                      title={t.title}
+                      class={`${t.name} h-24 hover:cursor-pointer`}
+                      className={`${t.name} absolute -top-12  z-50 h-32 text-white hover:cursor-pointer`}
+                      onMouseEnter={handleMouseEnter}
+                      onMouseLeave={handleMouseLeave}
+                    />
+
+                    {/* este div tiene el texto */}
+                    {expandedIndex === i && (
+                      <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ duration: 0.5 }}
+                        className="text-box  h-96 w-96 rounded-xl p-4 pt-20 text-white"
+                      ></motion.div>
+                    )}
+                    {/* abajo esta el fondo gradiente con el efecto */}
+                    {expandedIndex === i && (
+                      <motion.div
+                        variants={{
+                          visible: {
+                            opacity: 1,
+                            borderRadius: ["0%", "20%", "50%", "50%", "20%"],
+                          },
+                        }}
+                        initial="hidden"
+                        whileHover="visible"
+                        transition={{
+                          duration: 3,
+                          times: [0, 0.2, 0.5, 0.8, 1],
+                          repeat: 0,
+                        }}
+                        className=" box absolute top-0 left-0 h-96 w-96 rounded-xl  bg-gradient-to-b from-transparent to-slate-900 p-4 pt-20"
+                      ></motion.div>
+                    )}
+                  </motion.div>
                 </motion.div>
               );
             })}
           </div>
         ) : (
-          <div className=" flex h-full w-full flex-col flex-wrap items-center justify-between  gap-10   font-roboto">
+          <div className=" mt-40 flex h-full w-full flex-col flex-wrap items-center justify-between gap-10  font-roboto">
             {arrayTech.map((t, i) => {
               return (
                 <div
-                  className="- flex w-full  items-center justify-between bg-white p-6  tracking-widest sm:w-3/4"
+                  className="- flex w-full items-center justify-between p-6 pr-10 tracking-widest text-white shadow-black text-shadow-md sm:w-3/4"
                   key={i}
                 >
                   <a href={t.url}>

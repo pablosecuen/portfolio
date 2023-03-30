@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { useMediaQuery } from "./useMediaQuery";
 import proyect1 from "../assets/img/logo.png";
 import pokemon from "../assets/img/pokemon.png";
-import rick from "../assets//img/rick.png";
+import rick from "../assets/img/rick.png";
 import pet from "../assets/img/petfriendly.png";
 import petsm from "../assets/img/petfriendlysm.png";
 import poke from "../assets/img/pokeApp.png";

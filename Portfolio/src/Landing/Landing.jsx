@@ -3,9 +3,10 @@ import Proyects from "./Proyects";
 import Technologies from "../Components/Technologies";
 import About from "../Components/About";
 import LanguageToggle from "../Components/LanguagueTogle";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Contact from "../Components/Contact";
 import Footer from "../Components/Footer";
+import ActionMenu from "../Components/ActionMenu";
 
 function Landing() {
   const [language, setLanguage] = useState("en");
@@ -27,6 +28,7 @@ function Landing() {
     <div className=" -z-50 h-full overflow-x-hidden bg-bggrey bg-cover bg-center">
       <LanguageToggle onToggle={toggleLanguage} />
       <About language={language}></About>
+      <ActionMenu />
       {/* Cards de proyectos */}
       <Proyects language={language} />
       {/* Cards de redes sociales */}

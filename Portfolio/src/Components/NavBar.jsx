@@ -116,18 +116,6 @@ function NavBar() {
     },
   };
 
-  const personalInfo = {
-    Name: "Pablo Amico",
-    Function: "Fullstack Developer",
-    LinkedIn: "https://www.linkedin.com/in/pablo-j-amico/",
-    Github: "https://github.com/pablosecuen",
-    Whatsapp: "+54-9-3417206026",
-  };
-
-  for (const [key, value] of Object.entries(personalInfo)) {
-    console.log(`${key}: ${value}`);
-  }
-
   return (
     <header class="primary-header h-20 w-full items-center justify-between xsm:h-20 sm:h-24 ">
       <nav class="navbar container flex w-full items-center justify-between">

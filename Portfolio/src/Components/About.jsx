@@ -4,12 +4,12 @@ function About(props) {
   const { language } = props;
 
   return (
-    <div className="h-screen w-full  p-4 lg:pl-10">
-      <h2 className="mt-72 font-roboto text-2xl font-bold -tracking-widest text-white shadow-black text-shadow-md lg:mt-96 lg:pl-8 lg:text-9xl">
+    <div className="lg h-screen w-full p-4 xsm:w-3/4 sm:w-full lg:pl-10">
+      <h2 className="mt-72 font-roboto text-2xl font-bold -tracking-widest text-white shadow-black text-shadow-md md:text-6xl lg:mt-96 lg:pl-8 xl:text-9xl">
         Fullstack Developer
       </h2>
-      <div className=" mt-0 flex  w-full items-end justify-start   ">
-        <p className="top-96 mt-4 w-full text-start text-xs font-bold text-white shadow-black text-shadow-md lg:mt-0 lg:w-3/5 lg:p-10 lg:text-base">
+      <div className=" mt-0 flex  w-full items-end justify-start    ">
+        <p className="top-96 mt-4 w-full text-start text-xs font-bold text-white shadow-black text-shadow-md sm:w-3/4 md:w-3/4 lg:mt-0 lg:w-4/5 lg:p-10 lg:text-base">
           {language === "en" ? (
             <span>
               Hello again! My name is Pablo Amico, and I would love to talk to

@@ -301,7 +301,7 @@ function Technologies(props) {
           delay: 0.2,
           ease: [0, 0.71, 0.2, 1.01],
         }}
-        className="  mt-40 -mb-24 w-full p-4 text-center text-2xl text-white shadow-black text-shadow-md md:text-4xl   lg:-mb-0 lg:text-6xl"
+        className="  mt-40 -mb-0 w-full p-4 text-center text-4xl text-white shadow-black text-shadow-md md:text-4xl   lg:-mb-0 lg:text-6xl"
       >
         {" "}
         My Skills
@@ -420,7 +420,7 @@ function Technologies(props) {
             {arrayTech.map((t, i) => {
               return (
                 <div
-                  className="- flex w-full items-center justify-between p-6 pr-10 tracking-widest text-white shadow-black text-shadow-md sm:w-3/4"
+                  className="- flex w-full items-center justify-between tracking-widest text-white shadow-black text-shadow-md sm:w-3/4"
                   key={i}
                 >
                   <a href={t.url}>

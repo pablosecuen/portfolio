@@ -79,7 +79,7 @@ function Proyects(props) {
   };
 
   return (
-    <div className="relative mt-96 w-full lg:mt-64">
+    <div className="relative mt-96 w-full lg:mt-96">
       {language === "en" ? (
         <motion.h2
           variants={{
@@ -94,7 +94,7 @@ function Proyects(props) {
             delay: 0.2,
             ease: [0, 0.71, 0.2, 1.01],
           }}
-          className=" -mt-96 mb-48 w-full cursor-pointer p-4 text-center text-2xl  -tracking-widest text-white shadow-black text-shadow-md xsm:text-xl lg:-mt-48 lg:mb-0 lg:text-6xl   "
+          className=" -mt-96 mb-48 w-full cursor-pointer p-4 text-center text-4xl  -tracking-widest text-white shadow-black text-shadow-md xsm:text-4xl lg:-mt-48 lg:mb-0 lg:text-6xl   "
         >
           My proyects
         </motion.h2>
@@ -112,7 +112,7 @@ function Proyects(props) {
             delay: 0.2,
             ease: [0, 0.71, 0.2, 1.01],
           }}
-          className=" -mt-96 mb-48 w-full cursor-pointer p-4 text-center text-2xl  -tracking-widest text-white shadow-black text-shadow-md xsm:text-xl lg:-mt-48 lg:mb-0 lg:text-6xl   "
+          className="  mb-24 w-full cursor-pointer p-4 text-center text-4xl  -tracking-widest text-white shadow-black text-shadow-md xsm:text-4xl lg:-mt-48 lg:mb-0 lg:text-6xl   "
         >
           Mis proyectos
         </motion.h2>
@@ -143,16 +143,6 @@ function Proyects(props) {
                   }}
                   className="relative mb-20 flex flex-col items-center justify-center bg-slate-100 text-center shadow-2xl   shadow-black duration-1000 "
                 >
-                  {language === "en" ? (
-                    <motion.span className="absolute -top-12 text-white text-shadow-sm ">
-                      touch here to explore the proyect
-                    </motion.span>
-                  ) : (
-                    <motion.span className="absolute -top-12 text-white text-shadow-sm ">
-                      toca para ver mas del proyecto
-                    </motion.span>
-                  )}
-
                   <motion.img src={proyect1} className="h-24"></motion.img>
                 </motion.div>
               )}
@@ -210,7 +200,7 @@ function Proyects(props) {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ duration: 2 }}
-                        className="p-6 text-center"
+                        className="p-6 text-center  text-xs"
                       >
                         {" "}
                         Pet Friendly Universe is a multi-platform site with a
@@ -228,15 +218,15 @@ function Proyects(props) {
                         more. We used a variety of technologies to create this
                         site, including JavaScript, React, Redux, Express,
                         PostgreSQL, Cloudinary, JSON Web Token, third-party
-                        authorization (such as Google, Vite, and Tailwind), and
-                        several React libraries to optimize the site.{" "}
+                        authorization, and several React libraries to optimize
+                        the site.{" "}
                       </motion.span>
                     ) : (
                       <motion.span
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ duration: 2 }}
-                        className="p-6 text-center"
+                        className="p-6 text-center  text-xs"
                       >
                         Universo Amigable con las Mascotas es un sitio
                         multiplataforma con un sistema de comercio electrónico
@@ -256,8 +246,8 @@ function Proyects(props) {
                         mucho más. Utilizamos una variedad de tecnologías para
                         crear este sitio, incluyendo JavaScript, React, Redux,
                         Express, PostgreSQL, Cloudinary, JSON Web Token,
-                        autorización de terceros (como Google, Vite y Tailwind)
-                        y varias bibliotecas de React para optimizar el sitio.
+                        autorización de terceros y varias bibliotecas de React
+                        para optimizar el sitio.
                       </motion.span>
                     )}
                   </motion.div>
@@ -288,15 +278,6 @@ function Proyects(props) {
                   className="relative mb-20 flex h-48 w-48 flex-col items-center justify-center rounded-3xl bg-slate-100 text-center shadow-2xl  shadow-black duration-1000 "
                 >
                   {" "}
-                  {language === "en" ? (
-                    <motion.span className="absolute -top-12 text-white text-shadow-sm ">
-                      touch here to explore the proyect
-                    </motion.span>
-                  ) : (
-                    <motion.span className="absolute -top-12 text-white text-shadow-sm ">
-                      toca para ver mas del proyecto
-                    </motion.span>
-                  )}
                   <motion.img
                     src={pokemon}
                     className="h-20"
@@ -306,12 +287,12 @@ function Proyects(props) {
                 </motion.div>
               )}
               {isOpen1 && (
-                <div className="relative flex flex-col">
+                <div className=" flex flex-col">
                   <motion.div
                     layout
                     initial={{ height: 200, width: 200, borderRadius: 40 }}
                     animate={{
-                      height: 560,
+                      height: 150,
                       width: 280,
                       borderRadius: 80,
                       overflow: "hidden",
@@ -320,7 +301,7 @@ function Proyects(props) {
                       opacity: { easeInOut: "linear" },
                       layout: { duration: 2 },
                     }}
-                    className=" mt-96  flex  flex-col items-center justify-center rounded-full   duration-1000 "
+                    className="relative mt-0 flex flex-col  items-center justify-center rounded-full  duration-1000 "
                   >
                     <motion.img
                       src={poke}
@@ -342,14 +323,14 @@ function Proyects(props) {
                       height: 560,
                       width: 280,
                       borderRadius: 50,
-                      top: 735,
+                      top: 700,
                       overflow: "hidden",
                     }}
                     transition={{
                       opacity: { easeInOut: "linear" },
                       layout: { duration: 2 },
                     }}
-                    className=" absolute z-50 flex h-96 w-96 flex-col items-center justify-evenly rounded-full bg-slate-100  shadow-2xl shadow-black duration-1000 "
+                    className=" absolute  z-50 flex h-96 w-96 flex-col items-center justify-evenly rounded-full bg-slate-100  shadow-2xl shadow-black duration-1000 "
                   >
                     <img
                       src={pokemon}
@@ -425,15 +406,6 @@ function Proyects(props) {
                   }}
                   className="relative flex  h-48 w-48 flex-col items-center justify-center rounded-3xl bg-slate-100 text-center shadow-2xl  shadow-black duration-1000 "
                 >
-                  {language === "en" ? (
-                    <motion.span className="absolute -top-12 text-white text-shadow-sm ">
-                      touch here to explore the proyect
-                    </motion.span>
-                  ) : (
-                    <motion.span className="absolute -top-12 text-white text-shadow-sm ">
-                      toca para ver mas del proyecto
-                    </motion.span>
-                  )}
                   <motion.img
                     src={rick}
                     className="h-24"
@@ -489,15 +461,6 @@ function Proyects(props) {
                   }}
                   className=" flex flex-col items-center  justify-center bg-slate-100  text-center duration-1000 "
                 >
-                  {language === "en" ? (
-                    <motion.span className="absolute -top-12 text-white text-shadow-sm ">
-                      touch here to explore the proyect
-                    </motion.span>
-                  ) : (
-                    <motion.span className="absolute -top-12 text-white text-shadow-sm ">
-                      toca para ver mas del proyecto
-                    </motion.span>
-                  )}
                   <motion.img src={proyect1} className="h-24"></motion.img>
                 </motion.div>
               )}
@@ -629,15 +592,6 @@ function Proyects(props) {
                   className=" flex h-48 w-48 flex-col items-center justify-center rounded-3xl bg-slate-100  text-center duration-1000 "
                 >
                   {" "}
-                  {language === "en" ? (
-                    <motion.span className="absolute -top-12 text-white text-shadow-sm ">
-                      touch here to explore the proyect
-                    </motion.span>
-                  ) : (
-                    <motion.span className="absolute -top-12 text-white text-shadow-sm ">
-                      toca para ver mas del proyecto
-                    </motion.span>
-                  )}
                   <motion.img
                     src={pokemon}
                     className="h-20"
@@ -765,15 +719,6 @@ function Proyects(props) {
                   }}
                   className=" flex h-48 w-48 flex-col items-center justify-center rounded-3xl bg-slate-100  text-center duration-1000 "
                 >
-                  {language === "en" ? (
-                    <motion.span className="absolute -top-12 text-white text-shadow-sm ">
-                      touch here to explore the proyect
-                    </motion.span>
-                  ) : (
-                    <motion.span className="absolute -top-12 text-white text-shadow-sm ">
-                      toca para ver mas del proyecto
-                    </motion.span>
-                  )}
                   <motion.img
                     src={rick}
                     className="h-24"
@@ -829,15 +774,6 @@ function Proyects(props) {
                   }}
                   className=" flex  flex-col items-center justify-center bg-slate-100  text-center shadow-2xl  shadow-black duration-1000 "
                 >
-                  {language === "en" ? (
-                    <motion.span className="absolute -top-12 text-white text-shadow-sm ">
-                      touch here to explore the proyect
-                    </motion.span>
-                  ) : (
-                    <motion.span className="absolute -top-12 text-white text-shadow-sm ">
-                      toca para ver mas del proyecto
-                    </motion.span>
-                  )}
                   <motion.img src={proyect1} className="h-24"></motion.img>
                 </motion.div>
               )}
@@ -969,15 +905,6 @@ function Proyects(props) {
                   className=" flex  h-48 w-48 flex-col items-center justify-center rounded-3xl bg-slate-100 text-center shadow-2xl  shadow-black duration-1000 "
                 >
                   {" "}
-                  {language === "en" ? (
-                    <motion.span className="absolute -top-12 text-white text-shadow-sm ">
-                      touch here to explore the proyect
-                    </motion.span>
-                  ) : (
-                    <motion.span className="absolute -top-12 text-white text-shadow-sm ">
-                      toca para ver mas del proyecto
-                    </motion.span>
-                  )}
                   <motion.img
                     src={pokemon}
                     className="h-20"
@@ -1105,15 +1032,6 @@ function Proyects(props) {
                   }}
                   className="relative flex  h-48 w-48 flex-col items-center justify-center rounded-3xl bg-slate-100 text-center shadow-2xl  shadow-black duration-1000 "
                 >
-                  {language === "en" ? (
-                    <motion.span className="absolute -top-12 text-white text-shadow-sm ">
-                      touch here to explore the proyect
-                    </motion.span>
-                  ) : (
-                    <motion.span className="absolute -top-12 text-white text-shadow-sm ">
-                      toca para ver mas del proyecto
-                    </motion.span>
-                  )}
                   <motion.img
                     src={rick}
                     className="h-24"
@@ -1170,15 +1088,6 @@ function Proyects(props) {
                   }}
                   className="relative flex  flex-col items-center justify-center bg-slate-100  text-center shadow-2xl  shadow-black duration-1000 "
                 >
-                  {language === "en" ? (
-                    <motion.span className="absolute -top-12 text-white text-shadow-sm ">
-                      touch here to explore the proyect
-                    </motion.span>
-                  ) : (
-                    <motion.span className="absolute -top-12 text-white text-shadow-sm ">
-                      toca para ver mas del proyecto
-                    </motion.span>
-                  )}
                   <motion.img src={proyect1} className="h-24"></motion.img>
                 </motion.div>
               )}
@@ -1310,15 +1219,6 @@ function Proyects(props) {
                   className="relative flex  h-48 w-48 flex-col items-center justify-center rounded-3xl bg-slate-100 text-center shadow-2xl shadow-black duration-1000 "
                 >
                   {" "}
-                  {language === "en" ? (
-                    <motion.span className="absolute -top-12 text-white text-shadow-sm ">
-                      touch here to explore the proyect
-                    </motion.span>
-                  ) : (
-                    <motion.span className="absolute -top-12 text-white text-shadow-sm ">
-                      toca para ver mas del proyecto
-                    </motion.span>
-                  )}
                   <motion.img
                     src={pokemon}
                     className="h-20"
@@ -1446,15 +1346,6 @@ function Proyects(props) {
                   }}
                   className="relative z-50 flex h-48 w-48 flex-col items-center justify-center rounded-3xl bg-slate-100 text-center shadow-2xl  shadow-black duration-1000 "
                 >
-                  {language === "en" ? (
-                    <motion.span className="absolute -top-12 text-white text-shadow-sm ">
-                      touch here to explore the proyect
-                    </motion.span>
-                  ) : (
-                    <motion.span className="absolute -top-12 text-white text-shadow-sm ">
-                      toca para ver mas del proyecto
-                    </motion.span>
-                  )}
                   <motion.img
                     src={rick}
                     className="h-24"
@@ -1507,15 +1398,6 @@ function Proyects(props) {
                   }}
                   className="relative flex flex-col items-center  justify-center  bg-slate-100  text-center shadow-2xl  shadow-black duration-1000 "
                 >
-                  {language === "en" ? (
-                    <motion.span className="absolute -top-12 text-white text-shadow-sm ">
-                      touch here to explore the proyect
-                    </motion.span>
-                  ) : (
-                    <motion.span className="absolute -top-12 text-white text-shadow-sm ">
-                      toca para ver mas del proyecto
-                    </motion.span>
-                  )}
                   <motion.img src={proyect1} className="h-24"></motion.img>
                 </motion.div>
               )}
@@ -1778,15 +1660,6 @@ function Proyects(props) {
                   }}
                   className="relative flex h-48  w-48  flex-col items-center justify-center rounded-3xl bg-slate-100 text-center shadow-2xl  shadow-black duration-1000 "
                 >
-                  {language === "en" ? (
-                    <motion.span className="absolute -top-12 text-white text-shadow-sm ">
-                      touch here to explore the proyect
-                    </motion.span>
-                  ) : (
-                    <motion.span className="absolute -top-12 text-white text-shadow-sm ">
-                      toca para ver mas del proyecto
-                    </motion.span>
-                  )}
                   <motion.img
                     src={rick}
                     className="h-24"

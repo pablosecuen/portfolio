@@ -3,24 +3,6 @@ import React from "react";
 function About(props) {
   const { language } = props;
 
-  const handleDownloadCV = () => {
-    const link = document.createElement("a");
-    link.href = "/assets/cv/Cv-español.pdf";
-    link.download = "your-cv-file.pdf";
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
-
-  const handleDownloadCVEnglish = () => {
-    const link = document.createElement("a");
-    link.href = "/assets/cv/Cv-english.pdf";
-    link.download = "your-cv-file.pdf";
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
-
   return (
     <div className="h-screen w-full  p-4 lg:pl-10">
       <h2 className="mt-72 font-roboto text-2xl font-bold -tracking-widest text-white shadow-black text-shadow-md lg:mt-96 lg:pl-8 lg:text-9xl">
@@ -79,18 +61,23 @@ function About(props) {
         </p>
       </div>
       <div className="mt-6 flex w-full justify-center lg:mt-0 lg:justify-start">
-        <button
-          className="h-10 w-48 rounded-3xl bg-blue-500 text-white shadow-md shadow-black lg:ml-10"
-          onClick={handleDownloadCV}
+        <a
+          href="https://drive.google.com/file/d/1KT184mE7OYi1e756s7SBlIF2CZzq62qd/view?usp=share_link"
+          target="_blank"
         >
-          Descargar CV
-        </button>
-        <button
-          className="h-10 w-48 rounded-3xl bg-blue-500 text-white shadow-md shadow-black"
-          onClick={handleDownloadCVEnglish}
+          {" "}
+          <button className="h-10 w-48 rounded-3xl bg-blue-500 text-white shadow-md shadow-black lg:ml-10">
+            Descargar CV
+          </button>
+        </a>
+        <a
+          href="https://drive.google.com/file/d/1GELX-LyHAFCPho079-6FN-Fi_KfACC-G/view?usp=share_link"
+          target="_blank"
         >
-          Download CV
-        </button>
+          <button className="h-10 w-48 rounded-3xl bg-blue-500 text-white shadow-md shadow-black">
+            Download CV
+          </button>
+        </a>
       </div>
     </div>
   );

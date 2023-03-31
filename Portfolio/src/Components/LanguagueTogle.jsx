@@ -16,6 +16,11 @@ function LanguageToggle(props) {
         <img
           src={language === "en" ? español : english}
           alt="language"
+          title={
+            language === "en"
+              ? "cambia el lenguaje  español"
+              : "change languague to english"
+          }
           onClick={toggleLanguage}
           className="cursor-pointer"
         />

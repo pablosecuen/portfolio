@@ -116,8 +116,20 @@ function NavBar() {
     },
   };
 
+  const personalInfo = {
+    Name: "Pablo Amico",
+    Function: "Fullstack Developer",
+    LinkedIn: "https://www.linkedin.com/in/pablo-j-amico/",
+    Github: "https://github.com/pablosecuen",
+    Whatsapp: "+54-9-3417206026",
+  };
+
+  for (const [key, value] of Object.entries(personalInfo)) {
+    console.log(`${key}: ${value}`);
+  }
+
   return (
-    <header class="primary-header w-full items-center justify-between ">
+    <header class="primary-header h-20 w-full items-center justify-between xsm:h-20 sm:h-24 ">
       <nav class="navbar container flex w-full items-center justify-between">
         <motion.div
           initial={{ opacity: 0 }}
@@ -130,16 +142,16 @@ function NavBar() {
               src={logo}
               alt="logo"
               class="logo"
-              className="flex h-12 md:h-24"
+              className="flex h-8 sm:h-12 md:h-24"
             />
           </Link>
         </motion.div>
         {isMobile ? (
-          <div className="relative">
+          <div className="relative h-8">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
-              className="hamburger nav-icon h-10 cursor-pointer"
+              className="hamburger nav-icon h-8 cursor-pointer"
               onClick={toggleMenu}
             >
               <path
@@ -158,7 +170,7 @@ function NavBar() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.7 }}
-                className={`duration-800 absolute -right-10 top-[68px] flex flex-col rounded-b-xl p-10 ${
+                className={`duration-800 absolute -right-10 top-[48px] flex flex-col rounded-b-xl border-2 border-white p-10 xsm:top-[48px] sm:top-[64px] ${
                   isMenuBackgroundWhite ? "bg-white" : ""
                 }`}
               >

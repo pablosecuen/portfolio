@@ -1,11 +1,11 @@
 import { useMediaQuery } from "./useMediaQuery";
-import LandingImage from "./LandingImage";
 import Proyects from "./Proyects";
 import Technologies from "../Components/Technologies";
 import About from "../Components/About";
 import LanguageToggle from "../Components/LanguagueTogle";
 import { useState } from "react";
 import Contact from "../Components/Contact";
+import Footer from "../Components/Footer";
 
 function Landing() {
   const [language, setLanguage] = useState("en");
@@ -32,6 +32,7 @@ function Landing() {
       {/* Cards de redes sociales */}
       <Technologies language={language} />
       <Contact language={language} />
+      <Footer></Footer>
     </div>
   );
 }

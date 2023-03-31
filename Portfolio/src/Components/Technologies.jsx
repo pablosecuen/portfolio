@@ -14,7 +14,7 @@ import illustrator from "../assets/logoTecnologias/illustrator.png";
 import photoshop from "../assets/logoTecnologias/photoshop2.svg";
 import git from "../assets/logoTecnologias/git.svg";
 import github from "../assets/logoTecnologias/github.svg";
-import vite from "../assets/logoTecnologias/vitejs.svg";
+import vite from "../assets/logoTecnologias/vite.svg";
 import anime from "animejs/lib/anime.es.js";
 import "./Technologies.module.css";
 import { useMediaQuery } from "react-responsive";
@@ -312,6 +312,7 @@ function Technologies(props) {
             {arrayTech.map((t, i) => {
               return (
                 <motion.div
+                  key={i}
                   variants={{
                     hidden: { opacity: 0, scale: 0.5, x: "40%" },
                     visible: { opacity: 1, scale: 1, x: 0 },
@@ -361,7 +362,7 @@ function Technologies(props) {
                     )}
                     <motion.img
                       variants={{
-                        hidden: { opacity: 0, scale: 0.5, x: "-40%" },
+                        hidden: { opacity: 0, scale: 0.2, x: "-40%" },
                         visible: { opacity: 1, scale: 1, x: 0 },
                       }}
                       viewport={{ once: false, amount: 0.5 }}
@@ -384,8 +385,8 @@ function Technologies(props) {
                     {/* este div tiene el texto */}
                     {expandedIndex === i && (
                       <motion.div
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
+                        initial={{ opacity: 0, x: 100 }}
+                        animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.5 }}
                         className="text-box  h-96 w-96 rounded-xl p-4 pt-20 text-white"
                       ></motion.div>
@@ -396,7 +397,7 @@ function Technologies(props) {
                         variants={{
                           visible: {
                             opacity: 1,
-                            borderRadius: ["0%", "20%", "50%", "50%", "20%"],
+                            borderRadius: ["50%", "50%", "50%", "50%"],
                           },
                         }}
                         initial="hidden"
@@ -406,7 +407,7 @@ function Technologies(props) {
                           times: [0, 0.2, 0.5, 0.8, 1],
                           repeat: 0,
                         }}
-                        className=" box absolute top-0 left-0 h-96 w-96 rounded-xl  bg-gradient-to-b from-transparent to-slate-900 p-4 pt-20"
+                        className=" box absolute top-0 left-0 h-96 w-96 rounded-2xl  bg-gradient-to-b from-transparent to-slate-900 p-4 pt-20"
                       ></motion.div>
                     )}
                   </motion.div>

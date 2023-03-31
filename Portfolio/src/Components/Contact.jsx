@@ -38,14 +38,14 @@ function Contact() {
 
   return (
     <form
-      className=" mt-96 flex h-[500px] w-full justify-center border-2"
+      className=" mt-96 mb-48 flex h-[500px] w-full justify-center border-2"
       onSubmit={handleSubmit}
     >
-      <div className="flex w-1/2 flex-col border-2 pt-10">
+      <div className="flex w-3/4 flex-col border-2 pt-10 md:w-1/2">
         <h5 className="h-10 py-10 text-center text-xl text-white">
           GET IN CONTACT WITH ME
         </h5>
-        <label htmlFor="name" className="text-white">
+        <label htmlFor="name" className="w-11/12 self-center text-white">
           Name:
         </label>
         <input
@@ -54,9 +54,9 @@ function Contact() {
           name="name"
           value={formData.name}
           onChange={handleChange}
-          className="border-2 bg-transparent text-white "
+          className="w-11/12 self-center border-2 bg-transparent text-white"
         />
-        <label htmlFor="email" className="text-white ">
+        <label htmlFor="email" className="w-11/12 self-center text-white">
           EMAIL:
         </label>
         <input
@@ -65,9 +65,9 @@ function Contact() {
           name="email"
           value={formData.email}
           onChange={handleChange}
-          className="border-2 bg-transparent  text-white"
+          className="w-11/12 self-center border-2 bg-transparent  text-white"
         />
-        <label htmlFor="message" className="text-white">
+        <label htmlFor="message" className="w-11/12 self-center text-white">
           MESSAGE:
         </label>
         <textarea
@@ -75,7 +75,7 @@ function Contact() {
           name="message"
           value={formData.message}
           onChange={handleChange}
-          className="h-24 border-2 bg-transparent text-white"
+          className="h-24 w-11/12 self-center border-2 bg-transparent text-white"
         ></textarea>
         <button type="submit" className="pt-6 text-xl text-white">
           SUBMIT

@@ -16,7 +16,7 @@ import git from "../assets/logoTecnologias/git.svg";
 import github from "../assets/logoTecnologias/github.svg";
 import vite from "../assets/logoTecnologias/vite.svg";
 import anime from "animejs/lib/anime.es.js";
-import "./Technologies.module.css";
+
 import { useMediaQuery } from "react-responsive";
 import { motion } from "framer-motion";
 import { useState } from "react";
@@ -24,7 +24,6 @@ import { useState } from "react";
 function Technologies(props) {
   const { language } = props;
   const isMobile = useMediaQuery({ maxWidth: 600 });
-  const [selectedTech, setSelectedTech] = useState(null);
   const [expandedIndex, setExpandedIndex] = useState(null);
   const [isHovered, setIsHovered] = useState(false);
 

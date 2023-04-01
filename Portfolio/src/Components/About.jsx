@@ -5,11 +5,11 @@ function About(props) {
 
   return (
     <div className="lg h-screen w-full p-4 xsm:w-3/4 sm:w-full lg:pl-10">
-      <h2 className="mt-48 font-roboto text-2xl font-bold -tracking-wider text-white shadow-black text-shadow-md sm:mt-72 sm:-tracking-widest md:text-6xl lg:mt-96 lg:pl-8 xl:text-9xl">
+      <h1 className="mt-48 font-roboto text-2xl font-bold -tracking-wider text-white shadow-black text-shadow-md sm:mt-72 sm:-tracking-widest md:text-6xl lg:mt-96 lg:pl-8 xl:text-9xl">
         Fullstack Developer
-      </h2>
+      </h1>
       <div className=" mt-0 flex  w-full items-end justify-start    ">
-        <p className="top-96 mt-4 w-full text-start text-xs font-medium text-white shadow-black text-shadow-md sm:w-3/4 sm:font-bold md:w-3/4 lg:mt-0 lg:w-4/5 lg:p-10 lg:text-base">
+        <head className="top-96 mt-4 w-full text-start text-xs font-medium text-white shadow-black text-shadow-md sm:w-3/4 sm:font-bold md:w-3/4 lg:mt-0 lg:w-4/5 lg:p-10 lg:text-base">
           {language === "en" ? (
             <span>
               Hello again! My name is Pablo Amico, and I would love to talk to
@@ -58,7 +58,7 @@ function About(props) {
               emocionado de hablar contigo sobre cómo podemos trabajar juntos!
             </span>
           )}
-        </p>
+        </head>
       </div>
       <div className="mt-6 flex w-full justify-center lg:mt-0 lg:justify-start">
         <a

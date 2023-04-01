@@ -54,11 +54,11 @@ function Contact() {
 
   return (
     <form
-      className=" mt-96 mb-48 flex h-[500px] w-full justify-center border-2"
+      className=" mt-96 mb-48 flex h-[500px] w-full flex-row items-center justify-center  self-center border-2"
       onSubmit={handleSubmit}
     >
       <div className="flex w-3/4 flex-col border-2 pt-10 md:w-1/2">
-        <h5 className="h-10 py-10 text-center text-xl text-white">
+        <h5 className="h-10 pb-10 text-center text-xl text-white">
           GET IN CONTACT WITH ME
         </h5>
         <label htmlFor="name" className="w-11/12 self-center text-white">
@@ -70,7 +70,7 @@ function Contact() {
           name="name"
           value={formData.name}
           onChange={handleChange}
-          className="w-11/12 self-center border-2 bg-transparent text-white"
+          className="mb-4 w-11/12 self-center border-2 bg-transparent text-white"
         />
         <label htmlFor="email" className="w-11/12 self-center text-white">
           EMAIL:
@@ -81,7 +81,7 @@ function Contact() {
           name="email"
           value={formData.email}
           onChange={handleChange}
-          className="w-11/12 self-center border-2 bg-transparent  text-white"
+          className="mb-4 w-11/12 self-center border-2 bg-transparent  text-white"
         />
         <label htmlFor="message" className="w-11/12 self-center text-white">
           MESSAGE:
@@ -93,7 +93,7 @@ function Contact() {
           onChange={handleChange}
           className="h-24 w-11/12 self-center border-2 bg-transparent text-white"
         ></textarea>
-        <button type="submit" className="pt-6 text-xl text-white">
+        <button type="submit" className="py-6 text-xl text-white">
           SUBMIT
         </button>
         <Modal

@@ -6,7 +6,7 @@ import linkedin from "../assets/svg/linkedin.svg";
 function ActionMenu() {
   return (
     <div className="md:absolute md:top-96 md:flex md:h-1/2 md:w-full md:justify-end md:pr-4">
-      <div className="flex flex-col">
+      <div className="sticky bottom-0 flex flex-col">
         <a href="https://www.linkedin.com/in/pablo-j-amico/">
           <img
             src={linkedin}

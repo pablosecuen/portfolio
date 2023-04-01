@@ -9,7 +9,7 @@ function About(props) {
         Fullstack Developer
       </h1>
       <div className=" mt-0 flex  w-full items-end justify-start    ">
-        <head className="top-96 mt-4 w-full text-start text-xs font-medium text-white shadow-black text-shadow-md sm:w-3/4 sm:font-bold md:w-3/4 lg:mt-0 lg:w-4/5 lg:p-10 lg:text-base">
+        <p className="top-96 mt-4 w-full text-start text-xs font-medium text-white shadow-black text-shadow-md sm:w-3/4 sm:font-bold md:w-3/4 lg:mt-0 lg:w-4/5 lg:p-10 lg:text-base">
           {language === "en" ? (
             <span>
               Hello again! My name is Pablo Amico, and I would love to talk to
@@ -58,7 +58,7 @@ function About(props) {
               emocionado de hablar contigo sobre cómo podemos trabajar juntos!
             </span>
           )}
-        </head>
+        </p>
       </div>
       <div className="mt-6 flex w-full justify-center lg:mt-0 lg:justify-start">
         <a

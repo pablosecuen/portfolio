@@ -61,20 +61,24 @@ function About(props) {
         </p>
       </div>
       <div className="mt-6 flex w-full justify-center lg:mt-0 lg:justify-start">
-        <a
-          href="https://drive.google.com/file/d/1KT184mE7OYi1e756s7SBlIF2CZzq62qd/view?usp=share_link"
-          target="_blank"
-        >
-          {" "}
-          <button className="text-xsm h-10 w-32 rounded-3xl bg-blue-500 text-white shadow-md shadow-black sm:w-48 sm:text-base lg:ml-10">
+        <button className="text-xsm h-10 w-32 cursor-pointer rounded-3xl bg-blue-500 text-white shadow-md shadow-black sm:w-48 sm:text-base lg:ml-10">
+          <a
+            href="https://drive.google.com/file/d/1KT184mE7OYi1e756s7SBlIF2CZzq62qd/view?usp=share_link"
+            target="_blank"
+            className="cursor-pointer"
+            title="descarga este curriculum en español"
+          >
+            {" "}
             Descargar CV
-          </button>
-        </a>
+          </a>
+        </button>
         <a
           href="https://drive.google.com/file/d/1GELX-LyHAFCPho079-6FN-Fi_KfACC-G/view?usp=share_link"
           target="_blank"
+          className="cursor-pointer"
+          title="Download this cv in english"
         >
-          <button className="text-xsm h-10 w-32 rounded-3xl bg-blue-500 text-white shadow-md shadow-black sm:w-48 sm:text-base lg:ml-10">
+          <button className="text-xsm h-10 w-32 rounded-3xl bg-blue-500 text-white shadow-md shadow-black hover:cursor-pointer sm:w-48 sm:text-base lg:ml-10">
             Download CV
           </button>
         </a>

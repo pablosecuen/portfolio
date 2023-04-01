@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
-import { useMediaQuery } from "./useMediaQuery";
+import useMediaQuery from "./useMediaQuery";
 import proyect1 from "../assets/img/logo.png";
 import pokemon from "../assets/img/pokemon.png";
 import rick from "../assets/img/Rick.png";
@@ -13,7 +13,6 @@ function Proyects(props) {
   const [isOpen, setIsOpen] = useState(false);
   const [isOpen1, setIsOpen1] = useState(false);
   const [isOpen2, setIsOpen2] = useState(false);
-
   const isXSmallMobile = useMediaQuery("(max-width: 400px)");
   const isSmallMobile = useMediaQuery(
     "(min-width: 401px) and (max-width: 639px)"

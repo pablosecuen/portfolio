@@ -1,14 +1,12 @@
 import { useMediaQuery } from "./useMediaQuery";
+import Proyects from "./Proyects";
+import Technologies from "../Components/Technologies";
+import About from "../Components/About";
 import LanguageToggle from "../Components/LanguagueTogle";
-import { useState, lazy, Suspense } from "react";
-
+import { useEffect, useState } from "react";
+import Contact from "../Components/Contact";
+import Footer from "../Components/Footer";
 import ActionMenu from "../Components/ActionMenu";
-
-const Proyects = lazy(() => import("./Proyects"));
-const Technologies = lazy(() => import("../Components/Technologies"));
-const About = lazy(() => import("../Components/About"));
-const Contact = lazy(() => import("../Components/Contact"));
-const Footer = lazy(() => import("../Components/Footer"));
 
 function Landing() {
   const [language, setLanguage] = useState("en");

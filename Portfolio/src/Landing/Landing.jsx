@@ -1,9 +1,9 @@
-import { useMediaQuery } from "./useMediaQuery";
+import useMediaQuery from "./useMediaQuery";
 import Proyects from "./Proyects";
 import Technologies from "../Components/Technologies";
 import About from "../Components/About";
 import LanguageToggle from "../Components/LanguagueTogle";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Contact from "../Components/Contact";
 import Footer from "../Components/Footer";
 import ActionMenu from "../Components/ActionMenu";

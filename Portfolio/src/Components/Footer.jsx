@@ -22,11 +22,11 @@ function Footer(props) {
 
   return (
     <div className="flex-col border-2 border-white">
-      <div className="flex h-48 w-full ">
+      <div className="flex h-full w-full flex-col items-center align-middle sm:h-48 sm:flex-row">
         <div className="flex w-1/3 flex-col items-center justify-center align-middle">
-          <img src={logo} className="h-1/2" />
+          <img src={logo} className="h-24 pt-4 sm:pt-0 md:h-32" />
         </div>
-        <div className="flex w-1/3 flex-col items-center justify-center border-l-2 border-white  ">
+        <div className="flex flex-row items-center gap-4 border-white sm:w-1/3 sm:flex-col sm:gap-0 sm:border-l-2  ">
           {language === "en" ? (
             <p
               onClick={scrollToHome}
@@ -88,7 +88,7 @@ function Footer(props) {
             </p>
           )}
         </div>
-        <div className="flex w-1/3  flex-col items-center justify-center border-l-2   border-white">
+        <div className="flex flex-row items-center gap-4 border-white sm:w-1/3 sm:flex-col sm:gap-0 sm:border-l-2  ">
           {language === "en" ? (
             <p className="py-2 text-white">Get to know me</p>
           ) : (

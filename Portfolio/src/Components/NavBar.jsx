@@ -64,6 +64,10 @@ function NavBar() {
     window.scrollTo({ top: 3500, behavior: "smooth" });
   };
 
+  const scrollToContactMobile = () => {
+    window.scrollTo({ top: 4500, behavior: "smooth" });
+  };
+
   const sentence = {
     hidden: { opacity: 1 },
     visible: {
@@ -204,7 +208,7 @@ function NavBar() {
                   transition={{ duration: 2.5 }}
                 >
                   <h1
-                    onClick={scrollToContact}
+                    onClick={scrollToContactMobile}
                     className="load-screen--message cursor-pointer pt-4"
                   >
                     {line4}

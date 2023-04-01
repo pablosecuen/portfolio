@@ -79,7 +79,7 @@ function Proyects(props) {
   };
 
   return (
-    <div className="relative mt-96 w-full lg:mt-96">
+    <div className="relative mt-96 w-full lg:mt-96" id="proyects">
       {language === "en" ? (
         <motion.h2
           variants={{
@@ -94,7 +94,7 @@ function Proyects(props) {
             delay: 0.2,
             ease: [0, 0.71, 0.2, 1.01],
           }}
-          className=" -mt-96 mb-48 w-full cursor-pointer p-4 text-center text-4xl  -tracking-widest text-white shadow-black text-shadow-md xsm:text-4xl lg:-mt-48 lg:mb-0 lg:text-6xl   "
+          className=" sm-24 -mt-96 mb-12 w-full cursor-pointer p-4 text-center text-4xl  -tracking-widest text-white shadow-black text-shadow-md xsm:text-4xl lg:-mt-48 lg:mb-0 lg:text-6xl   "
         >
           My proyects
         </motion.h2>

@@ -5,11 +5,11 @@ function About(props) {
 
   return (
     <div className="lg h-screen w-full p-4 xsm:w-3/4 sm:w-full lg:pl-10">
-      <h2 className="mt-72 font-roboto text-2xl font-bold -tracking-widest text-white shadow-black text-shadow-md md:text-6xl lg:mt-96 lg:pl-8 xl:text-9xl">
+      <h2 className="mt-48 font-roboto text-2xl font-bold -tracking-wider text-white shadow-black text-shadow-md sm:mt-72 sm:-tracking-widest md:text-6xl lg:mt-96 lg:pl-8 xl:text-9xl">
         Fullstack Developer
       </h2>
       <div className=" mt-0 flex  w-full items-end justify-start    ">
-        <p className="top-96 mt-4 w-full text-start text-xs font-bold text-white shadow-black text-shadow-md sm:w-3/4 md:w-3/4 lg:mt-0 lg:w-4/5 lg:p-10 lg:text-base">
+        <p className="top-96 mt-4 w-full text-start text-xs font-medium text-white shadow-black text-shadow-md sm:w-3/4 sm:font-bold md:w-3/4 lg:mt-0 lg:w-4/5 lg:p-10 lg:text-base">
           {language === "en" ? (
             <span>
               Hello again! My name is Pablo Amico, and I would love to talk to
@@ -66,7 +66,7 @@ function About(props) {
           target="_blank"
         >
           {" "}
-          <button className="h-10 w-48 rounded-3xl bg-blue-500 text-white shadow-md shadow-black lg:ml-10">
+          <button className="text-xsm h-10 w-32 rounded-3xl bg-blue-500 text-white shadow-md shadow-black sm:w-48 sm:text-base lg:ml-10">
             Descargar CV
           </button>
         </a>
@@ -74,7 +74,7 @@ function About(props) {
           href="https://drive.google.com/file/d/1GELX-LyHAFCPho079-6FN-Fi_KfACC-G/view?usp=share_link"
           target="_blank"
         >
-          <button className="h-10 w-48 rounded-3xl bg-blue-500 text-white shadow-md shadow-black">
+          <button className="text-xsm h-10 w-32 rounded-3xl bg-blue-500 text-white shadow-md shadow-black sm:w-48 sm:text-base lg:ml-10">
             Download CV
           </button>
         </a>

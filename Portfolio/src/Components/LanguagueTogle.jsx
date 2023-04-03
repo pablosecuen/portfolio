@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import english from "../assets/svg/english.svg";
 import español from "../assets/svg/español.png";
 

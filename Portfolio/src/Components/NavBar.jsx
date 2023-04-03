@@ -225,7 +225,7 @@ function NavBar() {
               transition={{ duration: 3.0 }}
             >
               <motion.h3
-                className="load-screen--message cursor-pointer"
+                className="load-screen--message cursor-pointer duration-500  hover:text-white"
                 variants={sentence}
                 initial="hidden"
                 animate="visible"
@@ -246,7 +246,7 @@ function NavBar() {
               transition={{ duration: 2.0 }}
             >
               <motion.h3
-                className="load-screen--message cursor-pointer"
+                className="load-screen--message cursor-pointer duration-500  hover:text-white"
                 class="p2"
                 variants={sentence1}
                 initial="hidden"
@@ -268,7 +268,7 @@ function NavBar() {
               transition={{ duration: 1.0 }}
             >
               <motion.h3
-                className="load-screen--message cursor-pointer"
+                className="load-screen--message cursor-pointer duration-500 hover:text-white"
                 variants={sentence2}
                 initial="hidden"
                 animate="visible"
@@ -289,7 +289,7 @@ function NavBar() {
               transition={{ duration: 1.0 }}
             >
               <motion.h3
-                className="load-screen--message cursor-pointer"
+                className="load-screen--message cursor-pointer duration-500 hover:text-white"
                 variants={sentence3}
                 initial="hidden"
                 animate="visible"

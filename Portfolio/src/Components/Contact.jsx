@@ -58,9 +58,9 @@ function Contact() {
       onSubmit={handleSubmit}
     >
       <div className="flex w-3/4 flex-col border-2 pt-10 md:w-1/2">
-        <h5 className="h-10 pb-10 text-center text-xl text-white">
+        <h6 className="h-10 pb-10 text-center text-xl text-white">
           GET IN CONTACT WITH ME
-        </h5>
+        </h6>
         <label htmlFor="name" className="w-11/12 self-center text-white">
           Name:
         </label>

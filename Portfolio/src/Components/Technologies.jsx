@@ -310,7 +310,7 @@ function Technologies(props) {
           <div className="mx-20 flex w-full flex-wrap  justify-center gap-y-28 gap-x-10 font-roboto sm:justify-center md:justify-center lg:justify-around">
             {arrayTech.map((t, i) => {
               return (
-                <motion.div
+                <motion.article
                   key={i}
                   variants={{
                     hidden: { opacity: 0, scale: 0.5, x: "40%" },
@@ -410,7 +410,7 @@ function Technologies(props) {
                       ></motion.div>
                     )}
                   </motion.div>
-                </motion.div>
+                </motion.article>
               );
             })}
           </div>

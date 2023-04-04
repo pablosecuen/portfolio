@@ -64,7 +64,7 @@ module.exports = {
       },
       backgroundImage: {
         fondo: "url('./assets/1x/2x/fondo.png')",
-        bggrey: "url('./assets/img/greybg.png')",
+        bggrey: "url('./assets/img/greybg.webp')",
       },
     },
   },

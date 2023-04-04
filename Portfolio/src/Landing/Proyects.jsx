@@ -1,12 +1,12 @@
 import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import useMediaQuery from "./useMediaQuery";
-import proyect1 from "../assets/img/logo.png";
-import pokemon from "../assets/img/pokemon.png";
-import rick from "../assets/img/Rick.png";
-import pet from "../assets/img/petfriendly.png";
-import petsm from "../assets/img/petfriendlysm.png";
-import poke from "../assets/img/pokeApp.png";
+import proyect1 from "../assets/img/logo.webp";
+import pokemon from "../assets/img/pokemon.webp";
+import rick from "../assets/img/Rick.webp";
+import pet from "../assets/img/petfriendly.webp";
+import petsm from "../assets/img/petfriendly.webp";
+import poke from "../assets/img/pokeApp.webp";
 
 function Proyects(props) {
   const { language } = props;

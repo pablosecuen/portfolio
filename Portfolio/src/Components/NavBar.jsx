@@ -65,7 +65,7 @@ function NavBar() {
   };
 
   const scrollToContactMobile = () => {
-    window.scrollTo({ top: 4500, behavior: "smooth" });
+    window.scrollTo({ top: 5800, behavior: "smooth" });
   };
 
   const sentence = {

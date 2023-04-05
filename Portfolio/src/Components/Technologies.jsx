@@ -300,7 +300,7 @@ function Technologies(props) {
           delay: 0.2,
           ease: [0, 0.71, 0.2, 1.01],
         }}
-        className="  mt-40 mb-24 w-full p-4 text-center text-4xl text-white shadow-black text-shadow-md sm:mb-0 md:text-4xl   lg:-mb-0 lg:text-6xl"
+        className="z-10  mt-48 mb-24 w-full p-4 text-center text-4xl text-white shadow-black text-shadow-md sm:mb-0 md:text-4xl   lg:-mb-0 lg:text-6xl"
       >
         {" "}
         My Skills

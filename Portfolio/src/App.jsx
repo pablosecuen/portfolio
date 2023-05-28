@@ -15,10 +15,10 @@ function App() {
       <Suspense fallback={<Loader />}>
         <Routes>
           <Route path="/" element={<Landing />} />
-          <Analytics />
           {/* <Route path="*" element={<NotFound />} /> */}
         </Routes>
       </Suspense>
+          <Analytics />
     </div>
   );
 }

@@ -44,10 +44,8 @@ function animateCSS(name, filterValues, options) {
 function Technologies(props) {
   const { language } = props;
   const isMobile = useMediaQuery({ maxWidth: 600 });
-  const [state, setState] = useState({
-    expandedIndex: null,
-    isHovered: false,
-  });
+  const [expandedIndex, setExpandedIndex] = useState(null);
+  const [isHovered, setIsHovered] = useState(false);
 
   const arrayTech = useMemo(
     () => [
@@ -293,18 +291,15 @@ function Technologies(props) {
   });
 
   const handleMouseEnter = () => {
-    setState((prevState) => ({ ...prevState, isHovered: true }));
+    setIsHovered(true);
   };
 
   const handleMouseLeave = () => {
-    setState((prevState) => ({ ...prevState, isHovered: false }));
+    setIsHovered(false);
   };
 
   const handleOnClick = (i) => {
-    setState((prevState) => ({
-      ...prevState,
-      expandedIndex: i === prevState.expandedIndex ? null : i,
-    }));
+    setExpandedIndex(i === expandedIndex ? null : i);
   };
 
   return (

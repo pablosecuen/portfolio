@@ -9,7 +9,7 @@ function About(props) {
         Fullstack Developer
       </h1>
       <article className=" mt-0 flex  w-full items-end justify-start    ">
-        <p className="top-96 mt-4 w-full text-start text-xs  text-white shadow-black text-shadow-md sm:w-3/4 sm:font-bold md:w-3/4 lg:mt-0 lg:w-4/5 lg:p-10 lg:text-base">
+        <p className="top-96 mt-4 w-full text-start text-sm  text-white shadow-black text-shadow-md sm:w-3/4 sm:font-bold md:w-3/4 lg:mt-0 lg:w-4/5 lg:p-10 lg:text-base">
           {language === "en" ? (
             <span>
               Hello again! My name is Pablo Amico, and I would love to talk to you about how we can

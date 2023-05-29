@@ -16,6 +16,7 @@ import git from "../assets/logoTecnologias/git.svg";
 import github from "../assets/logoTecnologias/github.svg";
 import vite from "../assets/logoTecnologias/vite.svg";
 import anime from "animejs/lib/anime.es.js";
+import ts from "../assets/logoTecnologias/ts-logo-128.png";
 
 import { useMediaQuery } from "react-responsive";
 import { motion } from "framer-motion";
@@ -49,6 +50,17 @@ function Technologies(props) {
       title: "Css",
       shadowColor: "blue",
       url: "https://www.w3.org/Style/CSS/Overview.en.html",
+    },
+    {
+      name: "typescript",
+      logo: ts,
+      description:
+        " TypeScript is a strongly-typed superset of JavaScript that enhances the capabilities of the language by introducing static typing. It provides developers with the ability to define explicit types for variables, function parameters, and return values, which helps catch errors and provides better code documentation. TypeScript also supports the latest ECMAScript features, allowing developers to take advantage of modern JavaScript syntax while enjoying the benefits of static typing. With its rich tooling ecosystem and broad community support, TypeScript has become a popular choice for building scalable and maintainable web applications.",
+      descripcion:
+        "TypeScript es un superconjunto de JavaScript con tipado estático que mejora las capacidades del lenguaje. Permite a los desarrolladores definir tipos explícitos para variables, parámetros de función y valores de retorno, lo cual ayuda a detectar errores y proporciona una mejor documentación del código. TypeScript también es compatible con las últimas características de ECMAScript, lo que permite a los desarrolladores aprovechar la sintaxis moderna de JavaScript al tiempo que disfrutan de los beneficios del tipado estático. Con su amplio ecosistema de herramientas y un sólido respaldo de la comunidad, TypeScript se ha convertido en una elección popular para construir aplicaciones web escalables y mantenibles.",
+      title: "TypeScript",
+      shadowColor: "blue",
+      url: "https://www.typescriptlang.org/",
     },
     {
       name: "javascript",

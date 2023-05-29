@@ -19,7 +19,7 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        roboto: ["roboto", ...defaultTheme.fontFamily.roboto],
+        roboto: ['"roboto", ...defaultTheme.fontFamily.roboto'],
       },
       dropShadow: {
         "glow-red": "5px 5px 10px 2px rgba(255, 0, 0, 0.5)",

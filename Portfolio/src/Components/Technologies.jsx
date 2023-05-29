@@ -390,7 +390,7 @@ function Technologies(props) {
                         ease: [0, 0.71, 0.2, 1.01],
                       }}
                       src={t.logo}
-                      alt={t.name}
+                      alt="..."
                       title={t.title}
                       class={`${t.name} h-24 hover:cursor-pointer`}
                       className={`${t.name} absolute -top-12 z-50 h-32 pr-8 text-white hover:cursor-pointer`}
@@ -500,12 +500,15 @@ function Technologies(props) {
                           ease: [0, 0.71, 0.2, 1.01],
                         }}
                         src={t.logo}
-                        alt={t.name}
+                        alt="..."
                         title={t.title}
                         class={`${t.name} h-24 hover:cursor-pointer`}
                         className={`${t.name} absolute -top-12 z-50 h-32 pr-8 text-white hover:cursor-pointer`}
                         onMouseEnter={handleMouseEnter}
                         onMouseLeave={handleMouseLeave}
+                        loading="lazy"
+                        heigh={128}
+                        width={128}
                       />
                     </LazyLoad>
 

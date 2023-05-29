@@ -14,14 +14,10 @@ function Proyects(props) {
   const [isOpen1, setIsOpen1] = useState(false);
   const [isOpen2, setIsOpen2] = useState(false);
   const isXSmallMobile = useMediaQuery("(max-width: 400px)");
-  const isSmallMobile = useMediaQuery(
-    "(min-width: 401px) and (max-width: 639px)"
-  );
+  const isSmallMobile = useMediaQuery("(min-width: 401px) and (max-width: 639px)");
   const isMobile = useMediaQuery("(min-width: 640px) and (max-width: 767px)");
   const isTablet = useMediaQuery("(min-width: 768px) and (max-width: 1023px)");
-  const isDesktop = useMediaQuery(
-    "(min-width: 1024px) and (max-width: 1279px)"
-  );
+  const isDesktop = useMediaQuery("(min-width: 1024px) and (max-width: 1279px)");
   const isLargeDesktop = useMediaQuery("(min-width: 1280px)");
 
   function useOutsideAlerter(ref) {
@@ -208,23 +204,19 @@ function Proyects(props) {
                           className="p-6 text-center  text-xs"
                         >
                           {" "}
-                          Pet Friendly Universe is a multi-platform site with a
-                          fully functional e-commerce system. Any user with
-                          previous administrator authorization can create a
-                          store and upload their product catalogs. The site also
-                          provides services such as pet daycare and dog walking.
-                          Every sale made on the site must donate 3% of its
-                          profits to our non-governmental organizations for pet
-                          protection. These organizations have their own route
-                          on our site where they can post pets for adoption and
-                          have their own administrator dashboards to completely
-                          control the Pet Friendly Universe. This includes user
-                          banning, post deletions, store creation authorization,
-                          and much more. We used a variety of technologies to
-                          create this site, including JavaScript, React, Redux,
-                          Express, PostgreSQL, Cloudinary, JSON Web Token,
-                          third-party authorization, and several React libraries
-                          to optimize the site.{" "}
+                          Pet Friendly Universe is a multi-platform site with a fully functional
+                          e-commerce system. Any user with previous administrator authorization can
+                          create a store and upload their product catalogs. The site also provides
+                          services such as pet daycare and dog walking. Every sale made on the site
+                          must donate 3% of its profits to our non-governmental organizations for
+                          pet protection. These organizations have their own route on our site where
+                          they can post pets for adoption and have their own administrator
+                          dashboards to completely control the Pet Friendly Universe. This includes
+                          user banning, post deletions, store creation authorization, and much more.
+                          We used a variety of technologies to create this site, including
+                          JavaScript, React, Redux, Express, PostgreSQL, Cloudinary, JSON Web Token,
+                          third-party authorization, and several React libraries to optimize the
+                          site.{" "}
                         </motion.span>
                       ) : (
                         <motion.span
@@ -233,26 +225,21 @@ function Proyects(props) {
                           transition={{ duration: 2 }}
                           className="p-6 text-center  text-xs"
                         >
-                          Universo Amigable con las Mascotas es un sitio
-                          multiplataforma con un sistema de comercio electrónico
-                          completamente funcional. Cualquier usuario con
-                          autorización de administrador previa puede crear una
-                          tienda y cargar su catálogo de productos. El sitio
-                          también ofrece servicios como guardería de mascotas y
-                          paseo de perros. Cada venta realizada en el sitio debe
-                          donar el 3% de sus ganancias a nuestras organizaciones
-                          no gubernamentales de protección de mascotas. Estas
-                          organizaciones tienen su propia sección en nuestro
-                          sitio donde pueden publicar mascotas para adopción y
-                          tienen sus propios paneles de administración para
-                          controlar completamente el Universo Amigable con las
-                          Mascotas. Esto incluye la prohibición de usuarios,
-                          eliminación de publicaciones, autorización de creación
-                          de tiendas y mucho más. Utilizamos una variedad de
-                          tecnologías para crear este sitio, incluyendo
-                          JavaScript, React, Redux, Express, PostgreSQL,
-                          Cloudinary, JSON Web Token, autorización de terceros y
-                          varias bibliotecas de React para optimizar el sitio.
+                          Universo Amigable con las Mascotas es un sitio multiplataforma con un
+                          sistema de comercio electrónico completamente funcional. Cualquier usuario
+                          con autorización de administrador previa puede crear una tienda y cargar
+                          su catálogo de productos. El sitio también ofrece servicios como guardería
+                          de mascotas y paseo de perros. Cada venta realizada en el sitio debe donar
+                          el 3% de sus ganancias a nuestras organizaciones no gubernamentales de
+                          protección de mascotas. Estas organizaciones tienen su propia sección en
+                          nuestro sitio donde pueden publicar mascotas para adopción y tienen sus
+                          propios paneles de administración para controlar completamente el Universo
+                          Amigable con las Mascotas. Esto incluye la prohibición de usuarios,
+                          eliminación de publicaciones, autorización de creación de tiendas y mucho
+                          más. Utilizamos una variedad de tecnologías para crear este sitio,
+                          incluyendo JavaScript, React, Redux, Express, PostgreSQL, Cloudinary, JSON
+                          Web Token, autorización de terceros y varias bibliotecas de React para
+                          optimizar el sitio.
                         </motion.span>
                       )}
                     </motion.div>
@@ -360,20 +347,16 @@ function Proyects(props) {
                           className=" p-6 text-start text-xs"
                         >
                           {" "}
-                          This project uses React, Redux, Node, and Sequelize to
-                          view and interact with Pokémon data from the pokeapi
-                          API. The main page features a search input and list of
-                          Pokémon, which can be filtered and sorted by type and
-                          attack. Pagination is included to display 12 Pokémon
-                          per page. The Pokémon detail page includes stats and
-                          additional information, and a controlled form is
-                          available for creating new Pokémon. The creation form
-                          has been validated to ensure proper data entry. The
-                          app also includes a playable Kanto Ultimate Pokémon
-                          game. The app is not responsive due to limited
-                          development time. Overall, this project serves as a
-                          way to practice and apply knowledge of various
-                          technologies.
+                          This project uses React, Redux, Node, and Sequelize to view and interact
+                          with Pokémon data from the pokeapi API. The main page features a search
+                          input and list of Pokémon, which can be filtered and sorted by type and
+                          attack. Pagination is included to display 12 Pokémon per page. The Pokémon
+                          detail page includes stats and additional information, and a controlled
+                          form is available for creating new Pokémon. The creation form has been
+                          validated to ensure proper data entry. The app also includes a playable
+                          Kanto Ultimate Pokémon game. The app is not responsive due to limited
+                          development time. Overall, this project serves as a way to practice and
+                          apply knowledge of various technologies.
                         </motion.span>
                       ) : (
                         <motion.span
@@ -382,22 +365,18 @@ function Proyects(props) {
                           transition={{ duration: 2 }}
                           className=" p-6 text-start text-xs"
                         >
-                          Este proyecto utiliza React, Redux, Node y Sequelize
-                          para ver e interactuar con los datos de Pokémon de la
-                          API pokeapi. La página principal cuenta con una
-                          entrada de búsqueda y una lista de Pokémon, que se
-                          pueden filtrar y ordenar por tipo y ataque. Se incluye
-                          la paginación para mostrar 12 Pokémon por página. La
-                          página de detalle de Pokémon incluye estadísticas e
-                          información adicional, y hay un formulario controlado
-                          disponible para crear nuevos Pokémon. El formulario de
-                          creación ha sido validado para garantizar la entrada
-                          de datos correcta. La aplicación también incluye un
-                          juego de Pokémon Ultimate Kanto jugable. La aplicación
-                          no es responsiva debido al tiempo limitado de
-                          desarrollo. En general, este proyecto sirve como una
-                          manera de practicar y aplicar el conocimiento de
-                          varias tecnologías.
+                          Este proyecto utiliza React, Redux, Node y Sequelize para ver e
+                          interactuar con los datos de Pokémon de la API pokeapi. La página
+                          principal cuenta con una entrada de búsqueda y una lista de Pokémon, que
+                          se pueden filtrar y ordenar por tipo y ataque. Se incluye la paginación
+                          para mostrar 12 Pokémon por página. La página de detalle de Pokémon
+                          incluye estadísticas e información adicional, y hay un formulario
+                          controlado disponible para crear nuevos Pokémon. El formulario de creación
+                          ha sido validado para garantizar la entrada de datos correcta. La
+                          aplicación también incluye un juego de Pokémon Ultimate Kanto jugable. La
+                          aplicación no es responsiva debido al tiempo limitado de desarrollo. En
+                          general, este proyecto sirve como una manera de practicar y aplicar el
+                          conocimiento de varias tecnologías.
                         </motion.span>
                       )}
                     </motion.div>
@@ -556,24 +535,19 @@ function Proyects(props) {
                           className="p-6 text-center"
                         >
                           {" "}
-                          Pet Friendly Universe is a multi-platform site with a
-                          fully functional e-commerce system. Any user with
-                          previous administrator authorization can create a
-                          store and upload their product catalogs. The site also
-                          provides services such as pet daycare and dog walking.
-                          Every sale made on the site must donate 3% of its
-                          profits to our non-governmental organizations for pet
-                          protection. These organizations have their own route
-                          on our site where they can post pets for adoption and
-                          have their own administrator dashboards to completely
-                          control the Pet Friendly Universe. This includes user
-                          banning, post deletions, store creation authorization,
-                          and much more. We used a variety of technologies to
-                          create this site, including JavaScript, React, Redux,
-                          Express, PostgreSQL, Cloudinary, JSON Web Token,
-                          third-party authorization (such as Google, Vite, and
-                          Tailwind), and several React libraries to optimize the
-                          site.{" "}
+                          Pet Friendly Universe is a multi-platform site with a fully functional
+                          e-commerce system. Any user with previous administrator authorization can
+                          create a store and upload their product catalogs. The site also provides
+                          services such as pet daycare and dog walking. Every sale made on the site
+                          must donate 3% of its profits to our non-governmental organizations for
+                          pet protection. These organizations have their own route on our site where
+                          they can post pets for adoption and have their own administrator
+                          dashboards to completely control the Pet Friendly Universe. This includes
+                          user banning, post deletions, store creation authorization, and much more.
+                          We used a variety of technologies to create this site, including
+                          JavaScript, React, Redux, Express, PostgreSQL, Cloudinary, JSON Web Token,
+                          third-party authorization (such as Google, Vite, and Tailwind), and
+                          several React libraries to optimize the site.{" "}
                         </motion.span>
                       ) : (
                         <motion.span
@@ -582,27 +556,21 @@ function Proyects(props) {
                           transition={{ duration: 2 }}
                           className="p-6 text-center"
                         >
-                          Universo Amigable con las Mascotas es un sitio
-                          multiplataforma con un sistema de comercio electrónico
-                          completamente funcional. Cualquier usuario con
-                          autorización de administrador previa puede crear una
-                          tienda y cargar su catálogo de productos. El sitio
-                          también ofrece servicios como guardería de mascotas y
-                          paseo de perros. Cada venta realizada en el sitio debe
-                          donar el 3% de sus ganancias a nuestras organizaciones
-                          no gubernamentales de protección de mascotas. Estas
-                          organizaciones tienen su propia sección en nuestro
-                          sitio donde pueden publicar mascotas para adopción y
-                          tienen sus propios paneles de administración para
-                          controlar completamente el Universo Amigable con las
-                          Mascotas. Esto incluye la prohibición de usuarios,
-                          eliminación de publicaciones, autorización de creación
-                          de tiendas y mucho más. Utilizamos una variedad de
-                          tecnologías para crear este sitio, incluyendo
-                          JavaScript, React, Redux, Express, PostgreSQL,
-                          Cloudinary, JSON Web Token, autorización de terceros
-                          (como Google, Vite y Tailwind) y varias bibliotecas de
-                          React para optimizar el sitio.
+                          Universo Amigable con las Mascotas es un sitio multiplataforma con un
+                          sistema de comercio electrónico completamente funcional. Cualquier usuario
+                          con autorización de administrador previa puede crear una tienda y cargar
+                          su catálogo de productos. El sitio también ofrece servicios como guardería
+                          de mascotas y paseo de perros. Cada venta realizada en el sitio debe donar
+                          el 3% de sus ganancias a nuestras organizaciones no gubernamentales de
+                          protección de mascotas. Estas organizaciones tienen su propia sección en
+                          nuestro sitio donde pueden publicar mascotas para adopción y tienen sus
+                          propios paneles de administración para controlar completamente el Universo
+                          Amigable con las Mascotas. Esto incluye la prohibición de usuarios,
+                          eliminación de publicaciones, autorización de creación de tiendas y mucho
+                          más. Utilizamos una variedad de tecnologías para crear este sitio,
+                          incluyendo JavaScript, React, Redux, Express, PostgreSQL, Cloudinary, JSON
+                          Web Token, autorización de terceros (como Google, Vite y Tailwind) y
+                          varias bibliotecas de React para optimizar el sitio.
                         </motion.span>
                       )}
                     </motion.div>
@@ -705,20 +673,16 @@ function Proyects(props) {
                           className=" p-6 text-start text-xs"
                         >
                           {" "}
-                          This project uses React, Redux, Node, and Sequelize to
-                          view and interact with Pokémon data from the pokeapi
-                          API. The main page features a search input and list of
-                          Pokémon, which can be filtered and sorted by type and
-                          attack. Pagination is included to display 12 Pokémon
-                          per page. The Pokémon detail page includes stats and
-                          additional information, and a controlled form is
-                          available for creating new Pokémon. The creation form
-                          has been validated to ensure proper data entry. The
-                          app also includes a playable Kanto Ultimate Pokémon
-                          game. The app is not responsive due to limited
-                          development time. Overall, this project serves as a
-                          way to practice and apply knowledge of various
-                          technologies.
+                          This project uses React, Redux, Node, and Sequelize to view and interact
+                          with Pokémon data from the pokeapi API. The main page features a search
+                          input and list of Pokémon, which can be filtered and sorted by type and
+                          attack. Pagination is included to display 12 Pokémon per page. The Pokémon
+                          detail page includes stats and additional information, and a controlled
+                          form is available for creating new Pokémon. The creation form has been
+                          validated to ensure proper data entry. The app also includes a playable
+                          Kanto Ultimate Pokémon game. The app is not responsive due to limited
+                          development time. Overall, this project serves as a way to practice and
+                          apply knowledge of various technologies.
                         </motion.span>
                       ) : (
                         <motion.span
@@ -727,22 +691,18 @@ function Proyects(props) {
                           transition={{ duration: 2 }}
                           className=" p-6 text-start text-xs"
                         >
-                          Este proyecto utiliza React, Redux, Node y Sequelize
-                          para ver e interactuar con los datos de Pokémon de la
-                          API pokeapi. La página principal cuenta con una
-                          entrada de búsqueda y una lista de Pokémon, que se
-                          pueden filtrar y ordenar por tipo y ataque. Se incluye
-                          la paginación para mostrar 12 Pokémon por página. La
-                          página de detalle de Pokémon incluye estadísticas e
-                          información adicional, y hay un formulario controlado
-                          disponible para crear nuevos Pokémon. El formulario de
-                          creación ha sido validado para garantizar la entrada
-                          de datos correcta. La aplicación también incluye un
-                          juego de Pokémon Ultimate Kanto jugable. La aplicación
-                          no es responsiva debido al tiempo limitado de
-                          desarrollo. En general, este proyecto sirve como una
-                          manera de practicar y aplicar el conocimiento de
-                          varias tecnologías.
+                          Este proyecto utiliza React, Redux, Node y Sequelize para ver e
+                          interactuar con los datos de Pokémon de la API pokeapi. La página
+                          principal cuenta con una entrada de búsqueda y una lista de Pokémon, que
+                          se pueden filtrar y ordenar por tipo y ataque. Se incluye la paginación
+                          para mostrar 12 Pokémon por página. La página de detalle de Pokémon
+                          incluye estadísticas e información adicional, y hay un formulario
+                          controlado disponible para crear nuevos Pokémon. El formulario de creación
+                          ha sido validado para garantizar la entrada de datos correcta. La
+                          aplicación también incluye un juego de Pokémon Ultimate Kanto jugable. La
+                          aplicación no es responsiva debido al tiempo limitado de desarrollo. En
+                          general, este proyecto sirve como una manera de practicar y aplicar el
+                          conocimiento de varias tecnologías.
                         </motion.span>
                       )}
                     </motion.div>
@@ -900,24 +860,19 @@ function Proyects(props) {
                           className="p-6 text-center"
                         >
                           {" "}
-                          Pet Friendly Universe is a multi-platform site with a
-                          fully functional e-commerce system. Any user with
-                          previous administrator authorization can create a
-                          store and upload their product catalogs. The site also
-                          provides services such as pet daycare and dog walking.
-                          Every sale made on the site must donate 3% of its
-                          profits to our non-governmental organizations for pet
-                          protection. These organizations have their own route
-                          on our site where they can post pets for adoption and
-                          have their own administrator dashboards to completely
-                          control the Pet Friendly Universe. This includes user
-                          banning, post deletions, store creation authorization,
-                          and much more. We used a variety of technologies to
-                          create this site, including JavaScript, React, Redux,
-                          Express, PostgreSQL, Cloudinary, JSON Web Token,
-                          third-party authorization (such as Google, Vite, and
-                          Tailwind), and several React libraries to optimize the
-                          site.{" "}
+                          Pet Friendly Universe is a multi-platform site with a fully functional
+                          e-commerce system. Any user with previous administrator authorization can
+                          create a store and upload their product catalogs. The site also provides
+                          services such as pet daycare and dog walking. Every sale made on the site
+                          must donate 3% of its profits to our non-governmental organizations for
+                          pet protection. These organizations have their own route on our site where
+                          they can post pets for adoption and have their own administrator
+                          dashboards to completely control the Pet Friendly Universe. This includes
+                          user banning, post deletions, store creation authorization, and much more.
+                          We used a variety of technologies to create this site, including
+                          JavaScript, React, Redux, Express, PostgreSQL, Cloudinary, JSON Web Token,
+                          third-party authorization (such as Google, Vite, and Tailwind), and
+                          several React libraries to optimize the site.{" "}
                         </motion.span>
                       ) : (
                         <motion.span
@@ -926,27 +881,21 @@ function Proyects(props) {
                           transition={{ duration: 2 }}
                           className="p-6 text-center"
                         >
-                          Universo Amigable con las Mascotas es un sitio
-                          multiplataforma con un sistema de comercio electrónico
-                          completamente funcional. Cualquier usuario con
-                          autorización de administrador previa puede crear una
-                          tienda y cargar su catálogo de productos. El sitio
-                          también ofrece servicios como guardería de mascotas y
-                          paseo de perros. Cada venta realizada en el sitio debe
-                          donar el 3% de sus ganancias a nuestras organizaciones
-                          no gubernamentales de protección de mascotas. Estas
-                          organizaciones tienen su propia sección en nuestro
-                          sitio donde pueden publicar mascotas para adopción y
-                          tienen sus propios paneles de administración para
-                          controlar completamente el Universo Amigable con las
-                          Mascotas. Esto incluye la prohibición de usuarios,
-                          eliminación de publicaciones, autorización de creación
-                          de tiendas y mucho más. Utilizamos una variedad de
-                          tecnologías para crear este sitio, incluyendo
-                          JavaScript, React, Redux, Express, PostgreSQL,
-                          Cloudinary, JSON Web Token, autorización de terceros
-                          (como Google, Vite y Tailwind) y varias bibliotecas de
-                          React para optimizar el sitio.
+                          Universo Amigable con las Mascotas es un sitio multiplataforma con un
+                          sistema de comercio electrónico completamente funcional. Cualquier usuario
+                          con autorización de administrador previa puede crear una tienda y cargar
+                          su catálogo de productos. El sitio también ofrece servicios como guardería
+                          de mascotas y paseo de perros. Cada venta realizada en el sitio debe donar
+                          el 3% de sus ganancias a nuestras organizaciones no gubernamentales de
+                          protección de mascotas. Estas organizaciones tienen su propia sección en
+                          nuestro sitio donde pueden publicar mascotas para adopción y tienen sus
+                          propios paneles de administración para controlar completamente el Universo
+                          Amigable con las Mascotas. Esto incluye la prohibición de usuarios,
+                          eliminación de publicaciones, autorización de creación de tiendas y mucho
+                          más. Utilizamos una variedad de tecnologías para crear este sitio,
+                          incluyendo JavaScript, React, Redux, Express, PostgreSQL, Cloudinary, JSON
+                          Web Token, autorización de terceros (como Google, Vite y Tailwind) y
+                          varias bibliotecas de React para optimizar el sitio.
                         </motion.span>
                       )}
                     </motion.div>
@@ -1048,20 +997,16 @@ function Proyects(props) {
                           className=" p-6 text-start text-xs"
                         >
                           {" "}
-                          This project uses React, Redux, Node, and Sequelize to
-                          view and interact with Pokémon data from the pokeapi
-                          API. The main page features a search input and list of
-                          Pokémon, which can be filtered and sorted by type and
-                          attack. Pagination is included to display 12 Pokémon
-                          per page. The Pokémon detail page includes stats and
-                          additional information, and a controlled form is
-                          available for creating new Pokémon. The creation form
-                          has been validated to ensure proper data entry. The
-                          app also includes a playable Kanto Ultimate Pokémon
-                          game. The app is not responsive due to limited
-                          development time. Overall, this project serves as a
-                          way to practice and apply knowledge of various
-                          technologies.
+                          This project uses React, Redux, Node, and Sequelize to view and interact
+                          with Pokémon data from the pokeapi API. The main page features a search
+                          input and list of Pokémon, which can be filtered and sorted by type and
+                          attack. Pagination is included to display 12 Pokémon per page. The Pokémon
+                          detail page includes stats and additional information, and a controlled
+                          form is available for creating new Pokémon. The creation form has been
+                          validated to ensure proper data entry. The app also includes a playable
+                          Kanto Ultimate Pokémon game. The app is not responsive due to limited
+                          development time. Overall, this project serves as a way to practice and
+                          apply knowledge of various technologies.
                         </motion.span>
                       ) : (
                         <motion.span
@@ -1070,22 +1015,18 @@ function Proyects(props) {
                           transition={{ duration: 2 }}
                           className=" p-6 text-start text-xs"
                         >
-                          Este proyecto utiliza React, Redux, Node y Sequelize
-                          para ver e interactuar con los datos de Pokémon de la
-                          API pokeapi. La página principal cuenta con una
-                          entrada de búsqueda y una lista de Pokémon, que se
-                          pueden filtrar y ordenar por tipo y ataque. Se incluye
-                          la paginación para mostrar 12 Pokémon por página. La
-                          página de detalle de Pokémon incluye estadísticas e
-                          información adicional, y hay un formulario controlado
-                          disponible para crear nuevos Pokémon. El formulario de
-                          creación ha sido validado para garantizar la entrada
-                          de datos correcta. La aplicación también incluye un
-                          juego de Pokémon Ultimate Kanto jugable. La aplicación
-                          no es responsiva debido al tiempo limitado de
-                          desarrollo. En general, este proyecto sirve como una
-                          manera de practicar y aplicar el conocimiento de
-                          varias tecnologías.
+                          Este proyecto utiliza React, Redux, Node y Sequelize para ver e
+                          interactuar con los datos de Pokémon de la API pokeapi. La página
+                          principal cuenta con una entrada de búsqueda y una lista de Pokémon, que
+                          se pueden filtrar y ordenar por tipo y ataque. Se incluye la paginación
+                          para mostrar 12 Pokémon por página. La página de detalle de Pokémon
+                          incluye estadísticas e información adicional, y hay un formulario
+                          controlado disponible para crear nuevos Pokémon. El formulario de creación
+                          ha sido validado para garantizar la entrada de datos correcta. La
+                          aplicación también incluye un juego de Pokémon Ultimate Kanto jugable. La
+                          aplicación no es responsiva debido al tiempo limitado de desarrollo. En
+                          general, este proyecto sirve como una manera de practicar y aplicar el
+                          conocimiento de varias tecnologías.
                         </motion.span>
                       )}
                     </motion.div>
@@ -1242,24 +1183,19 @@ function Proyects(props) {
                           className="p-6 text-center"
                         >
                           {" "}
-                          Pet Friendly Universe is a multi-platform site with a
-                          fully functional e-commerce system. Any user with
-                          previous administrator authorization can create a
-                          store and upload their product catalogs. The site also
-                          provides services such as pet daycare and dog walking.
-                          Every sale made on the site must donate 3% of its
-                          profits to our non-governmental organizations for pet
-                          protection. These organizations have their own route
-                          on our site where they can post pets for adoption and
-                          have their own administrator dashboards to completely
-                          control the Pet Friendly Universe. This includes user
-                          banning, post deletions, store creation authorization,
-                          and much more. We used a variety of technologies to
-                          create this site, including JavaScript, React, Redux,
-                          Express, PostgreSQL, Cloudinary, JSON Web Token,
-                          third-party authorization (such as Google, Vite, and
-                          Tailwind), and several React libraries to optimize the
-                          site.{" "}
+                          Pet Friendly Universe is a multi-platform site with a fully functional
+                          e-commerce system. Any user with previous administrator authorization can
+                          create a store and upload their product catalogs. The site also provides
+                          services such as pet daycare and dog walking. Every sale made on the site
+                          must donate 3% of its profits to our non-governmental organizations for
+                          pet protection. These organizations have their own route on our site where
+                          they can post pets for adoption and have their own administrator
+                          dashboards to completely control the Pet Friendly Universe. This includes
+                          user banning, post deletions, store creation authorization, and much more.
+                          We used a variety of technologies to create this site, including
+                          JavaScript, React, Redux, Express, PostgreSQL, Cloudinary, JSON Web Token,
+                          third-party authorization (such as Google, Vite, and Tailwind), and
+                          several React libraries to optimize the site.{" "}
                         </motion.span>
                       ) : (
                         <motion.span
@@ -1268,27 +1204,21 @@ function Proyects(props) {
                           transition={{ duration: 2 }}
                           className="p-6 text-center"
                         >
-                          Universo Amigable con las Mascotas es un sitio
-                          multiplataforma con un sistema de comercio electrónico
-                          completamente funcional. Cualquier usuario con
-                          autorización de administrador previa puede crear una
-                          tienda y cargar su catálogo de productos. El sitio
-                          también ofrece servicios como guardería de mascotas y
-                          paseo de perros. Cada venta realizada en el sitio debe
-                          donar el 3% de sus ganancias a nuestras organizaciones
-                          no gubernamentales de protección de mascotas. Estas
-                          organizaciones tienen su propia sección en nuestro
-                          sitio donde pueden publicar mascotas para adopción y
-                          tienen sus propios paneles de administración para
-                          controlar completamente el Universo Amigable con las
-                          Mascotas. Esto incluye la prohibición de usuarios,
-                          eliminación de publicaciones, autorización de creación
-                          de tiendas y mucho más. Utilizamos una variedad de
-                          tecnologías para crear este sitio, incluyendo
-                          JavaScript, React, Redux, Express, PostgreSQL,
-                          Cloudinary, JSON Web Token, autorización de terceros
-                          (como Google, Vite y Tailwind) y varias bibliotecas de
-                          React para optimizar el sitio.
+                          Universo Amigable con las Mascotas es un sitio multiplataforma con un
+                          sistema de comercio electrónico completamente funcional. Cualquier usuario
+                          con autorización de administrador previa puede crear una tienda y cargar
+                          su catálogo de productos. El sitio también ofrece servicios como guardería
+                          de mascotas y paseo de perros. Cada venta realizada en el sitio debe donar
+                          el 3% de sus ganancias a nuestras organizaciones no gubernamentales de
+                          protección de mascotas. Estas organizaciones tienen su propia sección en
+                          nuestro sitio donde pueden publicar mascotas para adopción y tienen sus
+                          propios paneles de administración para controlar completamente el Universo
+                          Amigable con las Mascotas. Esto incluye la prohibición de usuarios,
+                          eliminación de publicaciones, autorización de creación de tiendas y mucho
+                          más. Utilizamos una variedad de tecnologías para crear este sitio,
+                          incluyendo JavaScript, React, Redux, Express, PostgreSQL, Cloudinary, JSON
+                          Web Token, autorización de terceros (como Google, Vite y Tailwind) y
+                          varias bibliotecas de React para optimizar el sitio.
                         </motion.span>
                       )}
                     </motion.div>
@@ -1389,20 +1319,16 @@ function Proyects(props) {
                           className=" p-6 text-start text-xs"
                         >
                           {" "}
-                          This project uses React, Redux, Node, and Sequelize to
-                          view and interact with Pokémon data from the pokeapi
-                          API. The main page features a search input and list of
-                          Pokémon, which can be filtered and sorted by type and
-                          attack. Pagination is included to display 12 Pokémon
-                          per page. The Pokémon detail page includes stats and
-                          additional information, and a controlled form is
-                          available for creating new Pokémon. The creation form
-                          has been validated to ensure proper data entry. The
-                          app also includes a playable Kanto Ultimate Pokémon
-                          game. The app is not responsive due to limited
-                          development time. Overall, this project serves as a
-                          way to practice and apply knowledge of various
-                          technologies.
+                          This project uses React, Redux, Node, and Sequelize to view and interact
+                          with Pokémon data from the pokeapi API. The main page features a search
+                          input and list of Pokémon, which can be filtered and sorted by type and
+                          attack. Pagination is included to display 12 Pokémon per page. The Pokémon
+                          detail page includes stats and additional information, and a controlled
+                          form is available for creating new Pokémon. The creation form has been
+                          validated to ensure proper data entry. The app also includes a playable
+                          Kanto Ultimate Pokémon game. The app is not responsive due to limited
+                          development time. Overall, this project serves as a way to practice and
+                          apply knowledge of various technologies.
                         </motion.span>
                       ) : (
                         <motion.span
@@ -1411,22 +1337,18 @@ function Proyects(props) {
                           transition={{ duration: 2 }}
                           className=" p-6 text-start text-xs"
                         >
-                          Este proyecto utiliza React, Redux, Node y Sequelize
-                          para ver e interactuar con los datos de Pokémon de la
-                          API pokeapi. La página principal cuenta con una
-                          entrada de búsqueda y una lista de Pokémon, que se
-                          pueden filtrar y ordenar por tipo y ataque. Se incluye
-                          la paginación para mostrar 12 Pokémon por página. La
-                          página de detalle de Pokémon incluye estadísticas e
-                          información adicional, y hay un formulario controlado
-                          disponible para crear nuevos Pokémon. El formulario de
-                          creación ha sido validado para garantizar la entrada
-                          de datos correcta. La aplicación también incluye un
-                          juego de Pokémon Ultimate Kanto jugable. La aplicación
-                          no es responsiva debido al tiempo limitado de
-                          desarrollo. En general, este proyecto sirve como una
-                          manera de practicar y aplicar el conocimiento de
-                          varias tecnologías.
+                          Este proyecto utiliza React, Redux, Node y Sequelize para ver e
+                          interactuar con los datos de Pokémon de la API pokeapi. La página
+                          principal cuenta con una entrada de búsqueda y una lista de Pokémon, que
+                          se pueden filtrar y ordenar por tipo y ataque. Se incluye la paginación
+                          para mostrar 12 Pokémon por página. La página de detalle de Pokémon
+                          incluye estadísticas e información adicional, y hay un formulario
+                          controlado disponible para crear nuevos Pokémon. El formulario de creación
+                          ha sido validado para garantizar la entrada de datos correcta. La
+                          aplicación también incluye un juego de Pokémon Ultimate Kanto jugable. La
+                          aplicación no es responsiva debido al tiempo limitado de desarrollo. En
+                          general, este proyecto sirve como una manera de practicar y aplicar el
+                          conocimiento de varias tecnologías.
                         </motion.span>
                       )}
                     </motion.div>
@@ -1582,24 +1504,19 @@ function Proyects(props) {
                           className="p-6 text-center"
                         >
                           {" "}
-                          Pet Friendly Universe is a multi-platform site with a
-                          fully functional e-commerce system. Any user with
-                          previous administrator authorization can create a
-                          store and upload their product catalogs. The site also
-                          provides services such as pet daycare and dog walking.
-                          Every sale made on the site must donate 3% of its
-                          profits to our non-governmental organizations for pet
-                          protection. These organizations have their own route
-                          on our site where they can post pets for adoption and
-                          have their own administrator dashboards to completely
-                          control the Pet Friendly Universe. This includes user
-                          banning, post deletions, store creation authorization,
-                          and much more. We used a variety of technologies to
-                          create this site, including JavaScript, React, Redux,
-                          Express, PostgreSQL, Cloudinary, JSON Web Token,
-                          third-party authorization (such as Google, Vite, and
-                          Tailwind), and several React libraries to optimize the
-                          site.{" "}
+                          Pet Friendly Universe is a multi-platform site with a fully functional
+                          e-commerce system. Any user with previous administrator authorization can
+                          create a store and upload their product catalogs. The site also provides
+                          services such as pet daycare and dog walking. Every sale made on the site
+                          must donate 3% of its profits to our non-governmental organizations for
+                          pet protection. These organizations have their own route on our site where
+                          they can post pets for adoption and have their own administrator
+                          dashboards to completely control the Pet Friendly Universe. This includes
+                          user banning, post deletions, store creation authorization, and much more.
+                          We used a variety of technologies to create this site, including
+                          JavaScript, React, Redux, Express, PostgreSQL, Cloudinary, JSON Web Token,
+                          third-party authorization (such as Google, Vite, and Tailwind), and
+                          several React libraries to optimize the site.{" "}
                         </motion.span>
                       ) : (
                         <motion.span
@@ -1608,27 +1525,21 @@ function Proyects(props) {
                           transition={{ duration: 2 }}
                           className="p-6 text-center"
                         >
-                          Universo Amigable con las Mascotas es un sitio
-                          multiplataforma con un sistema de comercio electrónico
-                          completamente funcional. Cualquier usuario con
-                          autorización de administrador previa puede crear una
-                          tienda y cargar su catálogo de productos. El sitio
-                          también ofrece servicios como guardería de mascotas y
-                          paseo de perros. Cada venta realizada en el sitio debe
-                          donar el 3% de sus ganancias a nuestras organizaciones
-                          no gubernamentales de protección de mascotas. Estas
-                          organizaciones tienen su propia sección en nuestro
-                          sitio donde pueden publicar mascotas para adopción y
-                          tienen sus propios paneles de administración para
-                          controlar completamente el Universo Amigable con las
-                          Mascotas. Esto incluye la prohibición de usuarios,
-                          eliminación de publicaciones, autorización de creación
-                          de tiendas y mucho más. Utilizamos una variedad de
-                          tecnologías para crear este sitio, incluyendo
-                          JavaScript, React, Redux, Express, PostgreSQL,
-                          Cloudinary, JSON Web Token, autorización de terceros
-                          (como Google, Vite y Tailwind) y varias bibliotecas de
-                          React para optimizar el sitio.
+                          Universo Amigable con las Mascotas es un sitio multiplataforma con un
+                          sistema de comercio electrónico completamente funcional. Cualquier usuario
+                          con autorización de administrador previa puede crear una tienda y cargar
+                          su catálogo de productos. El sitio también ofrece servicios como guardería
+                          de mascotas y paseo de perros. Cada venta realizada en el sitio debe donar
+                          el 3% de sus ganancias a nuestras organizaciones no gubernamentales de
+                          protección de mascotas. Estas organizaciones tienen su propia sección en
+                          nuestro sitio donde pueden publicar mascotas para adopción y tienen sus
+                          propios paneles de administración para controlar completamente el Universo
+                          Amigable con las Mascotas. Esto incluye la prohibición de usuarios,
+                          eliminación de publicaciones, autorización de creación de tiendas y mucho
+                          más. Utilizamos una variedad de tecnologías para crear este sitio,
+                          incluyendo JavaScript, React, Redux, Express, PostgreSQL, Cloudinary, JSON
+                          Web Token, autorización de terceros (como Google, Vite y Tailwind) y
+                          varias bibliotecas de React para optimizar el sitio.
                         </motion.span>
                       )}
                     </motion.div>
@@ -1651,7 +1562,7 @@ function Proyects(props) {
                 className="flex  items-center justify-center  "
               >
                 {!isOpen1 && (
-                  <button onClick={() => setIsOpen1(!isOpen1)}>
+                  <div onClick={() => setIsOpen1(!isOpen1)}>
                     <motion.div
                       ref={wrapperRef1}
                       layout
@@ -1674,7 +1585,7 @@ function Proyects(props) {
                         title="Individual Proyect Pokemon"
                       ></motion.img>
                     </motion.div>
-                  </button>
+                  </div>
                 )}
                 {isOpen1 && (
                   <div className="relative flex flex-col">
@@ -1733,20 +1644,16 @@ function Proyects(props) {
                           className=" p-6 text-start text-xs"
                         >
                           {" "}
-                          This project uses React, Redux, Node, and Sequelize to
-                          view and interact with Pokémon data from the pokeapi
-                          API. The main page features a search input and list of
-                          Pokémon, which can be filtered and sorted by type and
-                          attack. Pagination is included to display 12 Pokémon
-                          per page. The Pokémon detail page includes stats and
-                          additional information, and a controlled form is
-                          available for creating new Pokémon. The creation form
-                          has been validated to ensure proper data entry. The
-                          app also includes a playable Kanto Ultimate Pokémon
-                          game. The app is not responsive due to limited
-                          development time. Overall, this project serves as a
-                          way to practice and apply knowledge of various
-                          technologies.
+                          This project uses React, Redux, Node, and Sequelize to view and interact
+                          with Pokémon data from the pokeapi API. The main page features a search
+                          input and list of Pokémon, which can be filtered and sorted by type and
+                          attack. Pagination is included to display 12 Pokémon per page. The Pokémon
+                          detail page includes stats and additional information, and a controlled
+                          form is available for creating new Pokémon. The creation form has been
+                          validated to ensure proper data entry. The app also includes a playable
+                          Kanto Ultimate Pokémon game. The app is not responsive due to limited
+                          development time. Overall, this project serves as a way to practice and
+                          apply knowledge of various technologies.
                         </motion.span>
                       ) : (
                         <motion.span
@@ -1755,22 +1662,18 @@ function Proyects(props) {
                           transition={{ duration: 2 }}
                           className=" p-6 text-start text-xs"
                         >
-                          Este proyecto utiliza React, Redux, Node y Sequelize
-                          para ver e interactuar con los datos de Pokémon de la
-                          API pokeapi. La página principal cuenta con una
-                          entrada de búsqueda y una lista de Pokémon, que se
-                          pueden filtrar y ordenar por tipo y ataque. Se incluye
-                          la paginación para mostrar 12 Pokémon por página. La
-                          página de detalle de Pokémon incluye estadísticas e
-                          información adicional, y hay un formulario controlado
-                          disponible para crear nuevos Pokémon. El formulario de
-                          creación ha sido validado para garantizar la entrada
-                          de datos correcta. La aplicación también incluye un
-                          juego de Pokémon Ultimate Kanto jugable. La aplicación
-                          no es responsiva debido al tiempo limitado de
-                          desarrollo. En general, este proyecto sirve como una
-                          manera de practicar y aplicar el conocimiento de
-                          varias tecnologías.
+                          Este proyecto utiliza React, Redux, Node y Sequelize para ver e
+                          interactuar con los datos de Pokémon de la API pokeapi. La página
+                          principal cuenta con una entrada de búsqueda y una lista de Pokémon, que
+                          se pueden filtrar y ordenar por tipo y ataque. Se incluye la paginación
+                          para mostrar 12 Pokémon por página. La página de detalle de Pokémon
+                          incluye estadísticas e información adicional, y hay un formulario
+                          controlado disponible para crear nuevos Pokémon. El formulario de creación
+                          ha sido validado para garantizar la entrada de datos correcta. La
+                          aplicación también incluye un juego de Pokémon Ultimate Kanto jugable. La
+                          aplicación no es responsiva debido al tiempo limitado de desarrollo. En
+                          general, este proyecto sirve como una manera de practicar y aplicar el
+                          conocimiento de varias tecnologías.
                         </motion.span>
                       )}
                     </motion.div>
@@ -1952,24 +1855,19 @@ function Proyects(props) {
                           className="p-6 text-center"
                         >
                           {" "}
-                          Pet Friendly Universe is a multi-platform site with a
-                          fully functional e-commerce system. Any user with
-                          previous administrator authorization can create a
-                          store and upload their product catalogs. The site also
-                          provides services such as pet daycare and dog walking.
-                          Every sale made on the site must donate 3% of its
-                          profits to our non-governmental organizations for pet
-                          protection. These organizations have their own route
-                          on our site where they can post pets for adoption and
-                          have their own administrator dashboards to completely
-                          control the Pet Friendly Universe. This includes user
-                          banning, post deletions, store creation authorization,
-                          and much more. We used a variety of technologies to
-                          create this site, including JavaScript, React, Redux,
-                          Express, PostgreSQL, Cloudinary, JSON Web Token,
-                          third-party authorization (such as Google, Vite, and
-                          Tailwind), and several React libraries to optimize the
-                          site.{" "}
+                          Pet Friendly Universe is a multi-platform site with a fully functional
+                          e-commerce system. Any user with previous administrator authorization can
+                          create a store and upload their product catalogs. The site also provides
+                          services such as pet daycare and dog walking. Every sale made on the site
+                          must donate 3% of its profits to our non-governmental organizations for
+                          pet protection. These organizations have their own route on our site where
+                          they can post pets for adoption and have their own administrator
+                          dashboards to completely control the Pet Friendly Universe. This includes
+                          user banning, post deletions, store creation authorization, and much more.
+                          We used a variety of technologies to create this site, including
+                          JavaScript, React, Redux, Express, PostgreSQL, Cloudinary, JSON Web Token,
+                          third-party authorization (such as Google, Vite, and Tailwind), and
+                          several React libraries to optimize the site.{" "}
                         </motion.span>
                       ) : (
                         <motion.span
@@ -1978,27 +1876,21 @@ function Proyects(props) {
                           transition={{ duration: 2 }}
                           className="p-6 text-center"
                         >
-                          Universo Amigable con las Mascotas es un sitio
-                          multiplataforma con un sistema de comercio electrónico
-                          completamente funcional. Cualquier usuario con
-                          autorización de administrador previa puede crear una
-                          tienda y cargar su catálogo de productos. El sitio
-                          también ofrece servicios como guardería de mascotas y
-                          paseo de perros. Cada venta realizada en el sitio debe
-                          donar el 3% de sus ganancias a nuestras organizaciones
-                          no gubernamentales de protección de mascotas. Estas
-                          organizaciones tienen su propia sección en nuestro
-                          sitio donde pueden publicar mascotas para adopción y
-                          tienen sus propios paneles de administración para
-                          controlar completamente el Universo Amigable con las
-                          Mascotas. Esto incluye la prohibición de usuarios,
-                          eliminación de publicaciones, autorización de creación
-                          de tiendas y mucho más. Utilizamos una variedad de
-                          tecnologías para crear este sitio, incluyendo
-                          JavaScript, React, Redux, Express, PostgreSQL,
-                          Cloudinary, JSON Web Token, autorización de terceros
-                          (como Google, Vite y Tailwind) y varias bibliotecas de
-                          React para optimizar el sitio.
+                          Universo Amigable con las Mascotas es un sitio multiplataforma con un
+                          sistema de comercio electrónico completamente funcional. Cualquier usuario
+                          con autorización de administrador previa puede crear una tienda y cargar
+                          su catálogo de productos. El sitio también ofrece servicios como guardería
+                          de mascotas y paseo de perros. Cada venta realizada en el sitio debe donar
+                          el 3% de sus ganancias a nuestras organizaciones no gubernamentales de
+                          protección de mascotas. Estas organizaciones tienen su propia sección en
+                          nuestro sitio donde pueden publicar mascotas para adopción y tienen sus
+                          propios paneles de administración para controlar completamente el Universo
+                          Amigable con las Mascotas. Esto incluye la prohibición de usuarios,
+                          eliminación de publicaciones, autorización de creación de tiendas y mucho
+                          más. Utilizamos una variedad de tecnologías para crear este sitio,
+                          incluyendo JavaScript, React, Redux, Express, PostgreSQL, Cloudinary, JSON
+                          Web Token, autorización de terceros (como Google, Vite y Tailwind) y
+                          varias bibliotecas de React para optimizar el sitio.
                         </motion.span>
                       )}
                     </motion.div>
@@ -2116,10 +2008,7 @@ function Proyects(props) {
                       }}
                       className="absolute  z-50  flex h-96 w-96 cursor-pointer flex-col items-center justify-evenly rounded-full bg-slate-100  shadow-2xl shadow-black duration-1000 "
                     >
-                      <img
-                        src={pokemon}
-                        className="w-24 bg-cover object-cover pt-8 align-middle"
-                      />
+                      <img src={pokemon} className="w-24 bg-cover object-cover pt-8 align-middle" />
                       {language === "en" ? (
                         <motion.span
                           initial={{ opacity: 0 }}
@@ -2128,20 +2017,16 @@ function Proyects(props) {
                           className=" p-6 text-start text-xs"
                         >
                           {" "}
-                          This project uses React, Redux, Node, and Sequelize to
-                          view and interact with Pokémon data from the pokeapi
-                          API. The main page features a search input and list of
-                          Pokémon, which can be filtered and sorted by type and
-                          attack. Pagination is included to display 12 Pokémon
-                          per page. The Pokémon detail page includes stats and
-                          additional information, and a controlled form is
-                          available for creating new Pokémon. The creation form
-                          has been validated to ensure proper data entry. The
-                          app also includes a playable Kanto Ultimate Pokémon
-                          game. The app is not responsive due to limited
-                          development time. Overall, this project serves as a
-                          way to practice and apply knowledge of various
-                          technologies.
+                          This project uses React, Redux, Node, and Sequelize to view and interact
+                          with Pokémon data from the pokeapi API. The main page features a search
+                          input and list of Pokémon, which can be filtered and sorted by type and
+                          attack. Pagination is included to display 12 Pokémon per page. The Pokémon
+                          detail page includes stats and additional information, and a controlled
+                          form is available for creating new Pokémon. The creation form has been
+                          validated to ensure proper data entry. The app also includes a playable
+                          Kanto Ultimate Pokémon game. The app is not responsive due to limited
+                          development time. Overall, this project serves as a way to practice and
+                          apply knowledge of various technologies.
                         </motion.span>
                       ) : (
                         <motion.span
@@ -2150,22 +2035,18 @@ function Proyects(props) {
                           transition={{ duration: 2 }}
                           className=" p-6 text-start text-xs"
                         >
-                          Este proyecto utiliza React, Redux, Node y Sequelize
-                          para ver e interactuar con los datos de Pokémon de la
-                          API pokeapi. La página principal cuenta con una
-                          entrada de búsqueda y una lista de Pokémon, que se
-                          pueden filtrar y ordenar por tipo y ataque. Se incluye
-                          la paginación para mostrar 12 Pokémon por página. La
-                          página de detalle de Pokémon incluye estadísticas e
-                          información adicional, y hay un formulario controlado
-                          disponible para crear nuevos Pokémon. El formulario de
-                          creación ha sido validado para garantizar la entrada
-                          de datos correcta. La aplicación también incluye un
-                          juego de Pokémon Ultimate Kanto jugable. La aplicación
-                          no es responsiva debido al tiempo limitado de
-                          desarrollo. En general, este proyecto sirve como una
-                          manera de practicar y aplicar el conocimiento de
-                          varias tecnologías.
+                          Este proyecto utiliza React, Redux, Node y Sequelize para ver e
+                          interactuar con los datos de Pokémon de la API pokeapi. La página
+                          principal cuenta con una entrada de búsqueda y una lista de Pokémon, que
+                          se pueden filtrar y ordenar por tipo y ataque. Se incluye la paginación
+                          para mostrar 12 Pokémon por página. La página de detalle de Pokémon
+                          incluye estadísticas e información adicional, y hay un formulario
+                          controlado disponible para crear nuevos Pokémon. El formulario de creación
+                          ha sido validado para garantizar la entrada de datos correcta. La
+                          aplicación también incluye un juego de Pokémon Ultimate Kanto jugable. La
+                          aplicación no es responsiva debido al tiempo limitado de desarrollo. En
+                          general, este proyecto sirve como una manera de practicar y aplicar el
+                          conocimiento de varias tecnologías.
                         </motion.span>
                       )}
                     </motion.div>
@@ -2293,24 +2174,19 @@ function Proyects(props) {
                           className="p-6 text-center"
                         >
                           {" "}
-                          Pet Friendly Universe is a multi-platform site with a
-                          fully functional e-commerce system. Any user with
-                          previous administrator authorization can create a
-                          store and upload their product catalogs. The site also
-                          provides services such as pet daycare and dog walking.
-                          Every sale made on the site must donate 3% of its
-                          profits to our non-governmental organizations for pet
-                          protection. These organizations have their own route
-                          on our site where they can post pets for adoption and
-                          have their own administrator dashboards to completely
-                          control the Pet Friendly Universe. This includes user
-                          banning, post deletions, store creation authorization,
-                          and much more. We used a variety of technologies to
-                          create this site, including JavaScript, React, Redux,
-                          Express, PostgreSQL, Cloudinary, JSON Web Token,
-                          third-party authorization (such as Google, Vite, and
-                          Tailwind), and several React libraries to optimize the
-                          site.{" "}
+                          Pet Friendly Universe is a multi-platform site with a fully functional
+                          e-commerce system. Any user with previous administrator authorization can
+                          create a store and upload their product catalogs. The site also provides
+                          services such as pet daycare and dog walking. Every sale made on the site
+                          must donate 3% of its profits to our non-governmental organizations for
+                          pet protection. These organizations have their own route on our site where
+                          they can post pets for adoption and have their own administrator
+                          dashboards to completely control the Pet Friendly Universe. This includes
+                          user banning, post deletions, store creation authorization, and much more.
+                          We used a variety of technologies to create this site, including
+                          JavaScript, React, Redux, Express, PostgreSQL, Cloudinary, JSON Web Token,
+                          third-party authorization (such as Google, Vite, and Tailwind), and
+                          several React libraries to optimize the site.{" "}
                         </motion.span>
                       ) : (
                         <motion.span
@@ -2319,27 +2195,21 @@ function Proyects(props) {
                           transition={{ duration: 2 }}
                           className="p-6 text-center"
                         >
-                          Universo Amigable con las Mascotas es un sitio
-                          multiplataforma con un sistema de comercio electrónico
-                          completamente funcional. Cualquier usuario con
-                          autorización de administrador previa puede crear una
-                          tienda y cargar su catálogo de productos. El sitio
-                          también ofrece servicios como guardería de mascotas y
-                          paseo de perros. Cada venta realizada en el sitio debe
-                          donar el 3% de sus ganancias a nuestras organizaciones
-                          no gubernamentales de protección de mascotas. Estas
-                          organizaciones tienen su propia sección en nuestro
-                          sitio donde pueden publicar mascotas para adopción y
-                          tienen sus propios paneles de administración para
-                          controlar completamente el Universo Amigable con las
-                          Mascotas. Esto incluye la prohibición de usuarios,
-                          eliminación de publicaciones, autorización de creación
-                          de tiendas y mucho más. Utilizamos una variedad de
-                          tecnologías para crear este sitio, incluyendo
-                          JavaScript, React, Redux, Express, PostgreSQL,
-                          Cloudinary, JSON Web Token, autorización de terceros
-                          (como Google, Vite y Tailwind) y varias bibliotecas de
-                          React para optimizar el sitio.
+                          Universo Amigable con las Mascotas es un sitio multiplataforma con un
+                          sistema de comercio electrónico completamente funcional. Cualquier usuario
+                          con autorización de administrador previa puede crear una tienda y cargar
+                          su catálogo de productos. El sitio también ofrece servicios como guardería
+                          de mascotas y paseo de perros. Cada venta realizada en el sitio debe donar
+                          el 3% de sus ganancias a nuestras organizaciones no gubernamentales de
+                          protección de mascotas. Estas organizaciones tienen su propia sección en
+                          nuestro sitio donde pueden publicar mascotas para adopción y tienen sus
+                          propios paneles de administración para controlar completamente el Universo
+                          Amigable con las Mascotas. Esto incluye la prohibición de usuarios,
+                          eliminación de publicaciones, autorización de creación de tiendas y mucho
+                          más. Utilizamos una variedad de tecnologías para crear este sitio,
+                          incluyendo JavaScript, React, Redux, Express, PostgreSQL, Cloudinary, JSON
+                          Web Token, autorización de terceros (como Google, Vite y Tailwind) y
+                          varias bibliotecas de React para optimizar el sitio.
                         </motion.span>
                       )}
                     </motion.div>

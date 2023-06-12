@@ -122,7 +122,9 @@ function Technologies(props) {
                       alt="..."
                       title={t.title}
                       class={`${t.name} h-24 hover:cursor-pointer`}
-                      className={`${t.name}  flex max-h-24   items-center justify-center  text-white hover:cursor-pointer`}
+                      className={`${t.name}  flex max-h-24   items-center justify-center text-white  drop-shadow-glow-red hover:cursor-pointer`}
+                      onMouseEnter={handleMouseEnter}
+                      onMouseLeave={handleMouseLeave}
                     />
                   </motion.div>
                   <p className=" text-center font-roboto text-xl text-white opacity-80">
@@ -174,7 +176,7 @@ function Technologies(props) {
                       alt="..."
                       title={t.title}
                       class={`${t.name}    hover:cursor-pointer`}
-                      className={`${t.name}  flex self-center  text-white hover:cursor-pointer`}
+                      className={`${t.name}   flex  self-center text-white hover:cursor-pointer`}
                       onMouseEnter={handleMouseEnter}
                       onMouseLeave={handleMouseLeave}
                       loading="lazy"

@@ -197,7 +197,7 @@ function Technologies(props) {
                       src={t.logo}
                       alt="..."
                       title={t.title}
-                      class={`${t.name}  flex h-24 hover:cursor-pointer`}
+                      class={`${t.name}  flex  hover:cursor-pointer`}
                       className={`${t.name}  absolute -top-12 z-50 h-32 pr-8 text-white hover:cursor-pointer`}
                       onMouseEnter={handleMouseEnter}
                       onMouseLeave={handleMouseLeave}

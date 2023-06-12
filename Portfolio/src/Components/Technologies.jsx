@@ -1,6 +1,6 @@
 
 import anime from "animejs/lib/anime.es.js";
-import LazyLoad from "react-lazyload";
+
 
 import { useMediaQuery } from "react-responsive";
 import { motion } from "framer-motion";
@@ -265,7 +265,7 @@ function Technologies(props) {
                         )}
                       </>
                     )}
-                    <LazyLoad key={i} heigh={150} once>
+    
                       <motion.img
                         variants={{
                           hidden: { opacity: 0, scale: 0.2, x: "-40%" },
@@ -290,7 +290,7 @@ function Technologies(props) {
                         heigh={128}
                         width={128}
                       />
-                    </LazyLoad>
+       
 
                     {/* este div tiene el texto */}
                     {expandedIndex === i && (

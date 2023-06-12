@@ -83,7 +83,7 @@ function Proyects(props) {
   };
 
   return (
-    <div className="relative  mt-[580px] w-full sm:mt-96" id="proyects">
+    <div className="relative  mt-[650px] w-full sm:mt-96" id="proyects">
       {language === "en" ? (
         <motion.h2
           variants={{

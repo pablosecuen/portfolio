@@ -1,27 +1,8 @@
-import anime from "animejs/lib/anime.es.js";
-
+import { animateCSS } from "../data/Data";
 import { useMediaQuery } from "react-responsive";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { arrayTech } from "../data/Data";
-
-function animateCSS(name, filterValues, options) {
-  const target = "." + name.toLowerCase(); // creamos un selector para targetear basado en el nombre
-  const shadowColor = filterValues[0].shadowColor || "blue"; // absorbemos el color de la propiedad shadowColor y si no tiene uzamos la azul por defecto
-  const filter = filterValues.map((value) => {
-    return {
-      value: value.value.replace("blue", shadowColor),
-      duration: value.duration,
-    };
-  }); // remplazamos el filtro base color "blue" en el filter value
-  anime({
-    targets: target,
-    filter: filter,
-    easing: options.easing || "linear",
-    direction: options.direction || "alternate",
-    loop: options.loop || true,
-  });
-}
 
 function Technologies(props) {
   const { language } = props;
@@ -152,7 +133,7 @@ function Technologies(props) {
             })}
           </div>
         ) : (
-          <div className=" flex w-full flex-wrap items-center justify-center gap-x-20 gap-y-36 align-middle  font-roboto ">
+          <div className=" flex w-full flex-wrap items-center justify-center gap-x-20 gap-y-10 align-middle  font-roboto ">
             {arrayTech.map((t, i) => {
               return (
                 <motion.div
@@ -169,17 +150,12 @@ function Technologies(props) {
                     delay: 0.2,
                     ease: [0, 0.71, 0.2, 1.01],
                   }}
-                  className=""
+                  className="flex flex-col items-center justify-between"
                 >
                   <motion.div
-                    initial={{ height: 150, width: 150 }}
-                    animate={{
-                      height: 130,
-                      width: 100,
-                    }}
+                    initial={{ height: 150, width: 100 }}
                     transition={{ duration: 0.5 }}
-                    className=" item-center  relative flex flex-col justify-between   align-middle"
-                    key={i}
+                    className="  flex flex-col items-center justify-center"
                   >
                     <motion.img
                       variants={{
@@ -197,18 +173,18 @@ function Technologies(props) {
                       src={t.logo}
                       alt="..."
                       title={t.title}
-                      class={`${t.name}  flex  hover:cursor-pointer`}
-                      className={`${t.name}  absolute -top-12 z-50 h-32 pr-8 text-white hover:cursor-pointer`}
+                      class={`${t.name}    hover:cursor-pointer`}
+                      className={`${t.name}  flex self-center  text-white hover:cursor-pointer`}
                       onMouseEnter={handleMouseEnter}
                       onMouseLeave={handleMouseLeave}
                       loading="lazy"
                       heigh={128}
                       width={128}
                     />
-                    <p className=" text-center font-roboto text-xl text-white opacity-80">
-                      {t.title}
-                    </p>
                   </motion.div>
+                  <p className=" text-center font-roboto text-xl text-white opacity-80">
+                    {t.title}
+                  </p>
                 </motion.div>
               );
             })}

@@ -15,7 +15,7 @@ function About(props) {
         alt="foto"
       />
       <article className=" mt-0 flex  items-end justify-start sm:w-3/4    ">
-        <p className="shadow-black top-96 mt-4 w-full text-start  text-sm text-white text-shadow-md sm:w-3/4  md:w-3/4 lg:mt-0 lg:w-4/5 lg:p-10 lg:text-base">
+        <h2 className="shadow-black top-96 mt-4 w-full text-start  text-sm text-white text-shadow-md sm:w-3/4  md:w-3/4 lg:mt-0 lg:w-4/5 lg:p-10 lg:text-base">
           {language === "en" ? (
             <span>
               Hello again! My name is Pablo Amico, and I would love to talk to you about how we can
@@ -55,7 +55,7 @@ function About(props) {
               podemos trabajar juntos!
             </span>
           )}
-        </p>
+        </h2>
       </article>
       <div className="mt-6 flex w-full justify-start lg:mt-0 lg:justify-center ">
         <button className="text-xsm shadow-black h-10 w-32 cursor-pointer rounded-3xl bg-blue-500 text-white shadow-md sm:w-48 sm:text-base lg:ml-10">

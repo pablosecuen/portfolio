@@ -166,56 +166,53 @@ function NavBar() {
                   animate={{ opacity: 1 }}
                   transition={{ duration: 1 }}
                 >
-                  <h1
+                  <h3
                     onClick={scrollToHome}
                     className={`load-screen--message cursor-pointer pb-4 duration-500 hover:text-white ${
-                      isMenuBackgroundWhite ? " duration-500 hover:text-gray-600" : ""
+                      isMenuBackgroundWhite ? "text-gray-800 duration-500 hover:text-blue-600" : ""
                     }`}
                   >
                     {line1}
-                  </h1>
+                  </h3>
                 </motion.li>
                 <motion.li
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ duration: 1.5 }}
                 >
-                  <h1
+                  <h3
                     onClick={scrollToProjects}
                     className={`load-screen--message cursor-pointer pb-4 duration-500 hover:text-white ${
-                      isMenuBackgroundWhite ? " duration-500 hover:text-gray-600" : ""
-                    }`}
+                      isMenuBackgroundWhite ? "text-gray-800 duration-500 hover:text-blue-600" : ""                    }`}
                   >
                     {line2}
-                  </h1>
+                  </h3>
                 </motion.li>
                 <motion.li
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ duration: 2 }}
                 >
-                  <h1
+                  <h3
                     onClick={scrollToSkills}
                     className={`load-screen--message cursor-pointer pb-4 duration-500 hover:text-white ${
-                      isMenuBackgroundWhite ? " duration-500 hover:text-gray-600" : ""
-                    }`}
+                      isMenuBackgroundWhite ? "text-gray-800 duration-500 hover:text-blue-600" : ""                    }`}
                   >
                     {line3}
-                  </h1>
+                  </h3>
                 </motion.li>
                 <motion.li
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ duration: 2.5 }}
                 >
-                  <h1
+                  <h3
                     onClick={scrollToContactMobile}
                     className={`load-screen--message cursor-pointer pb-4 duration-500 hover:text-white ${
-                      isMenuBackgroundWhite ? "duration-500 hover:text-blue-600" : ""
-                    }`}
+                      isMenuBackgroundWhite ? "text-gray-800 duration-500 hover:text-blue-600" : ""                    }`}
                   >
                     {line4}
-                  </h1>
+                  </h3>
                 </motion.li>
               </motion.ul>
             )}
@@ -229,7 +226,7 @@ function NavBar() {
             >
               <motion.h3
                 className={`load-screen--message cursor-pointer pb-4 text-white opacity-80  duration-500 hover:text-blue-600 ${
-                  isMenuBackgroundWhite ? "duration-500 hover:text-blue-600" : ""
+                  isMenuBackgroundWhite ? "text-gray-800 duration-500 hover:text-blue-600" : ""
                 }`}
                 variants={sentence}
                 initial="hidden"
@@ -252,7 +249,7 @@ function NavBar() {
             >
               <motion.h3
                 className={`load-screen--message cursor-pointer pb-4 text-white opacity-80  duration-500 hover:text-blue-600 ${
-                  isMenuBackgroundWhite ? " duration-500 hover:text-blue-600" : ""
+                  isMenuBackgroundWhite ? " text-gray-800 duration-500 hover:text-blue-600" : ""
                 }`}
                 class="p2"
                 variants={sentence1}
@@ -276,7 +273,7 @@ function NavBar() {
             >
               <motion.h3
                 className={`load-screen--message cursor-pointer pb-4 text-white  opacity-80 duration-500 hover:text-blue-600 ${
-                  isMenuBackgroundWhite ? "duration-500 hover:text-blue-600" : ""
+                  isMenuBackgroundWhite ? "text-gray-800 duration-500 hover:text-blue-600" : ""
                 }`}
                 variants={sentence2}
                 initial="hidden"
@@ -299,7 +296,7 @@ function NavBar() {
             >
               <motion.h3
                 className={`load-screen--message cursor-pointer pb-4 text-white opacity-80 duration-500 hover:text-blue-600 ${
-                  isMenuBackgroundWhite ? "duration-500 hover:text-blue-600" : ""
+                  isMenuBackgroundWhite ? "text-gray-800 duration-500 hover:text-blue-600" : ""
                 }`}
                 variants={sentence3}
                 initial="hidden"

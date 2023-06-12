@@ -125,7 +125,7 @@ function Proyects(props) {
         </motion.h2>
       )}
       {isXSmallMobile && (
-        <div className="mt-48 flex  w-full flex-col">
+        <div className="mt-96 flex  w-full flex-col">
           <div className="flex h-[500px] flex-col justify-around gap-10 pt-48 ">
             <div className="flex flex-col self-center">
               {" "}
@@ -1132,7 +1132,7 @@ function Proyects(props) {
       )}
       ;
       {isTablet && (
-        <div key={index} className="mt-48 flex w-full flex-col">
+        <div className="mt-48 flex w-full flex-col">
           <div className="mt-48 flex h-[400px] flex-col justify-around gap-20">
             <div className="flex flex-col self-center">
               <motion.div

@@ -54,13 +54,11 @@ function Contact() {
 
   return (
     <form
-      className=" mt-96 mb-48 flex h-[500px] w-full flex-row items-center justify-center  self-center border-2"
+      className=" mt-96 flex h-[500px] w-full flex-row items-center justify-center  self-center border-l-2 border-r-2 border-t-2"
       onSubmit={handleSubmit}
     >
-      <div className="flex w-3/4 flex-col border-2 pt-10 md:w-1/2">
-        <h6 className="h-10 pb-10 text-center text-xl text-white">
-          GET IN CONTACT WITH ME
-        </h6>
+      <div className="flex w-3/4 flex-col border-l-2 border-r-2 pt-10  lg:w-1/3">
+        <h6 className="h-10 pb-10 text-center text-xl text-white">GET IN CONTACT WITH ME</h6>
         <label htmlFor="name" className="w-11/12 self-center text-white">
           Name:
         </label>
@@ -162,9 +160,7 @@ function Contact() {
           ></iframe>
 
           <p>
-            <a href="https://giphy.com/gifs/theoffice-ljtfkyTD3PIUZaKWRi">
-              via GIPHY
-            </a>
+            <a href="https://giphy.com/gifs/theoffice-ljtfkyTD3PIUZaKWRi">via GIPHY</a>
           </p>
           <p>
             <a href="https://giphy.com/gifs/playmobil-post-letter-mail-NsPTjaNFdMx8ZPe9Qh">

@@ -5,13 +5,17 @@ function About(props) {
   const { language } = props;
 
   return (
-    <div className="lg h-screen w-full p-4 xsm:w-3/4 sm:w-full lg:pl-10">
-      <h1 className="mt-48 font-roboto text-2xl font-bold -tracking-wider text-white shadow-black text-shadow-md sm:mt-72 sm:-tracking-widest md:text-6xl lg:mt-96 lg:pl-8 xl:text-9xl">
+    <div className="z-50 h-screen w-full p-4 xsm:w-3/4 sm:w-full lg:pl-10">
+      <h1 className="shadow-black mt-48 font-roboto text-2xl font-bold -tracking-wider text-white text-shadow-md sm:mt-72 sm:-tracking-widest md:text-6xl lg:mt-96 lg:pl-10 xl:text-6xl">
         Fullstack Developer
       </h1>
-        <img className="  xl:w-64 2xl:w-96  absolute xl:right-64 sm:top-24 md:w-64 md:right-40 sm:w-48 sm:right-24 xsm:w-32 xsm:top-0 xsm:right-[32%]" src={foto} alt="foto" />
-      <article className=" mt-0 flex  sm:w-3/4 items-end justify-start    ">
-        <p className="top-96 mt-4 w-full text-start text-sm  text-white shadow-black text-shadow-md sm:w-3/4 sm:font-bold md:w-3/4 lg:mt-0 lg:w-4/5 lg:p-10 lg:text-base">
+      <img
+        className="  absolute xsm:right-[32%]  xsm:top-0 xsm:w-32 sm:right-24 sm:top-24 sm:w-48 md:right-40 md:w-64 xl:right-64 xl:w-64 2xl:w-96"
+        src={foto}
+        alt="foto"
+      />
+      <article className=" mt-0 flex  items-end justify-start sm:w-3/4    ">
+        <p className="shadow-black top-96 mt-4 w-full text-start  text-sm text-white text-shadow-md sm:w-3/4  md:w-3/4 lg:mt-0 lg:w-4/5 lg:p-10 lg:text-base">
           {language === "en" ? (
             <span>
               Hello again! My name is Pablo Amico, and I would love to talk to you about how we can
@@ -53,8 +57,8 @@ function About(props) {
           )}
         </p>
       </article>
-      <div className="mt-6 flex w-full lg:justify-center justify-start lg:mt-0 ">
-        <button className="text-xsm h-10 w-32 cursor-pointer rounded-3xl bg-blue-500 text-white shadow-md shadow-black sm:w-48 sm:text-base lg:ml-10">
+      <div className="mt-6 flex w-full justify-start lg:mt-0 lg:justify-center ">
+        <button className="text-xsm shadow-black h-10 w-32 cursor-pointer rounded-3xl bg-blue-500 text-white shadow-md sm:w-48 sm:text-base lg:ml-10">
           <a
             href="https://drive.google.com/file/d/1R49MkGgp5i3pP2mAw9NhWJLI4gDsb1av/view?usp=sharing"
             target="_blank"
@@ -71,7 +75,7 @@ function About(props) {
           className="cursor-pointer"
           title="Download this cv in english"
         >
-          <button className="text-xsm h-10 w-32 rounded-3xl bg-blue-500 text-white shadow-md shadow-black hover:cursor-pointer sm:w-48 sm:text-base lg:ml-10">
+          <button className="text-xsm shadow-black h-10 w-32 rounded-3xl bg-blue-500 text-white shadow-md hover:cursor-pointer sm:w-48 sm:text-base lg:ml-10">
             Download CV
           </button>
         </a>

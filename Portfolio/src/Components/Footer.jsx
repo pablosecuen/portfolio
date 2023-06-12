@@ -21,69 +21,45 @@ function Footer(props) {
   };
 
   return (
-    <div className="flex-col border-2 border-white">
+    <div className="flex-col border-l-2 border-r-2 border-t-2 border-white">
       <div className="flex h-full w-full flex-col items-center align-middle sm:h-48 sm:flex-row">
         <div className="flex w-1/3 flex-col items-center justify-center align-middle">
           <img src={logo} className="h-24 pt-4 sm:pt-0 md:h-32" alt="logo" />
         </div>
         <div className="flex flex-row items-center gap-4 border-white sm:w-1/3 sm:flex-col sm:gap-0 sm:border-l-2  ">
           {language === "en" ? (
-            <p
-              onClick={scrollToHome}
-              className="cursor-pointer py-2 text-white"
-            >
+            <p onClick={scrollToHome} className="cursor-pointer py-2 text-white">
               Home
             </p>
           ) : (
-            <p
-              onClick={scrollToHome}
-              className="cursor-pointer py-2 text-white"
-            >
+            <p onClick={scrollToHome} className="cursor-pointer py-2 text-white">
               Inicio
             </p>
           )}
           {language === "en" ? (
-            <p
-              onClick={scrollToHome}
-              className="cursor-pointer py-2 text-white"
-            >
+            <p onClick={scrollToHome} className="cursor-pointer py-2 text-white">
               About
             </p>
           ) : (
-            <p
-              onClick={scrollToHome}
-              className="cursor-pointer py-2 text-white"
-            >
+            <p onClick={scrollToHome} className="cursor-pointer py-2 text-white">
               Acerca de mí
             </p>
           )}
           {language === "en" ? (
-            <p
-              onClick={scrollToProjects}
-              className="cursor-pointer py-2 text-white"
-            >
+            <p onClick={scrollToProjects} className="cursor-pointer py-2 text-white">
               Proyects
             </p>
           ) : (
-            <p
-              onClick={scrollToProjects}
-              className="cursor-pointer py-2 text-white"
-            >
+            <p onClick={scrollToProjects} className="cursor-pointer py-2 text-white">
               Proyectos
             </p>
           )}
           {language === "en" ? (
-            <p
-              onClick={scrollToSkills}
-              className="cursor-pointer py-2 text-white"
-            >
+            <p onClick={scrollToSkills} className="cursor-pointer py-2 text-white">
               Skills
             </p>
           ) : (
-            <p
-              onClick={scrollToSkills}
-              className="cursor-pointer py-2 text-white"
-            >
+            <p onClick={scrollToSkills} className="cursor-pointer py-2 text-white">
               Tecnologías
             </p>
           )}
@@ -107,7 +83,7 @@ function Footer(props) {
           </a>
         </div>
       </div>
-      <hr className="w-full border-2 border-white align-middle"></hr>
+      <hr className="w-full border-l-2 border-r-2 border-white align-middle"></hr>
       {language === "en" ? (
         <p className="flex w-full justify-center bg-black text-white">
           ®2023 Pablo Amico. All Rights Reserved

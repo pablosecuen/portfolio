@@ -152,7 +152,7 @@ function Technologies(props) {
             })}
           </div>
         ) : (
-          <div className=" flex w-full flex-wrap justify-center   font-roboto ">
+          <div className=" flex w-full flex-wrap items-center justify-center gap-x-20 gap-y-36 align-middle  font-roboto ">
             {arrayTech.map((t, i) => {
               return (
                 <motion.div
@@ -174,11 +174,11 @@ function Technologies(props) {
                   <motion.div
                     initial={{ height: 150, width: 150 }}
                     animate={{
-                      height: 150,
-                      width: 250,
+                      height: 130,
+                      width: 100,
                     }}
                     transition={{ duration: 0.5 }}
-                    className=" relative mt-8 flex justify-center"
+                    className=" item-center  relative flex flex-col justify-between   align-middle"
                     key={i}
                   >
                     <motion.img
@@ -197,15 +197,15 @@ function Technologies(props) {
                       src={t.logo}
                       alt="..."
                       title={t.title}
-                      class={`${t.name} h-24 hover:cursor-pointer`}
-                      className={`${t.name} absolute -top-12 z-50 h-32  text-white hover:cursor-pointer`}
+                      class={`${t.name} flex  hover:cursor-pointer`}
+                      className={`${t.name}  hover:cursor-pointer`}
                       onMouseEnter={handleMouseEnter}
                       onMouseLeave={handleMouseLeave}
                       loading="lazy"
                       heigh={128}
                       width={128}
                     />
-                    <p className=" mt-24 text-center font-roboto text-xl text-white opacity-80">
+                    <p className=" text-center font-roboto text-xl text-white opacity-80">
                       {t.title}
                     </p>
                   </motion.div>

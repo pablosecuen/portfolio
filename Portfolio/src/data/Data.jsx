@@ -58,7 +58,7 @@ export const arrayTech = [
     name: "next",
     logo: next,
     title: "Next Js",
-    shadowColor: "indigo",
+    shadowColor: "white",
     url: "https://nextjs.org/",
   },
   {
@@ -87,7 +87,7 @@ export const arrayTech = [
     name: "tailwind",
     logo: tailwind,
     title: "Tailwind Css",
-    shadowColor: "lightseagreen",
+    shadowColor: "white",
     url: "https://tailwindcss.com//",
   },
   {
@@ -109,7 +109,7 @@ export const arrayTech = [
     name: "express",
     logo: express,
     title: "express",
-    shadowColor: "black",
+    shadowColor: "white",
     url: "https://expressjs.com/",
   },
   {
@@ -143,7 +143,7 @@ export const arrayTech = [
   {
     name: "git",
     logo: git,
-    tittle: "Git",
+    title: "Git",
     shadowColor: "red",
     url: "https://git-scm.com/",
   },

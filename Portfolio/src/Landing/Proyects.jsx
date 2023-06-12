@@ -119,13 +119,13 @@ function Proyects(props) {
             delay: 0.2,
             ease: [0, 0.71, 0.2, 1.01],
           }}
-          className="  shadow-black mb-24 w-full cursor-pointer p-4 text-center  text-4xl -tracking-widest text-white text-shadow-md xsm:text-4xl lg:-mt-48 lg:mb-0 lg:text-6xl   "
+          className="  shadow-black  w-full cursor-pointer p-4 text-center  text-4xl -tracking-widest text-white text-shadow-md xsm:text-4xl lg:-mt-48 lg:mb-0 lg:text-6xl   "
         >
           Mis proyectos
         </motion.h2>
       )}
       {isXSmallMobile && (
-        <div className="mt-96 flex  w-full flex-col">
+        <div className="mt-48 flex  w-full flex-col">
           <div className="flex h-[500px] flex-col justify-around gap-10 pt-48 ">
             <div className="flex flex-col self-center">
               {" "}

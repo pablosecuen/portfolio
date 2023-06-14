@@ -1,7 +1,7 @@
 import { animateCSS } from "../data/Data";
 import { useMediaQuery } from "react-responsive";
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { arrayTech } from "../data/Data";
 
 function Technologies() {

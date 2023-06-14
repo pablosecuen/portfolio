@@ -3,8 +3,11 @@ import { useMediaQuery } from "react-responsive";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { arrayTech } from "../data/Data";
+import { debounce } from "lodash";
 
 function Technologies() {
+  const debouncedAnimateCSS = debounce(animateCSS, 100);
+
   const isMobile = useMediaQuery({ maxWidth: 600 });
 
   const [isHovered, setIsHovered] = useState(false);
@@ -12,37 +15,39 @@ function Technologies() {
   // funcion que absorbe las propiedades del array de technologia y aplica efectos de sombra a cada elemento de manera personalizada
   useEffect(() => {
     arrayTech?.forEach((element) => {
-      animateCSS(
-        element.name,
-        [
-          {
-            value: `drop-shadow(0px 0px 4px ${element.shadowColor})`,
-            duration: 500,
-            shadowColor: element.shadowColor,
-          },
-          {
-            value: `drop-shadow(0px 0px 6px ${element.shadowColor})`,
-            duration: 500,
-            shadowColor: element.shadowColor,
-          },
+      debouncedAnimateCSS(
+        animateCSS(
+          element.name,
+          [
+            {
+              value: `drop-shadow(0px 0px 4px ${element.shadowColor})`,
+              duration: 500,
+              shadowColor: element.shadowColor,
+            },
+            {
+              value: `drop-shadow(0px 0px 6px ${element.shadowColor})`,
+              duration: 500,
+              shadowColor: element.shadowColor,
+            },
 
-          {
-            value: `drop-shadow(0px 0px 10px ${element.shadowColor})`,
-            duration: 800,
-            shadowColor: element.shadowColor,
-          },
-          {
-            value: `drop-shadow(0px 0px 6px ${element.shadowColor})`,
-            duration: 500,
-            shadowColor: element.shadowColor,
-          },
-          {
-            value: `drop-shadow(0px 0px 4px ${element.shadowColor})`,
-            duration: 500,
-            shadowColor: element.shadowColor,
-          },
-        ],
-        { easing: "easeInOutQuad", direction: "normal", loop: true }
+            {
+              value: `drop-shadow(0px 0px 10px ${element.shadowColor})`,
+              duration: 800,
+              shadowColor: element.shadowColor,
+            },
+            {
+              value: `drop-shadow(0px 0px 6px ${element.shadowColor})`,
+              duration: 500,
+              shadowColor: element.shadowColor,
+            },
+            {
+              value: `drop-shadow(0px 0px 4px ${element.shadowColor})`,
+              duration: 500,
+              shadowColor: element.shadowColor,
+            },
+          ],
+          { easing: "easeInOutQuad", direction: "normal", loop: true }
+        )
       );
     });
   }, []);
@@ -61,15 +66,15 @@ function Technologies() {
   };
 
   const imageVariants = {
-    hidden: { opacity: 0, scale: 0.2, x: "-40%" },
-    visible: { opacity: 1, scale: 1, x: 0 },
+    hidden: { opacity: 0 },
+    visible: { opacity: 1 },
   };
 
   return (
     <div className="mt-96 h-full w-full lg:mt-0" id="tecnologies">
       <motion.h3
         variants={{
-          hidden: { opacity: 0, scale: 0.5, y: "-20%" },
+          hidden: { opacity: 0, scale: 0.5, y: 200 },
           visible: { opacity: 1, scale: 1, y: 0 },
         }}
         viewport={{ once: false, amount: 0.5 }}

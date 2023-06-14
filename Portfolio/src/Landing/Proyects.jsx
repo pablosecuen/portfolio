@@ -90,8 +90,8 @@ function Proyects(props) {
       {language === "en" ? (
         <motion.h2
           variants={{
-            hidden: { opacity: 0, scale: 0.5, x: "-40%" },
-            visible: { opacity: 1, scale: 1, x: 0 },
+            hidden: { opacity: 0, scale: 0.5, y: 200 },
+            visible: { opacity: 1, scale: 1, y: 0 },
           }}
           viewport={{ once: false, amount: 0.5 }}
           initial="hidden"
@@ -108,8 +108,8 @@ function Proyects(props) {
       ) : (
         <motion.h2
           variants={{
-            hidden: { opacity: 0, scale: 0.5, x: "-40%" },
-            visible: { opacity: 1, scale: 1, x: 0 },
+            hidden: { opacity: 0, scale: 0.5, y: 200 },
+            visible: { opacity: 1, scale: 1, y: 0 },
           }}
           viewport={{ once: false, amount: 0.5 }}
           initial="hidden"

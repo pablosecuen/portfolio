@@ -254,7 +254,6 @@ function NavBar() {
                 className={`load-screen--message cursor-pointer pb-4 opacity-80  duration-500 hover:text-blue-600 ${
                   isMenuBackgroundWhite ? " text-black duration-500 hover:text-blue-600" : "text-white"
                 }`}
-                class="p2"
                 variants={sentence1}
                 initial="hidden"
                 animate="visible"

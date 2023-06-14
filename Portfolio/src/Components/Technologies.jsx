@@ -4,48 +4,48 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import { arrayTech } from "../data/Data";
 
-function Technologies(props) {
-  const { language } = props;
+function Technologies() {
   const isMobile = useMediaQuery({ maxWidth: 600 });
 
   const [isHovered, setIsHovered] = useState(false);
 
   // funcion que absorbe las propiedades del array de technologia y aplica efectos de sombra a cada elemento de manera personalizada
+  useEffect(() => {
+    arrayTech?.forEach((element) => {
+      animateCSS(
+        element.name,
+        [
+          {
+            value: `drop-shadow(0px 0px 4px ${element.shadowColor})`,
+            duration: 500,
+            shadowColor: element.shadowColor,
+          },
+          {
+            value: `drop-shadow(0px 0px 6px ${element.shadowColor})`,
+            duration: 500,
+            shadowColor: element.shadowColor,
+          },
 
-  arrayTech?.forEach((element) => {
-    animateCSS(
-      element.name,
-      [
-        {
-          value: `drop-shadow(0px 0px 4px ${element.shadowColor})`,
-          duration: 500,
-          shadowColor: element.shadowColor,
-        },
-        {
-          value: `drop-shadow(0px 0px 6px ${element.shadowColor})`,
-          duration: 500,
-          shadowColor: element.shadowColor,
-        },
-
-        {
-          value: `drop-shadow(0px 0px 10px ${element.shadowColor})`,
-          duration: 800,
-          shadowColor: element.shadowColor,
-        },
-        {
-          value: `drop-shadow(0px 0px 6px ${element.shadowColor})`,
-          duration: 500,
-          shadowColor: element.shadowColor,
-        },
-        {
-          value: `drop-shadow(0px 0px 4px ${element.shadowColor})`,
-          duration: 500,
-          shadowColor: element.shadowColor,
-        },
-      ],
-      { easing: "easeInOutQuad", direction: "normal", loop: true }
-    );
-  });
+          {
+            value: `drop-shadow(0px 0px 10px ${element.shadowColor})`,
+            duration: 800,
+            shadowColor: element.shadowColor,
+          },
+          {
+            value: `drop-shadow(0px 0px 6px ${element.shadowColor})`,
+            duration: 500,
+            shadowColor: element.shadowColor,
+          },
+          {
+            value: `drop-shadow(0px 0px 4px ${element.shadowColor})`,
+            duration: 500,
+            shadowColor: element.shadowColor,
+          },
+        ],
+        { easing: "easeInOutQuad", direction: "normal", loop: true }
+      );
+    });
+  }, []);
 
   const handleMouseEnter = () => {
     setIsHovered(true);
@@ -53,6 +53,16 @@ function Technologies(props) {
 
   const handleMouseLeave = () => {
     setIsHovered(false);
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1 },
+  };
+
+  const imageVariants = {
+    hidden: { opacity: 0, scale: 0.2, x: "-40%" },
+    visible: { opacity: 1, scale: 1, x: 0 },
   };
 
   return (
@@ -82,10 +92,7 @@ function Technologies(props) {
               return (
                 <motion.article
                   key={i}
-                  variants={{
-                    hidden: { opacity: 0 },
-                    visible: { opacity: 1 },
-                  }}
+                  variants={itemVariants}
                   viewport={{ once: false, amount: 0.5 }}
                   initial="hidden"
                   whileInView="visible"
@@ -106,10 +113,7 @@ function Technologies(props) {
                     key={i}
                   >
                     <motion.img
-                      variants={{
-                        hidden: { opacity: 0, scale: 0.2, x: "-40%" },
-                        visible: { opacity: 1, scale: 1, x: 0 },
-                      }}
+                      variants={imageVariants}
                       viewport={{ once: false, amount: 0.5 }}
                       initial="hidden"
                       whileInView="visible"
@@ -140,10 +144,7 @@ function Technologies(props) {
               return (
                 <motion.div
                   key={i}
-                  variants={{
-                    hidden: { opacity: 0 },
-                    visible: { opacity: 1 },
-                  }}
+                  variants={itemVariants}
                   viewport={{ once: false, amount: 0.5 }}
                   initial="hidden"
                   whileInView="visible"
@@ -160,10 +161,7 @@ function Technologies(props) {
                     className="  flex flex-col items-center justify-center"
                   >
                     <motion.img
-                      variants={{
-                        hidden: { opacity: 0, scale: 0.2, x: "-40%" },
-                        visible: { opacity: 1, scale: 1, x: 0 },
-                      }}
+                      variants={imageVariants}
                       viewport={{ once: false, amount: 0.5 }}
                       initial="hidden"
                       whileInView="visible"

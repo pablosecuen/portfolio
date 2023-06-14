@@ -158,7 +158,9 @@ function NavBar() {
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.7 }}
                 className={`duration-800 absolute -right-10 top-[52px] flex h-screen w-48 flex-col rounded-l-xl  border-white bg-black p-10  text-opacity-90 xsm:top-[48px] sm:top-[64px] ${
-                  isMenuBackgroundWhite ? "bg-gradient-to-b from-white font-semibold to-black text-black " : "text-white opacity-80  tracking-wide transition duration-500"
+                  isMenuBackgroundWhite
+                    ? "bg-gradient-to-b from-white  to-black text-black "
+                    : "tracking-wide text-white  opacity-80 transition duration-500"
                 }`}
               >
                 <motion.li
@@ -169,7 +171,9 @@ function NavBar() {
                   <h3
                     onClick={scrollToHome}
                     className={`load-screen--message cursor-pointer pb-4 duration-500 hover:text-white ${
-                      isMenuBackgroundWhite ? "text-black  duration-500 font-semibold hover:text-blue-600" : "text-white opacity-80  tracking-wide transition duration-500 hover:text-blue-600"
+                      isMenuBackgroundWhite
+                        ? "text-black  duration-500  hover:text-blue-600"
+                        : "tracking-wide text-white  opacity-80 transition duration-500 hover:text-blue-600"
                     }`}
                   >
                     {line1}
@@ -183,7 +187,9 @@ function NavBar() {
                   <h3
                     onClick={scrollToProjects}
                     className={`load-screen--message cursor-pointer pb-4 duration-500 hover:text-white ${
-                      isMenuBackgroundWhite ? "text-black  duration-500 font-semibold hover:text-blue-600" : "text-white opacity-80  tracking-wide transition duration-500 hover:text-blue-600"
+                      isMenuBackgroundWhite
+                        ? "text-black  duration-500  hover:text-blue-600"
+                        : "tracking-wide text-white  opacity-80 transition duration-500 hover:text-blue-600"
                     }`}
                   >
                     {line2}
@@ -197,7 +203,9 @@ function NavBar() {
                   <h3
                     onClick={scrollToSkills}
                     className={`load-screen--message cursor-pointer pb-4 duration-500 hover:text-white ${
-                      isMenuBackgroundWhite ? "text-black  duration-500 font-semibold hover:text-blue-600" : "text-white opacity-80  tracking-wide transition duration-500 hover:text-blue-600"
+                      isMenuBackgroundWhite
+                        ? "text-black  duration-500  hover:text-blue-600"
+                        : "tracking-wide text-white  opacity-80 transition duration-500 hover:text-blue-600"
                     }`}
                   >
                     {line3}
@@ -211,7 +219,9 @@ function NavBar() {
                   <h3
                     onClick={scrollToContactMobile}
                     className={`load-screen--message cursor-pointer pb-4 duration-500 hover:text-white ${
-                      isMenuBackgroundWhite ? "text-black  duration-500 font-semibold hover:text-blue-600" : "text-white opacity-80  tracking-wide transition duration-500 hover:text-blue-600"
+                      isMenuBackgroundWhite
+                        ? "text-black  duration-500  hover:text-blue-600"
+                        : "tracking-wide text-white  opacity-80 transition duration-500 hover:text-blue-600"
                     }`}
                   >
                     {line4}
@@ -229,7 +239,9 @@ function NavBar() {
             >
               <motion.h3
                 className={`load-screen--message cursor-pointer pb-4 opacity-80  duration-500 hover:text-blue-600 ${
-                  isMenuBackgroundWhite ? "text-black  duration-500 font-semibold hover:text-blue-600" : "text-white opacity-80  tracking-wide transition duration-500"
+                  isMenuBackgroundWhite
+                    ? "text-black  duration-500  hover:text-blue-600"
+                    : "tracking-wide text-white  opacity-80 transition duration-500"
                 }`}
                 variants={sentence}
                 initial="hidden"
@@ -252,7 +264,9 @@ function NavBar() {
             >
               <motion.h3
                 className={`load-screen--message cursor-pointer pb-4 opacity-80  duration-500 hover:text-blue-600 ${
-                  isMenuBackgroundWhite ? " text-black duration-500 hover:text-blue-600 font-semibold" : "text-white  opacity-80 tracking-wide transition duration-500"
+                  isMenuBackgroundWhite
+                    ? " text-black duration-500 hover:text-blue-600 "
+                    : "tracking-wide  text-white opacity-80 transition duration-500"
                 }`}
                 variants={sentence1}
                 initial="hidden"
@@ -275,7 +289,9 @@ function NavBar() {
             >
               <motion.h3
                 className={`load-screen--message cursor-pointer pb-4   opacity-80 duration-500 hover:text-blue-600 ${
-                  isMenuBackgroundWhite ? "text-black  duration-500 hover:text-blue-600 font-semibold" : "text-white opacity-80  tracking-wide transition duration-500"
+                  isMenuBackgroundWhite
+                    ? "text-black  duration-500 hover:text-blue-600 "
+                    : "tracking-wide text-white  opacity-80 transition duration-500"
                 }`}
                 variants={sentence2}
                 initial="hidden"
@@ -297,8 +313,10 @@ function NavBar() {
               transition={{ duration: 1.0 }}
             >
               <motion.h3
-                className={`load-screen--message cursor-pointer pb-4  opacity-80 duration-500 hover:text-blue-600 ${
-                  isMenuBackgroundWhite ? "text-black  duration-500 font-semibold hover:text-blue-600" : "text-white opacity-80  tracking-wide transition duration-500"
+                className={`load-screen--message cursor-pointer pb-4   opacity-80 duration-500 hover:text-blue-600 ${
+                  isMenuBackgroundWhite
+                    ? "text-black  duration-500 hover:text-blue-600 "
+                    : "tracking-wide text-white  opacity-80 transition duration-500"
                 }`}
                 variants={sentence3}
                 initial="hidden"

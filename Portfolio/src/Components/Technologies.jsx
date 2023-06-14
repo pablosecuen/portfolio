@@ -3,7 +3,6 @@ import { useMediaQuery } from "react-responsive";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { arrayTech } from "../data/Data";
-import { debounce } from "lodash";
 
 function Technologies() {
   const debouncedAnimateCSS = debounce(animateCSS, 100);
@@ -15,39 +14,37 @@ function Technologies() {
   // funcion que absorbe las propiedades del array de technologia y aplica efectos de sombra a cada elemento de manera personalizada
   useEffect(() => {
     arrayTech?.forEach((element) => {
-      debouncedAnimateCSS(
-        animateCSS(
-          element.name,
-          [
-            {
-              value: `drop-shadow(0px 0px 4px ${element.shadowColor})`,
-              duration: 500,
-              shadowColor: element.shadowColor,
-            },
-            {
-              value: `drop-shadow(0px 0px 6px ${element.shadowColor})`,
-              duration: 500,
-              shadowColor: element.shadowColor,
-            },
+      animateCSS(
+        element.name,
+        [
+          {
+            value: `drop-shadow(0px 0px 4px ${element.shadowColor})`,
+            duration: 500,
+            shadowColor: element.shadowColor,
+          },
+          {
+            value: `drop-shadow(0px 0px 6px ${element.shadowColor})`,
+            duration: 500,
+            shadowColor: element.shadowColor,
+          },
 
-            {
-              value: `drop-shadow(0px 0px 10px ${element.shadowColor})`,
-              duration: 800,
-              shadowColor: element.shadowColor,
-            },
-            {
-              value: `drop-shadow(0px 0px 6px ${element.shadowColor})`,
-              duration: 500,
-              shadowColor: element.shadowColor,
-            },
-            {
-              value: `drop-shadow(0px 0px 4px ${element.shadowColor})`,
-              duration: 500,
-              shadowColor: element.shadowColor,
-            },
-          ],
-          { easing: "easeInOutQuad", direction: "normal", loop: true }
-        )
+          {
+            value: `drop-shadow(0px 0px 10px ${element.shadowColor})`,
+            duration: 800,
+            shadowColor: element.shadowColor,
+          },
+          {
+            value: `drop-shadow(0px 0px 6px ${element.shadowColor})`,
+            duration: 500,
+            shadowColor: element.shadowColor,
+          },
+          {
+            value: `drop-shadow(0px 0px 4px ${element.shadowColor})`,
+            duration: 500,
+            shadowColor: element.shadowColor,
+          },
+        ],
+        { easing: "easeInOutQuad", direction: "normal", loop: true }
       );
     });
   }, []);

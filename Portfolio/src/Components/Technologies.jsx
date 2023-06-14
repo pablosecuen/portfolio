@@ -5,7 +5,6 @@ import { useEffect, useState } from "react";
 import { arrayTech } from "../data/Data";
 
 function Technologies() {
-  const debouncedAnimateCSS = debounce(animateCSS, 100);
 
   const isMobile = useMediaQuery({ maxWidth: 600 });
 

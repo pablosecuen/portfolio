@@ -228,8 +228,8 @@ function NavBar() {
               transition={{ duration: 3.0 }}
             >
               <motion.h3
-                className={`load-screen--message cursor-pointer pb-4 text-white opacity-80  duration-500 hover:text-blue-600 ${
-                  isMenuBackgroundWhite ? "text-black  duration-500 hover:text-blue-600" : ""
+                className={`load-screen--message cursor-pointer pb-4 opacity-80  duration-500 hover:text-blue-600 ${
+                  isMenuBackgroundWhite ? "text-black  duration-500 hover:text-blue-600" : "text-white"
                 }`}
                 variants={sentence}
                 initial="hidden"
@@ -251,8 +251,8 @@ function NavBar() {
               transition={{ duration: 2.0 }}
             >
               <motion.h3
-                className={`load-screen--message cursor-pointer pb-4 text-white opacity-80  duration-500 hover:text-blue-600 ${
-                  isMenuBackgroundWhite ? " text-black duration-500 hover:text-blue-600" : ""
+                className={`load-screen--message cursor-pointer pb-4 opacity-80  duration-500 hover:text-blue-600 ${
+                  isMenuBackgroundWhite ? " text-black duration-500 hover:text-blue-600" : "text-white"
                 }`}
                 class="p2"
                 variants={sentence1}
@@ -275,8 +275,8 @@ function NavBar() {
               transition={{ duration: 1.0 }}
             >
               <motion.h3
-                className={`load-screen--message cursor-pointer pb-4 text-white  opacity-80 duration-500 hover:text-blue-600 ${
-                  isMenuBackgroundWhite ? "text-black  duration-500 hover:text-blue-600" : ""
+                className={`load-screen--message cursor-pointer pb-4   opacity-80 duration-500 hover:text-blue-600 ${
+                  isMenuBackgroundWhite ? "text-black  duration-500 hover:text-blue-600" : "text-white"
                 }`}
                 variants={sentence2}
                 initial="hidden"
@@ -298,8 +298,8 @@ function NavBar() {
               transition={{ duration: 1.0 }}
             >
               <motion.h3
-                className={`load-screen--message cursor-pointer pb-4 text-white opacity-80 duration-500 hover:text-blue-600 ${
-                  isMenuBackgroundWhite ? "text-black  duration-500 hover:text-blue-600" : ""
+                className={`load-screen--message cursor-pointer pb-4  opacity-80 duration-500 hover:text-blue-600 ${
+                  isMenuBackgroundWhite ? "text-black  duration-500 hover:text-blue-600" : "text-white"
                 }`}
                 variants={sentence3}
                 initial="hidden"

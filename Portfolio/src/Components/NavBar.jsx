@@ -134,7 +134,7 @@ function NavBar() {
           </Link>
         </motion.div>
         {isMobile ? (
-          <div className="relative h-8 pt-">
+          <div className="pt- relative h-8">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"

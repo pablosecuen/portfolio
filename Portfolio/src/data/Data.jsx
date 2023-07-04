@@ -163,7 +163,7 @@ export const proyects = [
     Pokemon: {
       name: "Pokemon",
       description:
-        "PThis project uses React, Redux, Node, and Sequelize to view and interact with Pokémon data from the pokeapi API. The main page features a search input and list of Pokémon, which can be filtered and sorted by type and attack. Pagination is included to display 12 Pokémon per page. The Pokémon detail page includes stats and additional information, and a controlled form is available for creating new Pokémon. The creation form has been validated to ensure proper data entry. The app also includes a playable Kanto Ultimate Pokémon game. The app is not responsive due to limited development time. Overall, this project serves as a way to practice and apply knowledge of various technologies.",
+        "This project uses React, Redux, Node, and Sequelize to view and interact with Pokémon data from the pokeapi API. The main page features a search input and list of Pokémon, which can be filtered and sorted by type and attack. Pagination is included to display 12 Pokémon per page. The Pokémon detail page includes stats and additional information, and a controlled form is available for creating new Pokémon. The creation form has been validated to ensure proper data entry. The app also includes a playable Kanto Ultimate Pokémon game. The app is not responsive due to limited development time. Overall, this project serves as a way to practice and apply knowledge of various technologies.",
       descripcion:
         "Este proyecto utiliza React, Redux, Node y Sequelize para ver e interactuar con los datos de Pokémon de la API pokeapi. La página principal cuenta con una entrada de búsqueda y una lista de Pokémon, que se pueden filtrar y ordenar por tipo y ataque. Se incluye la paginación para mostrar 12 Pokémon por página. La página de detalle de Pokémon incluye estadísticas e información adicional, y hay un formulario controlado disponible para crear nuevos Pokémon. El formulario de creación ha sido validado para garantizar la entrada de datos correcta. La aplicación también incluye un juego de Pokémon Ultimate Kanto jugable. La aplicación no es responsiva debido al tiempo limitado de desarrollo. En general, este proyecto sirve como una manera de practicar y aplicar el conocimiento de varias tecnologías.",
     },
@@ -187,8 +187,26 @@ export const proyects = [
         "Movi es la sede central para todas tus soluciones de transporte. Puedes pedir comida a domicilio, remises, taxis, buses intermunicipales e incluso hacer carpooling. Ofrecemos soluciones integrales con sistemas de seguridad confiables, un backend robusto y un diseño urbano intuitivo y fresco. En la sección /admin/dashboard, encontrarás un panel de administración completo y cuidadosamente diseñado hasta el Último detalle. Es intuitivo y eficiente. Este proyecto está desplegado en herramientas gratuitas, por lo que los tiempos de respuesta pueden ser algo lentos. Fue desarrollado con Firebase como base de datos y geolocalización en mente. En cuanto al stack tecnolónico, se utilizaron TypeScript, Node.js, Express, Babel, React, Next.js y Tailwind para los estilos.",
     },
   },
-];
 
+  {
+    Aythen: {
+      name: "Aythen",
+      description:
+        " Aythen is a multi-service platform where you can assemble your own development team by adjusting the needs of your business to achieve a custom-developed proposal for the user. With over 50 integrable APIs and infinite possibilities, Aythen allows you to abstract the most technical concepts and apply them to your business logic.  ",
+      descripcion:
+        "Aythen es una plataforma multi servicio de puedes armar tu propio equipo de desarrollo ajustando las necesidades de tu negocio para lograr una propuesta especialmente desarrollada a medida del usuario, con mas de  50 api's integrables y posiblidades infinitas para abstraer los conceptos mas técnicos y aplicarlos a tu lógica de negocios",
+    },
+  },
+  {
+    Wam: {
+      name: "Wam",
+      description:
+        "Wam is a comprehensive marketing services agency specializing in corporate identity development, graphic design, and web development. Among its clients are well-known companies from the city of Rosario and the province of Santa Fe.",
+      descripcion:
+        "Wam es una agencia de servicios de marketing integral, desarrollo de indentidades corporativas, diseño gráfico y desarrollo web. Entre sus clientes se encuentran conocidas empresas de la ciudad de Rosario y provincia de Santa Fe",
+    },
+  },
+];
 
 export function animateCSS(name, filterValues, options) {
   const target = "." + name.toLowerCase(); // creamos un selector para targetear basado en el nombre

@@ -9,6 +9,9 @@ import pet from "../assets/img/petfriendly.webp";
 import petsm from "../assets/img/petfriendly.webp";
 import poke from "../assets/img/pokeApp.webp";
 import { proyects } from "../data/Data";
+import aythen from "../assets/svg/aythen.svg";
+import aythenHome from "../assets/img/aythenHome.png";
+import wamhome from "../assets/img/wamhome.png";
 
 function Proyects(props) {
   console.log(proyects);
@@ -17,6 +20,8 @@ function Proyects(props) {
   const [isOpen, setIsOpen] = useState(false);
   const [isOpen1, setIsOpen1] = useState(false);
   const [isOpen2, setIsOpen2] = useState(false);
+  const [isOpen3, setIsOpen3] = useState(false);
+  const [isOpen4, setIsOpen4] = useState(false);
   const isXSmallMobile = useMediaQuery("(max-width: 400px)");
   const isSmallMobile = useMediaQuery("(min-width: 401px) and (max-width: 639px)");
   const isMobile = useMediaQuery("(min-width: 640px) and (max-width: 767px)");
@@ -63,6 +68,40 @@ function Proyects(props) {
         document.removeEventListener("mousedown", handleClickOutside);
       };
     }, [ref]);
+
+    useEffect(() => {
+      /**
+       * Alert if clicked on outside of element
+       */
+      function handleClickOutside(event) {
+        if (ref.current && !ref.current.contains(event.target)) {
+          setIsOpen2(isOpen3);
+        }
+      }
+      // Bind the event listener
+      document.addEventListener("mousedown", handleClickOutside);
+      return () => {
+        // Unbind the event listener on clean up
+        document.removeEventListener("mousedown", handleClickOutside);
+      };
+    }, [ref]);
+
+    useEffect(() => {
+      /**
+       * Alert if clicked on outside of element
+       */
+      function handleClickOutside(event) {
+        if (ref.current && !ref.current.contains(event.target)) {
+          setIsOpen2(isOpen4);
+        }
+      }
+      // Bind the event listener
+      document.addEventListener("mousedown", handleClickOutside);
+      return () => {
+        // Unbind the event listener on clean up
+        document.removeEventListener("mousedown", handleClickOutside);
+      };
+    }, [ref]);
   }
 
   const wrapperRef = useRef(null);
@@ -70,8 +109,15 @@ function Proyects(props) {
 
   const wrapperRef1 = useRef(null);
   useOutsideAlerter(wrapperRef1);
+
   const wrapperRef2 = useRef(null);
   useOutsideAlerter(wrapperRef2);
+
+  const wrapperRef3 = useRef(null);
+  useOutsideAlerter(wrapperRef3);
+
+  const wrapperRef4 = useRef(null);
+  useOutsideAlerter(wrapperRef4);
 
   const handleClickPet = () => {
     window.open("https://petfriendlyuniverse.vercel.app/", "_blank");
@@ -83,6 +129,14 @@ function Proyects(props) {
 
   const handleClickMovi = () => {
     window.open("https://urban-movi.vercel.app/", "_blank");
+  };
+
+  const handleClickAythen = () => {
+    window.open("https://aythen.com/", "_blank");
+  };
+
+  const handleClickWam = () => {
+    window.open("https://wamcreativo.com/", "_blank");
   };
 
   return (
@@ -101,7 +155,7 @@ function Proyects(props) {
             delay: 0.2,
             ease: [0, 0.71, 0.2, 1.01],
           }}
-          className=" sm-24 shadow-black -mt-96 mb-12 w-full cursor-pointer p-4 text-center  text-4xl -tracking-widest text-white text-shadow-md xsm:text-4xl lg:-mt-48 lg:mb-0 lg:text-6xl   "
+          className=" sm-24 -mt-96 mb-12 w-full cursor-pointer p-4 text-center text-4xl  -tracking-widest text-white shadow-black text-shadow-md xsm:text-4xl lg:-mt-48 lg:mb-0 lg:text-6xl   "
         >
           My proyects
         </motion.h2>
@@ -119,14 +173,14 @@ function Proyects(props) {
             delay: 0.2,
             ease: [0, 0.71, 0.2, 1.01],
           }}
-          className="  shadow-black  w-full cursor-pointer p-4 text-center  text-4xl -tracking-widest text-white text-shadow-md xsm:text-4xl lg:-mt-48 lg:mb-0 lg:text-6xl   "
+          className="  w-full  cursor-pointer p-4 text-center text-4xl  -tracking-widest text-white shadow-black text-shadow-md xsm:text-4xl lg:-mt-48 lg:mb-0 lg:text-6xl   "
         >
           Mis proyectos
         </motion.h2>
       )}
       {isXSmallMobile && (
         <div className="mt-48 flex  w-full flex-col">
-          <div className="flex h-[500px] flex-col justify-around gap-10 pt-48 ">
+          <div className="flex h-[500px] flex-col justify-around gap-10 pb-[600px] pt-[650px] ">
             <div className="flex flex-col self-center">
               {" "}
               <motion.div
@@ -150,7 +204,7 @@ function Proyects(props) {
                       opacity: { ease: "linear" },
                       layout: { duration: 2 },
                     }}
-                    className="bg-slate-100 shadow-black relative mb-20 flex flex-col items-center justify-center text-center   shadow-2xl duration-1000 "
+                    className="relative mb-20 flex flex-col items-center justify-center bg-slate-100 text-center shadow-2xl   shadow-black duration-1000 "
                   >
                     <motion.img src={proyect1} className="h-24"></motion.img>
                   </motion.div>
@@ -198,7 +252,7 @@ function Proyects(props) {
                         opacity: { easeInOut: "linear" },
                         layout: { duration: 2 },
                       }}
-                      className=" bg-slate-100 shadow-black absolute z-50 flex h-96 w-96 flex-col items-center justify-evenly  rounded-full shadow-2xl duration-1000 "
+                      className=" absolute z-50 flex h-96 w-96 flex-col items-center justify-evenly rounded-full bg-slate-100  shadow-2xl shadow-black duration-1000 "
                     >
                       <img
                         src={proyect1}
@@ -229,7 +283,7 @@ function Proyects(props) {
               </motion.div>{" "}
               <button
                 onClick={handleClickPet}
-                className="text-xsm shadow-black -mt-10 h-10 w-36 cursor-pointer self-center rounded-3xl bg-blue-500 text-white shadow-md sm:w-48 sm:text-base"
+                className="text-xsm mt-8 h-10 w-36 cursor-pointer self-center rounded-3xl bg-blue-500 text-white shadow-md shadow-black sm:w-48 sm:text-base"
               >
                 {" "}
                 link to the proyect
@@ -259,7 +313,7 @@ function Proyects(props) {
                       opacity: { ease: "linear" },
                       layout: { duration: 2 },
                     }}
-                    className="bg-slate-100 shadow-black relative mb-20 flex h-48 w-48 flex-col items-center justify-center rounded-3xl text-center  shadow-2xl duration-1000 "
+                    className="relative mb-20 flex h-48 w-48 flex-col items-center justify-center rounded-3xl bg-slate-100 text-center shadow-2xl  shadow-black duration-1000 "
                   >
                     {" "}
                     <motion.img
@@ -307,14 +361,14 @@ function Proyects(props) {
                         height: 560,
                         width: 280,
                         borderRadius: 50,
-                        top: 700,
+                        top: 360,
                         overflow: "hidden",
                       }}
                       transition={{
                         opacity: { easeInOut: "linear" },
                         layout: { duration: 2 },
                       }}
-                      className=" bg-slate-100  shadow-black absolute z-50 flex h-96 w-96 flex-col items-center justify-evenly  rounded-full shadow-2xl duration-1000 "
+                      className=" absolute  z-50 flex h-96 w-96 flex-col items-center justify-evenly rounded-full bg-slate-100  shadow-2xl shadow-black duration-1000 "
                     >
                       <img
                         src={pokemon}
@@ -346,7 +400,7 @@ function Proyects(props) {
               </motion.div>{" "}
               <button
                 onClick={handleClickPoke}
-                className="text-xsm shadow-black -mt-10 h-10 w-36 cursor-pointer self-center rounded-3xl bg-blue-500 text-white shadow-md sm:w-48 sm:text-base"
+                className="text-xsm mt-8 h-10 w-36 cursor-pointer self-center rounded-3xl bg-blue-500 text-white shadow-md shadow-black sm:w-48 sm:text-base"
               >
                 {" "}
                 link to the proyect
@@ -372,7 +426,7 @@ function Proyects(props) {
                       opacity: { ease: "linear" },
                       layout: { duration: 2 },
                     }}
-                    className="bg-slate-100 shadow-black  relative flex h-48 w-48 flex-col items-center justify-center rounded-3xl text-center  shadow-2xl duration-1000 "
+                    className="relative flex  h-48 w-48 flex-col items-center justify-center rounded-3xl bg-slate-100 text-center shadow-2xl  shadow-black duration-1000 "
                   >
                     <motion.img
                       src={movi}
@@ -419,14 +473,14 @@ function Proyects(props) {
                         height: 560,
                         width: 280,
                         borderRadius: 50,
-                        top: 960,
+                        top: 640,
                         overflow: "hidden",
                       }}
                       transition={{
                         opacity: { easeInOut: "linear" },
                         layout: { duration: 2 },
                       }}
-                      className=" bg-slate-100  shadow-black absolute z-50 flex h-96 w-96 flex-col items-center justify-evenly  rounded-full shadow-2xl duration-1000 "
+                      className=" absolute  z-50 flex h-96 w-96 flex-col items-center justify-evenly rounded-full bg-slate-100  shadow-2xl shadow-black duration-1000 "
                     >
                       <img src={movi} className="w-12 bg-cover object-cover pt-8 align-middle " />
                       {language === "en" ? (
@@ -454,7 +508,230 @@ function Proyects(props) {
               </motion.div>{" "}
               <button
                 onClick={handleClickMovi}
-                className="text-xsm shadow-black mt-8 h-10 w-36 cursor-pointer self-center rounded-3xl bg-blue-500 text-white shadow-md sm:w-48 sm:text-base"
+                className="text-xsm mt-8 h-10 w-36 cursor-pointer self-center rounded-3xl bg-blue-500 text-white shadow-md shadow-black sm:w-48 sm:text-base"
+              >
+                {" "}
+                link to the proyect
+              </button>
+            </div>
+
+            {/* aythen */}
+            <div className="flex flex-col self-center ">
+              <motion.div
+                ref={wrapperRef3}
+                layout
+                data-isopen={!isOpen3}
+                initial={{ borderRadius: 50 }}
+                onClick={() => setIsOpen3(!isOpen3)}
+                className="parent flex  items-center justify-center  "
+              >
+                {!isOpen3 && (
+                  <motion.div
+                    ref={wrapperRef3}
+                    layout
+                    initial={{ height: 500, width: 500, borderRadius: 50 }}
+                    animate={{ height: 200, width: 200, borderRadius: 80 }}
+                    transition={{
+                      opacity: { ease: "linear" },
+                      layout: { duration: 2 },
+                    }}
+                    className=" relative flex h-48 w-48 cursor-pointer flex-col items-center justify-center rounded-3xl bg-slate-100 text-center shadow-2xl  shadow-black duration-1000 "
+                  >
+                    <motion.img
+                      src={aythen}
+                      className="w-36"
+                      alt="Aythen"
+                      title="aythen"
+                    ></motion.img>
+                  </motion.div>
+                )}
+                {isOpen3 && (
+                  <div className="relative flex  flex-col">
+                    <motion.div
+                      ref={wrapperRef3}
+                      layout
+                      initial={{
+                        height: 200,
+                        width: 200,
+                        borderRadius: 80,
+                      }}
+                      animate={{
+                        height: 180,
+                        width: 300,
+                        borderRadius: 50,
+                        overflow: "hidden",
+                      }}
+                      transition={{
+                        opacity: { easeInOut: "linear" },
+                        layout: { duration: 2 },
+                      }}
+                      className=" flex h-96  w-96 cursor-pointer flex-col items-center justify-center rounded-full bg-white shadow-2xl shadow-black duration-1000 "
+                    >
+                      <motion.img
+                        src={aythenHome}
+                        alt="Aythen - home"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                      />
+                    </motion.div>
+                    <motion.div
+                      layout
+                      initial={{
+                        height: 200,
+                        width: 200,
+                        borderRadius: 80,
+                        top: 0,
+                      }}
+                      animate={{
+                        height: 600,
+                        width: 300,
+                        borderRadius: 50,
+                        top: 195,
+                        overflow: "hidden",
+                      }}
+                      transition={{
+                        opacity: { easeInOut: "linear" },
+                        layout: { duration: 2 },
+                      }}
+                      className="absolute  z-50  flex h-96 w-96 cursor-pointer flex-col items-center justify-evenly rounded-full bg-slate-100  shadow-2xl shadow-black duration-1000 "
+                    >
+                      <img src={aythen} className="w-24 bg-cover object-cover pt-8 align-middle" />
+                      {language === "en" ? (
+                        <motion.span
+                          initial={{ opacity: 0 }}
+                          animate={{ opacity: 1 }}
+                          transition={{ duration: 2 }}
+                          className="p-6 text-center"
+                        >
+                          {proyects[3].Aythen.description}
+                        </motion.span>
+                      ) : (
+                        <motion.span
+                          initial={{ opacity: 0 }}
+                          animate={{ opacity: 1 }}
+                          transition={{ duration: 2 }}
+                          className="p-6 text-center"
+                        >
+                          {proyects[3].Aythen.descripcion}
+                        </motion.span>
+                      )}
+                    </motion.div>
+                  </div>
+                )}
+              </motion.div>
+              <button
+                onClick={handleClickAythen}
+                className="text-xsm mt-8 h-10 w-36 cursor-pointer self-center rounded-3xl bg-blue-500 text-white shadow-md shadow-black sm:w-48 sm:text-base"
+              >
+                {" "}
+                link to the proyect
+              </button>
+            </div>
+            {/* Wam Creativo */}
+            <div className="flex flex-col self-center">
+              <motion.div
+                ref={wrapperRef4}
+                layout
+                data-isopen={!isOpen4}
+                initial={{ borderRadius: 50 }}
+                onClick={() => setIsOpen4(!isOpen4)}
+                className="parent flex  items-center justify-center  "
+              >
+                {!isOpen4 && (
+                  <motion.div
+                    ref={wrapperRef4}
+                    layout
+                    initial={{ height: 500, width: 500, borderRadius: 50 }}
+                    animate={{ height: 200, width: 200, borderRadius: 80 }}
+                    transition={{
+                      opacity: { ease: "linear" },
+                      layout: { duration: 2 },
+                    }}
+                    className=" relative flex h-48 w-48 cursor-pointer flex-col items-center justify-center rounded-3xl bg-slate-100 text-center shadow-2xl  shadow-black duration-1000 "
+                  >
+                    {/* <motion.img src={wamhome} className="w-36" alt="Wam" title="Wam"></motion.img> */}
+                    Wam!
+                  </motion.div>
+                )}
+                {isOpen4 && (
+                  <div className="relative flex  flex-col ">
+                    <motion.div
+                      layout
+                      initial={{
+                        height: 200,
+                        width: 200,
+                        borderRadius: 80,
+                      }}
+                      animate={{
+                        height: 180,
+                        width: 300,
+                        borderRadius: 50,
+
+                        overflow: "hidden",
+                      }}
+                      transition={{
+                        opacity: { easeInOut: "linear" },
+                        layout: { duration: 2 },
+                      }}
+                      className=" flex  h-96 w-96 cursor-pointer flex-col items-center justify-center rounded-full shadow-2xl shadow-black duration-1000 "
+                    >
+                      <motion.img
+                        src={wamhome}
+                        alt="Wam - home"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                      />
+                    </motion.div>
+                    <motion.div
+                      layout
+                      initial={{
+                        height: 200,
+                        width: 200,
+                        borderRadius: 80,
+                        top: 0,
+                      }}
+                      animate={{
+                        height: 600,
+                        width: 300,
+                        borderRadius: 50,
+                        top: 195,
+
+                        overflow: "hidden",
+                      }}
+                      transition={{
+                        opacity: { easeInOut: "linear" },
+                        layout: { duration: 2 },
+                      }}
+                      className="absolute  z-50  flex h-96 w-96 cursor-pointer flex-col items-center justify-evenly rounded-full bg-slate-100  shadow-2xl shadow-black duration-1000 "
+                    >
+                      {/* <img src={wamhome} className="w-24 bg-cover object-cover pt-8 align-middle" /> */}
+                      WAM!
+                      {language === "en" ? (
+                        <motion.span
+                          initial={{ opacity: 0 }}
+                          animate={{ opacity: 1 }}
+                          transition={{ duration: 2 }}
+                          className="p-6 text-center"
+                        >
+                          {proyects[4].Wam.description}
+                        </motion.span>
+                      ) : (
+                        <motion.span
+                          initial={{ opacity: 0 }}
+                          animate={{ opacity: 1 }}
+                          transition={{ duration: 2 }}
+                          className="p-6 text-center"
+                        >
+                          {proyects[4].Wam.descripcion}
+                        </motion.span>
+                      )}
+                    </motion.div>
+                  </div>
+                )}
+              </motion.div>
+              <button
+                onClick={handleClickWam}
+                className="text-xsm mt-8 h-10 w-36 cursor-pointer self-center rounded-3xl bg-blue-500 text-white shadow-md shadow-black sm:w-48 sm:text-base"
               >
                 {" "}
                 link to the proyect
@@ -465,7 +742,7 @@ function Proyects(props) {
       )}
       {isSmallMobile && (
         <div className="mt-48 flex w-full flex-col">
-          <div className="flex h-[500px] flex-col justify-around gap-10 pt-48">
+          <div className="flex h-[500px] flex-col justify-around gap-10 pb-[600px] pt-[600px]">
             <div className="flex flex-col self-center">
               {" "}
               <motion.div
@@ -489,7 +766,7 @@ function Proyects(props) {
                       opacity: { ease: "linear" },
                       layout: { duration: 2 },
                     }}
-                    className=" bg-slate-100 flex flex-col  items-center justify-center  text-center duration-1000 "
+                    className=" flex flex-col items-center  justify-center bg-slate-100  text-center duration-1000 "
                   >
                     <motion.img src={proyect1} className="h-24"></motion.img>
                   </motion.div>
@@ -537,7 +814,7 @@ function Proyects(props) {
                         opacity: { easeInOut: "linear" },
                         layout: { duration: 2 },
                       }}
-                      className="bg-slate-100 absolute z-50 mb-48 flex h-96 w-96 flex-col items-center justify-evenly rounded-full text-xs duration-1000 "
+                      className="absolute z-50 mb-48 flex h-96 w-96 flex-col items-center justify-evenly rounded-full bg-slate-100 text-xs duration-1000 "
                     >
                       <img
                         src={proyect1}
@@ -568,7 +845,7 @@ function Proyects(props) {
               </motion.div>
               <button
                 onClick={handleClickPet}
-                className="text-xsm shadow-black mt-4 h-10 w-36 cursor-pointer self-center rounded-3xl bg-blue-500 text-white shadow-md sm:w-48 sm:text-base"
+                className="text-xsm mt-4 h-10 w-36 cursor-pointer self-center rounded-3xl bg-blue-500 text-white shadow-md shadow-black sm:w-48 sm:text-base"
               >
                 {" "}
                 link to the proyect
@@ -594,7 +871,7 @@ function Proyects(props) {
                       opacity: { ease: "linear" },
                       layout: { duration: 2 },
                     }}
-                    className=" bg-slate-100 flex h-48 w-48 flex-col items-center justify-center rounded-3xl  text-center duration-1000 "
+                    className=" flex h-48 w-48 flex-col items-center justify-center rounded-3xl bg-slate-100  text-center duration-1000 "
                   >
                     {" "}
                     <motion.img
@@ -648,7 +925,7 @@ function Proyects(props) {
                         opacity: { easeInOut: "linear" },
                         layout: { duration: 2 },
                       }}
-                      className="bg-slate-100 absolute z-50 flex h-96 w-96 flex-col items-center  justify-evenly rounded-full duration-1000 "
+                      className="absolute z-50 flex h-96 w-96 flex-col items-center justify-evenly  rounded-full bg-slate-100 duration-1000 "
                     >
                       <img
                         src={pokemon}
@@ -680,7 +957,7 @@ function Proyects(props) {
               </motion.div>
               <button
                 onClick={handleClickPoke}
-                className="text-xsm shadow-black mt-4 h-10 w-36 cursor-pointer self-center rounded-3xl bg-blue-500 text-white shadow-md sm:w-48 sm:text-base"
+                className="text-xsm mt-4 h-10 w-36 cursor-pointer self-center rounded-3xl bg-blue-500 text-white shadow-md shadow-black sm:w-48 sm:text-base"
               >
                 {" "}
                 link to the proyect
@@ -706,7 +983,7 @@ function Proyects(props) {
                       opacity: { ease: "linear" },
                       layout: { duration: 2 },
                     }}
-                    className=" bg-slate-100 flex h-48 w-48 flex-col items-center justify-center rounded-3xl  text-center duration-1000 "
+                    className=" flex h-48 w-48 flex-col items-center justify-center rounded-3xl bg-slate-100  text-center duration-1000 "
                   >
                     <motion.img
                       src={movi}
@@ -759,7 +1036,7 @@ function Proyects(props) {
                         opacity: { easeInOut: "linear" },
                         layout: { duration: 2 },
                       }}
-                      className="bg-slate-100 absolute z-50 flex h-96 w-96 flex-col items-center  justify-evenly rounded-full duration-1000 "
+                      className="absolute z-50 flex h-96 w-96 flex-col items-center justify-evenly  rounded-full bg-slate-100 duration-1000 "
                     >
                       <img
                         src={movihome}
@@ -790,7 +1067,230 @@ function Proyects(props) {
               </motion.div>
               <button
                 onClick={handleClickMovi}
-                className="text-xsm shadow-black mt-4 h-10 w-36 cursor-pointer self-center rounded-3xl bg-blue-500 text-white shadow-md sm:w-48 sm:text-base"
+                className="text-xsm mt-4 h-10 w-36 cursor-pointer self-center rounded-3xl bg-blue-500 text-white shadow-md shadow-black sm:w-48 sm:text-base"
+              >
+                {" "}
+                link to the proyect
+              </button>
+            </div>
+
+            {/* aythen */}
+            <div className="flex flex-col self-center ">
+              <motion.div
+                ref={wrapperRef3}
+                layout
+                data-isopen={!isOpen3}
+                initial={{ borderRadius: 50 }}
+                onClick={() => setIsOpen3(!isOpen3)}
+                className="parent flex  items-center justify-center  "
+              >
+                {!isOpen3 && (
+                  <motion.div
+                    ref={wrapperRef3}
+                    layout
+                    initial={{ height: 500, width: 500, borderRadius: 50 }}
+                    animate={{ height: 200, width: 200, borderRadius: 80 }}
+                    transition={{
+                      opacity: { ease: "linear" },
+                      layout: { duration: 2 },
+                    }}
+                    className=" relative flex h-48 w-48 cursor-pointer flex-col items-center justify-center rounded-3xl bg-slate-100 text-center shadow-2xl  shadow-black duration-1000 "
+                  >
+                    <motion.img
+                      src={aythen}
+                      className="w-36"
+                      alt="Aythen"
+                      title="aythen"
+                    ></motion.img>
+                  </motion.div>
+                )}
+                {isOpen3 && (
+                  <div className="relative flex  flex-col">
+                    <motion.div
+                      ref={wrapperRef3}
+                      layout
+                      initial={{
+                        height: 200,
+                        width: 200,
+                        borderRadius: 80,
+                      }}
+                      animate={{
+                        height: 180,
+                        width: 300,
+                        borderRadius: 50,
+                        overflow: "hidden",
+                      }}
+                      transition={{
+                        opacity: { easeInOut: "linear" },
+                        layout: { duration: 2 },
+                      }}
+                      className=" flex h-96  w-96 cursor-pointer flex-col items-center justify-center rounded-full bg-white shadow-2xl shadow-black duration-1000 "
+                    >
+                      <motion.img
+                        src={aythenHome}
+                        alt="Aythen - home"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                      />
+                    </motion.div>
+                    <motion.div
+                      layout
+                      initial={{
+                        height: 200,
+                        width: 200,
+                        borderRadius: 80,
+                        top: 0,
+                      }}
+                      animate={{
+                        height: 600,
+                        width: 300,
+                        borderRadius: 50,
+                        top: 195,
+                        overflow: "hidden",
+                      }}
+                      transition={{
+                        opacity: { easeInOut: "linear" },
+                        layout: { duration: 2 },
+                      }}
+                      className="absolute  z-50  flex h-96 w-96 cursor-pointer flex-col items-center justify-evenly rounded-full bg-slate-100  shadow-2xl shadow-black duration-1000 "
+                    >
+                      <img src={aythen} className="w-24 bg-cover object-cover pt-8 align-middle" />
+                      {language === "en" ? (
+                        <motion.span
+                          initial={{ opacity: 0 }}
+                          animate={{ opacity: 1 }}
+                          transition={{ duration: 2 }}
+                          className="p-6 text-center"
+                        >
+                          {proyects[3].Aythen.description}
+                        </motion.span>
+                      ) : (
+                        <motion.span
+                          initial={{ opacity: 0 }}
+                          animate={{ opacity: 1 }}
+                          transition={{ duration: 2 }}
+                          className="p-6 text-center"
+                        >
+                          {proyects[3].Aythen.descripcion}
+                        </motion.span>
+                      )}
+                    </motion.div>
+                  </div>
+                )}
+              </motion.div>
+              <button
+                onClick={handleClickAythen}
+                className="text-xsm mt-10 h-10 w-32 cursor-pointer self-center rounded-3xl bg-blue-500 text-white shadow-md shadow-black sm:w-48 sm:text-base"
+              >
+                {" "}
+                link to the proyect
+              </button>
+            </div>
+            {/* Wam Creativo */}
+            <div className="flex flex-col self-center">
+              <motion.div
+                ref={wrapperRef4}
+                layout
+                data-isopen={!isOpen4}
+                initial={{ borderRadius: 50 }}
+                onClick={() => setIsOpen4(!isOpen4)}
+                className="parent flex  items-center justify-center  "
+              >
+                {!isOpen4 && (
+                  <motion.div
+                    ref={wrapperRef4}
+                    layout
+                    initial={{ height: 500, width: 500, borderRadius: 50 }}
+                    animate={{ height: 200, width: 200, borderRadius: 80 }}
+                    transition={{
+                      opacity: { ease: "linear" },
+                      layout: { duration: 2 },
+                    }}
+                    className=" relative flex h-48 w-48 cursor-pointer flex-col items-center justify-center rounded-3xl bg-slate-100 text-center shadow-2xl  shadow-black duration-1000 "
+                  >
+                    {/* <motion.img src={wamhome} className="w-36" alt="Wam" title="Wam"></motion.img> */}
+                    Wam!
+                  </motion.div>
+                )}
+                {isOpen4 && (
+                  <div className="relative flex  flex-col ">
+                    <motion.div
+                      layout
+                      initial={{
+                        height: 200,
+                        width: 200,
+                        borderRadius: 80,
+                      }}
+                      animate={{
+                        height: 180,
+                        width: 300,
+                        borderRadius: 50,
+
+                        overflow: "hidden",
+                      }}
+                      transition={{
+                        opacity: { easeInOut: "linear" },
+                        layout: { duration: 2 },
+                      }}
+                      className=" flex  h-96 w-96 cursor-pointer flex-col items-center justify-center rounded-full shadow-2xl shadow-black duration-1000 "
+                    >
+                      <motion.img
+                        src={wamhome}
+                        alt="Wam - home"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                      />
+                    </motion.div>
+                    <motion.div
+                      layout
+                      initial={{
+                        height: 200,
+                        width: 200,
+                        borderRadius: 80,
+                        top: 0,
+                      }}
+                      animate={{
+                        height: 600,
+                        width: 300,
+                        borderRadius: 50,
+                        top: 195,
+
+                        overflow: "hidden",
+                      }}
+                      transition={{
+                        opacity: { easeInOut: "linear" },
+                        layout: { duration: 2 },
+                      }}
+                      className="absolute  z-50  flex h-96 w-96 cursor-pointer flex-col items-center justify-evenly rounded-full bg-slate-100  shadow-2xl shadow-black duration-1000 "
+                    >
+                      {/* <img src={wamhome} className="w-24 bg-cover object-cover pt-8 align-middle" /> */}
+                      WAM!
+                      {language === "en" ? (
+                        <motion.span
+                          initial={{ opacity: 0 }}
+                          animate={{ opacity: 1 }}
+                          transition={{ duration: 2 }}
+                          className="p-6 text-center"
+                        >
+                          {proyects[4].Wam.description}
+                        </motion.span>
+                      ) : (
+                        <motion.span
+                          initial={{ opacity: 0 }}
+                          animate={{ opacity: 1 }}
+                          transition={{ duration: 2 }}
+                          className="p-6 text-center"
+                        >
+                          {proyects[4].Wam.descripcion}
+                        </motion.span>
+                      )}
+                    </motion.div>
+                  </div>
+                )}
+              </motion.div>
+              <button
+                onClick={handleClickWam}
+                className="text-xsm mt-10 h-10 w-32 cursor-pointer self-center rounded-3xl bg-blue-500 text-white shadow-md shadow-black sm:w-48 sm:text-base"
               >
                 {" "}
                 link to the proyect
@@ -825,7 +1325,7 @@ function Proyects(props) {
                       opacity: { ease: "linear" },
                       layout: { duration: 2 },
                     }}
-                    className=" bg-slate-100  shadow-black flex flex-col items-center  justify-center text-center  shadow-2xl duration-1000 "
+                    className=" flex  flex-col items-center justify-center bg-slate-100  text-center shadow-2xl  shadow-black duration-1000 "
                   >
                     <motion.img src={proyect1} className="h-24"></motion.img>
                   </motion.div>
@@ -845,7 +1345,7 @@ function Proyects(props) {
                         opacity: { easeInOut: "linear" },
                         layout: { duration: 2 },
                       }}
-                      className=" m-l-24  shadow-black flex h-96 w-96 flex-col items-center justify-center rounded-full shadow-2xl  duration-1000 "
+                      className=" m-l-24  flex h-96 w-96 flex-col items-center justify-center rounded-full shadow-2xl shadow-black  duration-1000 "
                     >
                       <motion.img
                         src={pet}
@@ -873,7 +1373,7 @@ function Proyects(props) {
                         opacity: { easeInOut: "linear" },
                         layout: { duration: 2 },
                       }}
-                      className=" bg-slate-100 shadow-black absolute z-50 flex h-96 w-96 flex-col items-center justify-evenly  rounded-full shadow-2xl duration-1000 "
+                      className=" absolute z-50 flex h-96 w-96 flex-col items-center justify-evenly rounded-full bg-slate-100  shadow-2xl shadow-black duration-1000 "
                     >
                       <img
                         src={proyect1}
@@ -905,7 +1405,7 @@ function Proyects(props) {
               </motion.div>
               <button
                 onClick={handleClickPet}
-                className="text-xsm shadow-black mt-10 h-10 w-32 cursor-pointer self-center rounded-3xl bg-blue-500 text-white shadow-md sm:w-48 sm:text-base"
+                className="text-xsm mt-10 h-10 w-32 cursor-pointer self-center rounded-3xl bg-blue-500 text-white shadow-md shadow-black sm:w-48 sm:text-base"
               >
                 {" "}
                 link to the proyect
@@ -930,7 +1430,7 @@ function Proyects(props) {
                       opacity: { ease: "linear" },
                       layout: { duration: 2 },
                     }}
-                    className=" bg-slate-100  shadow-black flex h-48 w-48 flex-col items-center justify-center rounded-3xl text-center  shadow-2xl duration-1000 "
+                    className=" flex  h-48 w-48 flex-col items-center justify-center rounded-3xl bg-slate-100 text-center shadow-2xl  shadow-black duration-1000 "
                   >
                     {" "}
                     <motion.img
@@ -956,7 +1456,7 @@ function Proyects(props) {
                         opacity: { easeInOut: "linear" },
                         layout: { duration: 2 },
                       }}
-                      className=" m-l-24  shadow-black flex h-96 w-96 flex-col items-center justify-center rounded-full shadow-2xl  duration-1000 "
+                      className=" m-l-24  flex h-96 w-96 flex-col items-center justify-center rounded-full shadow-2xl shadow-black  duration-1000 "
                     >
                       <motion.img
                         src={poke}
@@ -984,7 +1484,7 @@ function Proyects(props) {
                         opacity: { easeInOut: "linear" },
                         layout: { duration: 2 },
                       }}
-                      className=" bg-slate-100 shadow-black absolute z-50 flex h-96 w-96 flex-col items-center justify-evenly  rounded-full shadow-2xl duration-1000 "
+                      className=" absolute z-50 flex h-96 w-96 flex-col items-center justify-evenly rounded-full bg-slate-100  shadow-2xl shadow-black duration-1000 "
                     >
                       <img
                         src={pokemon}
@@ -1016,7 +1516,7 @@ function Proyects(props) {
               </motion.div>
               <button
                 onClick={handleClickPoke}
-                className="text-xsm shadow-black mt-10 h-10 w-32 cursor-pointer self-center rounded-3xl bg-blue-500 text-white shadow-md sm:w-48 sm:text-base"
+                className="text-xsm mt-10 h-10 w-32 cursor-pointer self-center rounded-3xl bg-blue-500 text-white shadow-md shadow-black sm:w-48 sm:text-base"
               >
                 {" "}
                 link to the proyect
@@ -1040,7 +1540,7 @@ function Proyects(props) {
                       opacity: { ease: "linear" },
                       layout: { duration: 2 },
                     }}
-                    className="bg-slate-100 shadow-black relative z-10 flex h-48 w-48 flex-col items-center justify-center rounded-3xl text-center  shadow-2xl duration-1000 "
+                    className="relative z-10 flex h-48 w-48 flex-col items-center justify-center rounded-3xl bg-slate-100 text-center shadow-2xl  shadow-black duration-1000 "
                   >
                     <motion.img
                       src={movi}
@@ -1065,7 +1565,7 @@ function Proyects(props) {
                         opacity: { easeInOut: "linear" },
                         layout: { duration: 2 },
                       }}
-                      className=" m-l-24  shadow-black flex h-96 w-96 flex-col items-center justify-center rounded-full shadow-2xl  duration-1000 "
+                      className=" m-l-24  flex h-96 w-96 flex-col items-center justify-center rounded-full shadow-2xl shadow-black  duration-1000 "
                     >
                       <motion.img
                         src={movihome}
@@ -1093,7 +1593,7 @@ function Proyects(props) {
                         opacity: { easeInOut: "linear" },
                         layout: { duration: 2 },
                       }}
-                      className=" bg-slate-100 shadow-black absolute z-50 flex h-96 w-96 flex-col items-center justify-evenly  rounded-full shadow-2xl duration-1000 "
+                      className=" absolute z-50 flex h-96 w-96 flex-col items-center justify-evenly rounded-full bg-slate-100  shadow-2xl shadow-black duration-1000 "
                     >
                       <img src={movi} className="w-12 bg-cover object-cover pt-8 align-middle " />
                       {language === "en" ? (
@@ -1121,7 +1621,7 @@ function Proyects(props) {
               </motion.div>
               <button
                 onClick={handleClickMovi}
-                className="text-xsm shadow-black mt-10 h-10 w-32 cursor-pointer self-center rounded-3xl bg-blue-500 text-white shadow-md sm:w-48 sm:text-base"
+                className="text-xsm mt-10 h-10 w-32 cursor-pointer self-center rounded-3xl bg-blue-500 text-white shadow-md shadow-black sm:w-48 sm:text-base"
               >
                 {" "}
                 link to the proyect
@@ -1156,7 +1656,7 @@ function Proyects(props) {
                       opacity: { ease: "linear" },
                       layout: { duration: 2 },
                     }}
-                    className="bg-slate-100 shadow-black  relative flex flex-col items-center  justify-center text-center  shadow-2xl duration-1000 "
+                    className="relative flex  flex-col items-center justify-center bg-slate-100  text-center shadow-2xl  shadow-black duration-1000 "
                   >
                     <motion.img src={proyect1} className="h-24"></motion.img>
                   </motion.div>
@@ -1176,7 +1676,7 @@ function Proyects(props) {
                         opacity: { easeInOut: "linear" },
                         layout: { duration: 2 },
                       }}
-                      className=" m-l-24  shadow-black flex h-96 w-96 flex-col items-center justify-center rounded-full shadow-2xl  duration-1000 "
+                      className=" m-l-24  flex h-96 w-96 flex-col items-center justify-center rounded-full shadow-2xl shadow-black  duration-1000 "
                     >
                       <motion.img
                         src={pet}
@@ -1204,7 +1704,7 @@ function Proyects(props) {
                         opacity: { easeInOut: "linear" },
                         layout: { duration: 2 },
                       }}
-                      className=" shadow-black absolute z-50 flex h-96 w-96 flex-col items-center justify-evenly rounded-full  bg-white shadow-2xl duration-1000 "
+                      className=" absolute z-50 flex h-96 w-96 flex-col items-center justify-evenly rounded-full bg-white  shadow-2xl shadow-black duration-1000 "
                     >
                       <img
                         src={proyect1}
@@ -1235,7 +1735,7 @@ function Proyects(props) {
               </motion.div>
               <button
                 onClick={handleClickPet}
-                className="text-xsm shadow-black mt-10 h-10 w-32 cursor-pointer self-center rounded-3xl bg-blue-500 text-white shadow-md sm:w-48 sm:text-base"
+                className="text-xsm mt-10 h-10 w-32 cursor-pointer self-center rounded-3xl bg-blue-500 text-white shadow-md shadow-black sm:w-48 sm:text-base"
               >
                 {" "}
                 link to the proyect
@@ -1259,7 +1759,7 @@ function Proyects(props) {
                       opacity: { ease: "linear" },
                       layout: { duration: 2 },
                     }}
-                    className="bg-slate-100 shadow-black  relative flex h-48 w-48 flex-col items-center justify-center rounded-3xl text-center shadow-2xl duration-1000 "
+                    className="relative flex  h-48 w-48 flex-col items-center justify-center rounded-3xl bg-slate-100 text-center shadow-2xl shadow-black duration-1000 "
                   >
                     {" "}
                     <motion.img
@@ -1285,7 +1785,7 @@ function Proyects(props) {
                         opacity: { easeInOut: "linear" },
                         layout: { duration: 2 },
                       }}
-                      className=" m-l-24  shadow-black flex h-96 w-96 flex-col items-center justify-center rounded-full shadow-2xl  duration-1000 "
+                      className=" m-l-24  flex h-96 w-96 flex-col items-center justify-center rounded-full shadow-2xl shadow-black  duration-1000 "
                     >
                       <motion.img
                         src={poke}
@@ -1313,7 +1813,7 @@ function Proyects(props) {
                         opacity: { easeInOut: "linear" },
                         layout: { duration: 2 },
                       }}
-                      className=" bg-slate-100 shadow-black absolute z-50 flex h-96 w-96 flex-col items-center justify-evenly  rounded-full shadow-2xl duration-1000 "
+                      className=" absolute z-50 flex h-96 w-96 flex-col items-center justify-evenly rounded-full bg-slate-100  shadow-2xl shadow-black duration-1000 "
                     >
                       <img
                         src={pokemon}
@@ -1344,7 +1844,7 @@ function Proyects(props) {
               </motion.div>
               <button
                 onClick={handleClickPoke}
-                className="text-xsm shadow-black mt-10 h-10 w-32 cursor-pointer self-center rounded-3xl bg-blue-500 text-white shadow-md sm:w-48 sm:text-base"
+                className="text-xsm mt-10 h-10 w-32 cursor-pointer self-center rounded-3xl bg-blue-500 text-white shadow-md shadow-black sm:w-48 sm:text-base"
               >
                 {" "}
                 link to the proyect
@@ -1368,7 +1868,7 @@ function Proyects(props) {
                       opacity: { ease: "linear" },
                       layout: { duration: 2 },
                     }}
-                    className="bg-slate-100 shadow-black relative flex h-48 w-48 flex-col items-center justify-center rounded-3xl text-center  shadow-2xl duration-1000 "
+                    className="relative flex h-48 w-48 flex-col items-center justify-center rounded-3xl bg-slate-100 text-center shadow-2xl  shadow-black duration-1000 "
                   >
                     <motion.img
                       src={movi}
@@ -1393,7 +1893,7 @@ function Proyects(props) {
                         opacity: { easeInOut: "linear" },
                         layout: { duration: 2 },
                       }}
-                      className=" m-l-24  shadow-black flex h-96 w-96 flex-col items-center justify-center rounded-full shadow-2xl  duration-1000 "
+                      className=" m-l-24  flex h-96 w-96 flex-col items-center justify-center rounded-full shadow-2xl shadow-black  duration-1000 "
                     >
                       <motion.img
                         src={movihome}
@@ -1421,7 +1921,7 @@ function Proyects(props) {
                         opacity: { easeInOut: "linear" },
                         layout: { duration: 2 },
                       }}
-                      className=" bg-slate-100 shadow-black absolute z-50 flex h-96 w-96 flex-col items-center justify-evenly  rounded-full shadow-2xl duration-1000 "
+                      className=" absolute z-50 flex h-96 w-96 flex-col items-center justify-evenly rounded-full bg-slate-100  shadow-2xl shadow-black duration-1000 "
                     >
                       <img src={movi} className="w-12 bg-cover object-cover pt-8 align-middle " />
                       {language === "en" ? (
@@ -1450,7 +1950,7 @@ function Proyects(props) {
               </motion.div>
               <button
                 onClick={handleClickMovi}
-                className="text-xsm shadow-black mt-10 h-10 w-32 cursor-pointer self-center rounded-3xl bg-blue-500 text-white shadow-md sm:w-48 sm:text-base"
+                className="text-xsm mt-10 h-10 w-32 cursor-pointer self-center rounded-3xl bg-blue-500 text-white shadow-md shadow-black sm:w-48 sm:text-base"
               >
                 {" "}
                 link to the proyect
@@ -1461,7 +1961,7 @@ function Proyects(props) {
       )}
       ;
       {isDesktop && (
-        <div className="flex flex-col self-center">
+        <div className="mt-32 flex flex-col self-center">
           <div className="flex h-[400px] justify-around">
             <div className="flex flex-col self-center">
               <motion.div
@@ -1481,16 +1981,16 @@ function Proyects(props) {
                       opacity: { ease: "linear" },
                       layout: { duration: 2 },
                     }}
-                    className="bg-slate-100 shadow-black relative flex  flex-col  items-center  justify-center text-center  shadow-2xl duration-1000 "
+                    className="relative flex flex-col items-center  justify-center  bg-slate-100  text-center shadow-2xl  shadow-black duration-1000 "
                   >
                     <motion.img src={proyect1} className="h-24"></motion.img>
-                    <span className="shadow-black absolute -top-20 text-white   text-shadow-md">
+                    <span className="absolute -top-20 text-white shadow-black   text-shadow-md">
                       toca para ver mas del proyecto
                     </span>
                   </motion.div>
                 )}
                 {isOpen && (
-                  <div className="relative flex flex-col">
+                  <div className="relative flex flex-col pl-56">
                     <motion.div
                       layout
                       initial={{ height: 200, width: 200, borderRadius: 80 }}
@@ -1504,7 +2004,7 @@ function Proyects(props) {
                         opacity: { easeInOut: "linear" },
                         layout: { duration: 2 },
                       }}
-                      className=" shadow-black  flex h-96 w-96 flex-col items-center justify-center rounded-full shadow-2xl  duration-1000 "
+                      className=" flex  h-96 w-96 flex-col items-center justify-center rounded-full shadow-2xl shadow-black  duration-1000 "
                     >
                       <motion.img
                         src={pet}
@@ -1532,7 +2032,7 @@ function Proyects(props) {
                         opacity: { easeInOut: "linear" },
                         layout: { duration: 2 },
                       }}
-                      className="bg-slate-100  shadow-black  absolute flex h-96 w-96 flex-col items-center justify-evenly  rounded-full shadow-2xl duration-1000 "
+                      className="absolute  flex  h-96 w-96 flex-col items-center justify-evenly rounded-full bg-slate-100  shadow-2xl shadow-black duration-1000 "
                     >
                       <img
                         src={proyect1}
@@ -1564,7 +2064,7 @@ function Proyects(props) {
               </motion.div>
               <button
                 onClick={handleClickPet}
-                className="text-xsm shadow-black mt-10 h-10 w-32 cursor-pointer self-center rounded-3xl bg-blue-500 text-white shadow-md sm:w-48 sm:text-base"
+                className="text-xsm mt-10 h-10 w-32 cursor-pointer self-center rounded-3xl bg-blue-500 text-white shadow-md shadow-black sm:w-48 sm:text-base"
               >
                 {" "}
                 link to the proyect
@@ -1588,10 +2088,10 @@ function Proyects(props) {
                         opacity: { ease: "linear" },
                         layout: { duration: 2 },
                       }}
-                      className="bg-slate-100 shadow-black  relative  flex h-48 w-48 flex-col items-center justify-center rounded-3xl text-center  shadow-2xl duration-1000 "
+                      className="relative flex  h-48  w-48 flex-col items-center justify-center rounded-3xl bg-slate-100 text-center shadow-2xl  shadow-black duration-1000 "
                     >
                       {" "}
-                      <span className="shadow-black absolute -top-20 text-white   text-shadow-md">
+                      <span className="absolute -top-20 text-white shadow-black   text-shadow-md">
                         toca para ver mas del proyecto
                       </span>
                       <motion.img
@@ -1618,7 +2118,7 @@ function Proyects(props) {
                         opacity: { easeInOut: "linear" },
                         layout: { duration: 2 },
                       }}
-                      className="  shadow-black  flex h-96 w-96 flex-col items-center justify-center rounded-full shadow-2xl  duration-1000 "
+                      className="  flex  h-96 w-96 flex-col items-center justify-center rounded-full shadow-2xl shadow-black  duration-1000 "
                     >
                       <motion.img
                         src={poke}
@@ -1646,7 +2146,7 @@ function Proyects(props) {
                         opacity: { easeInOut: "linear" },
                         layout: { duration: 2 },
                       }}
-                      className="bg-slate-100  shadow-black absolute  z-50 flex h-96 w-96 flex-col items-center justify-evenly  rounded-full shadow-2xl duration-1000 "
+                      className="absolute  z-50 flex  h-96 w-96 flex-col items-center justify-evenly rounded-full bg-slate-100  shadow-2xl shadow-black duration-1000 "
                     >
                       <img
                         src={pokemon}
@@ -1678,7 +2178,7 @@ function Proyects(props) {
               </motion.div>
               <button
                 onClick={handleClickPoke}
-                className="text-xsm shadow-black mt-10 h-10 w-32 cursor-pointer self-center rounded-3xl bg-blue-500 text-white shadow-md sm:w-48 sm:text-base"
+                className="text-xsm mt-10 h-10 w-32 cursor-pointer self-center rounded-3xl bg-blue-500 text-white shadow-md shadow-black sm:w-48 sm:text-base"
               >
                 {" "}
                 link to the proyect
@@ -1702,7 +2202,7 @@ function Proyects(props) {
                       opacity: { ease: "linear" },
                       layout: { duration: 2 },
                     }}
-                    className="bg-slate-100 shadow-black relative  flex  h-48 w-48 flex-col items-center justify-center rounded-3xl text-center  shadow-2xl duration-1000 "
+                    className="relative flex h-48  w-48  flex-col items-center justify-center rounded-3xl bg-slate-100 text-center shadow-2xl  shadow-black duration-1000 "
                   >
                     <motion.img
                       src={movi}
@@ -1710,7 +2210,7 @@ function Proyects(props) {
                       alt="Urban Movi"
                       title="Urban Movi"
                     ></motion.img>
-                    <span className="shadow-black absolute -top-20 text-white   text-shadow-md">
+                    <span className="absolute -top-20 text-white shadow-black   text-shadow-md">
                       toca para ver mas del proyecto
                     </span>
                   </motion.div>
@@ -1730,7 +2230,7 @@ function Proyects(props) {
                         opacity: { easeInOut: "linear" },
                         layout: { duration: 2 },
                       }}
-                      className="  shadow-black  flex h-96 w-96 flex-col items-center justify-center rounded-full shadow-2xl  duration-1000 "
+                      className="  flex  h-96 w-96 flex-col items-center justify-center rounded-full shadow-2xl shadow-black  duration-1000 "
                     >
                       <motion.img
                         src={movihome}
@@ -1758,7 +2258,7 @@ function Proyects(props) {
                         opacity: { easeInOut: "linear" },
                         layout: { duration: 2 },
                       }}
-                      className="bg-slate-100  shadow-black absolute  z-50 flex h-96 w-96 flex-col items-center justify-evenly  rounded-full shadow-2xl duration-1000 "
+                      className="absolute  z-50 flex  h-96 w-96 flex-col items-center justify-evenly rounded-full bg-slate-100  shadow-2xl shadow-black duration-1000 "
                     >
                       <img src={movi} className="w-12 bg-cover object-cover pt-8 align-middle " />
                       {language === "en" ? (
@@ -1786,7 +2286,248 @@ function Proyects(props) {
               </motion.div>
               <button
                 onClick={handleClickMovi}
-                className="text-xsm shadow-black mt-10 h-10 w-32 cursor-pointer self-center rounded-3xl bg-blue-500 text-white shadow-md sm:w-48 sm:text-base"
+                className="text-xsm mt-10 h-10 w-32 cursor-pointer self-center rounded-3xl bg-blue-500 text-white shadow-md shadow-black sm:w-48 sm:text-base"
+              >
+                {" "}
+                link to the proyect
+              </button>
+            </div>
+            {/* aythen */}
+            <div className="flex flex-col self-center ">
+              <motion.div
+                ref={wrapperRef3}
+                layout
+                data-isopen={!isOpen3}
+                initial={{ borderRadius: 50 }}
+                onClick={() => setIsOpen3(!isOpen3)}
+                className="parent flex  items-center justify-center  "
+              >
+                {!isOpen3 && (
+                  <motion.div
+                    ref={wrapperRef3}
+                    layout
+                    initial={{ height: 800, width: 800, borderRadius: 50 }}
+                    animate={{ height: 200, width: 200, borderRadius: 80 }}
+                    transition={{
+                      opacity: { ease: "linear" },
+                      layout: { duration: 2 },
+                    }}
+                    className=" relative flex h-48 w-48 cursor-pointer flex-col items-center justify-center rounded-3xl bg-slate-100 text-center shadow-2xl  shadow-black duration-1000 "
+                  >
+                    {language === "en" ? (
+                      <motion.span className="absolute -top-12 text-white text-shadow-sm ">
+                        touch here to explore the proyect
+                      </motion.span>
+                    ) : (
+                      <motion.span className="absolute -top-12 text-white text-shadow-sm ">
+                        toca para ver mas del proyecto
+                      </motion.span>
+                    )}
+                    <motion.img
+                      src={aythen}
+                      className="w-36"
+                      alt="Aythen"
+                      title="aythen"
+                    ></motion.img>
+                  </motion.div>
+                )}
+                {isOpen3 && (
+                  <div className="relative flex  flex-col">
+                    <motion.div
+                      ref={wrapperRef3}
+                      layout
+                      initial={{
+                        height: 200,
+                        width: 200,
+                        borderRadius: 80,
+                      }}
+                      animate={{
+                        height: 285,
+                        width: 600,
+                        borderRadius: 50,
+                        overflow: "hidden",
+                      }}
+                      transition={{
+                        opacity: { easeInOut: "linear" },
+                        layout: { duration: 2 },
+                      }}
+                      className=" flex h-96  w-96 cursor-pointer flex-col items-center justify-center rounded-full bg-white shadow-2xl shadow-black duration-1000 "
+                    >
+                      <motion.img
+                        src={aythenHome}
+                        alt="Aythen - home"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                      />
+                    </motion.div>
+                    <motion.div
+                      layout
+                      initial={{
+                        height: 200,
+                        width: 200,
+                        borderRadius: 80,
+                        top: 0,
+                      }}
+                      animate={{
+                        height: 285,
+                        width: 600,
+                        borderRadius: 50,
+                        top: 295,
+                        overflow: "hidden",
+                      }}
+                      transition={{
+                        opacity: { easeInOut: "linear" },
+                        layout: { duration: 2 },
+                      }}
+                      className="absolute  z-50  flex h-96 w-96 cursor-pointer flex-col items-center justify-evenly rounded-full bg-slate-100  shadow-2xl shadow-black duration-1000 "
+                    >
+                      <img src={aythen} className="w-24 bg-cover object-cover pt-8 align-middle" />
+                      {language === "en" ? (
+                        <motion.span
+                          initial={{ opacity: 0 }}
+                          animate={{ opacity: 1 }}
+                          transition={{ duration: 2 }}
+                          className="p-6 text-center"
+                        >
+                          {proyects[3].Aythen.description}
+                        </motion.span>
+                      ) : (
+                        <motion.span
+                          initial={{ opacity: 0 }}
+                          animate={{ opacity: 1 }}
+                          transition={{ duration: 2 }}
+                          className="p-6 text-center"
+                        >
+                          {proyects[3].Aythen.descripcion}
+                        </motion.span>
+                      )}
+                    </motion.div>
+                  </div>
+                )}
+              </motion.div>
+              <button
+                onClick={handleClickAythen}
+                className="text-xsm mt-10 h-10 w-32 cursor-pointer self-center rounded-3xl bg-blue-500 text-white shadow-md shadow-black sm:w-48 sm:text-base"
+              >
+                {" "}
+                link to the proyect
+              </button>
+            </div>
+            {/* Wam Creativo */}
+            <div className="flex flex-col self-center">
+              <motion.div
+                ref={wrapperRef4}
+                layout
+                data-isopen={!isOpen4}
+                initial={{ borderRadius: 50 }}
+                onClick={() => setIsOpen4(!isOpen4)}
+                className="parent flex  items-center justify-center  "
+              >
+                {!isOpen4 && (
+                  <motion.div
+                    ref={wrapperRef4}
+                    layout
+                    initial={{ height: 800, width: 800, borderRadius: 50 }}
+                    animate={{ height: 200, width: 200, borderRadius: 80 }}
+                    transition={{
+                      opacity: { ease: "linear" },
+                      layout: { duration: 2 },
+                    }}
+                    className=" relative flex h-48 w-48 cursor-pointer flex-col items-center justify-center rounded-3xl bg-slate-100 text-center shadow-2xl  shadow-black duration-1000 "
+                  >
+                    {language === "en" ? (
+                      <motion.span className="absolute -top-12 text-white text-shadow-sm ">
+                        touch here to explore the proyect
+                      </motion.span>
+                    ) : (
+                      <motion.span className="absolute -top-12 text-white text-shadow-sm ">
+                        toca para ver mas del proyecto
+                      </motion.span>
+                    )}
+                    {/* <motion.img src={wamhome} className="w-36" alt="Wam" title="Wam"></motion.img> */}
+                    Wam!
+                  </motion.div>
+                )}
+                {isOpen4 && (
+                  <div className="relative flex  flex-col pr-96">
+                    <motion.div
+                      layout
+                      initial={{
+                        height: 200,
+                        width: 200,
+                        borderRadius: 80,
+                        right: 100,
+                      }}
+                      animate={{
+                        height: 285,
+                        width: 600,
+                        borderRadius: 50,
+
+                        overflow: "hidden",
+                      }}
+                      transition={{
+                        opacity: { easeInOut: "linear" },
+                        layout: { duration: 2 },
+                      }}
+                      className=" flex  h-96 w-96 cursor-pointer flex-col items-center justify-center rounded-full shadow-2xl shadow-black duration-1000 "
+                    >
+                      <motion.img
+                        src={wamhome}
+                        alt="Wam - home"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                      />
+                    </motion.div>
+                    <motion.div
+                      layout
+                      initial={{
+                        height: 200,
+                        width: 200,
+                        borderRadius: 80,
+                        top: 0,
+                      }}
+                      animate={{
+                        height: 285,
+                        width: 600,
+                        borderRadius: 50,
+                        top: 290,
+
+                        overflow: "hidden",
+                      }}
+                      transition={{
+                        opacity: { easeInOut: "linear" },
+                        layout: { duration: 2 },
+                      }}
+                      className="absolute  z-50  flex h-96 w-96 cursor-pointer flex-col items-center justify-evenly rounded-full bg-slate-100  shadow-2xl shadow-black duration-1000 "
+                    >
+                      {/* <img src={wamhome} className="w-24 bg-cover object-cover pt-8 align-middle" /> */}
+                      WAM!
+                      {language === "en" ? (
+                        <motion.span
+                          initial={{ opacity: 0 }}
+                          animate={{ opacity: 1 }}
+                          transition={{ duration: 2 }}
+                          className="p-6 text-center"
+                        >
+                          {proyects[4].Wam.description}
+                        </motion.span>
+                      ) : (
+                        <motion.span
+                          initial={{ opacity: 0 }}
+                          animate={{ opacity: 1 }}
+                          transition={{ duration: 2 }}
+                          className="p-6 text-center"
+                        >
+                          {proyects[4].Wam.descripcion}
+                        </motion.span>
+                      )}
+                    </motion.div>
+                  </div>
+                )}
+              </motion.div>
+              <button
+                onClick={handleClickWam}
+                className="text-xsm mt-10 h-10 w-32 cursor-pointer self-center rounded-3xl bg-blue-500 text-white shadow-md shadow-black sm:w-48 sm:text-base"
               >
                 {" "}
                 link to the proyect
@@ -1797,8 +2538,8 @@ function Proyects(props) {
       )}
       ;
       {isLargeDesktop && (
-        <div className=" flex flex-col  ">
-          <div className="flex h-[600px] justify-around align-top">
+        <div className=" my-20 flex  flex-col">
+          <div className="flex h-[600px] flex-wrap justify-around  align-top">
             <div className="flex flex-col self-center">
               <motion.div
                 ref={wrapperRef}
@@ -1835,7 +2576,7 @@ function Proyects(props) {
                         layout: { duration: 2 },
                       }}
                       onClick={() => setIsOpen(!isOpen)}
-                      className="bg-slate-100  shadow-black  relative flex cursor-pointer flex-col items-center justify-center text-center  shadow-2xl duration-1000 "
+                      className="relative  flex  cursor-pointer flex-col items-center justify-center bg-slate-100 text-center shadow-2xl  shadow-black duration-1000 "
                     >
                       {language === "en" ? (
                         <motion.span className="absolute -top-12 text-white text-shadow-sm ">
@@ -1869,7 +2610,7 @@ function Proyects(props) {
                         opacity: { easeInOut: "linear" },
                         layout: { duration: 2 },
                       }}
-                      className=" shadow-black  flex h-96 w-96 cursor-pointer flex-col items-center justify-center rounded-full shadow-2xl duration-1000 "
+                      className=" flex  h-96 w-96 cursor-pointer flex-col items-center justify-center rounded-full shadow-2xl shadow-black duration-1000 "
                     >
                       <motion.img
                         src={pet}
@@ -1897,7 +2638,7 @@ function Proyects(props) {
                         opacity: { easeInOut: "linear" },
                         layout: { duration: 2 },
                       }}
-                      className="bg-slate-100  shadow-black  absolute z-50 flex h-96 w-96 cursor-pointer flex-col items-center justify-evenly  rounded-full shadow-2xl duration-1000 "
+                      className="absolute  z-50  flex h-96 w-96 cursor-pointer flex-col items-center justify-evenly rounded-full bg-slate-100  shadow-2xl shadow-black duration-1000 "
                     >
                       <img
                         src={proyect1}
@@ -1929,7 +2670,7 @@ function Proyects(props) {
               </motion.div>
               <button
                 onClick={handleClickPet}
-                className="text-xsm shadow-black mt-10 h-10 w-32 cursor-pointer self-center rounded-3xl bg-blue-500 text-white shadow-md sm:w-48 sm:text-base"
+                className="text-xsm mt-10 h-10 w-32 cursor-pointer self-center rounded-3xl bg-blue-500 text-white shadow-md shadow-black sm:w-48 sm:text-base"
               >
                 {" "}
                 link to the proyect
@@ -1938,6 +2679,7 @@ function Proyects(props) {
             <div className="flex flex-col self-center">
               {" "}
               <motion.div
+                ref={wrapperRef1}
                 layout
                 data-isopen={!isOpen1}
                 initial={{ borderRadius: 50 }}
@@ -1968,7 +2710,7 @@ function Proyects(props) {
                         layout: { duration: 2 },
                       }}
                       onClick={() => setIsOpen1(!isOpen)}
-                      className="bg-slate-100  shadow-black  relative flex h-48 w-48 cursor-pointer flex-col items-center justify-center rounded-3xl text-center  shadow-2xl duration-1000 "
+                      className="relative  flex  h-48 w-48 cursor-pointer flex-col items-center justify-center rounded-3xl bg-slate-100 text-center shadow-2xl  shadow-black duration-1000 "
                     >
                       {" "}
                       {language === "en" ? (
@@ -2008,7 +2750,7 @@ function Proyects(props) {
                         opacity: { easeInOut: "linear" },
                         layout: { duration: 2 },
                       }}
-                      className=" shadow-black  flex h-96 w-96 cursor-pointer flex-col items-center justify-center rounded-full shadow-2xl duration-1000 "
+                      className=" flex  h-96 w-96 cursor-pointer flex-col items-center justify-center rounded-full shadow-2xl shadow-black duration-1000 "
                     >
                       <motion.img
                         src={poke}
@@ -2036,7 +2778,7 @@ function Proyects(props) {
                         opacity: { easeInOut: "linear" },
                         layout: { duration: 2 },
                       }}
-                      className="bg-slate-100  shadow-black  absolute z-50 flex h-96 w-96 cursor-pointer flex-col items-center justify-evenly  rounded-full shadow-2xl duration-1000 "
+                      className="absolute  z-50  flex h-96 w-96 cursor-pointer flex-col items-center justify-evenly rounded-full bg-slate-100  shadow-2xl shadow-black duration-1000 "
                     >
                       <img src={pokemon} className="w-24 bg-cover object-cover pt-8 align-middle" />
                       {language === "en" ? (
@@ -2044,7 +2786,7 @@ function Proyects(props) {
                           initial={{ opacity: 0 }}
                           animate={{ opacity: 1 }}
                           transition={{ duration: 2 }}
-                          className=" p-6 text-start text-xs"
+                          className=" p-6 text-center"
                         >
                           {proyects[0].Pokemon.description}
                         </motion.span>
@@ -2053,7 +2795,7 @@ function Proyects(props) {
                           initial={{ opacity: 0 }}
                           animate={{ opacity: 1 }}
                           transition={{ duration: 2 }}
-                          className=" p-6 text-start text-xs"
+                          className=" p-6 text-center "
                         >
                           {proyects[0].Pokemon.descripcion}
                         </motion.span>
@@ -2064,7 +2806,7 @@ function Proyects(props) {
               </motion.div>
               <button
                 onClick={handleClickPoke}
-                className="text-xsm shadow-black mt-10 h-10 w-32 cursor-pointer self-center rounded-3xl bg-blue-500 text-white shadow-md sm:w-48 sm:text-base"
+                className="text-xsm mt-10 h-10 w-32 cursor-pointer self-center rounded-3xl bg-blue-500 text-white shadow-md shadow-black sm:w-48 sm:text-base"
               >
                 {" "}
                 link to the proyect
@@ -2072,6 +2814,7 @@ function Proyects(props) {
             </div>
             <div className="flex flex-col self-center">
               <motion.div
+                ref={wrapperRef2}
                 layout
                 data-isopen={!isOpen2}
                 initial={{ borderRadius: 50 }}
@@ -2102,7 +2845,7 @@ function Proyects(props) {
                         opacity: { ease: "linear" },
                         layout: { duration: 2 },
                       }}
-                      className=" bg-slate-100 shadow-black relative flex h-48 w-48 cursor-pointer flex-col items-center justify-center rounded-3xl text-center  shadow-2xl duration-1000 "
+                      className=" relative flex h-48 w-48 cursor-pointer flex-col items-center justify-center rounded-3xl bg-slate-100 text-center shadow-2xl  shadow-black duration-1000 "
                     >
                       {language === "en" ? (
                         <motion.span className="absolute -top-12 text-white text-shadow-sm ">
@@ -2141,7 +2884,7 @@ function Proyects(props) {
                         opacity: { easeInOut: "linear" },
                         layout: { duration: 2 },
                       }}
-                      className=" shadow-black  flex h-96 w-96 cursor-pointer flex-col items-center justify-center rounded-full shadow-2xl duration-1000 "
+                      className=" flex  h-96 w-96 cursor-pointer flex-col items-center justify-center rounded-full shadow-2xl shadow-black duration-1000 "
                     >
                       <motion.img
                         src={movihome}
@@ -2169,7 +2912,7 @@ function Proyects(props) {
                         opacity: { easeInOut: "linear" },
                         layout: { duration: 2 },
                       }}
-                      className="bg-slate-100  shadow-black  absolute z-50 flex h-96 w-96 cursor-pointer flex-col items-center justify-evenly  rounded-full shadow-2xl duration-1000 "
+                      className="absolute  z-50  flex h-96 w-96 cursor-pointer flex-col items-center justify-evenly rounded-full bg-slate-100  shadow-2xl shadow-black duration-1000 "
                     >
                       <img src={movi} className="w-24 bg-cover object-cover pt-8 align-middle" />
                       {language === "en" ? (
@@ -2197,7 +2940,276 @@ function Proyects(props) {
               </motion.div>
               <button
                 onClick={handleClickMovi}
-                className="text-xsm shadow-black mt-10 h-10 w-32 cursor-pointer self-center rounded-3xl bg-blue-500 text-white shadow-md sm:w-48 sm:text-base"
+                className="text-xsm mt-10 h-10 w-32 cursor-pointer self-center rounded-3xl bg-blue-500 text-white shadow-md shadow-black sm:w-48 sm:text-base"
+              >
+                {" "}
+                link to the proyect
+              </button>
+            </div>
+
+            {/* aythen */}
+            <div className="flex flex-col self-center ">
+              <motion.div
+                ref={wrapperRef3}
+                layout
+                data-isopen={!isOpen3}
+                initial={{ borderRadius: 50 }}
+                onClick={() => setIsOpen3(!isOpen3)}
+                className="parent flex  items-center justify-center  "
+              >
+                {!isOpen3 && (
+                  <motion.div
+                    variants={{
+                      hidden: { opacity: 0, scale: 0.5, x: "40%" },
+                      visible: { opacity: 1, scale: 1, x: 0 },
+                    }}
+                    viewport={{ once: false, amount: 0.5 }}
+                    initial="hidden"
+                    whileInView="visible"
+                    transition={{
+                      duration: 1.8,
+                      delay: 0.2,
+                      ease: [0, 0.71, 0.2, 1.01],
+                    }}
+                  >
+                    <motion.div
+                      ref={wrapperRef3}
+                      layout
+                      initial={{ height: 385, width: 800, borderRadius: 50 }}
+                      animate={{ height: 200, width: 200, borderRadius: 80 }}
+                      transition={{
+                        opacity: { ease: "linear" },
+                        layout: { duration: 2 },
+                      }}
+                      className=" relative flex h-48 w-48 cursor-pointer flex-col items-center justify-center rounded-3xl bg-slate-100 text-center shadow-2xl  shadow-black duration-1000 "
+                    >
+                      {language === "en" ? (
+                        <motion.span className="absolute -top-12 text-white text-shadow-sm ">
+                          touch here to explore the proyect
+                        </motion.span>
+                      ) : (
+                        <motion.span className="absolute -top-12 text-white text-shadow-sm ">
+                          toca para ver mas del proyecto
+                        </motion.span>
+                      )}
+                      <motion.img
+                        src={aythen}
+                        className="w-36"
+                        alt="Aythen"
+                        title="aythen"
+                      ></motion.img>
+                    </motion.div>
+                  </motion.div>
+                )}
+                {isOpen3 && (
+                  <div className="relative flex  flex-col">
+                    <motion.div
+                      ref={wrapperRef3}
+                      layout
+                      initial={{
+                        height: 200,
+                        width: 200,
+                        borderRadius: 80,
+                      }}
+                      animate={{
+                        height: 385,
+                        width: 800,
+                        borderRadius: 50,
+                        overflow: "hidden",
+                      }}
+                      transition={{
+                        opacity: { easeInOut: "linear" },
+                        layout: { duration: 2 },
+                      }}
+                      className=" flex h-96  w-96 cursor-pointer flex-col items-center justify-center rounded-full bg-white shadow-2xl shadow-black duration-1000 "
+                    >
+                      <motion.img
+                        src={aythenHome}
+                        alt="Aythen - home"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                      />
+                    </motion.div>
+                    <motion.div
+                      layout
+                      initial={{
+                        height: 200,
+                        width: 200,
+                        borderRadius: 80,
+                        top: 0,
+                      }}
+                      animate={{
+                        height: 385,
+                        width: 800,
+                        borderRadius: 50,
+                        top: 395,
+                        overflow: "hidden",
+                      }}
+                      transition={{
+                        opacity: { easeInOut: "linear" },
+                        layout: { duration: 2 },
+                      }}
+                      className="absolute  z-50  flex h-96 w-96 cursor-pointer flex-col items-center justify-evenly rounded-full bg-slate-100  shadow-2xl shadow-black duration-1000 "
+                    >
+                      <img src={aythen} className="w-24 bg-cover object-cover pt-8 align-middle" />
+                      {language === "en" ? (
+                        <motion.span
+                          initial={{ opacity: 0 }}
+                          animate={{ opacity: 1 }}
+                          transition={{ duration: 2 }}
+                          className="p-6 text-center"
+                        >
+                          {proyects[3].Aythen.description}
+                        </motion.span>
+                      ) : (
+                        <motion.span
+                          initial={{ opacity: 0 }}
+                          animate={{ opacity: 1 }}
+                          transition={{ duration: 2 }}
+                          className="p-6 text-center"
+                        >
+                          {proyects[3].Aythen.descripcion}
+                        </motion.span>
+                      )}
+                    </motion.div>
+                  </div>
+                )}
+              </motion.div>
+              <button
+                onClick={handleClickAythen}
+                className="text-xsm mt-10 h-10 w-32 cursor-pointer self-center rounded-3xl bg-blue-500 text-white shadow-md shadow-black sm:w-48 sm:text-base"
+              >
+                {" "}
+                link to the proyect
+              </button>
+            </div>
+            {/* Wam Creativo */}
+            <div className="flex flex-col self-center">
+              <motion.div
+                ref={wrapperRef4}
+                layout
+                data-isopen={!isOpen4}
+                initial={{ borderRadius: 50 }}
+                onClick={() => setIsOpen4(!isOpen4)}
+                className="parent flex  items-center justify-center  "
+              >
+                {!isOpen4 && (
+                  <motion.div
+                    variants={{
+                      hidden: { opacity: 0, scale: 0.5, x: "40%" },
+                      visible: { opacity: 1, scale: 1, x: 0 },
+                    }}
+                    viewport={{ once: false, amount: 0.5 }}
+                    initial="hidden"
+                    whileInView="visible"
+                    transition={{
+                      duration: 1.8,
+                      delay: 0.2,
+                      ease: [0, 0.71, 0.2, 1.01],
+                    }}
+                  >
+                    <motion.div
+                      ref={wrapperRef4}
+                      layout
+                      initial={{ height: 385, width: 800, borderRadius: 50 }}
+                      animate={{ height: 200, width: 200, borderRadius: 80 }}
+                      transition={{
+                        opacity: { ease: "linear" },
+                        layout: { duration: 2 },
+                      }}
+                      className=" relative flex h-48 w-48 cursor-pointer flex-col items-center justify-center rounded-3xl bg-slate-100 text-center shadow-2xl  shadow-black duration-1000 "
+                    >
+                      {language === "en" ? (
+                        <motion.span className="absolute -top-12 text-white text-shadow-sm ">
+                          touch here to explore the proyect
+                        </motion.span>
+                      ) : (
+                        <motion.span className="absolute -top-12 text-white text-shadow-sm ">
+                          toca para ver mas del proyecto
+                        </motion.span>
+                      )}
+                      {/* <motion.img src={wamhome} className="w-36" alt="Wam" title="Wam"></motion.img> */}
+                      Wam!
+                    </motion.div>
+                  </motion.div>
+                )}
+                {isOpen4 && (
+                  <div className="relative flex  flex-col">
+                    <motion.div
+                      layout
+                      initial={{
+                        height: 200,
+                        width: 200,
+                        borderRadius: 80,
+                      }}
+                      animate={{
+                        height: 385,
+                        width: 800,
+                        borderRadius: 50,
+                        overflow: "hidden",
+                      }}
+                      transition={{
+                        opacity: { easeInOut: "linear" },
+                        layout: { duration: 2 },
+                      }}
+                      className=" flex  h-96 w-96 cursor-pointer flex-col items-center justify-center rounded-full shadow-2xl shadow-black duration-1000 "
+                    >
+                      <motion.img
+                        src={wamhome}
+                        alt="Wam - home"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                      />
+                    </motion.div>
+                    <motion.div
+                      layout
+                      initial={{
+                        height: 200,
+                        width: 200,
+                        borderRadius: 80,
+                        top: 0,
+                      }}
+                      animate={{
+                        height: 385,
+                        width: 800,
+                        borderRadius: 50,
+                        top: 395,
+                        overflow: "hidden",
+                      }}
+                      transition={{
+                        opacity: { easeInOut: "linear" },
+                        layout: { duration: 2 },
+                      }}
+                      className="absolute  z-50  flex h-96 w-96 cursor-pointer flex-col items-center justify-evenly rounded-full bg-slate-100  shadow-2xl shadow-black duration-1000 "
+                    >
+                      {/* <img src={wamhome} className="w-24 bg-cover object-cover pt-8 align-middle" /> */}
+                      WAM!
+                      {language === "en" ? (
+                        <motion.span
+                          initial={{ opacity: 0 }}
+                          animate={{ opacity: 1 }}
+                          transition={{ duration: 2 }}
+                          className="p-6 text-center"
+                        >
+                          {proyects[4].Wam.description}
+                        </motion.span>
+                      ) : (
+                        <motion.span
+                          initial={{ opacity: 0 }}
+                          animate={{ opacity: 1 }}
+                          transition={{ duration: 2 }}
+                          className="p-6 text-center"
+                        >
+                          {proyects[4].Wam.descripcion}
+                        </motion.span>
+                      )}
+                    </motion.div>
+                  </div>
+                )}
+              </motion.div>
+              <button
+                onClick={handleClickWam}
+                className="text-xsm mt-10 h-10 w-32 cursor-pointer self-center rounded-3xl bg-blue-500 text-white shadow-md shadow-black sm:w-48 sm:text-base"
               >
                 {" "}
                 link to the proyect

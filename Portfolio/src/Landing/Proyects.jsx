@@ -14,8 +14,6 @@ import aythenHome from "../assets/img/aythenHome.png";
 import wamhome from "../assets/img/wamhome.png";
 
 function Proyects(props) {
-  console.log(proyects);
-
   const { language } = props;
   const [isOpen, setIsOpen] = useState(false);
   const [isOpen1, setIsOpen1] = useState(false);

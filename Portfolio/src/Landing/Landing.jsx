@@ -7,6 +7,7 @@ import { useState } from "react";
 import Contact from "../Components/Contact";
 import Footer from "../Components/Footer";
 import ActionMenu from "../Components/ActionMenu";
+import Proyects2 from "./Proyects2";
 
 function Landing() {
   const [language, setLanguage] = useState("en");
@@ -20,7 +21,9 @@ function Landing() {
       <About language={language}></About>
       <ActionMenu />
       {/* Cards de proyectos */}
-      <Proyects language={language} />
+      {/* <Proyects language={language} /> */}
+      <Proyects2 language={language} />
+
       {/* Cards de redes sociales */}
       <Technologies language={language} />
       <Contact language={language} />

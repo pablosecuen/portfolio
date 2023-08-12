@@ -121,16 +121,16 @@ function NavBar() {
   };
 
   return (
-    <header class="primary-header h-20 w-full items-center justify-between xsm:h-20 sm:h-24 ">
+    <header class="primary-header h-20 w-full items-center justify-between ">
       <nav class="navbar container flex w-full items-center justify-between">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 3.5 }}
-          className="flex w-full justify-between"
+          className="flex w-full items-center justify-between align-middle"
         >
-          <Link to="/" className="flex text-xl font-bold text-white">
-            <img src={logo} alt="logo" class="logo" className="flex h-8 sm:h-12 md:h-24" />
+          <Link to="/" className="flex items-center align-middle ">
+            <img src={logo} alt="logo" class="logo" className=" -mt-2 h-12 " />
           </Link>
         </motion.div>
         {isMobile ? (

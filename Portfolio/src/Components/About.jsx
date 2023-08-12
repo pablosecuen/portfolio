@@ -5,8 +5,8 @@ function About(props) {
   const { language } = props;
 
   return (
-    <div className="z-50 h-screen w-full p-4 xsm:w-3/4 sm:w-full lg:pl-10">
-      <h1 className="shadow-black mt-48 font-roboto text-2xl font-bold -tracking-wider text-white text-shadow-md sm:mt-72 sm:-tracking-widest md:text-6xl lg:mt-96 lg:pl-10 xl:text-6xl">
+    <div className="z-50 h-full w-full p-4 xsm:w-3/4 sm:w-full md:h-screen lg:pl-10">
+      <h1 className="mt-48 font-roboto text-2xl font-bold -tracking-wider text-white shadow-black text-shadow-md sm:mt-72 sm:-tracking-widest md:text-6xl lg:mt-96 lg:pl-10 xl:text-6xl">
         Fullstack Developer
       </h1>
       <img
@@ -15,24 +15,26 @@ function About(props) {
         alt="foto"
       />
       <article className=" mt-0 flex  items-end justify-start sm:w-3/4    ">
-        <h2 className="shadow-black top-96 mt-4 w-full text-start  text-sm text-white text-shadow-md sm:w-3/4  md:w-3/4 lg:mt-0 lg:w-4/5 lg:p-10 lg:text-base">
+        <h2 className="top-96 mt-4 w-full text-start text-sm  text-white shadow-black text-shadow-md sm:w-3/4  md:w-3/4 lg:mt-0 lg:w-4/5 lg:p-10 lg:text-base">
           {language === "en" ? (
-            <span>
+            <span className="opacity-90">
               Hello again! My name is Pablo Amico, and I would love to talk to you about how we can
               work together to bring your projects to life. With over 5 years of experience in the
               technology field, I have developed skills in different areas of IT, including graphic
-              design, web development, project management, and digital marketing. Throughout my
-              career, I have worked with companies of various sizes and industries, which has
-              allowed me to gain a broad understanding of business and how software development can
-              improve business operations. As a Fullstack developer, I have experience in different
-              programming languages and frameworks, which allows me to choose the best option for
-              each project. My goal is to create scalable, efficient, and easy-to-maintain
-              solutions. In addition to my technical skills, I am a natural leader who knows how to
-              motivate and guide a team to achieve the set goals. I have led teams of developers and
-              designers and understand the importance of clear and effective communication in
-              project success. If you are looking for someone who not only has technical skills but
-              also leadership skills and business understanding, do not hesitate to contact me. I am
-              excited to talk to you about how we can work together!
+              design, web development, project management, and digital marketing.
+              <br /> Throughout my career, I have worked with companies of various sizes and
+              industries, which has allowed me to gain a broad understanding of business and how
+              software development can improve business operations. <br />
+              As a Fullstack developer, I have experience in different programming languages and
+              frameworks, which allows me to choose the best option for each project. My goal is to
+              create scalable, efficient, and easy-to-maintain solutions. In addition to my
+              technical skills, I am a natural leader who knows how to motivate and guide a team to
+              achieve the set goals.
+              <br /> I have led teams of developers and designers and understand the importance of
+              clear and effective communication in project success. If you are looking for someone
+              who not only has technical skills but also leadership skills and business
+              understanding, do not hesitate to contact me. I am excited to talk to you about how we
+              can work together!
             </span>
           ) : (
             <span>
@@ -40,25 +42,26 @@ function About(props) {
               podemos trabajar juntos para dar vida a tus proyectos. Con más de 5 años de
               experiencia en el campo de la tecnología, he desarrollado habilidades en diferentes
               áreas de TI, incluyendo diseño gráfico, desarrollo web, gestión de proyectos y
-              marketing digital. A lo largo de mi carrera, he trabajado con empresas de diferentes
-              tamaños e industrias, lo que me ha permitido obtener una comprensión amplia del
-              negocio y cómo el desarrollo de software puede mejorar las operaciones comerciales.
-              Como desarrollador Fullstack, tengo experiencia en diferentes lenguajes de
-              programación y marcos de trabajo, lo que me permite elegir la mejor opción para cada
-              proyecto. Mi objetivo es crear soluciones escalables, eficientes y fáciles de
-              mantener. Además de mis habilidades técnicas, soy un líder natural que sabe cómo
-              motivar y guiar a un equipo para alcanzar los objetivos establecidos. He dirigido
-              equipos de desarrolladores y diseñadores y entiendo la importancia de la comunicación
-              clara y efectiva en el éxito del proyecto. Si estás buscando a alguien que no sólo
-              tenga habilidades técnicas sino también habilidades de liderazgo y comprensión del
-              negocio, no dudes en contactarme. ¡Estoy emocionado de hablar contigo sobre cómo
-              podemos trabajar juntos!
+              marketing digital.
+              <br /> A lo largo de mi carrera, he trabajado con empresas de diferentes tamaños e
+              industrias, lo que me ha permitido obtener una comprensión amplia del negocio y cómo
+              el desarrollo de software puede mejorar las operaciones comerciales. Como
+              desarrollador Fullstack, tengo experiencia en diferentes lenguajes de programación y
+              marcos de trabajo, lo que me permite elegir la mejor opción para cada proyecto. <br />
+              Mi objetivo es crear soluciones escalables, eficientes y fáciles de mantener. Además
+              de mis habilidades técnicas, soy un líder natural que sabe cómo motivar y guiar a un
+              equipo para alcanzar los objetivos establecidos. <br />
+              He dirigido equipos de desarrolladores y diseñadores y entiendo la importancia de la
+              comunicación clara y efectiva en el éxito del proyecto. Si estás buscando a alguien
+              que no sólo tenga habilidades técnicas sino también habilidades de liderazgo y
+              comprensión del negocio, no dudes en contactarme. ¡Estoy emocionado de hablar contigo
+              sobre cómo podemos trabajar juntos!
             </span>
           )}
         </h2>
       </article>
       <div className="mt-6 flex w-full justify-start lg:mt-0 lg:justify-center ">
-        <button className="text-xsm shadow-black h-10 w-32 cursor-pointer rounded-3xl bg-blue-500 text-white shadow-md sm:w-48 sm:text-base lg:ml-10">
+        <button className="text-xsm h-10 w-32 cursor-pointer rounded-3xl bg-blue-500 text-white shadow-md shadow-black sm:w-48 sm:text-base lg:ml-10">
           <a
             href="https://drive.google.com/file/d/1R49MkGgp5i3pP2mAw9NhWJLI4gDsb1av/view?usp=sharing"
             target="_blank"
@@ -75,7 +78,7 @@ function About(props) {
           className="cursor-pointer"
           title="Download this cv in english"
         >
-          <button className="text-xsm shadow-black h-10 w-32 rounded-3xl bg-blue-500 text-white shadow-md hover:cursor-pointer sm:w-48 sm:text-base lg:ml-10">
+          <button className="text-xsm h-10 w-32 rounded-3xl bg-blue-500 text-white shadow-md shadow-black hover:cursor-pointer sm:w-48 sm:text-base lg:ml-10">
             Download CV
           </button>
         </a>

@@ -5,7 +5,6 @@ import { useEffect, useState } from "react";
 import { arrayTech } from "../data/Data";
 
 function Technologies() {
-
   const isMobile = useMediaQuery({ maxWidth: 600 });
 
   const [isHovered, setIsHovered] = useState(false);
@@ -67,7 +66,7 @@ function Technologies() {
   };
 
   return (
-    <div className="mt-96 h-full w-full lg:mt-0" id="tecnologies">
+    <div className="h-full w-full md:mt-96 lg:mt-0" id="tecnologies">
       <motion.h3
         variants={{
           hidden: { opacity: 0, scale: 0.5, y: 200 },
@@ -81,7 +80,7 @@ function Technologies() {
           delay: 0.2,
           ease: [0, 0.71, 0.2, 1.01],
         }}
-        className="shadow-black  z-10 mb-24 mt-48 w-full p-4 text-center text-4xl text-white text-shadow-md sm:mb-0 md:text-4xl   lg:-mb-0 lg:text-6xl"
+        className="z-10  mb-24 mt-48 w-full p-4 text-center text-4xl text-white shadow-black text-shadow-md sm:mb-0 md:text-4xl   lg:-mb-0 lg:text-6xl"
       >
         {" "}
         My Skills

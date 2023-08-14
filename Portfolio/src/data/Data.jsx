@@ -29,6 +29,7 @@ import aythenHome from "../assets/img/aythenHome.png";
 import wamhome from "../assets/img/wamhome.png";
 import meduxa from "../assets/logoTecnologias/meduxa.png";
 import anime from "animejs/lib/anime.es.js";
+import primhero from "../assets/img/primhero.png";
 
 export const arrayTech = [
   {
@@ -170,12 +171,12 @@ export const arrayTech = [
 
 export const proyects = [
   {
-    name: "Pokemon",
-    img: poke,
+    name: "Prim Hero",
+    img: primhero,
     description:
-      "This project uses React, Redux, Node, and Sequelize to view and interact with Pokémon data from the pokeapi API. The main page features a search input and list of Pokémon, which can be filtered and sorted by type and attack. Pagination is included to display 12 Pokémon per page. The Pokémon detail page includes stats and additional information, and a controlled form is available for creating new Pokémon. The creation form has been validated to ensure proper data entry. The app also includes a playable Kanto Ultimate Pokémon game. The app is not responsive due to limited development time. Overall, this project serves as a way to practice and apply knowledge of various technologies.",
+      "I'm pleased to introduce you to Prime Hero, the logistics platform designed and developed at WAM! Creative Studio. For Prime Hero, we have created a nationwide shipment tracking system, aiming to provide you with a first-class experience where you'll always be informed and at ease about the status and location of your packages. This project was developed using Typescript, React + Next.js 13, Tailwind, Sonner Toast, EmailJS, and in a second phase, we will be developing with Node.js, Express, and Sequelize to connect to the database.",
     descripcion:
-      "Este proyecto utiliza React, Redux, Node y Sequelize para ver e interactuar con los datos de Pokémon de la API pokeapi. La página principal cuenta con una entrada de búsqueda y una lista de Pokémon, que se pueden filtrar y ordenar por tipo y ataque. Se incluye la paginación para mostrar 12 Pokémon por página. La página de detalle de Pokémon incluye estadísticas e información adicional, y hay un formulario controlado disponible para crear nuevos Pokémon. El formulario de creación ha sido validado para garantizar la entrada de datos correcta. La aplicación también incluye un juego de Pokémon Ultimate Kanto jugable. La aplicación no es responsiva debido al tiempo limitado de desarrollo. En general, este proyecto sirve como una manera de practicar y aplicar el conocimiento de varias tecnologías.",
+      "Me complace presentarles Prime Hero, la plataforma de logística diseñada y desarrolla en WAM! estudio Creativo. Para Prime Hero, hemos creado un sistema de seguimiento y rastreo de envíos a nivel nacional, pensando en brindarte una experiencia de primera clase, donde siempre estarás informado y tranquilo acerca del estado y ubicación de tus paquetes. Este proyecto fue desarrollado en Typescript, React + nextjs 13, tailwind, sonner toast, emailjs, y en una segunda etapa desarrollaremos en NodeJs, Express y Sequelize para conectar con la base de datos",
   },
   {
     name: "Pet Friendly",

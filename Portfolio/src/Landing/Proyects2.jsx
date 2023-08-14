@@ -19,7 +19,7 @@ function Proyects2(props) {
           >
             {" "}
             <motion.div
-              className="flex-end hidden h-full w-full justify-center md:flex md:w-1/2 md:justify-end"
+              className="flex-end hidden h-full w-full justify-center md:flex md:w-1/2 md:justify-end "
               variants={{
                 hidden: { opacity: 0, x: -300 },
                 visible: { opacity: 1, x: 0, transition: { duration: 1 } },
@@ -36,10 +36,10 @@ function Proyects2(props) {
               <img
                 src={proyect.img}
                 alt={proyect.name}
-                className=" h-64 overflow-hidden rounded-xl object-fill md:h-64"
+                className=" object-fil -md  h-64 rounded-xl shadow-xl shadow-white/40  md:h-64"
               />
             </motion.div>
-            <div className="flex-end flex h-full w-full justify-center md:hidden md:w-1/2 md:justify-end">
+            <div className="flex-end flex h-full w-full justify-center shadow shadow-white drop-shadow-md md:hidden md:w-1/2 md:justify-end">
               <img
                 src={proyect.img}
                 alt={proyect.name}
@@ -61,14 +61,14 @@ function Proyects2(props) {
                 ease: [0, 0.71, 0.2, 1.01],
               }}
             >
-              <h3 className="w-96 pb-8 text-2xl font-bold">{proyect.name}</h3>
+              <h3 className="w-96 pb-2 text-2xl font-bold">{proyect.name}</h3>
               <span className="m w-3/5 opacity-80">
                 {language === "en" ? proyect.description : proyect.descripcion}
               </span>
             </motion.div>
             <div className="flex-end  flex h-full w-11/12 flex-col justify-end  text-center md:hidden  ">
               <h3 className="pb-8 text-center  text-2xl font-bold">{proyect.name}</h3>
-              <span className=" text-center  opacity-80">
+              <span className="text-center opacity-80">
                 {language === "en" ? proyect.description : proyect.descripcion}
               </span>
               <a
@@ -94,7 +94,7 @@ function Proyects2(props) {
               className="text-xsm  h-10 cursor-pointer rounded-3xl  bg-blue-500 p-2 px-4 text-white shadow-md shadow-black sm:text-base"
               variants={{
                 hidden: { opacity: 0, x: 0 },
-                visible: { opacity: 1, x: 0, transition: { duration: 2 } },
+                visible: { opacity: 1, x: 0, transition: { duration: 3 } },
               }}
               viewport={{ once: false, amount: 0.5 }}
               initial="hidden"

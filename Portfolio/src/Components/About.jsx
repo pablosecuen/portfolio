@@ -18,49 +18,28 @@ function About(props) {
         <h2 className="top-96 mt-4 w-full text-start text-sm  text-white shadow-black text-shadow-md sm:w-3/4  md:w-3/4 lg:mt-0 lg:w-4/5 lg:p-10 lg:text-base">
           {language === "en" ? (
             <span className="opacity-90">
-              Hello again! My name is Pablo Amico, and I would love to talk to you about how we can
-              work together to bring your projects to life. With over 5 years of experience in the
-              technology field, I have developed skills in different areas of IT, including graphic
-              design, web development, project management, and digital marketing.
-              <br /> Throughout my career, I have worked with companies of various sizes and
-              industries, which has allowed me to gain a broad understanding of business and how
-              software development can improve business operations. <br />
-              As a Fullstack developer, I have experience in different programming languages and
-              frameworks, which allows me to choose the best option for each project. My goal is to
-              create scalable, efficient, and easy-to-maintain solutions. In addition to my
-              technical skills, I am a natural leader who knows how to motivate and guide a team to
-              achieve the set goals.
-              <br /> I have led teams of developers and designers and understand the importance of
-              clear and effective communication in project success. If you are looking for someone
-              who not only has technical skills but also leadership skills and business
-              understanding, do not hesitate to contact me. I am excited to talk to you about how we
-              can work together!
+              Hello! I'm Pablo Amico, a seasoned professional with over 5 years in technology. I
+              excel in graphic design, web development, project management, and digital marketing.
+              Having collaborated with diverse companies, I grasp the impact of software on business
+              operations. As a Fullstack developer, I leverage my proficiency in multiple languages
+              and frameworks to craft scalable, efficient solutions. With leadership acumen and
+              adept communication, I've led successful teams. Reach out if you seek a tech-savvy
+              leader for your projects!
             </span>
           ) : (
             <span>
-              Hola de nuevo! Mi nombre es Pablo Amico y me encantaría hablar contigo sobre cómo
-              podemos trabajar juntos para dar vida a tus proyectos. Con más de 5 años de
-              experiencia en el campo de la tecnología, he desarrollado habilidades en diferentes
-              áreas de TI, incluyendo diseño gráfico, desarrollo web, gestión de proyectos y
-              marketing digital.
-              <br /> A lo largo de mi carrera, he trabajado con empresas de diferentes tamaños e
-              industrias, lo que me ha permitido obtener una comprensión amplia del negocio y cómo
-              el desarrollo de software puede mejorar las operaciones comerciales. Como
-              desarrollador Fullstack, tengo experiencia en diferentes lenguajes de programación y
-              marcos de trabajo, lo que me permite elegir la mejor opción para cada proyecto. <br />
-              Mi objetivo es crear soluciones escalables, eficientes y fáciles de mantener. Además
-              de mis habilidades técnicas, soy un líder natural que sabe cómo motivar y guiar a un
-              equipo para alcanzar los objetivos establecidos. <br />
-              He dirigido equipos de desarrolladores y diseñadores y entiendo la importancia de la
-              comunicación clara y efectiva en el éxito del proyecto. Si estás buscando a alguien
-              que no sólo tenga habilidades técnicas sino también habilidades de liderazgo y
-              comprensión del negocio, no dudes en contactarme. ¡Estoy emocionado de hablar contigo
-              sobre cómo podemos trabajar juntos!
+              ¡Hola! Soy Pablo Amico, un profesional con más de 5 años en tecnología. Destaco en
+              diseño gráfico, desarrollo web, gestión de proyectos y marketing digital. Al haber
+              colaborado con diversas empresas, comprendo el impacto del software en las operaciones
+              comerciales. Como desarrollador Fullstack, aprovecho mi habilidad en varios lenguajes
+              y marcos de trabajo para crear soluciones escalables y eficientes. Con habilidades de
+              liderazgo y comunicación hábil, he dirigido equipos exitosos. ¡Contáctame si buscas un
+              líder tecnológico para tus proyectos!
             </span>
           )}
         </h2>
       </article>
-      <div className="mt-6 flex w-full justify-start lg:mt-0 lg:justify-center ">
+      <div className="mt-6 flex w-full justify-start gap-4 sm:gap-0 lg:mt-0 lg:justify-start ">
         <button className="text-xsm h-10 w-32 cursor-pointer rounded-3xl bg-blue-500 text-white shadow-md shadow-black sm:w-48 sm:text-base lg:ml-10">
           <a
             href="https://drive.google.com/file/d/1R49MkGgp5i3pP2mAw9NhWJLI4gDsb1av/view?usp=sharing"

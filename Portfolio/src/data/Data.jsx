@@ -177,6 +177,7 @@ export const proyects = [
       "I'm pleased to introduce you to Prime Hero, the logistics platform designed and developed at WAM! Creative Studio. For Prime Hero, we have created a nationwide shipment tracking system, aiming to provide you with a first-class experience where you'll always be informed and at ease about the status and location of your packages. This project was developed using Typescript, React + Next.js 13, Tailwind, Sonner Toast, EmailJS, and in a second phase, we will be developing with Node.js, Express, and Sequelize to connect to the database.",
     descripcion:
       "Me complace presentarles Prime Hero, la plataforma de logística diseñada y desarrolla en WAM! estudio Creativo. Para Prime Hero, hemos creado un sistema de seguimiento y rastreo de envíos a nivel nacional, pensando en brindarte una experiencia de primera clase, donde siempre estarás informado y tranquilo acerca del estado y ubicación de tus paquetes. Este proyecto fue desarrollado en Typescript, React + nextjs 13, tailwind, sonner toast, emailjs, y en una segunda etapa desarrollaremos en NodeJs, Express y Sequelize para conectar con la base de datos",
+    url: "https://primhero-pablosecuen.vercel.app/",
   },
   {
     name: "Pet Friendly",

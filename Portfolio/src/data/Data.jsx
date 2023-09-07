@@ -17,19 +17,14 @@ import github from "../assets/logoTecnologias/github.svg";
 import vite from "../assets/logoTecnologias/vite.svg";
 import ts from "../assets/logoTecnologias/ts-logo-128.png";
 import next from "../assets/logoTecnologias/next.svg";
-import proyect1 from "../assets/img/logo.webp";
-import pokemon from "../assets/img/pokemon.webp";
-import movi from "../assets/img/UrbanIsoLogo.png";
 import movihome from "../assets/img/movihome.png";
 import pet from "../assets/img/petfriendly.webp";
-import petsm from "../assets/img/petfriendly.webp";
-import poke from "../assets/img/pokeApp.webp";
-import aythen from "../assets/svg/aythen.svg";
 import aythenHome from "../assets/img/aythenHome.png";
 import wamhome from "../assets/img/wamhome.png";
 import meduxa from "../assets/logoTecnologias/meduxa.png";
 import anime from "animejs/lib/anime.es.js";
 import primhero from "../assets/img/primhero.png";
+import paracomex from "../assets/img/paracomex.png";
 
 export const arrayTech = [
   {
@@ -170,6 +165,15 @@ export const arrayTech = [
 ];
 
 export const proyects = [
+  {
+    name: "Parana Comex",
+    img: paranacomex,
+    description:
+      "Parana Comex is a foreign trade company dedicated to the import and export of all kinds of products. We have developed a cutting-edge, responsive, modern, and attractive website using state-of-the-art technology.",
+    descripcion:
+      "Parana comex es una empresa de comercio exterior dedicada a la exportacion y exportación de todo tipo de productos, desarrollamos una web responsive, moderna y atractiva con tecnología de punta",
+    url: "https://comex.vercel.app/",
+  },
   {
     name: "Prim Hero",
     img: primhero,

@@ -1,6 +1,5 @@
 import { useParallax } from "react-scroll-parallax";
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import uno from "../assets/1x/Recurso1.png";
 import dos from "../assets/1x/Recurso2sol.png";
 import tres from "../assets/1x/Recurso3derecho.png";

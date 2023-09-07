@@ -1,5 +1,3 @@
-import useMediaQuery from "./useMediaQuery";
-import Proyects from "./Proyects";
 import Technologies from "../Components/Technologies";
 import About from "../Components/About";
 import LanguageToggle from "../Components/LanguagueTogle";

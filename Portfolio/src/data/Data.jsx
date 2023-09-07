@@ -24,7 +24,7 @@ import wamhome from "../assets/img/wamhome.png";
 import meduxa from "../assets/logoTecnologias/meduxa.png";
 import anime from "animejs/lib/anime.es.js";
 import primhero from "../assets/img/primhero.png";
-import paranacomex from "../assets/img/paracomex.png";
+import paranacomex from "../assets/img/paranacomex.png";
 
 export const arrayTech = [
   {

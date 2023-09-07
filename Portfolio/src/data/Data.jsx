@@ -171,7 +171,7 @@ export const proyects = [
     description:
       "Parana Comex is a foreign trade company dedicated to the import and export of all kinds of products. We have developed a cutting-edge, responsive, modern, and attractive website using state-of-the-art technology.",
     descripcion:
-      "Parana comex es una empresa de comercio exterior dedicada a la exportacion y exportación de todo tipo de productos, desarrollamos una web responsive, moderna y atractiva con tecnología de punta",
+      "Parana comex es una empresa de comercio exterior dedicada a la importacion y exportación de todo tipo de productos, desarrollamos una web responsive, moderna y atractiva con tecnología de punta",
     url: "https://comex.vercel.app/",
   },
   {

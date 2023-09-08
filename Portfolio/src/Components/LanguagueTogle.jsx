@@ -11,7 +11,7 @@ function LanguageToggle(props) {
   };
 
   return (
-    <div className="fixed right-4 top-32 p-8">
+    <div className="fixed right-4 top-32 p-6">
       <div className="relative mr-2 inline-block w-10 select-none align-middle">
         <img
           src={language === "en" ? español : english}

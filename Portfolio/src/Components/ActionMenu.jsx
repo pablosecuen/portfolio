@@ -13,7 +13,7 @@ function ActionMenu(props) {
   const title3 = language === "en" ? "Chatea conmigo" : "Chat with me";
 
   return (
-    <div className="absolute right-0  bottom-72 w-24 ">
+    <div className="fixed right-0  bottom-72 w-24 ">
       <div className="sticky bottom-0 flex flex-col">
         <a href="https://www.linkedin.com/in/pablo-j-amico/" title={title1}>
           <img

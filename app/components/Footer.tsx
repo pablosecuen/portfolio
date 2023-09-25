@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../../public/assets/logoblanco.png";
+import logo from "../../public/assets/img/logoblanco.png";
 import Image from "next/image";
 
 function Footer(props: { language: any }) {

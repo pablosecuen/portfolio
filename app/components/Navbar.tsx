@@ -1,6 +1,6 @@
 "use client";
-import "./NavBar.css";
-import logo from "@/public/assets/logopablo.png";
+import "./Navbar.css";
+import logo from "../../public/assets/img/logopablo.png";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import Link from "next/link";

@@ -8,7 +8,7 @@ function Proyects(props: { language: any }) {
   const { language } = props;
 
   return (
-    <div className="flex h-full max-w-screen flex-col text-white overflow-hidden">
+    <div className="flex h-full w-full item-start flex-col text-white overflow-x-hidden">
       <h3 className="p-24 text-center text-4xl" id="proyects">
         Proyects
       </h3>
@@ -16,12 +16,11 @@ function Proyects(props: { language: any }) {
         <div key={proyect.name} className="flex flex-col w-full items-center">
           <div className="mb-20 flex h-full  w-full flex-col items-center justify-evenly rounded-xl border-2   py-8 align-middle text-white md:mb-0 md:flex-row md:gap-20 md:border-none md:py-0">
             <motion.div
-              className="md:flex h-full hidden w-full justify-centermd:w-1/2 md:justify-end"
+              className="md:flex h-full hidden w-full justify-center md:w-1/2 md:justify-end"
               variants={{
                 hidden: { opacity: 0, x: -300 },
                 visible: { opacity: 1, x: 0, transition: { duration: 1 } },
               }}
-              viewport={{ once: false, amount: 0.5 }}
               initial="hidden"
               whileInView="visible"
               transition={{
@@ -36,7 +35,7 @@ function Proyects(props: { language: any }) {
                 className=" h-64 rounded-xl shadow-xl  shadow-white/40  w-auto"
               />
             </motion.div>
-            <div className="items-center flex justify-start pb-4 h-auto w-full shadow-white/20 drop-shadow-md  md:hidden md:w-1/2 md:justify-end">
+            <div className="items-center  justify-start pb-4 h-auto w-full shadow-white/20 drop-shadow-md  md:hidden md:w-1/2 md:justify-end">
               <Image
                 src={proyect.img}
                 alt={proyect.name}

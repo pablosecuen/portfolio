@@ -124,7 +124,7 @@ function Technologies() {
                       src={t.logo}
                       alt="..."
                       title={t.title}
-                      className={`${t.name} h-24 w-auto flex max-h-24   items-center justify-center text-white  drop-shadow-glow-red hover:cursor-pointer`}
+                      className={`${t.name}  md:h-24 w-auto flex   items-center justify-center text-white  drop-shadow-glow-red hover:cursor-pointer`}
                       onMouseEnter={handleMouseEnter}
                       onMouseLeave={handleMouseLeave}
                     />
@@ -173,8 +173,8 @@ function Technologies() {
                       onMouseEnter={handleMouseEnter}
                       onMouseLeave={handleMouseLeave}
                       loading="lazy"
-                      height={128}
-                      width={128}
+                      height={100}
+                      width={100}
                     />
                   </motion.div>
                   <p className=" text-center font-roboto text-xl text-white opacity-80">

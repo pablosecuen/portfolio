@@ -17,7 +17,6 @@ function Proyects2(props) {
             key={proyect.name}
             className="mb-20 flex h-full w-full flex-col items-center justify-evenly rounded-xl border py-8 align-middle text-white md:mb-0 md:flex-row md:gap-20 md:border-none md:py-0"
           >
-            {" "}
             <motion.div
               className="flex-end hidden h-full w-full justify-center md:flex md:w-1/2 md:justify-end "
               variants={{
@@ -66,7 +65,7 @@ function Proyects2(props) {
                 {language === "en" ? proyect.description : proyect.descripcion}
               </span>
             </motion.div>
-            <div className="flex-end  flex h-full w-11/12 flex-col justify-end  text-center md:hidden  ">
+            <div className="flex-end flex h-full w-11/12 flex-col justify-end  text-center sm:hidden">
               <h3 className="pb-8 text-center  text-2xl font-bold">{proyect.name}</h3>
               <span className="text-center opacity-80">
                 {language === "en" ? proyect.description : proyect.descripcion}

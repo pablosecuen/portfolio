@@ -44,7 +44,7 @@ function About(props: any) {
       <div className="mt-6 flex w-full justify-start gap-4 sm:gap-0 lg:mt-0 lg:justify-start ">
         <button className="text-xsm h-10 w-32 cursor-pointer rounded-3xl bg-blue-500 text-white shadow-md shadow-black sm:w-48 sm:text-base lg:ml-10">
           <a
-            href="https://drive.google.com/file/d/1R49MkGgp5i3pP2mAw9NhWJLI4gDsb1av/view?usp=sharing"
+            href="https://drive.google.com/file/d/1RP1T_xDBoNre9DgdVnGuh378DK2GnTWR/view?usp=sharing"
             target="_blank"
             className="cursor-pointer"
             title="descarga este curriculum en español"
@@ -54,7 +54,7 @@ function About(props: any) {
           </a>
         </button>
         <a
-          href="https://drive.google.com/file/d/1SPbz4JR5M190_4x60nvwrvhIotilEoeQ/view?usp=sharing"
+          href="https://drive.google.com/file/d/1cDj65VGJB2YgzcwGFYOU-kSHyxFX-h4m/view?usp=sharing"
           target="_blank"
           className="cursor-pointer"
           title="Download this cv in english"

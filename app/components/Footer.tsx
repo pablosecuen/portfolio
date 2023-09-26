@@ -14,11 +14,15 @@ function Footer(props: { language: any }) {
   };
 
   const scrollToSkills = () => {
-    window.scrollTo({ top: 1700, behavior: "smooth" });
+    window.scrollTo({ top: 5500, behavior: "smooth" });
   };
 
   const scrollToContact = () => {
-    window.scrollTo({ top: 3500, behavior: "smooth" });
+    window.scrollTo({ top: 7500, behavior: "smooth" });
+  };
+
+  const scrollToContactMobile = () => {
+    window.scrollTo({ top: 5800, behavior: "smooth" });
   };
 
   return (

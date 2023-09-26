@@ -7,7 +7,7 @@ function About(props: any) {
   const { language } = props;
 
   return (
-    <div className="z-50 h-full w-full  max-w-screen  p-4 xsm:w-3/4 sm:w-full md:h-screen lg:pl-10">
+    <div className="z-40 h-full w-full  max-w-screen  p-4 xsm:w-3/4 sm:w-full md:h-screen lg:pl-10">
       <h1 className="mt-48 font-roboto text-2xl font-bold -tracking-wider text-white shadow-black text-shadow-md sm:mt-72 sm:-tracking-widest md:text-6xl lg:mt-96 lg:pl-10 xl:text-6xl">
         Fullstack Developer
       </h1>

@@ -14,7 +14,7 @@ function LanguageToggle(props: { onToggle: () => void }) {
 
   return (
     <div className="fixed md:right-4 md:top-32 md:p-8 w-auto top-32 right-0 z-50">
-      <div className="relative mr-2 inline-block w-10 select-none align-middle">
+      <div className="relative mr-2 inline-block w-10 select-none align-middle hover:cursor-pointer">
         <Image
           src={language === "en" ? español : english}
           alt="language"

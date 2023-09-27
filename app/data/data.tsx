@@ -1,30 +1,32 @@
-import html from "../../public/assets/logoTecnologias/html.png";
-import css from "../../public/assets/logoTecnologias/css.svg";
-import javascript from "../../public/assets/logoTecnologias/js.svg";
-import react from "../../public/assets/logoTecnologias/react.svg";
-import redux from "../../public/assets/logoTecnologias/redux.svg";
-import sass from "../../public/assets/logoTecnologias/sass.svg";
-import boostrap from "../../public/assets/logoTecnologias/boostrap.svg";
-import tailwind from "../../public/assets/logoTecnologias/tailwind.svg";
-import node from "../../public/assets/logoTecnologias/node.svg";
-import express from "../../public/assets/logoTecnologias/express.svg";
-import insomnia from "../../public/assets/logoTecnologias/insomnia.svg";
-import webpack from "../../public/assets/logoTecnologias/webpack.svg";
-import illustrator from "../../public/assets/logoTecnologias/illustrator.png";
-import photoshop from "../../public/assets/logoTecnologias/photoshop2.svg";
-import git from "../../public/assets/logoTecnologias/git.svg";
-import github from "../../public/assets/logoTecnologias/github.svg";
-import vite from "../../public/assets/logoTecnologias/vite.svg";
-import ts from "../../public/assets/logoTecnologias/ts-logo-128.png";
-import next from "../../public/assets/logoTecnologias/next.svg";
-import movihome from "../../public/assets/img/movihome.png";
-import pet from "../../public/assets/img/petfriendly.webp";
-import aythenHome from "../../public/assets/img/aythenHome.png";
-import wamhome from "../../public/assets/img/wamhome.png";
-import meduxa from "../../public/assets/logoTecnologias/meduxa.png";
+import html from "@/public/assets/logoTecnologias/html.png";
+import css from "@/public/assets/logoTecnologias/css.svg";
+import javascript from "@/public/assets/logoTecnologias/js.svg";
+import react from "@/public/assets/logoTecnologias/react.svg";
+import redux from "@/public/assets/logoTecnologias/redux.svg";
+import sass from "@/public/assets/logoTecnologias/sass.svg";
+import boostrap from "@/public/assets/logoTecnologias/boostrap.svg";
+import tailwind from "@/public/assets/logoTecnologias/tailwind.svg";
+import node from "@/public/assets/logoTecnologias/node.svg";
+import express from "@/public/assets/logoTecnologias/express.svg";
+import insomnia from "@/public/assets/logoTecnologias/insomnia.svg";
+import webpack from "@/public/assets/logoTecnologias/webpack.svg";
+import illustrator from "@/public/assets/logoTecnologias/illustrator.png";
+import photoshop from "@/public/assets/logoTecnologias/photoshop2.svg";
+import git from "@/public/assets/logoTecnologias/git.svg";
+import github from "@/public/assets/logoTecnologias/github.svg";
+import vite from "@/public/assets/logoTecnologias/vite.svg";
+import ts from "@/public/assets/logoTecnologias/ts-logo-128.png";
+import next from "@/public/assets/logoTecnologias/next.svg";
+import postgres from "@/public/assets/logoTecnologias/postgres.svg";
+import mongo from "@/public/assets/logoTecnologias/mongo.svg";
+import movihome from "@/public/assets/img/movihome.png";
+import pet from "@/public/assets/img/petfriendly.webp";
+import aythenHome from "@/public/assets/img/aythenHome.png";
+import wamhome from "@/public/assets/img/wamhome.png";
+import meduxa from "@/public/assets/logoTecnologias/meduxa.png";
 import anime from "animejs/lib/anime.es.js";
-import primhero from "../../public/assets/img/primhero.png";
-import paranacomex from "../../public/assets/img/paranacomex.png";
+import primhero from "@/public/assets/img/primhero.png";
+import paranacomex from "@/public/assets/img/paranacomex.png";
 //a
 export const arrayTech = [
   {
@@ -160,6 +162,20 @@ export const arrayTech = [
     logo: github,
     title: "Github",
     shadowColor: "indigo",
+    url: "https://github.com/",
+  },
+  {
+    name: "postgresql",
+    logo: postgres,
+    title: "PostgreSQL",
+    shadowColor: "indigo",
+    url: "https://www.postgresql.org/",
+  },
+  {
+    name: "mongodb",
+    logo: mongo,
+    title: "MongoDb",
+    shadowColor: "limegreen",
     url: "https://github.com/",
   },
 ];

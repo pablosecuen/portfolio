@@ -21,17 +21,17 @@ function Slider(language: any) {
       url: "https://primhero-pablosecuen.vercel.app/",
       projectName: "Primhero",
     },
-    { image: "bg-comexfull", url: "https://comex.vercel.app/", projectName: "Comex" },
-    { image: "bg-comexmb", url: "https://comex.vercel.app/", projectName: "Comex" },
+    { image: "bg-comexfull", url: "https://comex.vercel.app/", projectName: "Parana Comex" },
+    { image: "bg-comexmb", url: "https://comex.vercel.app/", projectName: "Parana Comex" },
     {
       image: "bg-petfull",
       url: "https://petfriendlyuniverse.vercel.app/",
-      projectName: "PetFriendly",
+      projectName: "Pet Friendly",
     },
     {
       image: "bg-petmb",
       url: "https://petfriendlyuniverse.vercel.app/",
-      projectName: "PetFriendly",
+      projectName: "Pet Friendly",
     },
   ];
   const dotsToRender = slides.slice(0, 6);

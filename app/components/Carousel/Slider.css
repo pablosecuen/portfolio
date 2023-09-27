@@ -61,6 +61,7 @@ li {
   top: 50%;
   left: 50%;
   transform: translate3d(-50%, -40%, 70px);
+  margin-right: 20px;
 }
 
 .carousel__snapper {
@@ -72,27 +73,26 @@ li {
   scroll-snap-align: center;
   background-size: cover;
   background-position: 50%;
+  margin-right: 20px;
 }
 
 .carousel__dots {
   display: flex;
   justify-content: center;
   position: absolute;
-  bottom: 10px; /* Puedes ajustar la posición vertical según tus necesidades */
+  bottom: 10px;
   width: 100%;
 }
 
 .carousel__dot {
-  width: 10px; /* Ajusta el ancho según tus necesidades */
-  height: 10px; /* Ajusta el alto según tus necesidades */
-  margin: 0 5px; /* Espacio entre los puntos de navegación */
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
   border-radius: 50%;
-  background-color: #949494; /* Color de los puntos de navegación */
+  background-color: #949494;
   cursor: pointer;
 }
 
 .carousel__dot.active {
-  background-color: #4f18b6; /* Color del punto de navegación activo */
+  background-color: #4f18b6;
 }
-
-

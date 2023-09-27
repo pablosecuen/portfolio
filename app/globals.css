@@ -16,6 +16,12 @@
   }
 }
 
+::selection {
+  background-color: #5c5c5c;
+  color: #ffffff;
+  opacity: 0.2;
+}
+
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb)))

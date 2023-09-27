@@ -4,6 +4,7 @@ import { useState } from "react";
 import emailjs from "emailjs-com";
 import Modal from "react-modal";
 import Script from "next/script";
+import Link from "next/link";
 
 function Contact() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -161,14 +162,14 @@ function Contact() {
             allowFullScreen
           ></iframe>
 
-          <p>
-            <a href="https://giphy.com/gifs/theoffice-ljtfkyTD3PIUZaKWRi">via GIPHY</a>
-          </p>
-          <p>
-            <a href="https://giphy.com/gifs/playmobil-post-letter-mail-NsPTjaNFdMx8ZPe9Qh">
+          <span>
+            <Link href="https://giphy.com/gifs/theoffice-ljtfkyTD3PIUZaKWRi">via GIPHY</Link>
+          </span>
+          <span>
+            <Link href="https://giphy.com/gifs/playmobil-post-letter-mail-NsPTjaNFdMx8ZPe9Qh">
               via GIPHY
-            </a>
-          </p>
+            </Link>
+          </span>
         </Modal>
         <Script
           type="text/javascript"

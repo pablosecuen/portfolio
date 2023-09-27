@@ -181,8 +181,8 @@ function NavBar() {
                     onClick={scrollToHome}
                     className={`load-screen--message cursor-pointer pb-4 duration-500 hover:text-white ${
                       isMenuBackgroundWhite
-                        ? "text-black  duration-500  hover:text-blue-600"
-                        : "tracking-wide text-white  opacity-80 transition duration-500 hover:text-blue-600"
+                        ? "text-black  duration-500  hover:text-blue-600 hover:brightness-150"
+                        : "tracking-wide text-white  opacity-80 transition duration-500 hover:text-blue-600 hover:brightness-150"
                     }`}
                   >
                     {line1}
@@ -195,10 +195,10 @@ function NavBar() {
                 >
                   <h3
                     onClick={scrollToProjects}
-                    className={`load-screen--message cursor-pointer pb-4 duration-500 hover:text-white ${
+                    className={`load-screen--message cursor-pointer pb-4 duration-500 hover:text-white hover:brightness-150 ${
                       isMenuBackgroundWhite
                         ? "text-black  duration-500  hover:text-blue-600"
-                        : "tracking-wide text-white  opacity-80 transition duration-500 hover:text-blue-600"
+                        : "tracking-wide text-white  opacity-80 transition duration-500 hover:text-blue-600 hover:brightness-150"
                     }`}
                   >
                     {line2}
@@ -211,10 +211,10 @@ function NavBar() {
                 >
                   <h3
                     onClick={scrollToSkills}
-                    className={`load-screen--message cursor-pointer pb-4 duration-500 hover:text-white ${
+                    className={`load-screen--message cursor-pointer pb-4 duration-500 hover:text-white hover:brightness-150 ${
                       isMenuBackgroundWhite
                         ? "text-black  duration-500  hover:text-blue-600"
-                        : "tracking-wide text-white  opacity-80 transition duration-500 hover:text-blue-600"
+                        : "tracking-wide text-white  opacity-80 transition duration-500 hover:text-blue-600 hover:brightness-150"
                     }`}
                   >
                     {line3}
@@ -227,10 +227,10 @@ function NavBar() {
                 >
                   <h3
                     onClick={scrollToContactMobile}
-                    className={`load-screen--message cursor-pointer pb-4 duration-500 hover:text-white ${
+                    className={`load-screen--message cursor-pointer pb-4 duration-500 hover:text-white hover:brightness-150 ${
                       isMenuBackgroundWhite
                         ? "text-black  duration-500  hover:text-blue-600"
-                        : "tracking-wide text-white  opacity-80 transition duration-500 hover:text-blue-600"
+                        : "tracking-wide text-white  opacity-80 transition duration-500 hover:text-blue-600 hover:brightness-150"
                     }`}
                   >
                     {line4}
@@ -247,10 +247,10 @@ function NavBar() {
               transition={{ duration: 3.0 }}
             >
               <motion.h3
-                className={`load-screen--message cursor-pointer pb-4 opacity-80  duration-500 hover:text-blue-600 ${
+                className={`load-screen--message cursor-pointer pb-4 opacity-80  duration-500 hover:text-blue-600 hover:brightness-150 ${
                   isMenuBackgroundWhite
-                    ? "text-black  duration-500  hover:text-blue-600"
-                    : "tracking-wide text-white  opacity-80 transition duration-500"
+                    ? "text-black  duration-500  hover:text-blue-600 hover:brightness-150"
+                    : "tracking-wide text-white  opacity-80 transition duration-500 hover:brightness-150"
                 }`}
                 variants={sentence}
                 initial="hidden"
@@ -272,9 +272,9 @@ function NavBar() {
               transition={{ duration: 2.0 }}
             >
               <motion.h3
-                className={`load-screen--message cursor-pointer pb-4 opacity-80  duration-500 hover:text-blue-600 ${
+                className={`load-screen--message cursor-pointer pb-4 opacity-80  duration-500 hover:text-blue-600 hover:brightness-150 ${
                   isMenuBackgroundWhite
-                    ? " text-black duration-500 hover:text-blue-600 "
+                    ? " text-black duration-500 hover:text-blue-600 hover:brightness-150"
                     : "tracking-wide  text-white opacity-80 transition duration-500"
                 }`}
                 variants={sentence1}
@@ -297,9 +297,9 @@ function NavBar() {
               transition={{ duration: 1.0 }}
             >
               <motion.h3
-                className={`load-screen--message cursor-pointer pb-4   opacity-80 duration-500 hover:text-blue-600 ${
+                className={`load-screen--message cursor-pointer pb-4   opacity-80 duration-500 hover:text-blue-600  hover:brightness-150 ${
                   isMenuBackgroundWhite
-                    ? "text-black  duration-500 hover:text-blue-600 "
+                    ? "text-black  duration-500 hover:text-blue-600 hover:brightness-150"
                     : "tracking-wide text-white  opacity-80 transition duration-500"
                 }`}
                 variants={sentence2}
@@ -322,7 +322,7 @@ function NavBar() {
               transition={{ duration: 1.0 }}
             >
               <motion.h3
-                className={`load-screen--message cursor-pointer pb-4   opacity-80 duration-500 hover:text-blue-600 ${
+                className={`load-screen--message cursor-pointer pb-4   opacity-80 duration-500 hover:text-blue-600 hover:brightness-150 ${
                   isMenuBackgroundWhite
                     ? "text-black  duration-500 hover:text-blue-600 "
                     : "tracking-wide text-white  opacity-80 transition duration-500"

@@ -34,21 +34,20 @@ html {
 }
 
 ::-webkit-scrollbar {
-  width: 15px;
-  height: 15px;
+  width: 12px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #132c2f;
+  background: transparent !important;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #bfe5ab;
-  border-radius: 5px;
+  background: #3c82f5;
+  border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #fff9b0;
+  background: transparent;
 }
 
 @font-face {

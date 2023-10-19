@@ -9,6 +9,16 @@ function Slider(language: any) {
   const carouselRef = useRef<HTMLDivElement | null>(null);
 
   const slides = [
+    {
+      image: "bg-ecommercefull",
+      url: "https://e-commerce-nine-beige.vercel.app/",
+      projectName: "E-commerce",
+    },
+    {
+      image: "bg-ecommercemb",
+      url: "https://e-commerce-nine-beige.vercel.app/",
+      projectName: "E-commerce",
+    },
     { image: "bg-meduxafull", url: "https://birthday-ruddy.vercel.app/", projectName: "Meduxa" },
     { image: "bg-meduxamb", url: "https://birthday-ruddy.vercel.app/", projectName: "Meduxa" },
     {
@@ -32,16 +42,6 @@ function Slider(language: any) {
       image: "bg-petmb",
       url: "https://petfriendlyuniverse.vercel.app/",
       projectName: "Pet Friendly",
-    },
-    {
-      image: "bg-ecommercefull",
-      url: "https://e-commerce-nine-beige.vercel.app/",
-      projectName: "E-commerce",
-    },
-    {
-      image: "bg-ecommercemb",
-      url: "https://e-commerce-nine-beige.vercel.app/",
-      projectName: "E-commerce",
     },
   ];
 

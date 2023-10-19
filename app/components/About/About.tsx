@@ -44,11 +44,11 @@ function About(props: any) {
           )}
         </h2>
       </article>
-      <div className=" md:ml-10">
+      <div className=" md:ml-10 ">
         <Link
           href="https://drive.google.com/file/d/1RP1T_xDBoNre9DgdVnGuh378DK2GnTWR/view?usp=sharing"
           target="_blank"
-          className="cursor-pointer"
+          className="cursor-pointer "
           title="descarga este curriculum en español"
         >
           {" "}

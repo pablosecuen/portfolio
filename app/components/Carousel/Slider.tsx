@@ -1,12 +1,12 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import "./Slider.css";
 import Link from "next/link";
 import Button from "../button/Button";
 
 function Slider(language: any) {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [numImagesVisible, setNumImagesVisible] = useState(3);
   const carouselRef = useRef<HTMLDivElement | null>(null);
-  const numImagesVisible = 3;
 
   const slides = [
     { image: "bg-meduxafull", url: "https://birthday-ruddy.vercel.app/", projectName: "Meduxa" },
@@ -33,8 +33,19 @@ function Slider(language: any) {
       url: "https://petfriendlyuniverse.vercel.app/",
       projectName: "Pet Friendly",
     },
+    {
+      image: "bg-ecommercefull",
+      url: "https://e-commerce-nine-beige.vercel.app/",
+      projectName: "E-commerce",
+    },
+    {
+      image: "bg-ecommercemb",
+      url: "https://e-commerce-nine-beige.vercel.app/",
+      projectName: "E-commerce",
+    },
   ];
-  const dotsToRender = slides.slice(0, 6);
+
+  const dotsToRender = slides.slice(0, 8);
 
   const handleDotClick = (index: number) => {
     setCurrentIndex(index);
@@ -56,6 +67,9 @@ function Slider(language: any) {
           <div className="carousel__slide" key={index}>
             <Link href={slide.url} target="_blank" rel="noopener noreferrer">
               <div className={`carousel__snapper relative ${slide.image}`}>
+                <h5 className="animate-pulse opacity-80 text-center sm:hidden my-2">
+                  slide to explore
+                </h5>
                 <Button
                   string={slide.projectName}
                   className="absolute z-50 bottom-10 left-1/2 -translate-x-1/2 "
@@ -65,7 +79,7 @@ function Slider(language: any) {
           </div>
         ))}
       </div>
-      <div className="carousel__dots">
+      <div className="carousel__dots !hidden sm:!flex">
         {dotsToRender.map((_, index) => (
           <span
             key={index}

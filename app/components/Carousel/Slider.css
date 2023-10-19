@@ -50,9 +50,18 @@ li {
 
 .carousel__slide {
   position: relative;
-  flex: 0 0 33.33%;
-  width: 33.33%;
+  flex: 0 0 calc(100% / 3); /* Default width for desktop, change the denominator to match your desired number of images per screen */
+  width: calc(
+    100% / 3
+  ); /* Default width for desktop, change the denominator to match your desired number of images per screen */
   counter-increment: item;
+}
+
+@media (max-width: 767px) {
+  .carousel__slide {
+    flex: 0 0 100%;
+    width: 100%;
+  }
 }
 
 .carousel__slide:before {

@@ -74,6 +74,8 @@ const config: Config = {
         comexmb: "url('../public/assets/proyects/comexmb.png')",
         petfull: "url('../public/assets/proyects/petfull.png')",
         petmb: "url('../public/assets/proyects/petmb.png')",
+        ecommercefull: "url('../public/assets/proyects/ecommercefull.png')",
+        ecommercemb: "url('../public/assets/proyects/ecommercemb.png')",
       },
     },
   },

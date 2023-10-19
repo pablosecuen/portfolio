@@ -15,24 +15,24 @@ export default function Home() {
     setLanguage(language === "en" ? "es" : "en");
   };
   return (
-    <main className="flex min-h-screen  max-w-screen bg-darkbg flex-col items-center justify-between">
+    <div className="flex min-h-screen  max-w-screen bg-darkbg flex-col items-center justify-between">
       <LanguageToggle onToggle={toggleLanguage} />
       <About language={language} />
       <ActionMenu />
       {/* Cards de proyectos */}
       {/* <Proyects language={language} /> */}
-      <h2 className="mt-52 font-roboto text-2xl font-bold -tracking-wider text-white shadow-black text-shadow-md sm:mt-72 sm:-tracking-widest md:text-6xl lg:mt-90 lg:pl-10 xl:text-6xl">
+      <h2 className="mt-52 mb-4 md:mb-0 font-roboto text-2xl font-bold -tracking-wider text-white shadow-black text-shadow-md sm:mt-72 sm:-tracking-widest md:text-6xl lg:mt-90 lg:pl-10 xl:text-6xl">
         MY PROYECTS
       </h2>
       <Slider language={language} />
 
       {/* Cards de redes sociales */}
-      <h2 className="mt-48 font-roboto text-2xl font-bold -tracking-wider text-white shadow-black text-shadow-md sm:mt-72 sm:-tracking-widest md:text-6xl lg:mt-90 lg:pl-10 xl:text-6xl">
+      <h2 className="mt-48 mb-4 md:mb-0  font-roboto text-2xl font-bold -tracking-wider text-white shadow-black text-shadow-md sm:mt-72 sm:-tracking-widest md:text-6xl lg:mt-90 lg:pl-10 xl:text-6xl">
         TECHNOLOGIES
       </h2>
       <Technologies />
       <Contact />
       <Footer language={language} />
-    </main>
+    </div>
   );
 }

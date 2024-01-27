@@ -15,7 +15,7 @@ function About(props: any) {
       </h1>
 
       <Image
-        className="  absolute xsm:right-[32%]  xsm:top-0 xsm:w-32 sm:right-24 sm:top-24 sm:w-48 md:right-40 md:w-64 xl:right-64 xl:w-64 2xl:w-96"
+        className="  absolute xsm:right-[32%] hidden md:block  xsm:top-0 xsm:w-32 sm:right-24 sm:top-24 sm:w-48 md:right-40 md:w-64 xl:right-64 xl:w-64 2xl:w-96"
         src={foto}
         alt="foto"
       />
@@ -46,16 +46,18 @@ function About(props: any) {
       </article>
       <div className=" md:ml-10 ">
         <Link
-          href="https://drive.google.com/file/d/1RP1T_xDBoNre9DgdVnGuh378DK2GnTWR/view?usp=sharing"
+          href="https://docs.google.com/document/d/1T5IkZt5vVJ7sLiZyEemC4lyXaPhb3PD_BsE7Q6RXjQ8/edit?usp=sharing"
           target="_blank"
           className="cursor-pointer "
           title="descarga este curriculum en español"
+          rel="noreferrer"
         >
           {" "}
           <Button string="Descargar CV" />
         </Link>
         <Link
-          href="https://drive.google.com/file/d/1cDj65VGJB2YgzcwGFYOU-kSHyxFX-h4m/view?usp=sharing"
+          href="https://docs.google.com/document/d/14inwpyMOWueKu98pIUm30h6GcNvJeUe0uaLxpN3_6kQ/edit?usp=sharing"
+          rel="noreferrer"
           target="_blank"
           className="cursor-pointer"
           title="Download this cv in english"

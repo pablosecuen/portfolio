@@ -60,7 +60,7 @@ function Contact() {
       className=" mt-96 flex h-[500px] w-full flex-row items-center justify-center  self-center border-l-2 border-r-2 border-t-2"
       onSubmit={handleSubmit}
     >
-      <div className="flex w-3/4 flex-col border-l-2 border-r-2 pt-10  lg:w-1/3">
+      <div className="flex w-full md:w-3/4 flex-col border-l-2 border-r-2 pt-10  lg:w-1/3">
         <h6 className="h-10 pb-10 text-center text-xl text-white">GET IN CONTACT WITH ME</h6>
         <label htmlFor="name" className="w-11/12 self-center text-white">
           Name:

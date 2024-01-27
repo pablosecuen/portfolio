@@ -100,7 +100,7 @@ function Footer(props: { language: any }) {
           ®2023 Pablo Amico. All Rights Reserved
         </p>
       ) : (
-        <p className="flex w-full justify-center bg-black text-white">
+        <p className="flex w-full justify-center bg-black text-white p-2 md:p-2 ">
           ®2023 Pablo Amico. Todos los derechos reservados
         </p>
       )}

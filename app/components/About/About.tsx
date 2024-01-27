@@ -44,7 +44,7 @@ function About(props: any) {
           )}
         </h2>
       </article>
-      <div className=" md:ml-10 ">
+      <div className=" md:ml-10 mt-10 md:mt-0">
         <Link
           href="https://docs.google.com/document/d/1T5IkZt5vVJ7sLiZyEemC4lyXaPhb3PD_BsE7Q6RXjQ8/edit?usp=sharing"
           target="_blank"

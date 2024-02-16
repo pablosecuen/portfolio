@@ -62,7 +62,7 @@ function Slider(language: any) {
     },
   ];
 
-  const dotsToRender = slides.slice(0, 8);
+  const dotsToRender = slides.slice(0, 12);
 
   const handleDotClick = (index: number) => {
     setCurrentIndex(index);

@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef } from "react";
 import "./Slider.css";
 import Link from "next/link";
 import Button from "../button/Button";
@@ -10,10 +10,27 @@ function Slider(language: any) {
 
   const slides = [
     {
-      image: "bg-ecommercefull",
-      url: "https://e-commerce-nine-beige.vercel.app/",
-      projectName: "E-commerce",
+      image: "bg-raffleappfull",
+      url: "https://raffle-app-public.vercel.app/",
+      projectName: "Free Raffle App",
     },
+
+    {
+      image: "bg-raffleappmb",
+      url: "https://raffle-app-public.vercel.app/",
+      projectName: "Free Raffle App",
+    },
+    {
+      image: "bg-campusfull",
+      url: "https://www.interchange.com.ar/",
+      projectName: "E-Learning",
+    },
+    {
+      image: "bg-campusmb",
+      url: "https://www.interchange.com.ar/",
+      projectName: "E-Learning",
+    },
+
     {
       image: "bg-ecommercemb",
       url: "https://e-commerce-nine-beige.vercel.app/",

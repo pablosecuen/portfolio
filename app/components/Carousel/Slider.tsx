@@ -30,7 +30,11 @@ function Slider(language: any) {
       url: "https://www.interchange.com.ar/",
       projectName: "E-Learning",
     },
-
+    {
+      image: "bg-ecommercefull",
+      url: "https://e-commerce-nine-beige.vercel.app/",
+      projectName: "E-commerce",
+    },
     {
       image: "bg-ecommercemb",
       url: "https://e-commerce-nine-beige.vercel.app/",
